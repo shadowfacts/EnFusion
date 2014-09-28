@@ -1,0 +1,16 @@
+[
+{
+  "modid": "zcraft",
+  "name": "ZCraft",
+  "description": "ZCraft is a standalone mod (using the RF enery system) primaryily about the technological expansion of Minecraft, with a couple other things.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://shadowfacts.net/ZCraft/",
+  "updateUrl": "",
+  "authors": ["Shadowfacts"],
+  "credits": "Everone who helped on gitHub.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
