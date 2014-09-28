@@ -1,20 +1,24 @@
-# start from scratch (exclude all)
-/*
+/download
+/eclipseBin
 
-# include necessary things
 # gradle
-!gradle/
-!gradlew
-!gradlew.bat
-!build.gradle
-!build.properties
+/.gradle
+/build
 
-# Markdown stuff
-!README.md
-!LICENSE
+# ForgeGradle
+/run
 
-# source code
-!src/
+# eclipse
+/eclipse
+/.settings
+/.metdata
+/.classpath
+/.project
+/bin
 
-# git files
-!.gitignore
+# intellij
+/out
+/.idea
+/*.iml
+/*.ipr
+/*.iws
