@@ -24,11 +24,11 @@ public class ZBlocks {
 	// Methods
 	public static void preInit() {
 		greenZinchoriumGemOre = new ZinchoriumGemOre(1233, "green");
-		greenZinchoriumGemOre.setUnlocalizedName("greenZinchoriumGemOre").setCreativeTab(CreativeTabs.tabMisc)
+		greenZinchoriumGemOre.setUnlocalizedName("greenZinchoriumGemOre").setCreativeTab(ZCraft.zTab)
 								.setHardness(1.0f).setStepSound(Block.soundStoneFootstep);
 		greenZinchoriumLightActive = new ZinchoriumLight(1234, true);
 		greenZinchoriumLightActive.setUnlocalizedName("greenZinchoriumLightActive")
-								.setCreativeTab(CreativeTabs.tabBlock).setTextureName(ZCraft.modId + ":zinchoriumLight/green")
+								.setCreativeTab(ZCraft.zTab).setTextureName(ZCraft.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundMetalFootstep);
 		
 		greenZinchoriumLightIdle = new ZinchoriumLight(1235, false);

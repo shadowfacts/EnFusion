@@ -17,7 +17,7 @@ public class ZRecipes {
 	
 	private static void registerBlockRecipes() {
 		// Green Zinchorium Light
-		GameRegistry.addShapedRecipe(new ItemStack(ZBlocks.greenZinchoriumLightIdle, 1), "IGI", "GCG", "IGI", 'I', new ItemStack(ZItems.greenZinchoriumGem), 'G', new ItemStack(Block.glass), 'C', new ItemStack(Item.dyePowder, 1, 2));
+		GameRegistry.addShapedRecipe(new ItemStack(ZBlocks.greenZinchoriumLightIdle, 1), "IGI", "GLG", "IGI", 'I', new ItemStack(ZItems.greenZinchoriumGem), 'G', new ItemStack(Block.glass), 'L', new ItemStack(ZItems.lightBulb, 1));
 	}
 	
 	private static void registerItemRecipes() {

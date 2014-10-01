@@ -1,6 +1,7 @@
 package net.shadowfacts.zcraft;
 
 import net.shadowfacts.zcraft.block.ZBlocks;
+import net.shadowfacts.zcraft.gui.ZCreativeTab;
 import net.shadowfacts.zcraft.item.ZItems;
 import net.shadowfacts.zcraft.recipes.ZRecipes;
 import net.shadowfacts.zcraft.world.generation.OreGenerator;
@@ -31,6 +32,13 @@ public class ZCraft {
 	@SidedProxy(clientSide=ZCraft.clientProxyString, serverSide=ZCraft.serverProxyString)
 	public static CommonProxy proxy;
 	
+	
+	// Custom Creative Tab
+	public static ZCreativeTab zTab = new ZCreativeTab();
+	
+	
+	
+	// Ore Generation
 	OreGenerator oreGenerator = new OreGenerator();
 	
 	@EventHandler
