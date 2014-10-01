@@ -1,4 +1,4 @@
 # TODO
-- [ ] Add custom Creative Tab
-- [ ] Add light bulb
+- [x] Add custom Creative Tab
+- [x] Add light bulb
 - [ ] Add flashlight
