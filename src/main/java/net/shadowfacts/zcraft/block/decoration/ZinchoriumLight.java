@@ -2,16 +2,14 @@ package net.shadowfacts.zcraft.block.decoration;
 
 import java.util.Random;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
-import net.minecraft.block.StepSound;
+import net.minecraft.block.BlockRedstoneLight;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.World;
 import net.shadowfacts.zcraft.block.ZBlocks;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-public class ZinchoriumLight extends Block {
+public class ZinchoriumLight extends BlockRedstoneLight {
 	
 	
 	
@@ -20,7 +18,7 @@ public class ZinchoriumLight extends Block {
 
     public ZinchoriumLight(int par1, boolean par2)
     {
-        super(par1, Material.redstoneLight);
+        super(par1, par2);
         this.powered = par2;
 
         if (par2)
@@ -29,6 +27,7 @@ public class ZinchoriumLight extends Block {
         }
     }
 
+    @Override
     /**
      * Called whenever the block is added into the world. Args: world, x, y, z
      */
@@ -47,6 +46,7 @@ public class ZinchoriumLight extends Block {
         }
     }
 
+    @Override
     /**
      * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
      * their own) Args: x, y, z, neighbor blockID
@@ -66,6 +66,7 @@ public class ZinchoriumLight extends Block {
         }
     }
 
+    @Override
     /**
      * Ticks the block if it's been scheduled
      */
@@ -76,7 +77,8 @@ public class ZinchoriumLight extends Block {
             par1World.setBlock(par2, par3, par4, ZBlocks.greenZinchoriumLightIdle.blockID, 0, 2);
         }
     }
-
+    
+    @Override
     /**
      * Returns the ID of the items to drop on destruction.
      */
@@ -86,7 +88,7 @@ public class ZinchoriumLight extends Block {
     }
 
     @SideOnly(Side.CLIENT)
-
+    @Override
     /**
      * only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
      */
