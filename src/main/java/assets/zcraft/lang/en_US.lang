@@ -1,2 +1,7 @@
+# Blocks
+tile.greenZinchoriumGemOre.name=Zinchorium Gem Ore (Green)
 tile.greenZinchoriumLightActive.name=Zinchorium Light (Green)
 tile.greenZinchoriumLightIdle.name=Zinchorium Light (Green)
+
+# Items
+item.greenZinchoriumGem.name=Zinchorium Gem (Green)

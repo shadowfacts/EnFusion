@@ -1,6 +1,8 @@
 package net.shadowfacts.zcraft;
 
-import net.shadowfacts.zcraft.blocks.ZBlocks;
+import net.shadowfacts.zcraft.block.ZBlocks;
+import net.shadowfacts.zcraft.item.ZItems;
+import net.shadowfacts.zcraft.recipes.ZRecipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -27,21 +29,30 @@ public class ZCraft {
 	@SidedProxy(clientSide=ZCraft.clientProxyString, serverSide=ZCraft.serverProxyString)
 	public static CommonProxy proxy;
 	
-	// Blocks
-	public static ZBlocks zBlocks;
-
+	
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		zBlocks.preInit();
+		ZBlocks.preInit();
+		ZItems.preInit();
+		ZRecipes.registerRecipes();
 	}
 
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
-		zBlocks.load();
+		ZBlocks.load();
+		ZItems.load();
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		zBlocks.postInit();
+		ZBlocks.postInit();
+		ZItems.postInit();
 	}
 }
+
+
+
+
+
+
