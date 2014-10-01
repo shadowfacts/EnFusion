@@ -3,6 +3,7 @@ package net.shadowfacts.zcraft;
 import net.shadowfacts.zcraft.block.ZBlocks;
 import net.shadowfacts.zcraft.item.ZItems;
 import net.shadowfacts.zcraft.recipes.ZRecipes;
+import net.shadowfacts.zcraft.world.generation.OreGenerator;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -11,6 +12,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid=ZCraft.modId, name=ZCraft.displayName, version=ZCraft.version)
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
@@ -29,13 +31,16 @@ public class ZCraft {
 	@SidedProxy(clientSide=ZCraft.clientProxyString, serverSide=ZCraft.serverProxyString)
 	public static CommonProxy proxy;
 	
-	
+	OreGenerator oreGenerator = new OreGenerator();
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		ZBlocks.preInit();
 		ZItems.preInit();
 		ZRecipes.registerRecipes();
+		
+		// Ore Generator
+		GameRegistry.registerWorldGenerator(oreGenerator);
 	}
 
 	@EventHandler
