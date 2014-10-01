@@ -1,4 +1,4 @@
-package net.shadowfacts.zcraft.blocks.decoration;
+package net.shadowfacts.zcraft.block.decoration;
 
 import java.util.Random;
 
@@ -9,7 +9,7 @@ import net.minecraft.block.StepSound;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.World;
-import net.shadowfacts.zcraft.blocks.ZBlocks;
+import net.shadowfacts.zcraft.block.ZBlocks;
 
 public class ZinchoriumLight extends Block {
 	
