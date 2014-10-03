@@ -21,6 +21,8 @@ public class ZRecipes {
 	}
 	
 	private static void registerItemRecipes() {
+		// Light bulb
+		GameRegistry.addShapedRecipe(new ItemStack(ZItems.lightBulb), "GGG", "GOG", "III", 'G', new ItemStack(Block.glass), 'O', new ItemStack(Item.ingotGold), 'I', new ItemStack(Item.ingotIron));
 		
 	}
 	
