@@ -1,6 +1,6 @@
 # TODO
 ## Short term
-- [ ] Add flashlight
+- Add flashlight
 
 ## Long term
 
