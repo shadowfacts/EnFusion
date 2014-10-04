@@ -1,5 +1,6 @@
 # TODO
 ## Short term
+- Configuration
 - Add flashlight
 - Singel block portable tank
 
