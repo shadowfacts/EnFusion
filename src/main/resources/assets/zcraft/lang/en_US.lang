@@ -2,6 +2,8 @@
 tile.greenZinchoriumGemOre.name=Zinchorium Gem Ore (Green)
 tile.greenZinchoriumLightActive.name=Zinchorium Light (Green)
 tile.greenZinchoriumLightIdle.name=Zinchorium Light (Green)
+tile.invertedGreenZinchoriumLightActive.name=Zinchorium Light (Inverted - Green)
+tile.invertedGreenZinchoriumLightIdle.name=Zinchorium Light (Inverted - Green)
 
 # Items
 item.greenZinchoriumGem.name=Zinchorium Gem (Green)

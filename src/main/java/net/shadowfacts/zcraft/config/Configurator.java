@@ -32,8 +32,8 @@ public class Configurator {
 		// Load properties
 		// Block IDs
 		greenZinchoriumGemOreBlockId = config.getBlock("GreenZinchoriumGemOre", getNextId()).getInt();
-		greenZinchoriumLightIdleBlockId = config.getBlock("GreenZinchoriumLightIdle",  getNextId()).getInt();
 		greenZinchoriumLightActiveBlockId = config.getBlock("GreenZinchoriumLightActive",  getNextId()).getInt();
+		greenZinchoriumLightIdleBlockId = config.getBlock("GreenZinchoriumLightIdle",  getNextId()).getInt();
 		
 		
 		// Item IDs
