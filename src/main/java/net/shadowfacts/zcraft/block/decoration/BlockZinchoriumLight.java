@@ -11,8 +11,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockZinchoriumLight extends BlockRedstoneLight {
 	
-	
-	
 	/** Whether this lamp block is the powered version. */
     private final boolean powered;
 
