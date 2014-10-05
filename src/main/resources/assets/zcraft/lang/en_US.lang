@@ -10,6 +10,7 @@ item.lightBulb.name=Light Bulb
 item.ingotCopper.name=Copper Ingot
 item.zinchoriumSword.name=Zinchorium Gem Sword
 item.zinchoriumPickaxe.name=Zinchorium Gem Pickaxe
+item.zinchoriumAxe.name=Zinchorium Gem Axe
 
 # Creative Tabs
 itemGroup.ZCraftCore=ZCraft Core

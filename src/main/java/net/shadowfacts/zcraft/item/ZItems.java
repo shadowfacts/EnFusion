@@ -2,6 +2,7 @@ package net.shadowfacts.zcraft.item;
 
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSword;
 import net.shadowfacts.zcraft.ZCraft;
@@ -16,6 +17,7 @@ public class ZItems {
 	public static Item ingotCopper;
 	public static Item zinchoriumSword;
 	public static Item zinchoriumPickaxe;
+	public static Item zinchoriumAxe;
 	
 	
 	// Methods
@@ -41,12 +43,19 @@ public class ZItems {
 		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(ZCreativeTabs.tabZTools)
 							.setTextureName(ZCraft.modId + ":zinchoriumGemPickaxe");
 		
+		zinchoriumAxe = new ItemAxe(Configurator.zinchoriumAxeItemId, EnumToolMaterial.IRON);
+		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(ZCreativeTabs.tabZTools)
+						.setTextureName(ZCraft.modId + ":zinchoriumGemAxe");
+		
+		
+		
 		// Register them
 		GameRegistry.registerItem(greenZinchoriumGem, "greenZinchoriumGem");
 		GameRegistry.registerItem(lightBulb, "lightBulb");
 		GameRegistry.registerItem(ingotCopper, "ingotCopper");
 		GameRegistry.registerItem(zinchoriumSword, "zinchoriumSword");
 		GameRegistry.registerItem(zinchoriumPickaxe, "zinchoriumPickaxe");
+		GameRegistry.registerItem(zinchoriumAxe, "zinchoriumAxe");
 	}
 	
 	public static void load() {
