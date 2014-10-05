@@ -9,26 +9,32 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ZBlocks {
 	// Blocks
-	public static BlockZinchoriumGemOre greenZinchoriumGemOre;
+	public static BlockOre greenZinchoriumGemOre;
 	public static BlockZinchoriumLight greenZinchoriumLightActive;
 	public static BlockZinchoriumLight greenZinchoriumLightIdle;
+	public static BlockOre copperOre;
 
 	
 	// Methods
 	public static void preInit() {
-		greenZinchoriumGemOre = new BlockZinchoriumGemOre(Configurator.greenZinchoriumGemOreBlockId, "green");
+		greenZinchoriumGemOre = new BlockOre(Configurator.greenZinchoriumGemOreBlockId);
 		greenZinchoriumGemOre.setUnlocalizedName("greenZinchoriumGemOre").setCreativeTab(ZCraft.zTab)
 								.setHardness(1.0f).setStepSound(Block.soundStoneFootstep);
 		
 		greenZinchoriumLightActive = new BlockZinchoriumLight(Configurator.greenZinchoriumLightActiveBlockId, true);
 		greenZinchoriumLightActive.setUnlocalizedName("greenZinchoriumLightActive")
-								.setCreativeTab(ZCraft.zTab).setTextureName(ZCraft.modId + ":zinchoriumLight/green")
+								.setTextureName(ZCraft.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundMetalFootstep);
 		
 		greenZinchoriumLightIdle = new BlockZinchoriumLight(Configurator.greenZinchoriumLightIdleBlockId, false);
 		greenZinchoriumLightIdle.setUnlocalizedName("greenZinchoriumLightIdle")
-								.setTextureName(ZCraft.modId + ":zinchoriumLight/green")
+								.setCreativeTab(ZCraft.zTab).setTextureName(ZCraft.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundMetalFootstep);
+		
+		copperOre = new BlockOre(Configurator.copperOreBlockId);
+		copperOre.setUnlocalizedName("copperOre")
+				.setTextureName(ZCraft.modId + ":copperOre").setCreativeTab(ZCraft.zTab)
+				.setHardness(1.5f).setStepSound(Block.soundStoneFootstep);
 		
 		
 		
@@ -36,6 +42,7 @@ public class ZBlocks {
 		GameRegistry.registerBlock(greenZinchoriumGemOre, "greenZinchoriumGemOre");
 		GameRegistry.registerBlock(greenZinchoriumLightActive, "greenZinchoriumLightActive");
 		GameRegistry.registerBlock(greenZinchoriumLightIdle, "greenZinchoriumLightIdle");
+		GameRegistry.registerBlock(copperOre, "copperOre");
 		
 		
 		

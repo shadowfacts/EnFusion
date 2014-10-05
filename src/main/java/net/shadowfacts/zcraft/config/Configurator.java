@@ -16,6 +16,7 @@ public class Configurator {
 	public static int greenZinchoriumGemOreBlockId;
 	public static int greenZinchoriumLightIdleBlockId;
 	public static int greenZinchoriumLightActiveBlockId;
+	public static int copperOreBlockId;
 	
 	// Item IDs
 	public static int greenZinchoriumGemItemId;
@@ -34,6 +35,7 @@ public class Configurator {
 		greenZinchoriumGemOreBlockId = config.getBlock("GreenZinchoriumGemOre", getNextId()).getInt();
 		greenZinchoriumLightActiveBlockId = config.getBlock("GreenZinchoriumLightActive",  getNextId()).getInt();
 		greenZinchoriumLightIdleBlockId = config.getBlock("GreenZinchoriumLightIdle",  getNextId()).getInt();
+		copperOreBlockId = config.getBlock("CopperOre", getNextId()).getInt();
 		
 		
 		// Item IDs
