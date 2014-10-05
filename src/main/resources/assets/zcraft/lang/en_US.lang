@@ -2,8 +2,9 @@
 tile.greenZinchoriumGemOre.name=Zinchorium Gem Ore (Green)
 tile.greenZinchoriumLightActive.name=Zinchorium Light (Green)
 tile.greenZinchoriumLightIdle.name=Zinchorium Light (Green)
-tile.copperOre.name=Copper Ore
+tile.oreCopper.name=Copper Ore
 
 # Items
 item.greenZinchoriumGem.name=Zinchorium Gem (Green)
 item.lightBulb.name=Light Bulb
+item.ingotCopper.name=Copper Ingot

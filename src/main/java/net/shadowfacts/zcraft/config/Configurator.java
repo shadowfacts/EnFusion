@@ -16,11 +16,12 @@ public class Configurator {
 	public static int greenZinchoriumGemOreBlockId;
 	public static int greenZinchoriumLightIdleBlockId;
 	public static int greenZinchoriumLightActiveBlockId;
-	public static int copperOreBlockId;
+	public static int oreCopperBlockId;
 	
 	// Item IDs
 	public static int greenZinchoriumGemItemId;
 	public static int lightBulbItemId;
+	public static int ingotCopperItemId;
 	
 	public static void loadConfig(FMLPreInitializationEvent event) {
 		System.out.println("Loading configuration file");
@@ -35,13 +36,13 @@ public class Configurator {
 		greenZinchoriumGemOreBlockId = config.getBlock("GreenZinchoriumGemOre", getNextId()).getInt();
 		greenZinchoriumLightActiveBlockId = config.getBlock("GreenZinchoriumLightActive",  getNextId()).getInt();
 		greenZinchoriumLightIdleBlockId = config.getBlock("GreenZinchoriumLightIdle",  getNextId()).getInt();
-		copperOreBlockId = config.getBlock("CopperOre", getNextId()).getInt();
+		oreCopperBlockId = config.getBlock("OreCopper", getNextId()).getInt();
 		
 		
 		// Item IDs
 		greenZinchoriumGemItemId = config.getItem("GreenZinchoriumGem",  getNextId()).getInt();
 		lightBulbItemId = config.getItem("LightBulb",  getNextId()).getInt();
-		
+		ingotCopperItemId = config.getItem("IngotCopper", getNextId()).getInt();
 		
 		
 		// Save config

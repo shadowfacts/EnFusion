@@ -12,7 +12,7 @@ public class ZBlocks {
 	public static BlockOre greenZinchoriumGemOre;
 	public static BlockZinchoriumLight greenZinchoriumLightActive;
 	public static BlockZinchoriumLight greenZinchoriumLightIdle;
-	public static BlockOre copperOre;
+	public static BlockOre oreCopper;
 
 	
 	// Methods
@@ -31,9 +31,9 @@ public class ZBlocks {
 								.setCreativeTab(ZCraft.zTab).setTextureName(ZCraft.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundMetalFootstep);
 		
-		copperOre = new BlockOre(Configurator.copperOreBlockId);
-		copperOre.setUnlocalizedName("copperOre")
-				.setTextureName(ZCraft.modId + ":copperOre").setCreativeTab(ZCraft.zTab)
+		oreCopper = new BlockOre(Configurator.oreCopperBlockId);
+		oreCopper.setUnlocalizedName("oreCopper")
+				.setTextureName(ZCraft.modId + ":oreCopper").setCreativeTab(ZCraft.zTab)
 				.setHardness(1.5f).setStepSound(Block.soundStoneFootstep);
 		
 		
@@ -42,7 +42,7 @@ public class ZBlocks {
 		GameRegistry.registerBlock(greenZinchoriumGemOre, "greenZinchoriumGemOre");
 		GameRegistry.registerBlock(greenZinchoriumLightActive, "greenZinchoriumLightActive");
 		GameRegistry.registerBlock(greenZinchoriumLightIdle, "greenZinchoriumLightIdle");
-		GameRegistry.registerBlock(copperOre, "copperOre");
+		GameRegistry.registerBlock(oreCopper, "oreCopper");
 		
 		
 		
@@ -50,6 +50,7 @@ public class ZBlocks {
 		MinecraftForge.setBlockHarvestLevel(greenZinchoriumGemOre, "pickaxe", 1);
 		MinecraftForge.setBlockHarvestLevel(greenZinchoriumLightActive, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(greenZinchoriumLightIdle, "pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(oreCopper, "pickaxe", 1);
 	}
 	
 	public static void load() {

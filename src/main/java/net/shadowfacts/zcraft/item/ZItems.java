@@ -9,6 +9,7 @@ public class ZItems {
 	// Items
 	public static Item greenZinchoriumGem;
 	public static Item lightBulb;
+	public static Item ingotCopper;
 	
 	
 	// Methods
@@ -22,9 +23,14 @@ public class ZItems {
 		lightBulb.setUnlocalizedName("lightBulb").setTextureName(ZCraft.modId + ":lightBulb")
 				.setCreativeTab(ZCraft.zTab);
 		
+		ingotCopper = new Item(Configurator.ingotCopperItemId);
+		ingotCopper.setUnlocalizedName("ingotCopper").setTextureName(ZCraft.modId + ":ingotCopper")
+					.setCreativeTab(ZCraft.zTab);
+		
 		// Register them
 		GameRegistry.registerItem(greenZinchoriumGem, "greenZinchoriumGem");
 		GameRegistry.registerItem(lightBulb, "lightBulb");
+		GameRegistry.registerItem(ingotCopper, "ingotCopper");
 	}
 	
 	public static void load() {

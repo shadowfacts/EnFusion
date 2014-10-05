@@ -13,6 +13,7 @@ public class ZRecipes {
 	public static void registerRecipes() {
 		registerBlockRecipes();
 		registerItemRecipes();
+		registerFurnaceRecipes();
 	}
 	
 	private static void registerBlockRecipes() {
@@ -26,10 +27,17 @@ public class ZRecipes {
 		
 	}
 	
+	private static void registerFurnaceRecipes() {
+		GameRegistry.addSmelting(ZBlocks.oreCopper.blockID, new ItemStack(ZItems.ingotCopper, 1), 0.3f);
+	}
+	
 	public static void registerOreDictThings() {
 		// Blocks
+		OreDictionary.registerOre("oreCopper", ZBlocks.oreCopper);
 		
 		// Items
+		OreDictionary.registerOre("ingotCopper", ZItems.ingotCopper);
+		
 	}
 	
 }
