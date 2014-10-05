@@ -11,6 +11,8 @@ item.ingotCopper.name=Copper Ingot
 item.zinchoriumSword.name=Zinchorium Gem Sword
 item.zinchoriumPickaxe.name=Zinchorium Gem Pickaxe
 item.zinchoriumAxe.name=Zinchorium Gem Axe
+item.zinchoriumShovel.name=Zinchorium Gem Shovel
+item.zinchoriumHoe.name=Zinchorium Gem Hoe
 
 # Creative Tabs
 itemGroup.ZCraftCore=ZCraft Core

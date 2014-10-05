@@ -30,7 +30,10 @@ public class ZRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumPickaxe), "ZZZ", " S ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
 		// Zinchorium Gem Axe
 		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumAxe), "ZZ ", "ZS ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
-		
+		// Zinchorium Gem Shovel
+		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumShovel), " Z ", " S ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
+		// Zinchorium Gem Hoe
+		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumHoe), "ZZ ", " S ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
 		
 		
 	}

@@ -3,7 +3,9 @@ package net.shadowfacts.zcraft.item;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemSword;
 import net.shadowfacts.zcraft.ZCraft;
 import net.shadowfacts.zcraft.config.Configurator;
@@ -18,6 +20,8 @@ public class ZItems {
 	public static Item zinchoriumSword;
 	public static Item zinchoriumPickaxe;
 	public static Item zinchoriumAxe;
+	public static Item zinchoriumShovel;
+	public static Item zinchoriumHoe;
 	
 	
 	// Methods
@@ -47,6 +51,14 @@ public class ZItems {
 		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":zinchoriumGemAxe");
 		
+		zinchoriumShovel = new ItemSpade(Configurator.zinchoriumShovelItemId, EnumToolMaterial.IRON);
+		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(ZCreativeTabs.tabZTools)
+						.setTextureName(ZCraft.modId + ":zinchoriumGemShovel");
+		
+		zinchoriumHoe = new ItemHoe(Configurator.zinchoriumHoeItemId, EnumToolMaterial.IRON);
+		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(ZCreativeTabs.tabZTools)
+						.setTextureName(ZCraft.modId + ":zinchoriumGemHoe");
+		
 		
 		
 		// Register them
@@ -56,6 +68,8 @@ public class ZItems {
 		GameRegistry.registerItem(zinchoriumSword, "zinchoriumSword");
 		GameRegistry.registerItem(zinchoriumPickaxe, "zinchoriumPickaxe");
 		GameRegistry.registerItem(zinchoriumAxe, "zinchoriumAxe");
+		GameRegistry.registerItem(zinchoriumShovel, "zinchoriumShovel");
+		GameRegistry.registerItem(zinchoriumHoe, "zinchoriumHoe");
 	}
 	
 	public static void load() {

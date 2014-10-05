@@ -25,6 +25,8 @@ public class Configurator {
 	public static int zinchoriumSwordItemId;
 	public static int zinchoriumPickaxeItemId;
 	public static int zinchoriumAxeItemId;
+	public static int zinchoriumShovelItemId;
+	public static int zinchoriumHoeItemId;
 	
 	public static void loadConfig(FMLPreInitializationEvent event) {
 		System.out.println("Loading configuration file");
@@ -49,6 +51,8 @@ public class Configurator {
 		zinchoriumSwordItemId = config.getItem("ZinchoriumGemSword", getNextId()).getInt();
 		zinchoriumPickaxeItemId = config.getItem("ZinchoriumGemPickaxe", getNextId()).getInt();
 		zinchoriumAxeItemId = config.getItem("ZinchoriumGemAxe", getNextId()).getInt();
+		zinchoriumShovelItemId = config.getItem("ZinchoriumGemShovel", getNextId()).getInt();
+		zinchoriumHoeItemId = config.getItem("ZinchoriumGemHoe", getNextId()).getInt();
 		
 		
 		// Save config
