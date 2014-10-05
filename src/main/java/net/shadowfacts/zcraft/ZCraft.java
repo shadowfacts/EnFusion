@@ -52,6 +52,8 @@ public class ZCraft {
 		ZItems.preInit(); // Items
 		ZRecipes.registerRecipes(); // Recipes
 		
+		ZRecipes.registerOreDictThings(); // OreDict
+		
 		// Ore Generator
 		GameRegistry.registerWorldGenerator(oreGenerator);
 	}

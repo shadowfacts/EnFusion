@@ -28,10 +28,8 @@ public class ZRecipes {
 	
 	public static void registerOreDictThings() {
 		// Blocks
-		OreDictionary.registerOre("oreZinchorium", ZBlocks.greenZinchoriumGemOre); // Green Zinchorium Gem Ore
 		
 		// Items
-		OreDictionary.registerOre("gemZinchorium", ZItems.greenZinchoriumGem);
 	}
 	
 }
