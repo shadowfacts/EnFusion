@@ -3,6 +3,7 @@ package net.shadowfacts.zcraft.item;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.shadowfacts.zcraft.ZCraft;
+import net.shadowfacts.zcraft.config.Configurator;
 
 public class ZItems {
 	// Items
@@ -13,11 +14,11 @@ public class ZItems {
 	// Methods
 	public static void preInit() {
 		// Create the items
-		greenZinchoriumGem = new Item(1236);
+		greenZinchoriumGem = new Item(Configurator.greenZinchoriumGemItemId);
 		greenZinchoriumGem.setUnlocalizedName("greenZinchoriumGem").setTextureName(ZCraft.modId + ":zinchoriumGem/green")
 						.setCreativeTab(ZCraft.zTab);
 		
-		lightBulb = new Item(1237);
+		lightBulb = new Item(Configurator.lightBulbItemId);
 		lightBulb.setUnlocalizedName("lightBulb").setTextureName(ZCraft.modId + ":lightBulb")
 				.setCreativeTab(ZCraft.zTab);
 		

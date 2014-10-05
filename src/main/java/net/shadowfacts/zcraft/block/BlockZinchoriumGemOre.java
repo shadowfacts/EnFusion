@@ -6,12 +6,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.shadowfacts.zcraft.item.ZItems;
 
-public class ZinchoriumGemOre extends Block {
+public class BlockZinchoriumGemOre extends Block {
 	
 	public String color;
 	
 	
-	public ZinchoriumGemOre(int par1, String color) {
+	public BlockZinchoriumGemOre(int par1, String color) {
 		super(par1, Material.rock);
 		this.color = color;
 	}

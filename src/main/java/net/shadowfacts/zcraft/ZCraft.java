@@ -1,6 +1,7 @@
 package net.shadowfacts.zcraft;
 
 import net.shadowfacts.zcraft.block.ZBlocks;
+import net.shadowfacts.zcraft.config.Configurator;
 import net.shadowfacts.zcraft.gui.ZCreativeTab;
 import net.shadowfacts.zcraft.item.ZItems;
 import net.shadowfacts.zcraft.recipes.ZRecipes;
@@ -21,7 +22,7 @@ public class ZCraft {
 	// Mod info
 	public static final String modId = "zcraft";
 	public static final String displayName = "ZCraft";
-	public static final String version = "v1.0";
+	public static final String version = "v0.1";
 	public static final String clientProxyString = "net.shadowfacts.zcraft.client.ClientProxy";
 	public static final String serverProxyString = "net.shadowfacts.zcraft.CommonProxy";
 	
@@ -43,9 +44,13 @@ public class ZCraft {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		ZBlocks.preInit();
-		ZItems.preInit();
-		ZRecipes.registerRecipes();
+		// Config
+		Configurator.loadConfig(event);
+		
+		
+		ZBlocks.preInit(); // Blocks
+		ZItems.preInit(); // Items
+		ZRecipes.registerRecipes(); // Recipes
 		
 		// Ore Generator
 		GameRegistry.registerWorldGenerator(oreGenerator);

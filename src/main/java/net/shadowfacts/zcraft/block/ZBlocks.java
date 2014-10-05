@@ -7,31 +7,33 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.shadowfacts.zcraft.ZCraft;
-import net.shadowfacts.zcraft.block.decoration.ZinchoriumLight;
+import net.shadowfacts.zcraft.block.decoration.BlockZinchoriumLight;
+import net.shadowfacts.zcraft.config.Configurator;
 import net.shadowfacts.zcraft.item.ZItems;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ZBlocks {
 	// Blocks
-	public static ZinchoriumGemOre greenZinchoriumGemOre;
-	public static ZinchoriumLight greenZinchoriumLightActive;
-	public static ZinchoriumLight greenZinchoriumLightIdle;
+	public static BlockZinchoriumGemOre greenZinchoriumGemOre;
+	public static BlockZinchoriumLight greenZinchoriumLightActive;
+	public static BlockZinchoriumLight greenZinchoriumLightIdle;
 //	public static ZinchoriumLight greenZinchoriumLightInvertedActive;
 //	public static ZinchoriumLight greenZinchoriumLightInvertedIdle;
 
 	
 	// Methods
 	public static void preInit() {
-		greenZinchoriumGemOre = new ZinchoriumGemOre(1233, "green");
+		greenZinchoriumGemOre = new BlockZinchoriumGemOre(Configurator.greenZinchoriumGemOreBlockId, "green");
 		greenZinchoriumGemOre.setUnlocalizedName("greenZinchoriumGemOre").setCreativeTab(ZCraft.zTab)
 								.setHardness(1.0f).setStepSound(Block.soundStoneFootstep);
-		greenZinchoriumLightActive = new ZinchoriumLight(1234, true);
+		
+		greenZinchoriumLightActive = new BlockZinchoriumLight(Configurator.greenZinchoriumLightActiveBlockId, true);
 		greenZinchoriumLightActive.setUnlocalizedName("greenZinchoriumLightActive")
 								.setCreativeTab(ZCraft.zTab).setTextureName(ZCraft.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundMetalFootstep);
 		
-		greenZinchoriumLightIdle = new ZinchoriumLight(1235, false);
+		greenZinchoriumLightIdle = new BlockZinchoriumLight(Configurator.greenZinchoriumLightIdleBlockId, false);
 		greenZinchoriumLightIdle.setUnlocalizedName("greenZinchoriumLightIdle")
 								.setTextureName(ZCraft.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundMetalFootstep);

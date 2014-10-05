@@ -9,14 +9,14 @@ import net.shadowfacts.zcraft.block.ZBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ZinchoriumLight extends BlockRedstoneLight {
+public class BlockZinchoriumLight extends BlockRedstoneLight {
 	
 	
 	
 	/** Whether this lamp block is the powered version. */
     private final boolean powered;
 
-    public ZinchoriumLight(int par1, boolean par2)
+    public BlockZinchoriumLight(int par1, boolean par2)
     {
         super(par1, par2);
         this.powered = par2;
