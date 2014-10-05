@@ -5,6 +5,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.shadowfacts.zcraft.ZCraft;
 import net.shadowfacts.zcraft.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.zcraft.config.Configurator;
+import net.shadowfacts.zcraft.gui.ZCreativeTabs;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ZBlocks {
@@ -18,7 +19,7 @@ public class ZBlocks {
 	// Methods
 	public static void preInit() {
 		greenZinchoriumGemOre = new BlockOre(Configurator.greenZinchoriumGemOreBlockId);
-		greenZinchoriumGemOre.setUnlocalizedName("greenZinchoriumGemOre").setCreativeTab(ZCraft.zTab)
+		greenZinchoriumGemOre.setUnlocalizedName("greenZinchoriumGemOre").setCreativeTab(ZCreativeTabs.tabZCore)
 								.setHardness(1.0f).setStepSound(Block.soundStoneFootstep);
 		
 		greenZinchoriumLightActive = new BlockZinchoriumLight(Configurator.greenZinchoriumLightActiveBlockId, true);
@@ -28,12 +29,12 @@ public class ZBlocks {
 		
 		greenZinchoriumLightIdle = new BlockZinchoriumLight(Configurator.greenZinchoriumLightIdleBlockId, false);
 		greenZinchoriumLightIdle.setUnlocalizedName("greenZinchoriumLightIdle")
-								.setCreativeTab(ZCraft.zTab).setTextureName(ZCraft.modId + ":zinchoriumLight/green")
+								.setCreativeTab(ZCreativeTabs.tabZCore).setTextureName(ZCraft.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundMetalFootstep);
 		
 		oreCopper = new BlockOre(Configurator.oreCopperBlockId);
 		oreCopper.setUnlocalizedName("oreCopper")
-				.setTextureName(ZCraft.modId + ":oreCopper").setCreativeTab(ZCraft.zTab)
+				.setTextureName(ZCraft.modId + ":oreCopper").setCreativeTab(ZCreativeTabs.tabZCore)
 				.setHardness(1.5f).setStepSound(Block.soundStoneFootstep);
 		
 		

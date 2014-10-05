@@ -2,7 +2,7 @@ package net.shadowfacts.zcraft;
 
 import net.shadowfacts.zcraft.block.ZBlocks;
 import net.shadowfacts.zcraft.config.Configurator;
-import net.shadowfacts.zcraft.gui.ZCreativeTab;
+import net.shadowfacts.zcraft.gui.ZCreativeTabs;
 import net.shadowfacts.zcraft.item.ZItems;
 import net.shadowfacts.zcraft.recipes.ZRecipes;
 import net.shadowfacts.zcraft.world.generation.OreGenerator;
@@ -35,7 +35,7 @@ public class ZCraft {
 	
 	
 	// Custom Creative Tab
-	public static ZCreativeTab zTab = new ZCreativeTab();
+	public static ZCreativeTabs zTab = new ZCreativeTabs();
 	
 	
 	

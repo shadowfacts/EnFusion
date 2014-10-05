@@ -24,7 +24,8 @@ public class ZRecipes {
 	private static void registerItemRecipes() {
 		// Light bulb
 		GameRegistry.addShapedRecipe(new ItemStack(ZItems.lightBulb), "GGG", "GOG", "III", 'G', new ItemStack(Block.glass), 'O', new ItemStack(Item.ingotGold), 'I', new ItemStack(Item.ingotIron));
-		
+		// Zinchorium Gem Pickaxe
+		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumPickaxe), "ZZZ", " S ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
 	}
 	
 	private static void registerFurnaceRecipes() {

@@ -8,3 +8,9 @@ tile.oreCopper.name=Copper Ore
 item.greenZinchoriumGem.name=Zinchorium Gem (Green)
 item.lightBulb.name=Light Bulb
 item.ingotCopper.name=Copper Ingot
+item.zinchoriumPickaxe.name=Zinchorium Gem Pickaxe
+
+# Creative Tabs
+itemGroup.ZCraftCore=ZCraft Core
+itemGroup.ZCraftMachines=ZCraft Machines
+itemGroup.ZCraftTools=ZCraft Tools

@@ -22,6 +22,7 @@ public class Configurator {
 	public static int greenZinchoriumGemItemId;
 	public static int lightBulbItemId;
 	public static int ingotCopperItemId;
+	public static int zinchoriumPickaxeItemId;
 	
 	public static void loadConfig(FMLPreInitializationEvent event) {
 		System.out.println("Loading configuration file");
@@ -43,6 +44,7 @@ public class Configurator {
 		greenZinchoriumGemItemId = config.getItem("GreenZinchoriumGem",  getNextId()).getInt();
 		lightBulbItemId = config.getItem("LightBulb",  getNextId()).getInt();
 		ingotCopperItemId = config.getItem("IngotCopper", getNextId()).getInt();
+		zinchoriumPickaxeItemId = config.getItem("ZinchoriumGemPickaxe", getNextId()).getInt();
 		
 		
 		// Save config
