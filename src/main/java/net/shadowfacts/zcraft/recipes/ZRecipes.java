@@ -24,17 +24,34 @@ public class ZRecipes {
 	private static void registerItemRecipes() {
 		// Light bulb
 		GameRegistry.addShapedRecipe(new ItemStack(ZItems.lightBulb), "GGG", "GOG", "III", 'G', new ItemStack(Block.glass), 'O', new ItemStack(Item.ingotGold), 'I', new ItemStack(Item.ingotIron));
+		
 		// Zinchorium Gem Sword
 		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumSword), " Z ", " Z ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
+		
 		// Zinchorium Gem Pickaxe
 		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumPickaxe), "ZZZ", " S ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
+		
 		// Zinchorium Gem Axe
 		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumAxe), "ZZ ", "ZS ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
+		
 		// Zinchorium Gem Shovel
 		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumShovel), " Z ", " S ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
+		
 		// Zinchorium Gem Hoe
 		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumHoe), "ZZ ", " S ", " S ", 'Z', new ItemStack(ZItems.greenZinchoriumGem), 'S', new ItemStack(Item.stick));
+	
+		// Zinchorium Helmet
+		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumHelmet), "ZZZ", "Z Z", "   ", 'Z', new ItemStack(ZItems.greenZinchoriumGem));
 		
+		// Zinchorium Chestplate
+		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumChestplate), "Z Z", "ZZZ", "ZZZ", 'Z', new ItemStack(ZItems.greenZinchoriumGem));
+		
+		// Zinchoruim Leggings
+		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumLeggings), "ZZZ", "Z Z", "Z Z", 'Z', new ItemStack(ZItems.greenZinchoriumGem));
+		
+		// Zinchorium Boots
+		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumBoots), "Z Z", "Z Z", "   ", 'Z', new ItemStack(ZItems.greenZinchoriumGem));
+		GameRegistry.addShapedRecipe(new ItemStack(ZItems.zinchoriumBoots), "   ", "Z Z", "Z Z", 'Z', new ItemStack(ZItems.greenZinchoriumGem));
 		
 	}
 	

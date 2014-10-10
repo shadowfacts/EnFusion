@@ -8,7 +8,8 @@ public class Configurator {
 	// The all-mighty config
 	private static Configuration config;
 	
-	private static int nextId = 1232;
+	private static int nextBlockId = 1232;
+	private static int nextItemId = 4288;
 	
 	
 	// Config properties
@@ -27,6 +28,10 @@ public class Configurator {
 	public static int zinchoriumAxeItemId;
 	public static int zinchoriumShovelItemId;
 	public static int zinchoriumHoeItemId;
+	public static int zinchoriumHelmetItemId;
+	public static int zinchoriumChestplateItemId;
+	public static int zinchoriumLeggingsItemId;
+	public static int zinchoriumBootsItemId;
 	
 	public static void loadConfig(FMLPreInitializationEvent event) {
 		System.out.println("Loading configuration file");
@@ -38,21 +43,25 @@ public class Configurator {
 		
 		// Load properties
 		// Block IDs
-		greenZinchoriumGemOreBlockId = config.getBlock("GreenZinchoriumGemOre", getNextId()).getInt();
-		greenZinchoriumLightActiveBlockId = config.getBlock("GreenZinchoriumLightActive",  getNextId()).getInt();
-		greenZinchoriumLightIdleBlockId = config.getBlock("GreenZinchoriumLightIdle",  getNextId()).getInt();
-		oreCopperBlockId = config.getBlock("OreCopper", getNextId()).getInt();
+		greenZinchoriumGemOreBlockId = config.getBlock("GreenZinchoriumGemOre", getBlockId()).getInt();
+		greenZinchoriumLightActiveBlockId = config.getBlock("GreenZinchoriumLightActive",  getBlockId()).getInt();
+		greenZinchoriumLightIdleBlockId = config.getBlock("GreenZinchoriumLightIdle",  getBlockId()).getInt();
+		oreCopperBlockId = config.getBlock("OreCopper", getBlockId()).getInt();
 		
 		
 		// Item IDs
-		greenZinchoriumGemItemId = config.getItem("GreenZinchoriumGem",  getNextId()).getInt();
-		lightBulbItemId = config.getItem("LightBulb",  getNextId()).getInt();
-		ingotCopperItemId = config.getItem("IngotCopper", getNextId()).getInt();
-		zinchoriumSwordItemId = config.getItem("ZinchoriumGemSword", getNextId()).getInt();
-		zinchoriumPickaxeItemId = config.getItem("ZinchoriumGemPickaxe", getNextId()).getInt();
-		zinchoriumAxeItemId = config.getItem("ZinchoriumGemAxe", getNextId()).getInt();
-		zinchoriumShovelItemId = config.getItem("ZinchoriumGemShovel", getNextId()).getInt();
-		zinchoriumHoeItemId = config.getItem("ZinchoriumGemHoe", getNextId()).getInt();
+		greenZinchoriumGemItemId = config.getItem("GreenZinchoriumGem",  getItemId()).getInt();
+		lightBulbItemId = config.getItem("LightBulb",  getItemId()).getInt();
+		ingotCopperItemId = config.getItem("IngotCopper", getItemId()).getInt();
+		zinchoriumSwordItemId = config.getItem("ZinchoriumGemSword", getItemId()).getInt();
+		zinchoriumPickaxeItemId = config.getItem("ZinchoriumGemPickaxe", getItemId()).getInt();
+		zinchoriumAxeItemId = config.getItem("ZinchoriumGemAxe", getItemId()).getInt();
+		zinchoriumShovelItemId = config.getItem("ZinchoriumGemShovel", getItemId()).getInt();
+		zinchoriumHoeItemId = config.getItem("ZinchoriumGemHoe", getItemId()).getInt();
+		zinchoriumHelmetItemId = config.getItem("ZinchoriumHelmet", getItemId()).getInt();
+		zinchoriumChestplateItemId = config.getItem("ZinchoriumChestplate", getItemId()).getInt();
+		zinchoriumLeggingsItemId = config.getItem("ZinchoriumLeggings", getItemId()).getInt();
+		zinchoriumBootsItemId = config.getItem("ZinchoriumBoots", getItemId()).getInt();
 		
 		
 		// Save config
@@ -60,12 +69,21 @@ public class Configurator {
 	}
 	
 	
-	private static int getNextId() {
-		int id = nextId;
-		nextId = nextId + 1;
+	private static int getBlockId() {
+		int id = nextBlockId;
+		nextBlockId = nextBlockId + 1;
 		
 		return id;
 	}
+	
+	private static int getItemId() {
+		int id = nextItemId;
+		nextItemId = nextItemId + 1;
+		
+		return id;
+	}
+	
+	
 	
 	
 }

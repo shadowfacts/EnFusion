@@ -6,4 +6,8 @@ public class CommonProxy {
 		// Nothing to see here... yet.
 	}
 	
+	public int getArmorIndex(String par1) {
+		return 0;
+	}
+	
 }

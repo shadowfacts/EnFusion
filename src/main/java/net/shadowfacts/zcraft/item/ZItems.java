@@ -1,7 +1,9 @@
 package net.shadowfacts.zcraft.item;
 
+import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
@@ -10,6 +12,7 @@ import net.minecraft.item.ItemSword;
 import net.shadowfacts.zcraft.ZCraft;
 import net.shadowfacts.zcraft.config.Configurator;
 import net.shadowfacts.zcraft.gui.ZCreativeTabs;
+import net.shadowfacts.zcraft.item.armor.ZArmor;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ZItems {
@@ -22,6 +25,10 @@ public class ZItems {
 	public static Item zinchoriumAxe;
 	public static Item zinchoriumShovel;
 	public static Item zinchoriumHoe;
+	public static ItemArmor zinchoriumHelmet;
+	public static ItemArmor zinchoriumChestplate;
+	public static ItemArmor zinchoriumLeggings;
+	public static ItemArmor zinchoriumBoots;
 	
 	
 	// Methods
@@ -59,6 +66,22 @@ public class ZItems {
 		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":zinchoriumGemHoe");
 		
+		zinchoriumHelmet = new ZArmor(Configurator.zinchoriumHelmetItemId, EnumArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 0, "zinchorium");
+		zinchoriumHelmet.setUnlocalizedName("zinchoriumHelmet").setCreativeTab(ZCreativeTabs.tabZTools)
+						.setTextureName(ZCraft.modId + ":armor/zinchoriumHelmet");
+		
+		zinchoriumChestplate = new ZArmor(Configurator.zinchoriumChestplateItemId, EnumArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 1, "zinchorium");
+		zinchoriumChestplate.setUnlocalizedName("zinchoriumChestplate").setCreativeTab(ZCreativeTabs.tabZTools)
+						.setTextureName(ZCraft.modId + ":armor/zinchoriumChestplate");
+		
+		zinchoriumLeggings = new ZArmor(Configurator.zinchoriumLeggingsItemId, EnumArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 2, "zinchorium");
+		zinchoriumLeggings.setUnlocalizedName("zinchoriumLeggings").setCreativeTab(ZCreativeTabs.tabZTools)
+						.setTextureName(ZCraft.modId + ":armor/zinchoriumLeggings");
+		
+		zinchoriumBoots = new ZArmor(Configurator.zinchoriumBootsItemId, EnumArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 3, "zinchorium");
+		zinchoriumBoots.setUnlocalizedName("zinchoriumBoots").setCreativeTab(ZCreativeTabs.tabZTools)
+						.setTextureName(ZCraft.modId + ":armor/zinchoriumBoots");
+		
 		
 		
 		// Register them
@@ -70,6 +93,10 @@ public class ZItems {
 		GameRegistry.registerItem(zinchoriumAxe, "zinchoriumAxe");
 		GameRegistry.registerItem(zinchoriumShovel, "zinchoriumShovel");
 		GameRegistry.registerItem(zinchoriumHoe, "zinchoriumHoe");
+		GameRegistry.registerItem(zinchoriumHelmet, "zinchoriumHelmet");
+		GameRegistry.registerItem(zinchoriumChestplate, "zinchoriumChestplate");
+		GameRegistry.registerItem(zinchoriumLeggings, "zinchoriumLeggings");
+		GameRegistry.registerItem(zinchoriumBoots, "zinchoriumBoots");
 	}
 	
 	public static void load() {
