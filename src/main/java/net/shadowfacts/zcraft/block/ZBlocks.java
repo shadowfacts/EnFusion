@@ -20,7 +20,8 @@ public class ZBlocks {
 	public static void preInit() {
 		greenZinchoriumGemOre = new BlockOre(Configurator.greenZinchoriumGemOreBlockId);
 		greenZinchoriumGemOre.setUnlocalizedName("greenZinchoriumGemOre").setCreativeTab(ZCreativeTabs.tabZCore)
-								.setHardness(1.0f).setStepSound(Block.soundStoneFootstep);
+								.setHardness(1.0f).setStepSound(Block.soundStoneFootstep)
+								.setTextureName(ZCraft.modId + ":greenZinchoriumGemOre");
 		
 		greenZinchoriumLightActive = new BlockZinchoriumLight(Configurator.greenZinchoriumLightActiveBlockId, true);
 		greenZinchoriumLightActive.setUnlocalizedName("greenZinchoriumLightActive")
