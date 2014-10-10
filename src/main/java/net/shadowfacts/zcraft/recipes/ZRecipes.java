@@ -56,7 +56,10 @@ public class ZRecipes {
 	}
 	
 	private static void registerFurnaceRecipes() {
+		// Copper ore --> copper ingot
 		GameRegistry.addSmelting(ZBlocks.oreCopper.blockID, new ItemStack(ZItems.ingotCopper, 1), 0.3f);
+		// Zinchorium ore --> Zinchorium Gem (3)
+		GameRegistry.addSmelting(ZBlocks.greenZinchoriumGemOre.blockID, new ItemStack(ZItems.greenZinchoriumGem, 3), 0.5f);
 	}
 	
 	public static void registerOreDictThings() {
