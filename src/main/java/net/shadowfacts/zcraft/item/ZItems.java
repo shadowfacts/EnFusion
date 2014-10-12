@@ -13,6 +13,7 @@ import net.shadowfacts.zcraft.ZCraft;
 import net.shadowfacts.zcraft.config.Configurator;
 import net.shadowfacts.zcraft.gui.ZCreativeTabs;
 import net.shadowfacts.zcraft.item.armor.ZArmor;
+import net.shadowfacts.zcraft.item.tool.ItemLaserPistol;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ZItems {
@@ -29,6 +30,7 @@ public class ZItems {
 	public static ItemArmor zinchoriumChestplate;
 	public static ItemArmor zinchoriumLeggings;
 	public static ItemArmor zinchoriumBoots;
+	public static ItemLaserPistol laserPistol;
 	
 	
 	// Methods
@@ -82,6 +84,10 @@ public class ZItems {
 		zinchoriumBoots.setUnlocalizedName("zinchoriumBoots").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":armor/zinchoriumBoots");
 		
+		laserPistol = new ItemLaserPistol(Configurator.laserPistolItemId);
+		laserPistol.setUnlocalizedName("laserPistol").setCreativeTab(ZCreativeTabs.tabZTools)
+						.setTextureName(ZCraft.modId + ":laserPistol");
+		
 		
 		
 		// Register them
@@ -97,6 +103,7 @@ public class ZItems {
 		GameRegistry.registerItem(zinchoriumChestplate, "zinchoriumChestplate");
 		GameRegistry.registerItem(zinchoriumLeggings, "zinchoriumLeggings");
 		GameRegistry.registerItem(zinchoriumBoots, "zinchoriumBoots");
+		GameRegistry.registerItem(laserPistol, "laserPistol");
 	}
 	
 	public static void load() {

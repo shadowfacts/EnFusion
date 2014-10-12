@@ -14,6 +14,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid=ZCraft.modId, name=ZCraft.displayName, version=ZCraft.version)
@@ -68,6 +69,9 @@ public class ZCraft {
 	public void postInit(FMLPostInitializationEvent event) {
 		ZBlocks.postInit();
 		ZItems.postInit();
+		
+		proxy.registerEntities();
+		proxy.registerRenderInformation();
 	}
 }
 

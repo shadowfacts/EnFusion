@@ -1,7 +1,7 @@
 package net.shadowfacts.zcraft.config;
 
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.Configuration;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Configurator {
 	
@@ -10,6 +10,7 @@ public class Configurator {
 	
 	private static int nextBlockId = 1232;
 	private static int nextItemId = 4288;
+	private static int nextEntityId = 1337;
 	
 	
 	// Config properties
@@ -32,6 +33,10 @@ public class Configurator {
 	public static int zinchoriumChestplateItemId;
 	public static int zinchoriumLeggingsItemId;
 	public static int zinchoriumBootsItemId;
+	public static int laserPistolItemId;
+	
+	// Entity IDs
+	public static int laserBoltEntityId;
 	
 	public static void loadConfig(FMLPreInitializationEvent event) {
 		System.out.println("Loading configuration file");
@@ -62,6 +67,10 @@ public class Configurator {
 		zinchoriumChestplateItemId = config.getItem("ZinchoriumChestplate", getItemId()).getInt();
 		zinchoriumLeggingsItemId = config.getItem("ZinchoriumLeggings", getItemId()).getInt();
 		zinchoriumBootsItemId = config.getItem("ZinchoriumBoots", getItemId()).getInt();
+		laserPistolItemId = config.getItem("LaserPistol", getItemId()).getInt();
+		
+		// Entity IDs
+		laserBoltEntityId = config.get("EntityIDs", "LaserBoltEntity", getEntityId()).getInt();
 		
 		
 		// Save config
@@ -83,7 +92,12 @@ public class Configurator {
 		return id;
 	}
 	
-	
+	private static int getEntityId() {
+		int id = nextEntityId;
+		nextEntityId = nextEntityId + 1;
+		
+		return id;
+	}
 	
 	
 }
