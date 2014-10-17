@@ -6,6 +6,10 @@ import net.shadowfacts.zcraft.gui.ZCreativeTabs;
 import net.shadowfacts.zcraft.item.ZItems;
 import net.shadowfacts.zcraft.recipes.ZRecipes;
 import net.shadowfacts.zcraft.world.generation.OreGenerator;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -13,12 +17,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkMod;
-import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid=ZCraft.modId, name=ZCraft.displayName, version=ZCraft.version)
-@NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class ZCraft {
 	// Mod info
 	public static final String modId = "zcraft";
@@ -33,6 +34,9 @@ public class ZCraft {
 
 	@SidedProxy(clientSide=ZCraft.clientProxyString, serverSide=ZCraft.serverProxyString)
 	public static CommonProxy proxy;
+	
+	// Logger
+	public static final Logger log = LogManager.getLogger(modId);
 	
 	
 	// Custom Creative Tab
@@ -56,7 +60,7 @@ public class ZCraft {
 		ZRecipes.registerOreDictThings(); // OreDict
 		
 		// Ore Generator
-		GameRegistry.registerWorldGenerator(oreGenerator);
+		GameRegistry.registerWorldGenerator(oreGenerator, 3);
 	}
 
 	@EventHandler
