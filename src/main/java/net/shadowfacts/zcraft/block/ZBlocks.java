@@ -18,25 +18,29 @@ public class ZBlocks {
 	
 	// Methods
 	public static void preInit() {
-		greenZinchoriumGemOre = new BlockOre(Configurator.greenZinchoriumGemOreBlockId);
-		greenZinchoriumGemOre.setUnlocalizedName("greenZinchoriumGemOre").setCreativeTab(ZCreativeTabs.tabZCore)
-								.setHardness(1.0f).setStepSound(Block.soundStoneFootstep)
-								.setTextureName(ZCraft.modId + ":greenZinchoriumGemOre");
+		greenZinchoriumGemOre = new BlockOre();
+		greenZinchoriumGemOre.setBlockName("greenZinchoriumGemOre").setCreativeTab(ZCreativeTabs.tabZCore)
+								.setHardness(1.0f).setStepSound(Block.soundTypeStone)
+								.setBlockTextureName(ZCraft.modId + ":greenZinchoriumGemOre")
+								.setHarvestLevel("pickaxe", 1);
 		
-		greenZinchoriumLightActive = new BlockZinchoriumLight(Configurator.greenZinchoriumLightActiveBlockId, true);
-		greenZinchoriumLightActive.setUnlocalizedName("greenZinchoriumLightActive")
-								.setTextureName(ZCraft.modId + ":zinchoriumLight/green")
-								.setHardness(1.0f).setStepSound(Block.soundMetalFootstep);
+		greenZinchoriumLightActive = new BlockZinchoriumLight(true);
+		greenZinchoriumLightActive.setBlockName("greenZinchoriumLightActive")
+								.setBlockTextureName(ZCraft.modId + ":zinchoriumLight/green")
+								.setHardness(1.0f).setStepSound(Block.soundTypeMetal)
+								.setHarvestLevel("pickaxe", 2);;
 		
-		greenZinchoriumLightIdle = new BlockZinchoriumLight(Configurator.greenZinchoriumLightIdleBlockId, false);
-		greenZinchoriumLightIdle.setUnlocalizedName("greenZinchoriumLightIdle")
-								.setCreativeTab(ZCreativeTabs.tabZCore).setTextureName(ZCraft.modId + ":zinchoriumLight/green")
-								.setHardness(1.0f).setStepSound(Block.soundMetalFootstep);
+		greenZinchoriumLightIdle = new BlockZinchoriumLight(false);
+		greenZinchoriumLightIdle.setBlockName("greenZinchoriumLightIdle")
+								.setCreativeTab(ZCreativeTabs.tabZCore).setBlockTextureName(ZCraft.modId + ":zinchoriumLight/green")
+								.setHardness(1.0f).setStepSound(Block.soundTypeMetal)
+								.setHarvestLevel("pickaxe", 2);;
 		
-		oreCopper = new BlockOre(Configurator.oreCopperBlockId);
-		oreCopper.setUnlocalizedName("oreCopper")
-				.setTextureName(ZCraft.modId + ":oreCopper").setCreativeTab(ZCreativeTabs.tabZCore)
-				.setHardness(1.5f).setStepSound(Block.soundStoneFootstep);
+		oreCopper = new BlockOre();
+		oreCopper.setBlockName("oreCopper")
+				.setBlockTextureName(ZCraft.modId + ":oreCopper").setCreativeTab(ZCreativeTabs.tabZCore)
+				.setHardness(1.5f).setStepSound(Block.soundTypeStone)
+				.setHarvestLevel("pickaxe", 1);;
 		
 		
 		
@@ -45,14 +49,6 @@ public class ZBlocks {
 		GameRegistry.registerBlock(greenZinchoriumLightActive, "greenZinchoriumLightActive");
 		GameRegistry.registerBlock(greenZinchoriumLightIdle, "greenZinchoriumLightIdle");
 		GameRegistry.registerBlock(oreCopper, "oreCopper");
-		
-		
-		
-		// Set effective tools
-		MinecraftForge.setBlockHarvestLevel(greenZinchoriumGemOre, "pickaxe", 1);
-		MinecraftForge.setBlockHarvestLevel(greenZinchoriumLightActive, "pickaxe", 2);
-		MinecraftForge.setBlockHarvestLevel(greenZinchoriumLightIdle, "pickaxe", 2);
-		MinecraftForge.setBlockHarvestLevel(oreCopper, "pickaxe", 1);
 	}
 	
 	public static void load() {

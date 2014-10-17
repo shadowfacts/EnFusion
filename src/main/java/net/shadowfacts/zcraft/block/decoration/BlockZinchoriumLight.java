@@ -14,12 +14,12 @@ public class BlockZinchoriumLight extends BlockRedstoneLight {
 	/** Whether this lamp block is the powered version. */
     private final boolean powered;
 
-    public BlockZinchoriumLight(int par1, boolean par2)
+    public BlockZinchoriumLight(boolean par1)
     {
-        super(par1, par2);
-        this.powered = par2;
+        super(par1);
+        this.powered = par1;
 
-        if (par2)
+        if (par1)
         {
             this.setLightValue(1.0F);
         }
