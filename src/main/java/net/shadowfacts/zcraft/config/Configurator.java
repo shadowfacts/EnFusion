@@ -36,6 +36,15 @@ public class Configurator {
 	public static int zinchoriumBootsItemId;
 	public static int laserPistolItemId;
 	public static int miningLaserItemId;
+	public static int copperSwordItemId;
+	public static int copperPickaxeItemId;
+	public static int copperShovelItemId;
+	public static int copperAxeItemId;
+	public static int copperHoeItemId;
+	public static int copperHelmetItemId;
+	public static int copperChestplateItemId;
+	public static int copperLeggingsItemId;
+	public static int copperBootsItemId;
 	
 	// Entity IDs
 	public static int laserBoltEntityId;
@@ -72,6 +81,15 @@ public class Configurator {
 		zinchoriumBootsItemId = config.getItem("ZinchoriumBoots", getItemId()).getInt();
 		laserPistolItemId = config.getItem("LaserPistol", getItemId()).getInt();
 		miningLaserItemId = config.getItem("MiningLaser", getItemId()).getInt();
+		copperSwordItemId = config.getItem("CopperSword", getItemId()).getInt();
+		copperPickaxeItemId = config.getItem("CopperPickaxe", getItemId()).getInt();
+		copperShovelItemId = config.getItem("CopperShovel", getItemId()).getInt();
+		copperAxeItemId = config.getItem("CopperAxe", getItemId()).getInt();
+		copperHoeItemId = config.getItem("CopperHoe", getItemId()).getInt();
+		copperHelmetItemId = config.getItem("CopperHelmet", getItemId()).getInt();
+		copperChestplateItemId = config.getItem("CopperChestplate", getItemId()).getInt();
+		copperLeggingsItemId = config.getItem("CopperLeggings", getItemId()).getInt();
+		copperBootsItemId = config.getItem("CopperBoots", getItemId()).getInt();
 		
 		// Entity IDs
 		laserBoltEntityId = config.get("EntityIDs", "LaserBoltEntity", getEntityId()).getInt();

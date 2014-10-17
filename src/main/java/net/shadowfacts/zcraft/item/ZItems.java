@@ -22,17 +22,26 @@ public class ZItems {
 	public static Item greenZinchoriumGem;
 	public static Item lightBulb;
 	public static Item ingotCopper;
-	public static Item zinchoriumSword;
-	public static Item zinchoriumPickaxe;
-	public static Item zinchoriumAxe;
-	public static Item zinchoriumShovel;
-	public static Item zinchoriumHoe;
-	public static ItemArmor zinchoriumHelmet;
-	public static ItemArmor zinchoriumChestplate;
-	public static ItemArmor zinchoriumLeggings;
-	public static ItemArmor zinchoriumBoots;
+	public static ItemSword zinchoriumSword;
+	public static ItemPickaxe zinchoriumPickaxe;
+	public static ItemAxe zinchoriumAxe;
+	public static ItemSpade zinchoriumShovel;
+	public static ItemHoe zinchoriumHoe;
+	public static ZArmor zinchoriumHelmet;
+	public static ZArmor zinchoriumChestplate;
+	public static ZArmor zinchoriumLeggings;
+	public static ZArmor zinchoriumBoots;
 	public static ItemLaserPistol laserPistol;
 	public static ItemMiningLaser miningLaser;
+	public static ItemSword copperSword;
+	public static ItemPickaxe copperPickaxe;
+	public static ItemSpade copperShovel;
+	public static ItemAxe copperAxe;
+	public static ItemHoe copperHoe;
+	public static ZArmor copperHelmet;
+	public static ZArmor copperChestplate;
+	public static ZArmor copperLeggings;
+	public static ZArmor copperBoots;
 	
 	
 	// Methods
@@ -50,25 +59,25 @@ public class ZItems {
 		ingotCopper.setUnlocalizedName("ingotCopper").setTextureName(ZCraft.modId + ":ingotCopper")
 					.setCreativeTab(ZCreativeTabs.tabZCore);
 		
-		zinchoriumSword = new ItemSword(Configurator.zinchoriumSwordItemId, EnumToolMaterial.IRON);
+		zinchoriumSword = new ItemSword(Configurator.zinchoriumSwordItemId, EnumToolMaterial.EMERALD);
 		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(ZCreativeTabs.tabZTools)
-						.setTextureName(ZCraft.modId + ":zinchoriumGemSword");
+						.setTextureName(ZCraft.modId + ":tools/zinchoriumGemSword");
 		
-		zinchoriumPickaxe = new ItemPickaxe(Configurator.zinchoriumPickaxeItemId, EnumToolMaterial.IRON);
+		zinchoriumPickaxe = new ItemPickaxe(Configurator.zinchoriumPickaxeItemId, EnumToolMaterial.EMERALD);
 		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(ZCreativeTabs.tabZTools)
-							.setTextureName(ZCraft.modId + ":zinchoriumGemPickaxe");
+							.setTextureName(ZCraft.modId + ":tools/zinchoriumGemPickaxe");
 		
-		zinchoriumAxe = new ItemAxe(Configurator.zinchoriumAxeItemId, EnumToolMaterial.IRON);
+		zinchoriumAxe = new ItemAxe(Configurator.zinchoriumAxeItemId, EnumToolMaterial.EMERALD);
 		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(ZCreativeTabs.tabZTools)
-						.setTextureName(ZCraft.modId + ":zinchoriumGemAxe");
+						.setTextureName(ZCraft.modId + ":tools/zinchoriumGemAxe");
 		
-		zinchoriumShovel = new ItemSpade(Configurator.zinchoriumShovelItemId, EnumToolMaterial.IRON);
+		zinchoriumShovel = new ItemSpade(Configurator.zinchoriumShovelItemId, EnumToolMaterial.EMERALD);
 		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(ZCreativeTabs.tabZTools)
-						.setTextureName(ZCraft.modId + ":zinchoriumGemShovel");
+						.setTextureName(ZCraft.modId + ":tools/zinchoriumGemShovel");
 		
-		zinchoriumHoe = new ItemHoe(Configurator.zinchoriumHoeItemId, EnumToolMaterial.IRON);
+		zinchoriumHoe = new ItemHoe(Configurator.zinchoriumHoeItemId, EnumToolMaterial.EMERALD);
 		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(ZCreativeTabs.tabZTools)
-						.setTextureName(ZCraft.modId + ":zinchoriumGemHoe");
+						.setTextureName(ZCraft.modId + ":tools/zinchoriumGemHoe");
 		
 		zinchoriumHelmet = new ZArmor(Configurator.zinchoriumHelmetItemId, EnumArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 0, "zinchorium");
 		zinchoriumHelmet.setUnlocalizedName("zinchoriumHelmet").setCreativeTab(ZCreativeTabs.tabZTools)
@@ -88,11 +97,31 @@ public class ZItems {
 		
 		laserPistol = new ItemLaserPistol(Configurator.laserPistolItemId);
 		laserPistol.setUnlocalizedName("laserPistol").setCreativeTab(ZCreativeTabs.tabZTools)
-						.setTextureName(ZCraft.modId + ":laserPistol");
+						.setTextureName(ZCraft.modId + ":tools/laserPistol");
 		
 		miningLaser = new ItemMiningLaser(Configurator.miningLaserItemId);
 		miningLaser.setUnlocalizedName("miningLaser").setCreativeTab(ZCreativeTabs.tabZTools)
-					.setTextureName(ZCraft.modId + ":miningLaser");
+					.setTextureName(ZCraft.modId + ":tools/miningLaser");
+		
+		copperSword = new ItemSword(Configurator.copperSwordItemId, EnumToolMaterial.IRON);
+		copperSword.setUnlocalizedName("copperSword").setCreativeTab(ZCreativeTabs.tabZTools)
+					.setTextureName(ZCraft.modId + ":tools/copperSword");
+		
+		copperPickaxe = new ItemPickaxe(Configurator.copperPickaxeItemId, EnumToolMaterial.IRON);
+		copperPickaxe.setUnlocalizedName("copperPickaxe").setCreativeTab(ZCreativeTabs.tabZTools)
+					.setTextureName(ZCraft.modId + ":tools/copperPickaxe");
+		
+		copperShovel = new ItemSpade(Configurator.copperShovelItemId, EnumToolMaterial.IRON);
+		copperShovel.setUnlocalizedName("copperShovel").setCreativeTab(ZCreativeTabs.tabZTools)
+					.setTextureName(ZCraft.modId + ":tools/copperShovel");
+		
+		copperAxe = new ItemAxe(Configurator.copperAxeItemId, EnumToolMaterial.IRON);
+		copperAxe.setUnlocalizedName("copperAxe").setCreativeTab(ZCreativeTabs.tabZTools)
+					.setTextureName(ZCraft.modId + ":tools/copperAxe");
+		
+		copperHoe = new ItemHoe(Configurator.copperHoeItemId, EnumToolMaterial.IRON);
+		copperHoe.setUnlocalizedName("copperHoe").setCreativeTab(ZCreativeTabs.tabZTools)
+					.setTextureName(ZCraft.modId + ":tools/copperHoe");
 		
 		
 		
@@ -111,6 +140,15 @@ public class ZItems {
 		GameRegistry.registerItem(zinchoriumBoots, "zinchoriumBoots");
 		GameRegistry.registerItem(laserPistol, "laserPistol");
 		GameRegistry.registerItem(miningLaser, "miningLaser");
+		GameRegistry.registerItem(copperSword, "copperSword");
+		GameRegistry.registerItem(copperPickaxe, "copperPickaxe");
+		GameRegistry.registerItem(copperShovel, "copperShovel");
+		GameRegistry.registerItem(copperAxe, "copperAxe");
+		GameRegistry.registerItem(copperHoe, "copperHoe");
+//		GameRegistry.registerItem(copperHelmet, "copperHelmet");
+//		GameRegistry.registerItem(copperChestplate, "copperChestplate");
+//		GameRegistry.registerItem(copperLeggings, "copperLeggings");
+//		GameRegistry.registerItem(copperBoots, "copperBoots");
 	}
 	
 	public static void load() {
