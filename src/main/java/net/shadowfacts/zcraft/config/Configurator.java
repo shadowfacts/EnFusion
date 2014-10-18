@@ -1,7 +1,7 @@
 package net.shadowfacts.zcraft.config;
 
-import net.minecraftforge.common.Configuration;
-import net.shadowfacts.zcraft.Log;
+import net.minecraftforge.common.config.Configuration;
+import net.shadowfacts.zcraft.ZCraft;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Configurator {
@@ -15,43 +15,12 @@ public class Configurator {
 	
 	
 	// Config properties
-	// Block IDs
-	public static int greenZinchoriumGemOreBlockId;
-	public static int greenZinchoriumLightIdleBlockId;
-	public static int greenZinchoriumLightActiveBlockId;
-	public static int oreCopperBlockId;
-	
-	// Item IDs
-	public static int greenZinchoriumGemItemId;
-	public static int lightBulbItemId;
-	public static int ingotCopperItemId;
-	public static int zinchoriumSwordItemId;
-	public static int zinchoriumPickaxeItemId;
-	public static int zinchoriumAxeItemId;
-	public static int zinchoriumShovelItemId;
-	public static int zinchoriumHoeItemId;
-	public static int zinchoriumHelmetItemId;
-	public static int zinchoriumChestplateItemId;
-	public static int zinchoriumLeggingsItemId;
-	public static int zinchoriumBootsItemId;
-	public static int laserPistolItemId;
-	public static int miningLaserItemId;
-	public static int copperSwordItemId;
-	public static int copperPickaxeItemId;
-	public static int copperShovelItemId;
-	public static int copperAxeItemId;
-	public static int copperHoeItemId;
-	public static int copperHelmetItemId;
-	public static int copperChestplateItemId;
-	public static int copperLeggingsItemId;
-	public static int copperBootsItemId;
-	
 	// Entity IDs
 	public static int laserBoltEntityId;
 	public static int miningLaserEntityId;
 	
 	public static void loadConfig(FMLPreInitializationEvent event) {
-		Log.info("Loading configuration file");
+		ZCraft.log.info("Loading configuration file");
 		
 		
 		config = new Configuration(event.getSuggestedConfigurationFile());
@@ -59,37 +28,6 @@ public class Configurator {
 		
 		
 		// Load properties
-		// Block IDs
-		greenZinchoriumGemOreBlockId = config.getBlock("GreenZinchoriumGemOre", getBlockId()).getInt();
-		greenZinchoriumLightActiveBlockId = config.getBlock("GreenZinchoriumLightActive",  getBlockId()).getInt();
-		greenZinchoriumLightIdleBlockId = config.getBlock("GreenZinchoriumLightIdle",  getBlockId()).getInt();
-		oreCopperBlockId = config.getBlock("OreCopper", getBlockId()).getInt();
-		
-		
-		// Item IDs
-		greenZinchoriumGemItemId = config.getItem("GreenZinchoriumGem",  getItemId()).getInt();
-		lightBulbItemId = config.getItem("LightBulb",  getItemId()).getInt();
-		ingotCopperItemId = config.getItem("IngotCopper", getItemId()).getInt();
-		zinchoriumSwordItemId = config.getItem("ZinchoriumGemSword", getItemId()).getInt();
-		zinchoriumPickaxeItemId = config.getItem("ZinchoriumGemPickaxe", getItemId()).getInt();
-		zinchoriumAxeItemId = config.getItem("ZinchoriumGemAxe", getItemId()).getInt();
-		zinchoriumShovelItemId = config.getItem("ZinchoriumGemShovel", getItemId()).getInt();
-		zinchoriumHoeItemId = config.getItem("ZinchoriumGemHoe", getItemId()).getInt();
-		zinchoriumHelmetItemId = config.getItem("ZinchoriumHelmet", getItemId()).getInt();
-		zinchoriumChestplateItemId = config.getItem("ZinchoriumChestplate", getItemId()).getInt();
-		zinchoriumLeggingsItemId = config.getItem("ZinchoriumLeggings", getItemId()).getInt();
-		zinchoriumBootsItemId = config.getItem("ZinchoriumBoots", getItemId()).getInt();
-		laserPistolItemId = config.getItem("LaserPistol", getItemId()).getInt();
-		miningLaserItemId = config.getItem("MiningLaser", getItemId()).getInt();
-		copperSwordItemId = config.getItem("CopperSword", getItemId()).getInt();
-		copperPickaxeItemId = config.getItem("CopperPickaxe", getItemId()).getInt();
-		copperShovelItemId = config.getItem("CopperShovel", getItemId()).getInt();
-		copperAxeItemId = config.getItem("CopperAxe", getItemId()).getInt();
-		copperHoeItemId = config.getItem("CopperHoe", getItemId()).getInt();
-		copperHelmetItemId = config.getItem("CopperHelmet", getItemId()).getInt();
-		copperChestplateItemId = config.getItem("CopperChestplate", getItemId()).getInt();
-		copperLeggingsItemId = config.getItem("CopperLeggings", getItemId()).getInt();
-		copperBootsItemId = config.getItem("CopperBoots", getItemId()).getInt();
 		
 		// Entity IDs
 		laserBoltEntityId = config.get("EntityIDs", "LaserBoltEntity", getEntityId()).getInt();
