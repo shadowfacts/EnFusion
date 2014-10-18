@@ -9,8 +9,8 @@ import net.shadowfacts.zcraft.item.ZItems;
 
 public class ItemLaserPistol extends Item {
 
-	public ItemLaserPistol(int par1) {
-		super(par1);
+	public ItemLaserPistol() {
+		super();
 		this.setMaxStackSize(1);
 		this.setMaxDamage(512);
 	}
