@@ -2,6 +2,8 @@ package net.shadowfacts.zcraft.gui;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.shadowfacts.zcraft.item.ZItems;
 import cpw.mods.fml.relauncher.Side;
@@ -12,24 +14,24 @@ public class ZCreativeTabs {
 	public static CreativeTabs tabZCore = new CreativeTabs("ZCraftCore") {
 		@Override
 		@SideOnly(Side.CLIENT)
-		public ItemStack getIconItemStack() {
-			return new ItemStack(ZItems.greenZinchoriumGem, 1);
+		public Item getTabIconItem() {
+			return ZItems.greenZinchoriumGem;
 		}
 	};
 	
 	public static CreativeTabs tabZMachines = new CreativeTabs("ZCraftMachines") {
 		@Override
 		@SideOnly(Side.CLIENT)
-		public ItemStack getIconItemStack() {
-			return new ItemStack(Block.furnaceBurning, 1);
+		public Item getTabIconItem() {
+			return Item.getItemFromBlock(Blocks.furnace);
 		}
 	};
 	
 	public static CreativeTabs tabZTools = new CreativeTabs("ZCraftTools") {
 		@Override
 		@SideOnly(Side.CLIENT)
-		public ItemStack getIconItemStack() {
-			return new ItemStack(ZItems.zinchoriumPickaxe, 1);
+		public Item getTabIconItem() {
+			return ZItems.zinchoriumSword;
 		}
 	};
 	
