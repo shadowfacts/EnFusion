@@ -1,21 +1,17 @@
 package net.shadowfacts.zcraft.item;
 
-import net.minecraft.item.EnumArmorMaterial;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemSword;
 import net.shadowfacts.zcraft.ZCraft;
-import net.shadowfacts.zcraft.config.Configurator;
 import net.shadowfacts.zcraft.gui.ZCreativeTabs;
 import net.shadowfacts.zcraft.item.armor.ZArmor;
 import net.shadowfacts.zcraft.item.tool.ItemLaserPistol;
-import net.shadowfacts.zcraft.item.tool.ItemMiningLaser;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ZItems {
@@ -80,19 +76,19 @@ public class ZItems {
 		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":tools/zinchoriumGemHoe");
 		
-		zinchoriumHelmet = new ZArmor(EnumArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 0, "zinchorium");
+		zinchoriumHelmet = new ZArmor(ArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 0, "zinchorium");
 		zinchoriumHelmet.setUnlocalizedName("zinchoriumHelmet").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":armor/zinchoriumHelmet");
 		
-		zinchoriumChestplate = new ZArmor(EnumArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 1, "zinchorium");
+		zinchoriumChestplate = new ZArmor(ArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 1, "zinchorium");
 		zinchoriumChestplate.setUnlocalizedName("zinchoriumChestplate").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":armor/zinchoriumChestplate");
 		
-		zinchoriumLeggings = new ZArmor(EnumArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 2, "zinchorium");
+		zinchoriumLeggings = new ZArmor(ArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 2, "zinchorium");
 		zinchoriumLeggings.setUnlocalizedName("zinchoriumLeggings").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":armor/zinchoriumLeggings");
 		
-		zinchoriumBoots = new ZArmor(EnumArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 3, "zinchorium");
+		zinchoriumBoots = new ZArmor(ArmorMaterial.DIAMOND, ZCraft.proxy.getArmorIndex("zinchorium"), 3, "zinchorium");
 		zinchoriumBoots.setUnlocalizedName("zinchoriumBoots").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":armor/zinchoriumBoots");
 		
