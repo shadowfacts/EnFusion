@@ -1,10 +1,8 @@
 package net.shadowfacts.zcraft.block;
 
 import net.minecraft.block.Block;
-import net.minecraftforge.common.MinecraftForge;
 import net.shadowfacts.zcraft.ZCraft;
 import net.shadowfacts.zcraft.block.decoration.BlockZinchoriumLight;
-import net.shadowfacts.zcraft.config.Configurator;
 import net.shadowfacts.zcraft.gui.ZCreativeTabs;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -40,7 +38,7 @@ public class ZBlocks {
 		oreCopper.setBlockName("oreCopper")
 				.setBlockTextureName(ZCraft.modId + ":oreCopper").setCreativeTab(ZCreativeTabs.tabZCore)
 				.setHardness(1.5f).setStepSound(Block.soundTypeStone)
-				.setHarvestLevel("pickaxe", 1);;
+				.setHarvestLevel("pickaxe", 1);
 		
 		
 		
