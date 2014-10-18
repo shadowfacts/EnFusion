@@ -12,6 +12,8 @@ import net.shadowfacts.zcraft.ZCraft;
 import net.shadowfacts.zcraft.gui.ZCreativeTabs;
 import net.shadowfacts.zcraft.item.armor.ZArmor;
 import net.shadowfacts.zcraft.item.tool.ItemLaserPistol;
+import net.shadowfacts.zcraft.item.tool.ItemZAxe;
+import net.shadowfacts.zcraft.item.tool.ItemZPickaxe;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ZItems {
@@ -60,11 +62,11 @@ public class ZItems {
 		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":tools/zinchoriumGemSword");
 		
-		zinchoriumPickaxe = new ItemPickaxe(ToolMaterial.EMERALD);
+		zinchoriumPickaxe = new ItemZPickaxe(ToolMaterial.EMERALD);
 		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(ZCreativeTabs.tabZTools)
 							.setTextureName(ZCraft.modId + ":tools/zinchoriumGemPickaxe");
 		
-		zinchoriumAxe = new ItemAxe(ToolMaterial.EMERALD);
+		zinchoriumAxe = new ItemZAxe(ToolMaterial.EMERALD);
 		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(ZCreativeTabs.tabZTools)
 						.setTextureName(ZCraft.modId + ":tools/zinchoriumGemAxe");
 		
