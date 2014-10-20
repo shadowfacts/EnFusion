@@ -3,6 +3,8 @@ tile.greenZinchoriumGemOre.name=Zinchorium Gem Ore (Green)
 tile.greenZinchoriumLightActive.name=Zinchorium Light (Green)
 tile.greenZinchoriumLightIdle.name=Zinchorium Light (Green)
 tile.oreCopper.name=Copper Ore
+tile.fluxFurnaceIdle.name=Flux Furnace
+tile.fluxFurnaceActive.name=Flux Furnace
 
 # Items
 item.greenZinchoriumGem.name=Zinchorium Gem (Green)

@@ -65,6 +65,8 @@ public class ZCraft {
 
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
+		proxy.registerTileEntities();
+		
 		ZBlocks.load();
 		ZItems.load();
 	}

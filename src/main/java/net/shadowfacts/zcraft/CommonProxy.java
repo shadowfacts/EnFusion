@@ -1,6 +1,8 @@
 package net.shadowfacts.zcraft;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.shadowfacts.zcraft.entity.EntityLaserBolt;
+import net.shadowfacts.zcraft.tileentity.TileEntityFluxFurnace;
 
 public class CommonProxy {
 	
@@ -17,6 +19,10 @@ public class CommonProxy {
 	}
 
 	public void registerRenderInformation() {
+	}
+	
+	public void registerTileEntities() {
+		GameRegistry.registerTileEntity(TileEntityFluxFurnace.class, TileEntityFluxFurnace.TEId);
 	}
 	
 }
