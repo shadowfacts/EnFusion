@@ -13,8 +13,8 @@ public class ZBlocks {
 	public static BlockZinchoriumLight greenZinchoriumLightActive;
 	public static BlockZinchoriumLight greenZinchoriumLightIdle;
 	public static BlockOre oreCopper;
-	public static BlockFluxFurnace fluxFurnaceIdle;
-	public static BlockFluxFurnace fluxFurnaceActive;
+//	public static BlockFluxFurnace fluxFurnaceIdle;
+//	public static BlockFluxFurnace fluxFurnaceActive;
 
 	
 	// Methods
@@ -43,15 +43,15 @@ public class ZBlocks {
 				.setHardness(1.5f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
 		
-		fluxFurnaceIdle = new BlockFluxFurnace(false);
-		fluxFurnaceIdle.setBlockName("fluxFurnaceIdle").setCreativeTab(ZCreativeTabs.tabZMachines)
-				.setHardness(0.9f).setStepSound(Block.soundTypeMetal)
-				.setHarvestLevel("pickaxe", 2);
-		
-		fluxFurnaceActive = new BlockFluxFurnace(true);
-		fluxFurnaceActive.setBlockName("fluxFurnaceActive")
-						.setHardness(0.9f).setStepSound(Block.soundTypeMetal)
-						.setHarvestLevel("pickaxe", 2);
+//		fluxFurnaceIdle = new BlockFluxFurnace(false);
+//		fluxFurnaceIdle.setBlockName("fluxFurnaceIdle").setCreativeTab(ZCreativeTabs.tabZMachines)
+//				.setHardness(0.9f).setStepSound(Block.soundTypeMetal)
+//				.setHarvestLevel("pickaxe", 2);
+//		
+//		fluxFurnaceActive = new BlockFluxFurnace(true);
+//		fluxFurnaceActive.setBlockName("fluxFurnaceActive")
+//						.setHardness(0.9f).setStepSound(Block.soundTypeMetal)
+//						.setHarvestLevel("pickaxe", 2);
 		
 		
 		
@@ -60,8 +60,8 @@ public class ZBlocks {
 		GameRegistry.registerBlock(greenZinchoriumLightActive, "greenZinchoriumLightActive");
 		GameRegistry.registerBlock(greenZinchoriumLightIdle, "greenZinchoriumLightIdle");
 		GameRegistry.registerBlock(oreCopper, "oreCopper");
-		GameRegistry.registerBlock(fluxFurnaceIdle, "fluxFurnaceIdle");
-		GameRegistry.registerBlock(fluxFurnaceActive, "fluxFurnaceActive");
+//		GameRegistry.registerBlock(fluxFurnaceIdle, "fluxFurnaceIdle");
+//		GameRegistry.registerBlock(fluxFurnaceActive, "fluxFurnaceActive");
 	}
 	
 	public static void load() {

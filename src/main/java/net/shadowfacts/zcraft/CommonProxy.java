@@ -22,7 +22,7 @@ public class CommonProxy {
 	}
 	
 	public void registerTileEntities() {
-		GameRegistry.registerTileEntity(TileEntityFluxFurnace.class, TileEntityFluxFurnace.TEId);
+//		GameRegistry.registerTileEntity(TileEntityFluxFurnace.class, TileEntityFluxFurnace.TEId);
 	}
 	
 }
