@@ -3,7 +3,6 @@ package net.shadowfacts.zcraft.block;
 import net.minecraft.block.Block;
 import net.shadowfacts.zcraft.ZCraft;
 import net.shadowfacts.zcraft.block.decoration.BlockZinchoriumLight;
-import net.shadowfacts.zcraft.block.machine.BlockFluxFurnace;
 import net.shadowfacts.zcraft.gui.ZCreativeTabs;
 import cpw.mods.fml.common.registry.GameRegistry;
 
