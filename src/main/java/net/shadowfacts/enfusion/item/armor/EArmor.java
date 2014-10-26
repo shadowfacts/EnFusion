@@ -5,11 +5,11 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.shadowfacts.enfusion.EnFusion;
 
-public class ZArmor extends ItemArmor {
+public class EArmor extends ItemArmor {
 
 	private String armorString;
 	
-	public ZArmor(ArmorMaterial par2ArmorMaterial, int par3, int par4, String armorString) {
+	public EArmor(ArmorMaterial par2ArmorMaterial, int par3, int par4, String armorString) {
 		super(par2ArmorMaterial, par3, par4);
 		this.armorString = armorString;
 	}
