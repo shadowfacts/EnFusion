@@ -30,7 +30,7 @@ public class OreGenerator implements IWorldGenerator {
 	
 	// Generate stuff for the overworld
 	private void generateOverworld(World world, Random random, int x, int z) {
-		this.addOreSpawn(EBlocks.greenZinchoriumGemOre, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 4, 42);
+		this.addOreSpawn(EBlocks.zinchoriumOre, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 4, 42);
 		this.addOreSpawn(EBlocks.oreCopper, world, random, x, z, 16, 16, 5 + random.nextInt(2), 5, 0, 70);
 	}
 	

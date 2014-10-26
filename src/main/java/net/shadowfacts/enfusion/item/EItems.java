@@ -19,6 +19,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class EItems {
 	// Items
+	public static Item zinchoriumDust;
 	public static Item zinchoriumAlloyIngot;
 	public static Item lightBulb;
 	public static Item ingotCopper;
@@ -38,65 +39,70 @@ public class EItems {
 	// Methods
 	public static void preInit() {
 		// Create the items
+		zinchoriumDust = new Item();
+		zinchoriumDust.setUnlocalizedName("zinchoriumDust").setTextureName(EnFusion.modId + ":zinchoriumDust")
+						.setCreativeTab(ECreativeTabs.tabCore);
+		
 		zinchoriumAlloyIngot = new Item();
 		zinchoriumAlloyIngot.setUnlocalizedName("zinchoriumAlloyIngot").setTextureName(EnFusion.modId + ":zinchoriumAlloyIngot")
-						.setCreativeTab(ECreativeTabs.tabZCore);
+						.setCreativeTab(ECreativeTabs.tabCore);
 		
 		lightBulb = new Item();
 		lightBulb.setUnlocalizedName("lightBulb").setTextureName(EnFusion.modId + ":lightBulb")
-				.setCreativeTab(ECreativeTabs.tabZCore);
+				.setCreativeTab(ECreativeTabs.tabCore);
 		
 		ingotCopper = new Item();
 		ingotCopper.setUnlocalizedName("ingotCopper").setTextureName(EnFusion.modId + ":ingotCopper")
-					.setCreativeTab(ECreativeTabs.tabZCore);
+					.setCreativeTab(ECreativeTabs.tabCore);
 		
 		zinchoriumSword = new ItemSword(ToolMaterial.EMERALD);
-		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(ECreativeTabs.tabZTools)
+		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(ECreativeTabs.tabTools)
 						.setTextureName(EnFusion.modId + ":tools/zinchoriumGemSword");
 		
 		zinchoriumPickaxe = new ItemEPickaxe(ToolMaterial.EMERALD);
-		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(ECreativeTabs.tabZTools)
+		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(ECreativeTabs.tabTools)
 							.setTextureName(EnFusion.modId + ":tools/zinchoriumGemPickaxe");
 		
 		zinchoriumAxe = new ItemEAxe(ToolMaterial.EMERALD);
-		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(ECreativeTabs.tabZTools)
+		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(ECreativeTabs.tabTools)
 						.setTextureName(EnFusion.modId + ":tools/zinchoriumGemAxe");
 		
 		zinchoriumShovel = new ItemSpade(ToolMaterial.EMERALD);
-		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(ECreativeTabs.tabZTools)
+		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(ECreativeTabs.tabTools)
 						.setTextureName(EnFusion.modId + ":tools/zinchoriumGemShovel");
 		
 		zinchoriumHoe = new ItemHoe(ToolMaterial.EMERALD);
-		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(ECreativeTabs.tabZTools)
+		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(ECreativeTabs.tabTools)
 						.setTextureName(EnFusion.modId + ":tools/zinchoriumGemHoe");
 		
 		zinchoriumHelmet = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 0, "zinchorium");
-		zinchoriumHelmet.setUnlocalizedName("zinchoriumHelmet").setCreativeTab(ECreativeTabs.tabZTools)
+		zinchoriumHelmet.setUnlocalizedName("zinchoriumHelmet").setCreativeTab(ECreativeTabs.tabTools)
 						.setTextureName(EnFusion.modId + ":armor/zinchoriumHelmet");
 		
 		zinchoriumChestplate = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 1, "zinchorium");
-		zinchoriumChestplate.setUnlocalizedName("zinchoriumChestplate").setCreativeTab(ECreativeTabs.tabZTools)
+		zinchoriumChestplate.setUnlocalizedName("zinchoriumChestplate").setCreativeTab(ECreativeTabs.tabTools)
 						.setTextureName(EnFusion.modId + ":armor/zinchoriumChestplate");
 		
 		zinchoriumLeggings = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 2, "zinchorium");
-		zinchoriumLeggings.setUnlocalizedName("zinchoriumLeggings").setCreativeTab(ECreativeTabs.tabZTools)
+		zinchoriumLeggings.setUnlocalizedName("zinchoriumLeggings").setCreativeTab(ECreativeTabs.tabTools)
 						.setTextureName(EnFusion.modId + ":armor/zinchoriumLeggings");
 		
 		zinchoriumBoots = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 3, "zinchorium");
-		zinchoriumBoots.setUnlocalizedName("zinchoriumBoots").setCreativeTab(ECreativeTabs.tabZTools)
+		zinchoriumBoots.setUnlocalizedName("zinchoriumBoots").setCreativeTab(ECreativeTabs.tabTools)
 						.setTextureName(EnFusion.modId + ":armor/zinchoriumBoots");
 		
 		laserPistol = new ItemLaserPistol();
-		laserPistol.setUnlocalizedName("laserPistol").setCreativeTab(ECreativeTabs.tabZTools)
+		laserPistol.setUnlocalizedName("laserPistol").setCreativeTab(ECreativeTabs.tabTools)
 						.setTextureName(EnFusion.modId + ":tools/laserPistol");
 		
 		miningLaser = new ItemMiningLaser();
-		miningLaser.setUnlocalizedName("miningLaser").setCreativeTab(ECreativeTabs.tabZTools)
+		miningLaser.setUnlocalizedName("miningLaser").setCreativeTab(ECreativeTabs.tabTools)
 					.setTextureName(EnFusion.modId + ":tools/miningLaser");
 		
 		
 		
 		// Register them
+		GameRegistry.registerItem(zinchoriumDust, "zinchoriumDust");
 		GameRegistry.registerItem(zinchoriumAlloyIngot, "zinchoriumAlloyIngot");
 		GameRegistry.registerItem(lightBulb, "lightBulb");
 		GameRegistry.registerItem(ingotCopper, "ingotCopper");
