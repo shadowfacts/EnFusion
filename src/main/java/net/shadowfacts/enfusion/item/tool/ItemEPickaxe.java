@@ -2,9 +2,9 @@ package net.shadowfacts.enfusion.item.tool;
 
 import net.minecraft.item.ItemPickaxe;
 
-public class ItemZPickaxe extends ItemPickaxe {
+public class ItemEPickaxe extends ItemPickaxe {
 
-	public ItemZPickaxe(ToolMaterial toolMaterial) {
+	public ItemEPickaxe(ToolMaterial toolMaterial) {
 		super(toolMaterial);
 	}
 
