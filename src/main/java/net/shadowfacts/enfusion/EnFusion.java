@@ -1,8 +1,8 @@
 package net.shadowfacts.enfusion;
 
 import net.shadowfacts.enfusion.block.ZBlocks;
+import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.config.Configurator;
-import net.shadowfacts.enfusion.gui.ZCreativeTabs;
 import net.shadowfacts.enfusion.item.ZItems;
 import net.shadowfacts.enfusion.recipes.ZRecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
@@ -40,7 +40,7 @@ public class EnFusion {
 	
 	
 	// Custom Creative Tab
-	public static ZCreativeTabs zTab = new ZCreativeTabs();
+	public static ECreativeTabs zTab = new ECreativeTabs();
 	
 	
 	

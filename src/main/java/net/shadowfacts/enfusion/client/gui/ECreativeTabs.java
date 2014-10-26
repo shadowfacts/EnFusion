@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.gui;
+package net.shadowfacts.enfusion.client.gui;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -9,9 +9,9 @@ import net.shadowfacts.enfusion.item.ZItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ZCreativeTabs {
+public class ECreativeTabs {
 	
-	public static CreativeTabs tabZCore = new CreativeTabs("ZCraftCore") {
+	public static CreativeTabs tabZCore = new CreativeTabs("EnFusionCore") {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
@@ -19,7 +19,7 @@ public class ZCreativeTabs {
 		}
 	};
 	
-	public static CreativeTabs tabZMachines = new CreativeTabs("ZCraftMachines") {
+	public static CreativeTabs tabZMachines = new CreativeTabs("EnFusionMachines") {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
@@ -27,7 +27,7 @@ public class ZCreativeTabs {
 		}
 	};
 	
-	public static CreativeTabs tabZTools = new CreativeTabs("ZCraftTools") {
+	public static CreativeTabs tabZTools = new CreativeTabs("EnFusionTools") {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
