@@ -60,7 +60,7 @@ public class ERecipes {
 		GameRegistry.addSmelting(EBlocks.oreCopper, new ItemStack(EItems.ingotCopper, 1), 0.3f);
 		
 		// Zinchorium ore --> Zinchorium Gem (3)
-		GameRegistry.addSmelting(EBlocks.zinchoriumOre, new ItemStack(EItems.zinchoriumAlloyIngot, 3), 0.5f);
+		GameRegistry.addSmelting(EBlocks.zinchoriumOre, new ItemStack(EItems.zinchoriumAlloyIngot), 0.5f);
 	}
 	
 	public static void registerOreDictThings() {
