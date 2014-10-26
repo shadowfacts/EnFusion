@@ -8,7 +8,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class EBlocks {
 	// Blocks
-	public static BlockOre greenZinchoriumGemOre;
+	public static BlockOre zinchoriumOre;
 	public static BlockZinchoriumLight greenZinchoriumLightActive;
 	public static BlockZinchoriumLight greenZinchoriumLightIdle;
 	public static BlockOre oreCopper;
