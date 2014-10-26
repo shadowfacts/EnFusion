@@ -13,7 +13,7 @@ import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.item.armor.EArmor;
 import net.shadowfacts.enfusion.item.tool.ItemLaserPistol;
 import net.shadowfacts.enfusion.item.tool.ItemMiningLaser;
-import net.shadowfacts.enfusion.item.tool.ItemZAxe;
+import net.shadowfacts.enfusion.item.tool.ItemEAxe;
 import net.shadowfacts.enfusion.item.tool.ItemZPickaxe;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -58,7 +58,7 @@ public class EItems {
 		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(ECreativeTabs.tabZTools)
 							.setTextureName(EnFusion.modId + ":tools/zinchoriumGemPickaxe");
 		
-		zinchoriumAxe = new ItemZAxe(ToolMaterial.EMERALD);
+		zinchoriumAxe = new ItemEAxe(ToolMaterial.EMERALD);
 		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(ECreativeTabs.tabZTools)
 						.setTextureName(EnFusion.modId + ":tools/zinchoriumGemAxe");
 		
