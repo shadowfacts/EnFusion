@@ -18,7 +18,7 @@ public class ERecipes {
 	
 	private static void registerBlockRecipes() {
 		// Green Zinchorium Light
-		GameRegistry.addShapedRecipe(new ItemStack(EBlocks.greenZinchoriumLightIdle, 1), "IGI", "GLG", "IGI", 'I', new ItemStack(EItems.greenZinchoriumGem), 'G', new ItemStack(Blocks.glass), 'L', new ItemStack(EItems.lightBulb, 1));
+		GameRegistry.addShapedRecipe(new ItemStack(EBlocks.greenZinchoriumLightIdle, 1), "IGI", "GLG", "IGI", 'I', new ItemStack(EItems.zinchoriumAlloyIngot), 'G', new ItemStack(Blocks.glass), 'L', new ItemStack(EItems.lightBulb, 1));
 	}
 	
 	private static void registerItemRecipes() {
@@ -26,32 +26,32 @@ public class ERecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(EItems.lightBulb), "GGG", "GOG", "III", 'G', new ItemStack(Blocks.glass), 'O', new ItemStack(Items.gold_ingot), 'I', new ItemStack(Items.iron_ingot));
 		
 		// Zinchorium Gem Sword
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumSword), " Z ", " Z ", " S ", 'Z', new ItemStack(EItems.greenZinchoriumGem), 'S', new ItemStack(Items.stick));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumSword), " Z ", " Z ", " S ", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
 		
 		// Zinchorium Gem Pickaxe
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumPickaxe), "ZZZ", " S ", " S ", 'Z', new ItemStack(EItems.greenZinchoriumGem), 'S', new ItemStack(Items.stick));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumPickaxe), "ZZZ", " S ", " S ", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
 		
 		// Zinchorium Gem Axe
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumAxe), "ZZ ", "ZS ", " S ", 'Z', new ItemStack(EItems.greenZinchoriumGem), 'S', new ItemStack(Items.stick));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumAxe), "ZZ ", "ZS ", " S ", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
 		
 		// Zinchorium Gem Shovel
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumShovel), " Z ", " S ", " S ", 'Z', new ItemStack(EItems.greenZinchoriumGem), 'S', new ItemStack(Items.stick));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumShovel), " Z ", " S ", " S ", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
 		
 		// Zinchorium Gem Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumHoe), "ZZ ", " S ", " S ", 'Z', new ItemStack(EItems.greenZinchoriumGem), 'S', new ItemStack(Items.stick));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumHoe), "ZZ ", " S ", " S ", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
 	
 		// Zinchorium Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumHelmet), "ZZZ", "Z Z", "   ", 'Z', new ItemStack(EItems.greenZinchoriumGem));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumHelmet), "ZZZ", "Z Z", "   ", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot));
 		
 		// Zinchorium Chestplate
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumChestplate), "Z Z", "ZZZ", "ZZZ", 'Z', new ItemStack(EItems.greenZinchoriumGem));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumChestplate), "Z Z", "ZZZ", "ZZZ", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot));
 		
 		// Zinchoruim Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumLeggings), "ZZZ", "Z Z", "Z Z", 'Z', new ItemStack(EItems.greenZinchoriumGem));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumLeggings), "ZZZ", "Z Z", "Z Z", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot));
 		
 		// Zinchorium Boots
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumBoots), "Z Z", "Z Z", "   ", 'Z', new ItemStack(EItems.greenZinchoriumGem));
-		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumBoots), "   ", "Z Z", "Z Z", 'Z', new ItemStack(EItems.greenZinchoriumGem));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumBoots), "Z Z", "Z Z", "   ", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot));
+		GameRegistry.addShapedRecipe(new ItemStack(EItems.zinchoriumBoots), "   ", "Z Z", "Z Z", 'Z', new ItemStack(EItems.zinchoriumAlloyIngot));
 		
 	}
 	
@@ -60,7 +60,7 @@ public class ERecipes {
 		GameRegistry.addSmelting(EBlocks.oreCopper, new ItemStack(EItems.ingotCopper, 1), 0.3f);
 		
 		// Zinchorium ore --> Zinchorium Gem (3)
-		GameRegistry.addSmelting(EBlocks.greenZinchoriumGemOre, new ItemStack(EItems.greenZinchoriumGem, 3), 0.5f);
+		GameRegistry.addSmelting(EBlocks.greenZinchoriumGemOre, new ItemStack(EItems.zinchoriumAlloyIngot, 3), 0.5f);
 	}
 	
 	public static void registerOreDictThings() {

@@ -19,7 +19,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class EItems {
 	// Items
-	public static Item greenZinchoriumGem;
+	public static Item zinchoriumAlloyIngot;
 	public static Item lightBulb;
 	public static Item ingotCopper;
 	public static ItemSword zinchoriumSword;
@@ -38,8 +38,8 @@ public class EItems {
 	// Methods
 	public static void preInit() {
 		// Create the items
-		greenZinchoriumGem = new Item();
-		greenZinchoriumGem.setUnlocalizedName("greenZinchoriumGem").setTextureName(EnFusion.modId + ":zinchoriumGem/green")
+		zinchoriumAlloyIngot = new Item();
+		zinchoriumAlloyIngot.setUnlocalizedName("zinchoriumAlloyIngot").setTextureName(EnFusion.modId + ":zinchoriumAlloyIngot")
 						.setCreativeTab(ECreativeTabs.tabZCore);
 		
 		lightBulb = new Item();
@@ -97,7 +97,7 @@ public class EItems {
 		
 		
 		// Register them
-		GameRegistry.registerItem(greenZinchoriumGem, "greenZinchoriumGem");
+		GameRegistry.registerItem(zinchoriumAlloyIngot, "zinchoriumAlloyIngot");
 		GameRegistry.registerItem(lightBulb, "lightBulb");
 		GameRegistry.registerItem(ingotCopper, "ingotCopper");
 		GameRegistry.registerItem(zinchoriumSword, "zinchoriumSword");
