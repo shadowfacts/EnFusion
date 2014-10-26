@@ -4,7 +4,7 @@ import net.shadowfacts.enfusion.block.EBlocks;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.config.Configurator;
 import net.shadowfacts.enfusion.item.EItems;
-import net.shadowfacts.enfusion.recipes.ZRecipes;
+import net.shadowfacts.enfusion.recipes.ERecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
 
 import org.apache.logging.log4j.LogManager;
@@ -55,9 +55,9 @@ public class EnFusion {
 		
 		EBlocks.preInit(); // Blocks
 		EItems.preInit(); // Items
-		ZRecipes.registerRecipes(); // Recipes
+		ERecipes.registerRecipes(); // Recipes
 		
-		ZRecipes.registerOreDictThings(); // OreDict
+		ERecipes.registerOreDictThings(); // OreDict
 		
 		// Ore Generator
 		GameRegistry.registerWorldGenerator(oreGenerator, 3);

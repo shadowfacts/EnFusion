@@ -8,7 +8,7 @@ import net.shadowfacts.enfusion.block.EBlocks;
 import net.shadowfacts.enfusion.item.EItems;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ZRecipes {
+public class ERecipes {
 	
 	public static void registerRecipes() {
 		registerBlockRecipes();
