@@ -3,7 +3,7 @@ package net.shadowfacts.enfusion.item.armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.shadowfacts.enfusion.ZCraft;
+import net.shadowfacts.enfusion.EnFusion;
 
 public class ZArmor extends ItemArmor {
 
@@ -17,9 +17,9 @@ public class ZArmor extends ItemArmor {
 	@Override
 	public String getArmorTexture(ItemStack itemStack, Entity entity, int slot, String type) {
 		if (this.armorType == 2) {
-			return ZCraft.modId + ":textures/armor/" + this.armorString + "_2.png";
+			return EnFusion.modId + ":textures/armor/" + this.armorString + "_2.png";
 		} else {
-			return ZCraft.modId + ":textures/armor/" + this.armorString + "_1.png";
+			return EnFusion.modId + ":textures/armor/" + this.armorString + "_1.png";
 		}
 	}
 	

@@ -1,7 +1,7 @@
 package net.shadowfacts.enfusion.config;
 
 import net.minecraftforge.common.config.Configuration;
-import net.shadowfacts.enfusion.ZCraft;
+import net.shadowfacts.enfusion.EnFusion;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Configurator {
@@ -20,7 +20,7 @@ public class Configurator {
 	public static int miningLaserEntityId;
 	
 	public static void loadConfig(FMLPreInitializationEvent event) {
-		ZCraft.log.info("Loading configuration file");
+		EnFusion.log.info("Loading configuration file");
 		
 		
 		config = new Configuration(event.getSuggestedConfigurationFile());

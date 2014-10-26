@@ -10,14 +10,14 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.shadowfacts.enfusion.ZCraft;
+import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.config.Configurator;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class EntityMiningLaser extends EntityThrowable {
 	
 	public static void initialize() {
-		EntityRegistry.registerModEntity(EntityMiningLaser.class, "MiningLaser", Configurator.miningLaserEntityId, ZCraft.instance, 120, 3, true);
+		EntityRegistry.registerModEntity(EntityMiningLaser.class, "MiningLaser", Configurator.miningLaserEntityId, EnFusion.instance, 120, 3, true);
 	}
 
 	public EntityMiningLaser(World par1World) {

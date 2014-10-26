@@ -1,7 +1,7 @@
 package net.shadowfacts.enfusion.block;
 
 import net.minecraft.block.Block;
-import net.shadowfacts.enfusion.ZCraft;
+import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.gui.ZCreativeTabs;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -21,24 +21,24 @@ public class ZBlocks {
 		greenZinchoriumGemOre = new BlockOre();
 		greenZinchoriumGemOre.setBlockName("greenZinchoriumGemOre").setCreativeTab(ZCreativeTabs.tabZCore)
 								.setHardness(1.0f).setStepSound(Block.soundTypeStone)
-								.setBlockTextureName(ZCraft.modId + ":greenZinchoriumGemOre")
+								.setBlockTextureName(EnFusion.modId + ":greenZinchoriumGemOre")
 								.setHarvestLevel("pickaxe", 1);
 		
 		greenZinchoriumLightActive = new BlockZinchoriumLight(true);
 		greenZinchoriumLightActive.setBlockName("greenZinchoriumLightActive")
-								.setBlockTextureName(ZCraft.modId + ":zinchoriumLight/green")
+								.setBlockTextureName(EnFusion.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundTypeMetal)
 								.setHarvestLevel("pickaxe", 2);;
 		
 		greenZinchoriumLightIdle = new BlockZinchoriumLight(false);
 		greenZinchoriumLightIdle.setBlockName("greenZinchoriumLightIdle")
-								.setCreativeTab(ZCreativeTabs.tabZCore).setBlockTextureName(ZCraft.modId + ":zinchoriumLight/green")
+								.setCreativeTab(ZCreativeTabs.tabZCore).setBlockTextureName(EnFusion.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundTypeMetal)
 								.setHarvestLevel("pickaxe", 2);;
 		
 		oreCopper = new BlockOre();
 		oreCopper.setBlockName("oreCopper")
-				.setBlockTextureName(ZCraft.modId + ":oreCopper").setCreativeTab(ZCreativeTabs.tabZCore)
+				.setBlockTextureName(EnFusion.modId + ":oreCopper").setCreativeTab(ZCreativeTabs.tabZCore)
 				.setHardness(1.5f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
 		

@@ -19,20 +19,20 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid=ZCraft.modId, name=ZCraft.displayName, version=ZCraft.version)
-public class ZCraft {
+@Mod(modid=EnFusion.modId, name=EnFusion.displayName, version=EnFusion.version)
+public class EnFusion {
 	// Mod info
-	public static final String modId = "zcraft";
-	public static final String displayName = "ZCraft";
-	public static final String version = "v0.1";
-	public static final String clientProxyString = "net.shadowfacts.zcraft.client.ClientProxy";
-	public static final String serverProxyString = "net.shadowfacts.zcraft.CommonProxy";
+	public static final String modId = "enfusion";
+	public static final String displayName = "EnFusion";
+	public static final String version = "0.0.1";
+	public static final String clientProxyString = "net.shadowfacts.enfusion.client.ClientProxy";
+	public static final String serverProxyString = "net.shadowfacts.enfusion.CommonProxy";
 	
 	
-	@Instance(value=ZCraft.modId)
-	public static ZCraft instance;
+	@Instance(value=EnFusion.modId)
+	public static EnFusion instance;
 
-	@SidedProxy(clientSide=ZCraft.clientProxyString, serverSide=ZCraft.serverProxyString)
+	@SidedProxy(clientSide=EnFusion.clientProxyString, serverSide=EnFusion.serverProxyString)
 	public static CommonProxy proxy;
 	
 	// Logger
