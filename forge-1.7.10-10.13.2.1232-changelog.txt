@@ -1,5 +1,23 @@
 Changelog:
-Build 1229:
+Build 1232:
+	luacs1998:
+		Create CONTRIBUTING.md
+		
+		Simple file (which github will show for those making PRs) containing guidelines for making PRs.
+		Feel free to comment if you want/need anything added. I can pull the same thing to FML too if you'd like, Lex.
+	luacs1998:
+		Update CONTRIBUTING.md
+		
+		Add link to wiki page on contributing
+
+Build 1.7.10-10.13.2.1231:
+	Adubbz: Fixed desert list initialization. Fixes #1447
+
+Build 1.7.10-10.13.2.1230:
+	LexManos: Fix logic error in Blodd's Snapshot capture that caused blocks to not be updated to the client. Closes #1451
+	LexManos: Bump version for new RB.
+
+Build 1.7.10-10.13.1.1229:
 	AbrarSyed: implemented crowdin support
 	matthewprenger: Add username cache for determining a player's last known username
 	azanor1:
