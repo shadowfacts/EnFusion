@@ -59,8 +59,10 @@ public class ERecipes {
 		// Copper ore --> copper ingot
 		GameRegistry.addSmelting(EBlocks.oreCopper, new ItemStack(EItems.ingotCopper, 1), 0.3f);
 		
-		// Zinchorium ore --> Zinchorium Gem (3)
+		// Zinchorium ore	-->		Zinchorium Alloy Ingot
 		GameRegistry.addSmelting(EBlocks.zinchoriumOre, new ItemStack(EItems.zinchoriumAlloyIngot), 0.5f);
+		// Zinchorium dust	-->		Zinchorium Alloy Ingot
+		GameRegistry.addSmelting(EItems.zinchoriumDust, new ItemStack(EItems.zinchoriumAlloyIngot), 0.4f);
 	}
 	
 	public static void registerOreDictThings() {
