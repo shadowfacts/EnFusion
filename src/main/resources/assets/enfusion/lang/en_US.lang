@@ -23,6 +23,6 @@ item.laserPistol.name=Laser Pistol
 item.miningLaser.name=Mining Laser
 
 # Creative Tabs
-itemGroup.ZCraftCore=ZCraft Core
-itemGroup.ZCraftMachines=ZCraft Machines
-itemGroup.ZCraftTools=ZCraft Tools
+itemGroup.EnFusionCore=EnFusion Core
+itemGroup.EnFusionMachines=EnFusion Machines
+itemGroup.EnFusionTools=EnFusion Tools
