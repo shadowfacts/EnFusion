@@ -3,7 +3,7 @@ package net.shadowfacts.enfusion;
 import net.shadowfacts.enfusion.block.EBlocks;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.config.Configurator;
-import net.shadowfacts.enfusion.item.ZItems;
+import net.shadowfacts.enfusion.item.EItems;
 import net.shadowfacts.enfusion.recipes.ZRecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
 
@@ -54,7 +54,7 @@ public class EnFusion {
 		
 		
 		EBlocks.preInit(); // Blocks
-		ZItems.preInit(); // Items
+		EItems.preInit(); // Items
 		ZRecipes.registerRecipes(); // Recipes
 		
 		ZRecipes.registerOreDictThings(); // OreDict
@@ -68,13 +68,13 @@ public class EnFusion {
 		proxy.registerTileEntities();
 		
 		EBlocks.load();
-		ZItems.load();
+		EItems.load();
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		EBlocks.postInit();
-		ZItems.postInit();
+		EItems.postInit();
 		
 		proxy.registerEntities();
 		proxy.registerRenderInformation();

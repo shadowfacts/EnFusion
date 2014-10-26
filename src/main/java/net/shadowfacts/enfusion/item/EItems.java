@@ -17,7 +17,7 @@ import net.shadowfacts.enfusion.item.tool.ItemZAxe;
 import net.shadowfacts.enfusion.item.tool.ItemZPickaxe;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ZItems {
+public class EItems {
 	// Items
 	public static Item greenZinchoriumGem;
 	public static Item lightBulb;

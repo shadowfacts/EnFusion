@@ -5,7 +5,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.shadowfacts.enfusion.item.ZItems;
+import net.shadowfacts.enfusion.item.EItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -15,7 +15,7 @@ public class ECreativeTabs {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
-			return ZItems.greenZinchoriumGem;
+			return EItems.greenZinchoriumGem;
 		}
 	};
 	
@@ -31,7 +31,7 @@ public class ECreativeTabs {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
-			return ZItems.zinchoriumSword;
+			return EItems.zinchoriumSword;
 		}
 	};
 	

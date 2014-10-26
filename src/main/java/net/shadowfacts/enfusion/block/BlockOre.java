@@ -7,7 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
-import net.shadowfacts.enfusion.item.ZItems;
+import net.shadowfacts.enfusion.item.EItems;
 
 public class BlockOre extends Block {
 
@@ -18,7 +18,7 @@ public class BlockOre extends Block {
 	@Override
 	public Item getItemDropped(int par1, Random par2Random, int par3) {
 		if (this == EBlocks.greenZinchoriumGemOre) {
-			return ZItems.greenZinchoriumGem;
+			return EItems.greenZinchoriumGem;
 		} else {
 			return Item.getItemFromBlock(this);
 		}
