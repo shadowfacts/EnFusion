@@ -1,6 +1,6 @@
 package net.shadowfacts.enfusion;
 
-import net.shadowfacts.enfusion.block.ZBlocks;
+import net.shadowfacts.enfusion.block.EBlocks;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.config.Configurator;
 import net.shadowfacts.enfusion.item.ZItems;
@@ -53,7 +53,7 @@ public class EnFusion {
 		Configurator.loadConfig(event);
 		
 		
-		ZBlocks.preInit(); // Blocks
+		EBlocks.preInit(); // Blocks
 		ZItems.preInit(); // Items
 		ZRecipes.registerRecipes(); // Recipes
 		
@@ -67,13 +67,13 @@ public class EnFusion {
 	public void load(FMLInitializationEvent event) {
 		proxy.registerTileEntities();
 		
-		ZBlocks.load();
+		EBlocks.load();
 		ZItems.load();
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		ZBlocks.postInit();
+		EBlocks.postInit();
 		ZItems.postInit();
 		
 		proxy.registerEntities();

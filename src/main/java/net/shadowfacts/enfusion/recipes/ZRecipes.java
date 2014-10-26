@@ -4,7 +4,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
-import net.shadowfacts.enfusion.block.ZBlocks;
+import net.shadowfacts.enfusion.block.EBlocks;
 import net.shadowfacts.enfusion.item.ZItems;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -18,7 +18,7 @@ public class ZRecipes {
 	
 	private static void registerBlockRecipes() {
 		// Green Zinchorium Light
-		GameRegistry.addShapedRecipe(new ItemStack(ZBlocks.greenZinchoriumLightIdle, 1), "IGI", "GLG", "IGI", 'I', new ItemStack(ZItems.greenZinchoriumGem), 'G', new ItemStack(Blocks.glass), 'L', new ItemStack(ZItems.lightBulb, 1));
+		GameRegistry.addShapedRecipe(new ItemStack(EBlocks.greenZinchoriumLightIdle, 1), "IGI", "GLG", "IGI", 'I', new ItemStack(ZItems.greenZinchoriumGem), 'G', new ItemStack(Blocks.glass), 'L', new ItemStack(ZItems.lightBulb, 1));
 	}
 	
 	private static void registerItemRecipes() {
@@ -57,15 +57,15 @@ public class ZRecipes {
 	
 	private static void registerFurnaceRecipes() {
 		// Copper ore --> copper ingot
-		GameRegistry.addSmelting(ZBlocks.oreCopper, new ItemStack(ZItems.ingotCopper, 1), 0.3f);
+		GameRegistry.addSmelting(EBlocks.oreCopper, new ItemStack(ZItems.ingotCopper, 1), 0.3f);
 		
 		// Zinchorium ore --> Zinchorium Gem (3)
-		GameRegistry.addSmelting(ZBlocks.greenZinchoriumGemOre, new ItemStack(ZItems.greenZinchoriumGem, 3), 0.5f);
+		GameRegistry.addSmelting(EBlocks.greenZinchoriumGemOre, new ItemStack(ZItems.greenZinchoriumGem, 3), 0.5f);
 	}
 	
 	public static void registerOreDictThings() {
 		// Blocks
-		OreDictionary.registerOre("oreCopper", ZBlocks.oreCopper);
+		OreDictionary.registerOre("oreCopper", EBlocks.oreCopper);
 		
 		// Items
 		OreDictionary.registerOre("ingotCopper", ZItems.ingotCopper);

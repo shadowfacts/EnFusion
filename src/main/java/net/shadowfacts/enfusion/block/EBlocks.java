@@ -6,7 +6,7 @@ import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ZBlocks {
+public class EBlocks {
 	// Blocks
 	public static BlockOre greenZinchoriumGemOre;
 	public static BlockZinchoriumLight greenZinchoriumLightActive;
