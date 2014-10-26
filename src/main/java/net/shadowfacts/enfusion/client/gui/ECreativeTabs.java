@@ -11,15 +11,15 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ECreativeTabs {
 	
-	public static CreativeTabs tabZCore = new CreativeTabs("EnFusionCore") {
+	public static CreativeTabs tabCore = new CreativeTabs("EnFusionCore") {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
-			return EItems.greenZinchoriumGem;
+			return EItems.zinchoriumAlloyIngot;
 		}
 	};
 	
-	public static CreativeTabs tabZMachines = new CreativeTabs("EnFusionMachines") {
+	public static CreativeTabs tabMachines = new CreativeTabs("EnFusionMachines") {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
@@ -27,7 +27,7 @@ public class ECreativeTabs {
 		}
 	};
 	
-	public static CreativeTabs tabZTools = new CreativeTabs("EnFusionTools") {
+	public static CreativeTabs tabTools = new CreativeTabs("EnFusionTools") {
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {

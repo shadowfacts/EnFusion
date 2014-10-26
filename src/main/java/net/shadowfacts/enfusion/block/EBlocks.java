@@ -18,10 +18,10 @@ public class EBlocks {
 	
 	// Methods
 	public static void preInit() {
-		greenZinchoriumGemOre = new BlockOre();
-		greenZinchoriumGemOre.setBlockName("greenZinchoriumGemOre").setCreativeTab(ECreativeTabs.tabZCore)
+		zinchoriumOre = new BlockOre();
+		zinchoriumOre.setBlockName("zinchoriumOre").setCreativeTab(ECreativeTabs.tabCore)
 								.setHardness(1.0f).setStepSound(Block.soundTypeStone)
-								.setBlockTextureName(EnFusion.modId + ":greenZinchoriumGemOre")
+								.setBlockTextureName(EnFusion.modId + ":zinchoriumOre")
 								.setHarvestLevel("pickaxe", 1);
 		
 		greenZinchoriumLightActive = new BlockZinchoriumLight(true);
@@ -32,13 +32,13 @@ public class EBlocks {
 		
 		greenZinchoriumLightIdle = new BlockZinchoriumLight(false);
 		greenZinchoriumLightIdle.setBlockName("greenZinchoriumLightIdle")
-								.setCreativeTab(ECreativeTabs.tabZCore).setBlockTextureName(EnFusion.modId + ":zinchoriumLight/green")
+								.setCreativeTab(ECreativeTabs.tabCore).setBlockTextureName(EnFusion.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundTypeMetal)
 								.setHarvestLevel("pickaxe", 2);;
 		
 		oreCopper = new BlockOre();
 		oreCopper.setBlockName("oreCopper")
-				.setBlockTextureName(EnFusion.modId + ":oreCopper").setCreativeTab(ECreativeTabs.tabZCore)
+				.setBlockTextureName(EnFusion.modId + ":oreCopper").setCreativeTab(ECreativeTabs.tabCore)
 				.setHardness(1.5f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
 		
@@ -55,7 +55,7 @@ public class EBlocks {
 		
 		
 		// Register blocks
-		GameRegistry.registerBlock(greenZinchoriumGemOre, "greenZinchoriumGemOre");
+		GameRegistry.registerBlock(zinchoriumOre, "zinchoriumOre");
 		GameRegistry.registerBlock(greenZinchoriumLightActive, "greenZinchoriumLightActive");
 		GameRegistry.registerBlock(greenZinchoriumLightIdle, "greenZinchoriumLightIdle");
 		GameRegistry.registerBlock(oreCopper, "oreCopper");

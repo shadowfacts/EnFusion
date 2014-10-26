@@ -17,8 +17,8 @@ public class BlockOre extends Block {
 	
 	@Override
 	public Item getItemDropped(int par1, Random par2Random, int par3) {
-		if (this == EBlocks.greenZinchoriumGemOre) {
-			return EItems.greenZinchoriumGem;
+		if (this == EBlocks.zinchoriumOre) {
+			return EItems.zinchoriumOre;
 		} else {
 			return Item.getItemFromBlock(this);
 		}
@@ -26,11 +26,7 @@ public class BlockOre extends Block {
 	
 	@Override
 	public int quantityDropped(Random par1Random) {
-		if (this == EBlocks.greenZinchoriumGemOre) {
-			return 3;
-		} else {
-			return 1;
-		}
+		return 1;
 	}
 	
 	@Override
