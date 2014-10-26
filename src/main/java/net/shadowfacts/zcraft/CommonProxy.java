@@ -1,11 +1,13 @@
 package net.shadowfacts.zcraft;
 
 import net.shadowfacts.zcraft.entity.EntityLaserBolt;
+import net.shadowfacts.zcraft.entity.EntityMiningLaser;
 
 public class CommonProxy {
 	
 	public void registerEntities() {
 		EntityLaserBolt.initialize();
+		EntityMiningLaser.initialize();
 	}
 	
 	public void registerRenderers() {
