@@ -1,11 +1,11 @@
 [
 {
-  "modid": "zcraft",
-  "name": "ZCraft",
-  "description": "ZCraft is a standalone mod (using the RF enery system) primaryily about the technological expansion of Minecraft, with a couple other things.",
+  "modid": "enfusion",
+  "name": "EnFusion",
+  "description": "EnFusion (ENergetic InFUSION)  is a standalone mod (using the RF enery system) primaryily about the technological expansion of Minecraft, with a couple other things.",
   "version": "v0.0.1",
   "mcversion": "1.7.10",
-  "url": "http://github.com/shadowfacts/zcraft",
+  "url": "http://github.com/shadowfacts/EnFusion",
   "updateUrl": "",
   "authorList": ["Shadowfacts"],
   "credits": "The Forge and FML guys, for making Forge and FML. Everyone who contributed on GitHub.",
