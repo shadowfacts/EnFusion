@@ -40,11 +40,11 @@ public class EItems {
 	public static void preInit() {
 		// Create the items
 		zinchoriumDust = new Item();
-		zinchoriumDust.setUnlocalizedName("zinchoriumDust").setTextureName(EnFusion.modId + ":zinchoriumDust")
+		zinchoriumDust.setUnlocalizedName("zinchoriumDust").setTextureName(EnFusion.modId + ":crushed/zinchoriumDust")
 						.setCreativeTab(ECreativeTabs.tabCore);
 		
 		zinchoriumAlloyIngot = new Item();
-		zinchoriumAlloyIngot.setUnlocalizedName("zinchoriumAlloyIngot").setTextureName(EnFusion.modId + ":zinchoriumAlloyIngot")
+		zinchoriumAlloyIngot.setUnlocalizedName("zinchoriumAlloyIngot").setTextureName(EnFusion.modId + ":ingot/zinchoriumAlloy")
 						.setCreativeTab(ECreativeTabs.tabCore);
 		
 		lightBulb = new Item();
@@ -52,7 +52,7 @@ public class EItems {
 				.setCreativeTab(ECreativeTabs.tabCore);
 		
 		ingotCopper = new Item();
-		ingotCopper.setUnlocalizedName("ingotCopper").setTextureName(EnFusion.modId + ":ingotCopper")
+		ingotCopper.setUnlocalizedName("ingotCopper").setTextureName(EnFusion.modId + ":ingot/copper")
 					.setCreativeTab(ECreativeTabs.tabCore);
 		
 		zinchoriumSword = new ItemSword(ToolMaterial.EMERALD);

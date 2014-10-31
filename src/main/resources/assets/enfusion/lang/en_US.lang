@@ -7,6 +7,7 @@ tile.fluxFurnaceIdle.name=Flux Furnace
 tile.fluxFurnaceActive.name=Flux Furnace
 
 # Items
+item.zinchoriumDust.name=Zinchorium Dust
 item.zinchoriumAlloyIngot.name=Zinchorium Alloy Ingot
 item.lightBulb.name=Light Bulb
 item.ingotCopper.name=Copper Ingot
