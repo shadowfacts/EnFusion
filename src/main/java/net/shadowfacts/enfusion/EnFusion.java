@@ -6,10 +6,8 @@ import net.shadowfacts.enfusion.config.Configurator;
 import net.shadowfacts.enfusion.item.EItems;
 import net.shadowfacts.enfusion.recipes.ERecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import net.shadowfacts.shadowcore.Log;
+import net.shadowfacts.shadowcore.command.CommandHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -17,6 +15,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid=EnFusion.modId, name=EnFusion.displayName, version=EnFusion.version)
@@ -36,7 +35,7 @@ public class EnFusion {
 	public static CommonProxy proxy;
 	
 	// Logger
-	public static final Logger log = LogManager.getLogger(modId);
+	public static final Log log = new Log(modId);
 	
 	
 	// Custom Creative Tab
