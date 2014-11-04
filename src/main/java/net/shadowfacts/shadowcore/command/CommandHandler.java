@@ -1,15 +1,15 @@
 package net.shadowfacts.shadowcore.command;
 
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import gnu.trove.map.TMap;
 import gnu.trove.map.hash.THashMap;
-
-import java.util.List;
-import java.util.Set;
-
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
-import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import net.shadowfacts.shadowcore.ShadowCore;
+
+import java.util.List;
+import java.util.Set;
 
 public class CommandHandler extends CommandBase {
 	
@@ -17,11 +17,13 @@ public class CommandHandler extends CommandBase {
 	
 	public static CommandHandler instance = new CommandHandler();
 	
-	private static TMap<String, ISubCommand> commands = new THashMap<String, ISubCommand>();
+	protected static TMap<String, ISubCommand> commands = new THashMap<String, ISubCommand>();
 	
 	
 	static {
 		registerSubCommand(CommandKillAll.instance);
+		registerSubCommand(CommandVersion.instance);
+		registerSubCommand(CommandHelp.instance);
 	}
 	
 	
@@ -68,12 +70,7 @@ public class CommandHandler extends CommandBase {
 			throw new WrongUsageException("Type '" + getCommandUsage(sender) + "' for help.");
 		}
 		if (commands.containsKey(args[0])) {
-			String[] subArgs = new String[args.length - 1];
-			for (int i = 1; i <= args.length; i++) {
-				subArgs[i - 1] = args[i];
-			}
-			
-			commands.get(args[0]).handleCommand(sender, subArgs);
+			commands.get(args[0]).handleCommand(sender, args);
 			return;
 		}
 		throw new WrongUsageException("Type '" + getCommandUsage(sender) + "' for help.");

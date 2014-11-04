@@ -1,10 +1,9 @@
 package net.shadowfacts.shadowcore.command;
 
-import java.util.List;
-
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentText;
-import net.shadowfacts.shadowcore.util.CoreUtils;
+
+import java.util.List;
 
 public class CommandKillAll implements ISubCommand {
 
@@ -18,16 +17,21 @@ public class CommandKillAll implements ISubCommand {
 
 	@Override
 	public void handleCommand(ICommandSender sender, String[] args) {
-		if (!CoreUtils.isOpOrServer(sender.getCommandSenderName())) {
-			sender.addChatMessage(new ChatComponentText(CommandHandler.COMMAND_DISALLOWED));
-			return;
-		}
-		
+//		if (!CoreUtils.isOpOrServer(sender.getCommandSenderName())) {
+//			sender.addChatMessage(new ChatComponentText(CommandHandler.COMMAND_DISALLOWED));
+//			return;
+//		}
+		sender.addChatMessage(new ChatComponentText("This command is not implemented yet."));
 	}
 
 	@Override
 	public List<String> addTabCompletionOptions(ICommandSender sender, String[] args) {
 		return null;
+	}
+
+	@Override
+	public void handleHelpRequest(ICommandSender sender, String[] args) {
+		sender.addChatMessage(new ChatComponentText("Kills all hostile mobs within a 32 block radius."));
 	}
 
 }
