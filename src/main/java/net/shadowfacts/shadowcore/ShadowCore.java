@@ -1,7 +1,11 @@
 package net.shadowfacts.shadowcore;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.server.MinecraftServer;
+import net.shadowfacts.enfusion.EnFusion;
+import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.shadowcore.command.CommandHandler;
+import net.shadowfacts.shadowcore.debug.ItemDebugger;
 import net.shadowfacts.shadowcore.proxy.CommonProxy;
 
 import org.apache.logging.log4j.LogManager;
@@ -34,11 +38,17 @@ public class ShadowCore {
 	public static final Log log = new Log(modId);
 	
 	public static MinecraftServer server;
-	
+
+	// Debugger
+	public static ItemDebugger debugger;
 	
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) { 
-		
+	public void preInit(FMLPreInitializationEvent event) {
+		debugger = new ItemDebugger();
+		debugger.setUnlocalizedName("shadowDebugger").setCreativeTab(ECreativeTabs.tabCore)
+				.setTextureName(modId + ":shadowDebugger");
+
+		GameRegistry.registerItem(debugger, "shadowDebugger");
 	}
 	
 	@EventHandler

@@ -1,5 +1,6 @@
 package net.shadowfacts.enfusion.block.decoration;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -11,8 +12,10 @@ import net.minecraft.world.World;
 import net.shadowfacts.enfusion.block.EBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.shadowfacts.shadowcore.debug.IDebuggable;
+import net.shadowfacts.shadowcore.util.StringHelper;
 
-public class BlockZinchoriumLight extends BlockRedstoneLight {
+public class BlockZinchoriumLight extends BlockRedstoneLight implements IDebuggable {
 	
 	/** Whether this lamp block is the powered version. */
     private final boolean powered;
@@ -90,4 +93,18 @@ public class BlockZinchoriumLight extends BlockRedstoneLight {
     {
         return Item.getItemFromBlock(EBlocks.greenZinchoriumLightIdle);
     }
+
+	// Debuggable
+	public ArrayList<String> getDebugInfo() {
+
+		ArrayList<String> list = new ArrayList<String>();
+
+		if (this.powered) {
+			list.add(StringHelper.BRIGHT_GREEN + "ZinchoriumLight" + StringHelper.WHITE + ": " + StringHelper.LIGHT_RED + "active" + StringHelper.WHITE);
+		} else {
+			list.add(StringHelper.BRIGHT_GREEN + "ZinchoriumLight" + StringHelper.WHITE + ": " + StringHelper.LIGHT_RED + "idle" + StringHelper.WHITE);
+		}
+
+		return list;
+	}
 }
