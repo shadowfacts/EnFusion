@@ -1,13 +1,5 @@
 package net.shadowfacts.enfusion;
 
-import net.shadowfacts.enfusion.block.EBlocks;
-import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
-import net.shadowfacts.enfusion.config.Configurator;
-import net.shadowfacts.enfusion.item.EItems;
-import net.shadowfacts.enfusion.recipes.ERecipes;
-import net.shadowfacts.enfusion.world.generation.OreGenerator;
-import net.shadowfacts.shadowcore.Log;
-import net.shadowfacts.shadowcore.command.CommandHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -15,8 +7,17 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+
+import net.shadowfacts.enfusion.block.EBlocks;
+import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
+import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
+import net.shadowfacts.enfusion.config.Configurator;
+import net.shadowfacts.enfusion.item.EItems;
+import net.shadowfacts.enfusion.recipes.ERecipes;
+import net.shadowfacts.enfusion.world.generation.OreGenerator;
+import net.shadowfacts.shadowcore.Log;
 
 @Mod(modid=EnFusion.modId, name=EnFusion.displayName, version=EnFusion.version)
 public class EnFusion {
@@ -36,12 +37,6 @@ public class EnFusion {
 	
 	// Logger
 	public static final Log log = new Log(modId);
-	
-	
-	// Custom Creative Tab
-	public static ECreativeTabs zTab = new ECreativeTabs();
-	
-	
 	
 	// Ore Generation
 	OreGenerator oreGenerator = new OreGenerator();
@@ -68,6 +63,9 @@ public class EnFusion {
 		
 		EBlocks.load();
 		EItems.load();
+
+		// Register GUI handler
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new EFGuiHandler());
 	}
 
 	@EventHandler
