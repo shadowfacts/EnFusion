@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.client.gui.container;
+package net.shadowfacts.enfusion.client.gui.machine;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
