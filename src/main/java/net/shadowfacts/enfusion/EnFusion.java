@@ -23,7 +23,7 @@ public class EnFusion {
 	// Mod info
 	public static final String modId = "enfusion";
 	public static final String displayName = "EnFusion";
-	public static final String version = "0.0.1";
+	public static final String version = "@VERSION@";
 	public static final String clientProxyString = "net.shadowfacts.enfusion.client.ClientProxy";
 	public static final String serverProxyString = "net.shadowfacts.enfusion.CommonProxy";
 	
