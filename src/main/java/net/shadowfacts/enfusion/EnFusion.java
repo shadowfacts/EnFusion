@@ -18,7 +18,7 @@ import net.shadowfacts.enfusion.recipes.ERecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
 import net.shadowfacts.shadowcore.Log;
 
-@Mod(modid=EnFusion.modId, name=EnFusion.displayName, version=EnFusion.version)
+@Mod(modid=EnFusion.modId, name=EnFusion.displayName, version=EnFusion.version, dependencies = EnFusion.depString)
 public class EnFusion {
 	// Mod info
 	public static final String modId = "enfusion";
@@ -26,6 +26,7 @@ public class EnFusion {
 	public static final String version = "@VERSION@";
 	public static final String clientProxyString = "net.shadowfacts.enfusion.client.ClientProxy";
 	public static final String serverProxyString = "net.shadowfacts.enfusion.CommonProxy";
+	public static final String depString = "required-after:shadowcore@[0.0.1,)";
 	
 	
 	@Instance(value=EnFusion.modId)
