@@ -19,6 +19,9 @@ public class EFRecipes {
 	private static void registerBlockRecipes() {
 		// Green Zinchorium Light
 		GameRegistry.addShapedRecipe(new ItemStack(EFBlocks.greenZinchoriumLightIdle, 1), "IGI", "GLG", "IGI", 'I', new ItemStack(EFItems.zinchoriumAlloyIngot), 'G', new ItemStack(Blocks.glass), 'L', new ItemStack(EFItems.lightBulb, 1));
+
+		// Zinchorium Block
+		GameRegistry.addShapedRecipe(new ItemStack(EFBlocks.zinchoriumBlock), "ZZZ", "ZZZ", "ZZZ", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot));
 	}
 	
 	private static void registerItemRecipes() {
@@ -52,6 +55,9 @@ public class EFRecipes {
 		// Zinchorium Boots
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumBoots), "Z Z", "Z Z", "   ", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot));
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumBoots), "   ", "Z Z", "Z Z", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot));
+
+		// Zinchorium Block -> Zinchorium Alloy Ingot
+		GameRegistry.addShapelessRecipe(new ItemStack(EFItems.zinchoriumAlloyIngot, 9), new ItemStack(EFBlocks.zinchoriumBlock));
 		
 	}
 	

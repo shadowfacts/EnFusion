@@ -17,6 +17,7 @@ public class EFBlocks {
 	public static BlockOre oreCopper;
 	public static MachineFluxFurnace fluxFurnaceIdle;
 	public static MachineFluxFurnace fluxFurnaceActive;
+	public static EFBlock zinchoriumBlock;
 
 	
 	// Methods
@@ -54,6 +55,11 @@ public class EFBlocks {
 		fluxFurnaceActive.setBlockName("fluxFurnaceActive")
 						.setHardness(0.9f).setStepSound(Block.soundTypeMetal)
 						.setHarvestLevel("pickaxe", 2);
+
+		zinchoriumBlock = new EFBlock();
+		zinchoriumBlock.setBlockName("zinchoriumBlock")
+						.setHardness(0.8f).setStepSound(Block.soundTypeStone)
+						.setHarvestLevel("pickaxe", 1);
 		
 		
 		
@@ -64,6 +70,7 @@ public class EFBlocks {
 		GameRegistry.registerBlock(oreCopper, "oreCopper");
 		GameRegistry.registerBlock(fluxFurnaceIdle, "fluxFurnaceIdle");
 		GameRegistry.registerBlock(fluxFurnaceActive, "fluxFurnaceActive");
+		GameRegistry.registerBlock(zinchoriumBlock, "zinchoriumBlock");
 	}
 	
 	public static void load() {
