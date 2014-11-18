@@ -17,7 +17,7 @@ import net.shadowfacts.enfusion.item.tool.ItemEAxe;
 import net.shadowfacts.enfusion.item.tool.ItemEPickaxe;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class EItems {
+public class EFItems {
 	// Items
 	public static Item zinchoriumDust;
 	public static Item zinchoriumAlloyIngot;

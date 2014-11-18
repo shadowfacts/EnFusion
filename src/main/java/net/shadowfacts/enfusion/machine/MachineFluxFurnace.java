@@ -21,7 +21,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import net.shadowfacts.enfusion.EnFusion;
-import net.shadowfacts.enfusion.block.EBlocks;
+import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.GUIs;
 import net.shadowfacts.enfusion.tileentity.TileEntityFluxFurnace;
 
@@ -93,7 +93,7 @@ public class MachineFluxFurnace extends Block implements ITileEntityProvider {
 	 */
 	@Override
 	public Item getItemDropped(int par1, Random random, int par3) {
-		return Item.getItemFromBlock(EBlocks.fluxFurnaceIdle);
+		return Item.getItemFromBlock(EFBlocks.fluxFurnaceIdle);
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class MachineFluxFurnace extends Block implements ITileEntityProvider {
 	 */
 	@Override
 	public Item getItem(World world, int par2, int par3, int par4) {
-		return Item.getItemFromBlock(EBlocks.fluxFurnaceIdle);
+		return Item.getItemFromBlock(EFBlocks.fluxFurnaceIdle);
 	}
 
 	/**
@@ -175,9 +175,9 @@ public class MachineFluxFurnace extends Block implements ITileEntityProvider {
 		isBurning = true;
 
 		if (burning) {
-			world.setBlock(x, y, z, EBlocks.fluxFurnaceActive);
+			world.setBlock(x, y, z, EFBlocks.fluxFurnaceActive);
 		} else {
-			world.setBlock(x, y, z, EBlocks.fluxFurnaceIdle);
+			world.setBlock(x, y, z, EFBlocks.fluxFurnaceIdle);
 		}
 
 		isBurning = false;

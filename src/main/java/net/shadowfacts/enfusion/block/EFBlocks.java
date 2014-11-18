@@ -9,7 +9,7 @@ import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.machine.MachineFluxFurnace;
 
-public class EBlocks {
+public class EFBlocks {
 	// Blocks
 	public static BlockOre zinchoriumOre;
 	public static BlockZinchoriumLight greenZinchoriumLightActive;

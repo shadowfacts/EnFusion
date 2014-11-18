@@ -5,11 +5,9 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRedstoneLight;
-import net.minecraft.block.material.Material;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
-import net.shadowfacts.enfusion.block.EBlocks;
+import net.shadowfacts.enfusion.block.EFBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.shadowfacts.shadowcore.debug.IDebuggable;
@@ -45,7 +43,7 @@ public class BlockZinchoriumLight extends BlockRedstoneLight implements IDebugga
             }
             else if (!this.powered && par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
             {
-                par1World.setBlock(par2, par3, par4, EBlocks.greenZinchoriumLightActive, 0, 2);
+                par1World.setBlock(par2, par3, par4, EFBlocks.greenZinchoriumLightActive, 0, 2);
             }
         }
     }
@@ -65,7 +63,7 @@ public class BlockZinchoriumLight extends BlockRedstoneLight implements IDebugga
             }
             else if (!this.powered && par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
             {
-                par1World.setBlock(par2, par3, par4, EBlocks.greenZinchoriumLightActive, 0, 2);
+                par1World.setBlock(par2, par3, par4, EFBlocks.greenZinchoriumLightActive, 0, 2);
             }
         }
     }
@@ -78,20 +76,20 @@ public class BlockZinchoriumLight extends BlockRedstoneLight implements IDebugga
     {
         if (!par1World.isRemote && this.powered && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
         {
-            par1World.setBlock(par2, par3, par4, EBlocks.greenZinchoriumLightIdle, 0, 2);
+            par1World.setBlock(par2, par3, par4, EFBlocks.greenZinchoriumLightIdle, 0, 2);
         }
     }
     
     @Override
     public Item getItemDropped(int par1, Random par2Random, int par3) {
-    	return Item.getItemFromBlock(EBlocks.greenZinchoriumLightIdle);
+    	return Item.getItemFromBlock(EFBlocks.greenZinchoriumLightIdle);
     }
     
     @SideOnly(Side.CLIENT)
     @Override
     public Item getItem(World par1World, int par2, int par3, int par4)
     {
-        return Item.getItemFromBlock(EBlocks.greenZinchoriumLightIdle);
+        return Item.getItemFromBlock(EFBlocks.greenZinchoriumLightIdle);
     }
 
 	// Debuggable

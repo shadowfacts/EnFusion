@@ -10,11 +10,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-import net.shadowfacts.enfusion.block.EBlocks;
+import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
 import net.shadowfacts.enfusion.config.Configurator;
-import net.shadowfacts.enfusion.item.EItems;
-import net.shadowfacts.enfusion.recipes.ERecipes;
+import net.shadowfacts.enfusion.item.EFItems;
+import net.shadowfacts.enfusion.recipes.EFRecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
 import net.shadowfacts.shadowcore.Log;
 
@@ -47,11 +47,11 @@ public class EnFusion {
 		Configurator.loadConfig(event);
 		
 		
-		EBlocks.preInit(); // Blocks
-		EItems.preInit(); // Items
-		ERecipes.registerRecipes(); // Recipes
+		EFBlocks.preInit(); // Blocks
+		EFItems.preInit(); // Items
+		EFRecipes.registerRecipes(); // Recipes
 		
-		ERecipes.registerOreDictThings(); // OreDict
+		EFRecipes.registerOreDictThings(); // OreDict
 		
 		// Ore Generator
 		GameRegistry.registerWorldGenerator(oreGenerator, 3);
@@ -61,8 +61,8 @@ public class EnFusion {
 	public void load(FMLInitializationEvent event) {
 		proxy.registerTileEntities();
 		
-		EBlocks.load();
-		EItems.load();
+		EFBlocks.load();
+		EFItems.load();
 
 		// Register GUI handler
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new EFGuiHandler());
@@ -70,8 +70,8 @@ public class EnFusion {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		EBlocks.postInit();
-		EItems.postInit();
+		EFBlocks.postInit();
+		EFItems.postInit();
 		
 		proxy.registerEntities();
 		proxy.registerRenderInformation();
