@@ -1,18 +1,16 @@
 package net.shadowfacts.enfusion.block;
 
-import java.util.Random;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import net.shadowfacts.enfusion.item.EFItems;
 
-public class BlockOre extends Block {
+import java.util.Random;
+
+public class BlockOre extends EFBlock {
 
 	public BlockOre() {
-		super(Material.rock);
+		super();
 	}
 	
 	@Override

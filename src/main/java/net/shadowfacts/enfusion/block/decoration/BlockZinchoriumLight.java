@@ -1,17 +1,17 @@
 package net.shadowfacts.enfusion.block.decoration;
 
-import java.util.ArrayList;
-import java.util.Random;
-
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRedstoneLight;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import net.shadowfacts.enfusion.block.EFBlocks;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.shadowfacts.shadowcore.debug.IDebuggable;
 import net.shadowfacts.shadowcore.util.StringHelper;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class BlockZinchoriumLight extends BlockRedstoneLight implements IDebuggable {
 	
