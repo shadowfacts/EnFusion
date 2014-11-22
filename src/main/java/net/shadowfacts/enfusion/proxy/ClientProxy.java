@@ -1,6 +1,5 @@
-package net.shadowfacts.enfusion.client;
+package net.shadowfacts.enfusion.proxy;
 
-import net.shadowfacts.enfusion.CommonProxy;
 import net.shadowfacts.enfusion.entity.EntityLaserBolt;
 import net.shadowfacts.enfusion.render.RenderLaserBolt;
 import cpw.mods.fml.client.registry.RenderingRegistry;

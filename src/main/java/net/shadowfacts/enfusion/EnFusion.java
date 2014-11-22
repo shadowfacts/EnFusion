@@ -14,6 +14,7 @@ import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
 import net.shadowfacts.enfusion.config.Configurator;
 import net.shadowfacts.enfusion.item.EFItems;
+import net.shadowfacts.enfusion.proxy.CommonProxy;
 import net.shadowfacts.enfusion.recipes.EFRecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
 import net.shadowfacts.shadowcore.Log;
@@ -24,8 +25,8 @@ public class EnFusion {
 	public static final String modId = "enfusion";
 	public static final String displayName = "EnFusion";
 	public static final String version = "@VERSION@";
-	public static final String clientProxyString = "net.shadowfacts.enfusion.client.ClientProxy";
-	public static final String serverProxyString = "net.shadowfacts.enfusion.CommonProxy";
+	public static final String clientProxyString = "net.shadowfacts.enfusion.proxy.ClientProxy";
+	public static final String serverProxyString = "net.shadowfacts.enfusion.proxy.CommonProxy";
 	public static final String depString = "required-after:shadowcore@[0.0.1,)";
 	
 	

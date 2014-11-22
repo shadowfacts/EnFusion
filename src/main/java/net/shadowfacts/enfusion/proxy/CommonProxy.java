@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion;
+package net.shadowfacts.enfusion.proxy;
 
 import net.shadowfacts.enfusion.entity.EntityLaserBolt;
 import net.shadowfacts.enfusion.entity.EntityMiningLaser;
