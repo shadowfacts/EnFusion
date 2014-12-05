@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine;
+package net.shadowfacts.enfusion.machine.furnace;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -19,11 +19,10 @@ import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.EFBlock;
 import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.GUIs;
-import net.shadowfacts.enfusion.tileentity.TileEntityFluxFurnace;
 
 import java.util.Random;
 
-public class MachineFluxFurnace extends EFBlock implements ITileEntityProvider {
+public class BlockFluxFurnace extends EFBlock implements ITileEntityProvider {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon front;
@@ -36,7 +35,7 @@ public class MachineFluxFurnace extends EFBlock implements ITileEntityProvider {
 
 
 
-	public MachineFluxFurnace(boolean isActive) {
+	public BlockFluxFurnace(boolean isActive) {
 		super();
 		isBurning2 = isActive;
 	}

@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.tileentity;
+package net.shadowfacts.enfusion.machine.furnace;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFurnace;

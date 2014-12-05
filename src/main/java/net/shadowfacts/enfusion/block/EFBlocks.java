@@ -7,7 +7,7 @@ import net.minecraft.block.Block;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
-import net.shadowfacts.enfusion.machine.MachineFluxFurnace;
+import net.shadowfacts.enfusion.machine.furnace.BlockFluxFurnace;
 
 public class EFBlocks {
 	// Blocks
@@ -15,8 +15,8 @@ public class EFBlocks {
 	public static BlockZinchoriumLight greenZinchoriumLightActive;
 	public static BlockZinchoriumLight greenZinchoriumLightIdle;
 	public static BlockOre oreCopper;
-	public static MachineFluxFurnace fluxFurnaceIdle;
-	public static MachineFluxFurnace fluxFurnaceActive;
+	public static BlockFluxFurnace fluxFurnaceIdle;
+	public static BlockFluxFurnace fluxFurnaceActive;
 	public static EFBlock zinchoriumBlock;
 
 	
@@ -46,12 +46,12 @@ public class EFBlocks {
 				.setHardness(1.5f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
 		
-		fluxFurnaceIdle = new MachineFluxFurnace(false);
+		fluxFurnaceIdle = new BlockFluxFurnace(false);
 		fluxFurnaceIdle.setBlockName("fluxFurnaceIdle").setCreativeTab(ECreativeTabs.tabMachines)
 				.setHardness(0.9f).setStepSound(Block.soundTypeMetal)
 				.setHarvestLevel("pickaxe", 2);
 
-		fluxFurnaceActive = new MachineFluxFurnace(true);
+		fluxFurnaceActive = new BlockFluxFurnace(true);
 		fluxFurnaceActive.setBlockName("fluxFurnaceActive")
 						.setHardness(0.9f).setStepSound(Block.soundTypeMetal)
 						.setHarvestLevel("pickaxe", 2);

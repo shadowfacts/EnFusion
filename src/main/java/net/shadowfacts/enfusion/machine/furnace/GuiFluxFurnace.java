@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.client.gui.machine;
+package net.shadowfacts.enfusion.machine.furnace;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
@@ -6,7 +6,6 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.container.ContainerFluxFurnace;
-import net.shadowfacts.enfusion.tileentity.TileEntityFluxFurnace;
 
 import org.lwjgl.opengl.GL11;
 

@@ -3,7 +3,6 @@ package net.shadowfacts.enfusion.client.gui;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-import net.shadowfacts.enfusion.client.gui.machine.GuiFluxFurnace;
 
 /**
  * @author shadowfacts
