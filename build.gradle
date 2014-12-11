@@ -1,8 +1,7 @@
-// Mod info
-ext.mod_ver = '0.0.1'
-ext.mc_ver = '1.7.10'
-ext.forge_ver = '10.13.2.1235'
-
+// Mod Info
+ext.mod_ver = '0.0.2'
+ext.mc_ver = '1.8'
+ext.forge_ver = '11.14.0.1262'
 
 buildscript {
     repositories {
@@ -28,11 +27,18 @@ group= "net.shadowfacts.enfusion" // http://maven.apache.org/guides/mini/guide-n
 archivesBaseName = "EnFusion"
 
 minecraft {
-    version = mc_ver + "-" + forge_ver
+    version = "1.8-11.14.0.1262-1.8"
     runDir = "eclipse"
+    
+    // the mappings can be changed at any time, and must be in the following format.
+    // snapshot_YYYYMMDD   snapshot are built nightly.
+    // stable_#            stables are built at the discretion of the MCP team.
+    // Use non-default mappings at your own risk. they may not allways work.
+    // simply re-run your setup task after changing the mappings to update your workspace.
+    mappings = "snapshot_nodoc_20141130"
 
     replaceIn "enfusion/EnFusion.java"
-    replace '@VERSION@', mod_ver
+    replace "@VERSION@", mod_ver
 }
 
 dependencies {
@@ -55,15 +61,19 @@ dependencies {
 
 processResources
 {
+    // this will ensure that this task is redone when the versions change.
     inputs.property "version", rootProject.mod_ver
-    
+
+    // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include '**/*.info'
-        expand 'version':mod_ver,'mcversion':mc_ver
+                
+        // replace version and mcversion
+        expand 'version':mod_ver, 'mcversion':mc_ver
     }
-
+        
+    // copy everything else, thats not the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude '**/*.info'
     }
-
 }
