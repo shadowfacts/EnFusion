@@ -5,6 +5,7 @@ tile.greenZinchoriumLightIdle.name=Zinchorium Light (Green)
 tile.oreCopper.name=Copper Ore
 tile.fluxFurnaceIdle.name=Flux Furnace
 tile.fluxFurnaceActive.name=Flux Furnace
+tile.solarPanelTier1.name=Solar Panel (Tier I)
 
 # Items
 item.zinchoriumDust.name=Zinchorium Dust

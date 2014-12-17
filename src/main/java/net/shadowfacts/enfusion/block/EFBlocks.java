@@ -8,6 +8,7 @@ import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.machine.furnace.BlockFluxFurnace;
+import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
 
 public class EFBlocks {
 	// Blocks
@@ -18,6 +19,7 @@ public class EFBlocks {
 	public static BlockFluxFurnace fluxFurnaceIdle;
 	public static BlockFluxFurnace fluxFurnaceActive;
 	public static EFBlock zinchoriumBlock;
+	public static BlockSolarPanel solarPanelTier1;
 
 	
 	// Methods
@@ -60,6 +62,11 @@ public class EFBlocks {
 		zinchoriumBlock.setBlockName("zinchoriumBlock")
 						.setHardness(0.8f).setStepSound(Block.soundTypeStone)
 						.setHarvestLevel("pickaxe", 1);
+
+		solarPanelTier1 = new BlockSolarPanel("solarPanelTier1", 32, 25000);
+		solarPanelTier1.setBlockName("solarPanelTier1").setHardness(0.9f).setStepSound(Block.soundTypePiston)
+						.setCreativeTab(ECreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier1")
+						.setHarvestLevel("pickaxe", 2);
 		
 		
 		
@@ -71,6 +78,7 @@ public class EFBlocks {
 		GameRegistry.registerBlock(fluxFurnaceIdle, "fluxFurnaceIdle");
 		GameRegistry.registerBlock(fluxFurnaceActive, "fluxFurnaceActive");
 		GameRegistry.registerBlock(zinchoriumBlock, "zinchoriumBlock");
+		GameRegistry.registerBlock(solarPanelTier1, "solarPanelTier1");
 	}
 	
 	public static void load() {
