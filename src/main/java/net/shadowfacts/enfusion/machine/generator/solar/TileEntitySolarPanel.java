@@ -7,6 +7,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraftforge.common.util.ForgeDirection;
+import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 /**
@@ -54,7 +55,7 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 
 	public int getEnergyProduced() {
 		if (worldObj.canBlockSeeTheSky(xCoord, yCoord + 1, zCoord)) {
-			float multiplicator = 1.5f;
+			float factor = 1.5f;
 			float displacement = 1.2f;
 			float celestialAngleRadians = worldObj.getCelestialAngleRadians(1.0f);
 
@@ -62,7 +63,7 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 				celestialAngleRadians = (2 * 3.14159f - celestialAngleRadians);
 			}
 
-			int c = Math.min(maxEnergyGeneration, Math.round(maxEnergyGeneration * multiplicator * MathHelper.cos(celestialAngleRadians / displacement)));
+			int c = Math.min(maxEnergyGeneration, Math.round(maxEnergyGeneration * factor * MathHelper.cos(celestialAngleRadians / displacement)));
 			return c > 0 ? c : 0;
 		}
 
@@ -88,16 +89,18 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 
 	@Override
 	protected void loadDataFromNBT(NBTTagCompound nbt) {
-		super.loadDataFromNBT(nbt);
+		EnFusion.log.info("readFromNBT");
+		super.readFromNBT(nbt);
 		maxEnergyGeneration = nbt.getInteger("MaxEnergyGeneration");
-		storage.readFromNBT(nbt);
+		this.storage.readFromNBT(nbt);
 	}
 
 	@Override
 	protected void addDataToNBT(NBTTagCompound nbt) {
-		super.addDataToNBT(nbt);
+		EnFusion.log.info("writeToNBT");
+		super.writeToNBT(nbt);
 		nbt.setInteger("MaxEnergyGeneration", maxEnergyGeneration);
-		storage.writeToNBT(nbt);
+		this.storage.writeToNBT(nbt);
 	}
 
 //	IEnergyHandler
