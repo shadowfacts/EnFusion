@@ -8,12 +8,16 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.shadowfacts.shadowcore.block.BaseTileEntityBlock;
+import net.shadowfacts.shadowcore.debug.IDebuggable;
+import net.shadowfacts.shadowcore.util.StringHelper;
+
+import java.util.ArrayList;
 
 /**
  * The solar panel block.
  * @author shadowfacts
  */
-public class BlockSolarPanel extends BaseTileEntityBlock {
+public class BlockSolarPanel extends BaseTileEntityBlock implements IDebuggable {
 
 	protected final int maxEnergyGeneration;
 	protected final int maxEnergyTransfer;
@@ -104,6 +108,19 @@ public class BlockSolarPanel extends BaseTileEntityBlock {
 	public void registerBlockIcons(IIconRegister iconRegister) {
 		super.registerBlockIcons(iconRegister);
 		sideIcon = iconRegister.registerIcon(this.getTextureName() + "_side");
+	}
+
+//	IDebuggable
+	public ArrayList<String> getDebugInfo() {
+
+		ArrayList<String> list = new ArrayList<String>();
+
+		StringBuilder msg1 = new StringBuilder();
+		msg1.append(StringHelper.BRIGHT_GREEN + "Energy Stored" + StringHelper.WHITE + ": ");
+
+
+		return list;
+
 	}
 
 }

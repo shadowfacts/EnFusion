@@ -86,11 +86,9 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 	}
 
 //	NBT Stuff
-
 	@Override
 	protected void loadDataFromNBT(NBTTagCompound nbt) {
 		EnFusion.log.info("readFromNBT");
-		super.readFromNBT(nbt);
 		maxEnergyGeneration = nbt.getInteger("MaxEnergyGeneration");
 		this.storage.readFromNBT(nbt);
 	}
@@ -98,13 +96,11 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 	@Override
 	protected void addDataToNBT(NBTTagCompound nbt) {
 		EnFusion.log.info("writeToNBT");
-		super.writeToNBT(nbt);
 		nbt.setInteger("MaxEnergyGeneration", maxEnergyGeneration);
 		this.storage.writeToNBT(nbt);
 	}
 
 //	IEnergyHandler
-
 	@Override
 	public boolean canConnectEnergy(ForgeDirection from) {
 		return from == ForgeDirection.UP ? false : true;
