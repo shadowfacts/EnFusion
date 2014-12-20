@@ -1,17 +1,19 @@
 package net.shadowfacts.enfusion.machine.generator.solar;
 
+import java.util.ArrayList;
+
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
 import net.minecraftforge.common.util.ForgeDirection;
+
 import net.shadowfacts.shadowcore.block.BaseTileEntityBlock;
 import net.shadowfacts.shadowcore.debug.IDebuggable;
 import net.shadowfacts.shadowcore.util.StringHelper;
-
-import java.util.ArrayList;
 
 /**
  * The solar panel block.
@@ -31,7 +33,7 @@ public class BlockSolarPanel extends BaseTileEntityBlock implements IDebuggable 
 		this.capacity = capacity;
 
 		// Rendering
-		setBlockBounds(0.0f, 0.0f, 0.0f, 1.0f, 0.375f, 1.0f);
+		setBlockBounds(0.0f, 0.0f, 0.0f, 1.0f, 0.2f, 1.0f);
 		setLightOpacity(255);
 		useNeighborBrightness = true;
 	}
