@@ -1,13 +1,17 @@
 package net.shadowfacts.enfusion.machine.generator.solar;
 
-import cofh.api.energy.EnergyStorage;
 import cofh.api.energy.IEnergyHandler;
+
 import com.google.common.base.Objects;
+
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
+
 import net.minecraftforge.common.util.ForgeDirection;
+
 import net.shadowfacts.enfusion.EnFusion;
+import net.shadowfacts.enfusion.energy.BaseEnergyStorage;
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 /**
@@ -16,7 +20,7 @@ import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
  */
 public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHandler {
 
-	private EnergyStorage storage;
+	private BaseEnergyStorage storage;
 	protected int maxEnergyGeneration;
 
 	/**
@@ -31,7 +35,7 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 	 */
 	public TileEntitySolarPanel(int maxEnergyGeneration, int maxTransfer, int capacity) {
 		this.maxEnergyGeneration = maxEnergyGeneration;
-		this.storage = new EnergyStorage(capacity, maxTransfer);
+		this.storage = new BaseEnergyStorage(capacity, maxTransfer);
 	}
 
 	@Override
