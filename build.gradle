@@ -28,7 +28,7 @@ group= "net.shadowfacts.enfusion" // http://maven.apache.org/guides/mini/guide-n
 archivesBaseName = "EnFusion"
 
 // Get the environment
-ext.env = System.getevn()
+ext.env = System.getenv()
 
 if (env.DRONE_BUILD_NUMBER != null) {
 	version += "-snapshot-" + env.DRONE_BUILD_NUMBER
