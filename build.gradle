@@ -27,8 +27,11 @@ version = mc_ver + "-" + mod_ver
 group= "net.shadowfacts.enfusion" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "EnFusion"
 
-if (env.BUILD_ID != null) {
-	version += "-snapshot-" + env.BUILD_ID
+// Get the environment
+ext.env = System.getevn()
+
+if (env.DRONE_BUILD_NUMBER != null) {
+	version += "-snapshot-" + env.DRONE_BUILD_NUMBER
 }
 
 minecraft {
