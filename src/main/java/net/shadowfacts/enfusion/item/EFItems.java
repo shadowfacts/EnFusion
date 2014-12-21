@@ -34,6 +34,11 @@ public class EFItems {
 	public static EArmor zinchoriumBoots;
 	public static ItemLaserPistol laserPistol;
 	public static ItemMiningLaser miningLaser;
+	public static Item mirror;
+	public static Item basicCapacitor;
+	public static Item enhancedCapacitor;
+	public static Item energeticCapacitor;
+	public static Item hyperEnergeticCapacitor;
 	
 	
 	// Methods
@@ -98,6 +103,14 @@ public class EFItems {
 		miningLaser = new ItemMiningLaser();
 		miningLaser.setUnlocalizedName("miningLaser").setCreativeTab(ECreativeTabs.tabTools)
 					.setTextureName(EnFusion.modId + ":tools/miningLaser");
+
+		mirror = new Item();
+		mirror.setUnlocalizedName("mirror").setCreativeTab(ECreativeTabs.tabCore)
+				.setTextureName(EnFusion.modId + ":mirror");
+
+		basicCapacitor = new Item();
+		basicCapacitor.setUnlocalizedName("basicCapacitor").setCreativeTab(ECreativeTabs.tabCore)
+						.setTextureName(EnFusion.modId + ":basicCapacitor");
 		
 		
 		
@@ -117,6 +130,8 @@ public class EFItems {
 		GameRegistry.registerItem(zinchoriumBoots, "zinchoriumBoots");
 		GameRegistry.registerItem(laserPistol, "laserPistol");
 		GameRegistry.registerItem(miningLaser, "miningLaser");
+		GameRegistry.registerItem(mirror, "mirror");
+		GameRegistry.registerItem(basicCapacitor, "basicCapacitor");
 	}
 	
 	public static void load() {

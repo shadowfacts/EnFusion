@@ -11,13 +11,19 @@ tile.solarPanelTier1.name=Solar Panel (Tier I)
 tile.solarPanelTier2.name=Solar Panel (Tier II)
 tile.solarPanelTier3.name=Solar Panel (Tier III)
 tile.solarPanelTier4.name=Solar Panel (Tier IV)
-tile.solarPanelTier5.name=Solar Panel (Tier V)
 
 # Items
 item.zinchoriumDust.name=Zinchorium Dust
 item.zinchoriumAlloyIngot.name=Zinchorium Alloy Ingot
 item.lightBulb.name=Light Bulb
 item.ingotCopper.name=Copper Ingot
+item.mirror.name=Mirror
+item.basicCapacitor.name=Basic Capacitor
+item.enhancedCapacitor.name=Enhanced Capacitor
+item.energeticCapacitor.name=Energetic Capacitor
+item.hyperEnergeticCapacitor.name=Hyper Energetic Capacitor
+
+# Tools
 item.zinchoriumSword.name=Zinchorium Sword
 item.zinchoriumPickaxe.name=Zinchorium Pickaxe
 item.zinchoriumAxe.name=Zinchorium Axe

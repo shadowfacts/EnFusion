@@ -22,6 +22,18 @@ public class EFRecipes {
 
 		// Zinchorium Block
 		GameRegistry.addShapedRecipe(new ItemStack(EFBlocks.zinchoriumBlock), "ZZZ", "ZZZ", "ZZZ", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot));
+
+		// Solar Panel Tier 1
+		GameRegistry.addShapedRecipe(new ItemStack(EFBlocks.solarPanelTier1), "MMM", "CFC", "CCC", 'M', new ItemStack(EFItems.mirror), 'C', new ItemStack(Blocks.cobblestone), 'F', new ItemStack(EFItems.basicCapacitor));
+
+		// Solar Panel Tier 2
+		GameRegistry.addShapelessRecipe(new ItemStack(EFBlocks.solarPanelTier2), new ItemStack(EFBlocks.solarPanelTier1), new ItemStack(EFItems.enhancedCapacitor), new ItemStack(EFBlocks.solarPanelTier1));
+
+		// Solar Panel Tier 3
+		GameRegistry.addShapelessRecipe(new ItemStack(EFBlocks.solarPanelTier3), new ItemStack(EFBlocks.solarPanelTier2), new ItemStack(EFItems.energeticCapacitor), new ItemStack(EFBlocks.solarPanelTier1));
+
+		// Solar Panel Tier 4
+		GameRegistry.addShapelessRecipe(new ItemStack(EFBlocks.solarPanelTier4), new ItemStack(EFBlocks.solarPanelTier3), new ItemStack(EFItems.hyperEnergeticCapacitor), new ItemStack(EFBlocks.solarPanelTier3));
 	}
 	
 	private static void registerItemRecipes() {
@@ -58,6 +70,20 @@ public class EFRecipes {
 
 		// Zinchorium Block -> Zinchorium Alloy Ingot
 		GameRegistry.addShapelessRecipe(new ItemStack(EFItems.zinchoriumAlloyIngot, 9), new ItemStack(EFBlocks.zinchoriumBlock));
+
+		// Mirror
+		GameRegistry.addShapedRecipe(new ItemStack(EFItems.mirror, 3), "GGG", "III", "   ", 'G', new ItemStack(Blocks.glass), 'I', new ItemStack(Items.iron_ingot));
+
+		// Basic Capacitor
+		GameRegistry.addShapedRecipe(new ItemStack(EFItems.basicCapacitor), "  R", " C ", "R  ", 'R', new ItemStack(Items.redstone), 'C', new ItemStack(EFItems.ingotCopper));
+
+		// Enhanced Capacitor
+
+
+		// Energetic Capacitor
+
+
+		// Hyper Energetic Capacitor
 		
 	}
 	
