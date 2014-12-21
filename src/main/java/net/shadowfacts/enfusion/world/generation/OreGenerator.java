@@ -1,13 +1,15 @@
 package net.shadowfacts.enfusion.world.generation;
 
+import java.util.Random;
+
 import cpw.mods.fml.common.IWorldGenerator;
+
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-import net.shadowfacts.enfusion.block.EFBlocks;
 
-import java.util.Random;
+import net.shadowfacts.enfusion.block.EFBlocks;
 
 /**
  * Ore generation, self explanatory.
@@ -34,7 +36,7 @@ public class OreGenerator implements IWorldGenerator {
 
 	// Generate stuff for the overworld
 	private void generateOverworld(World world, Random random, int x, int z) {
-		this.addOreSpawn(EFBlocks.zinchoriumOre, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 4, 42);
+		this.addOreSpawn(EFBlocks.oreZinchorium, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 4, 42);
 		this.addOreSpawn(EFBlocks.oreCopper, world, random, x, z, 16, 16, 5 + random.nextInt(2), 5, 0, 70);
 	}
 

@@ -1,11 +1,12 @@
 package net.shadowfacts.enfusion.block;
 
+import java.util.Random;
+
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
-import net.shadowfacts.enfusion.item.EFItems;
 
-import java.util.Random;
+import net.shadowfacts.enfusion.item.EFItems;
 
 public class BlockOre extends EFBlock {
 
@@ -15,7 +16,7 @@ public class BlockOre extends EFBlock {
 	
 	@Override
 	public Item getItemDropped(int par1, Random par2Random, int par3) {
-		if (this == EFBlocks.zinchoriumOre) {
+		if (this == EFBlocks.oreZinchorium) {
 			return EFItems.zinchoriumDust;
 		} else {
 			return Item.getItemFromBlock(this);
