@@ -1,21 +1,18 @@
 package net.shadowfacts.enfusion.item;
 
-import net.minecraft.item.Item;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+import net.minecraft.item.*;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.item.ItemAxe;
-import net.minecraft.item.ItemHoe;
-import net.minecraft.item.ItemPickaxe;
-import net.minecraft.item.ItemSpade;
-import net.minecraft.item.ItemSword;
+
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.item.armor.EArmor;
-import net.shadowfacts.enfusion.item.tool.ItemLaserPistol;
-import net.shadowfacts.enfusion.item.tool.ItemMiningLaser;
 import net.shadowfacts.enfusion.item.tool.ItemEAxe;
 import net.shadowfacts.enfusion.item.tool.ItemEPickaxe;
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.shadowfacts.enfusion.item.tool.ItemLaserPistol;
+import net.shadowfacts.enfusion.item.tool.ItemMiningLaser;
 
 public class EFItems {
 	// Items
@@ -111,6 +108,18 @@ public class EFItems {
 		basicCapacitor = new Item();
 		basicCapacitor.setUnlocalizedName("basicCapacitor").setCreativeTab(ECreativeTabs.tabCore)
 						.setTextureName(EnFusion.modId + ":basicCapacitor");
+
+		enhancedCapacitor = new Item();
+		enhancedCapacitor.setUnlocalizedName("enhancedCapacitor").setCreativeTab(ECreativeTabs.tabCore)
+						.setTextureName(EnFusion.modId + ":enhancedCapacitor");
+
+		energeticCapacitor = new Item();
+		energeticCapacitor.setUnlocalizedName("energeticCapacitor").setCreativeTab(ECreativeTabs.tabCore)
+						.setTextureName(EnFusion.modId + ":energeticCapacitor");
+
+		hyperEnergeticCapacitor = new Item();
+		hyperEnergeticCapacitor.setUnlocalizedName("hyperEnergeticCapacitor").setCreativeTab(ECreativeTabs.tabCore)
+							.setTextureName(EnFusion.modId + ":hyperEnergeticCapacitor");
 		
 		
 		
@@ -132,6 +141,9 @@ public class EFItems {
 		GameRegistry.registerItem(miningLaser, "miningLaser");
 		GameRegistry.registerItem(mirror, "mirror");
 		GameRegistry.registerItem(basicCapacitor, "basicCapacitor");
+		GameRegistry.registerItem(enhancedCapacitor, "enhancedCapacitor");
+		GameRegistry.registerItem(energeticCapacitor, "energeticCapacitor");
+		GameRegistry.registerItem(hyperEnergeticCapacitor, "hyperEnergeticCapacitor");
 	}
 	
 	public static void load() {
