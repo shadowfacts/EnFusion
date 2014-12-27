@@ -10,7 +10,6 @@ import net.minecraft.util.MathHelper;
 
 import net.minecraftforge.common.util.ForgeDirection;
 
-import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.energy.BaseEnergyStorage;
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
@@ -92,14 +91,12 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 //	NBT Stuff
 	@Override
 	protected void loadDataFromNBT(NBTTagCompound nbt) {
-		EnFusion.log.info("readFromNBT");
 		maxEnergyGeneration = nbt.getInteger("MaxEnergyGeneration");
 		this.storage.readFromNBT(nbt);
 	}
 
 	@Override
 	protected void addDataToNBT(NBTTagCompound nbt) {
-		EnFusion.log.info("writeToNBT");
 		nbt.setInteger("MaxEnergyGeneration", maxEnergyGeneration);
 		this.storage.writeToNBT(nbt);
 	}
