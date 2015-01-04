@@ -78,7 +78,7 @@ public class EFRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.mirror, 3), "GGG", "III", "   ", 'G', new ItemStack(Blocks.glass), 'I', new ItemStack(Items.iron_ingot));
 
 		// Basic Capacitor
-		GameRegistry.addShapedRecipe(new ItemStack(EFItems.basicCapacitor), "  R", " C ", "R  ", 'R', new ItemStack(Items.redstone), 'C', new ItemStack(EFItems.ingotCopper));
+		GameRegistry.addShapedRecipe(new ItemStack(EFItems.basicCapacitor), "  R", " Z ", "R  ", 'R', new ItemStack(Items.redstone), 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot));
 
 		// Enhanced Capacitor
 
