@@ -15,7 +15,6 @@ import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
 import net.shadowfacts.enfusion.compat.EFCompat;
 import net.shadowfacts.enfusion.config.Configurator;
 import net.shadowfacts.enfusion.item.EFItems;
-import net.shadowfacts.enfusion.machine.generator.solar.TileEntitySolarPanel;
 import net.shadowfacts.enfusion.proxy.CommonProxy;
 import net.shadowfacts.enfusion.recipes.EFRecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
@@ -65,16 +64,14 @@ public class EnFusion {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		proxy.registerTileEntities();
-		
 		EFBlocks.init();
 		EFItems.init();
 
+		// Register Tile Entities
+		proxy.registerTileEntities();
+
 		// Register GUI handler
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new EFGuiHandler());
-
-
-		GameRegistry.registerTileEntity(TileEntitySolarPanel.class, "enfusion.tileentity.solarpanel");
 
 		// Compatibility
 		EFCompat.init();
