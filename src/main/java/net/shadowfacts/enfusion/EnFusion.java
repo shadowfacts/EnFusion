@@ -64,11 +64,11 @@ public class EnFusion {
 	}
 
 	@EventHandler
-	public void load(FMLInitializationEvent event) {
+	public void init(FMLInitializationEvent event) {
 		proxy.registerTileEntities();
 		
-		EFBlocks.load();
-		EFItems.load();
+		EFBlocks.init();
+		EFItems.init();
 
 		// Register GUI handler
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new EFGuiHandler());

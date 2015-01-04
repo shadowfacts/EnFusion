@@ -122,7 +122,7 @@ public class EFBlocks {
 		GameRegistry.registerBlock(greenZinchoriumLightIdle, "greenZinchoriumLightIdle");
 	}
 	
-	public static void load() {
+	public static void init() {
 		
 	}
 	

@@ -1,15 +1,13 @@
 package net.shadowfacts.enfusion.compat;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 import cpw.mods.fml.common.registry.GameRegistry;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.item.EFItems;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * ExNihilo Compatibility

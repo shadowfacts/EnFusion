@@ -189,7 +189,7 @@ public class EFItems {
 		GameRegistry.registerItem(hyperEnergeticCapacitor, "hyperEnergeticCapacitor");
 	}
 	
-	public static void load() {
+	public static void init() {
 		
 	}
 	
