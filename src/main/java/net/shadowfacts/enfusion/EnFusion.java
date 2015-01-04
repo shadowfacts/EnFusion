@@ -12,6 +12,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
+import net.shadowfacts.enfusion.compat.EFCompat;
 import net.shadowfacts.enfusion.config.Configurator;
 import net.shadowfacts.enfusion.item.EFItems;
 import net.shadowfacts.enfusion.machine.generator.solar.TileEntitySolarPanel;
@@ -28,7 +29,7 @@ public class EnFusion {
 	public static final String version = "@VERSION@";
 	public static final String clientProxyString = "net.shadowfacts.enfusion.proxy.ClientProxy";
 	public static final String serverProxyString = "net.shadowfacts.enfusion.proxy.CommonProxy";
-	public static final String depString = "required-after:shadowcore@[0.0.1,)";
+	public static final String depString = "required-after:Forge@[10.13.2.1235,);required-after:shadowcore;after:exnihilo;";
 	
 	
 	@Instance(value=EnFusion.modId)
@@ -57,6 +58,9 @@ public class EnFusion {
 		
 		// Ore Generator
 		GameRegistry.registerWorldGenerator(oreGenerator, 3);
+
+		// Compatibility
+		EFCompat.preInit();
 	}
 
 	@EventHandler
@@ -71,6 +75,9 @@ public class EnFusion {
 
 
 		GameRegistry.registerTileEntity(TileEntitySolarPanel.class, "enfusion.tileentity.solarpanel");
+
+		// Compatibility
+		EFCompat.init();
 	}
 
 	@EventHandler
@@ -80,6 +87,9 @@ public class EnFusion {
 		
 		proxy.registerEntities();
 		proxy.registerRenderInformation();
+
+		// Compatibility
+		EFCompat.postInit();
 	}
 }
 
