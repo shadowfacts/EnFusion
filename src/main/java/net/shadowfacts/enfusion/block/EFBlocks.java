@@ -39,12 +39,12 @@ public class EFBlocks {
 		oreZinchorium = new BlockOre();
 		oreZinchorium.setBlockName("oreZinchorium").setCreativeTab(ECreativeTabs.tabCore)
 				.setHardness(1.0f).setStepSound(Block.soundTypeStone)
-				.setBlockTextureName(EnFusion.modId + ":oreZinchorium")
+				.setBlockTextureName(EnFusion.modId + ":ore/zinchorium")
 				.setHarvestLevel("pickaxe", 1);
 
 		oreCopper = new BlockOre();
 		oreCopper.setBlockName("oreCopper")
-				.setBlockTextureName(EnFusion.modId + ":oreCopper").setCreativeTab(ECreativeTabs.tabCore)
+				.setBlockTextureName(EnFusion.modId + ":ore/copper").setCreativeTab(ECreativeTabs.tabCore)
 				.setHardness(1.5f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
 

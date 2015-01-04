@@ -14,7 +14,6 @@ tile.solarPanelTier4.name=Solar Panel (Tier IV)
 
 # Items
 item.lightBulb.name=Light Bulb
-item.ingotCopper.name=Copper Ingot
 item.mirror.name=Mirror
 item.basicCapacitor.name=Basic Capacitor
 item.enhancedCapacitor.name=Enhanced Capacitor
@@ -22,10 +21,14 @@ item.energeticCapacitor.name=Energetic Capacitor
 item.hyperEnergeticCapacitor.name=Hyper Energetic Capacitor
 
 # Ingots
+item.ingotCopper.name=Copper Ingot
 item.zinchoriumAlloyIngot.name=Zinchorium Alloy Ingot
 
 
 # Dusts
+item.dustIron.name=Iron Dust
+item.dustGold.name=Gold Dust
+item.dustCopper.name=Copper Dust
 item.zinchoriumDust.name=Zinchorium Dust
 
 # Tools
