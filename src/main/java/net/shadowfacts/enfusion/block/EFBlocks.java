@@ -1,13 +1,10 @@
 package net.shadowfacts.enfusion.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-
 import net.minecraft.block.Block;
-
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
-import net.shadowfacts.enfusion.machine.furnace.BlockFluxFurnace;
 import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
 
 public class EFBlocks {
@@ -18,8 +15,6 @@ public class EFBlocks {
 
 
 //	Machines
-	public static BlockFluxFurnace fluxFurnaceIdle;
-	public static BlockFluxFurnace fluxFurnaceActive;
 	public static BlockSolarPanel solarPanelTier1;
 	public static BlockSolarPanel solarPanelTier2;
 	public static BlockSolarPanel solarPanelTier3;
@@ -50,16 +45,6 @@ public class EFBlocks {
 
 
 //		Machines
-		fluxFurnaceIdle = new BlockFluxFurnace(false);
-		fluxFurnaceIdle.setBlockName("fluxFurnaceIdle").setCreativeTab(ECreativeTabs.tabMachines)
-				.setHardness(0.9f).setStepSound(Block.soundTypeMetal)
-				.setHarvestLevel("pickaxe", 2);
-
-		fluxFurnaceActive = new BlockFluxFurnace(true);
-		fluxFurnaceActive.setBlockName("fluxFurnaceActive")
-				.setHardness(0.9f).setStepSound(Block.soundTypeMetal)
-				.setHarvestLevel("pickaxe", 2);
-
 		solarPanelTier1 = new BlockSolarPanel("solarPanelTier1", 16, 8000);
 		solarPanelTier1.setBlockName("solarPanelTier1").setHardness(0.9f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(ECreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier1")
@@ -108,8 +93,6 @@ public class EFBlocks {
 
 
 //		Machines
-		GameRegistry.registerBlock(fluxFurnaceIdle, "fluxFurnaceIdle");
-		GameRegistry.registerBlock(fluxFurnaceActive, "fluxFurnaceActive");
 		GameRegistry.registerBlock(solarPanelTier1, "solarPanelTier1");
 		GameRegistry.registerBlock(solarPanelTier2, "solarPanelTier2");
 		GameRegistry.registerBlock(solarPanelTier3, "solarPanelTier3");
