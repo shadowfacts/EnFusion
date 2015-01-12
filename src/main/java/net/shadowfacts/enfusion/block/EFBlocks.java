@@ -6,6 +6,7 @@ import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
+import net.shadowfacts.enfusion.machine.generator.zinchoriumfurnace.BlockZinchoriumFurnace;
 
 public class EFBlocks {
 //	Blocks
@@ -19,7 +20,7 @@ public class EFBlocks {
 	public static BlockSolarPanel solarPanelTier2;
 	public static BlockSolarPanel solarPanelTier3;
 	public static BlockSolarPanel solarPanelTier4;
-
+	public static BlockZinchoriumFurnace zinchoriumFurnace;
 
 
 	//	Miscellaneous
@@ -65,6 +66,10 @@ public class EFBlocks {
 				.setCreativeTab(ECreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier4")
 				.setHarvestLevel("pickaxe", 2);
 
+		zinchoriumFurnace = new BlockZinchoriumFurnace("zinchoriumFurnace", false);
+		zinchoriumFurnace.setBlockName("zinchoriumFurnace").setHardness(1.0f).setStepSound(Block.soundTypePiston)
+				.setCreativeTab(ECreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
+
 
 //		Miscellaneous
 		zinchoriumBlock = new EFBlock();
@@ -97,6 +102,7 @@ public class EFBlocks {
 		GameRegistry.registerBlock(solarPanelTier2, "solarPanelTier2");
 		GameRegistry.registerBlock(solarPanelTier3, "solarPanelTier3");
 		GameRegistry.registerBlock(solarPanelTier4, "solarPanelTier4");
+		GameRegistry.registerBlock(zinchoriumFurnace, "zinchoriumFurnace");
 
 
 //		Miscellaneous

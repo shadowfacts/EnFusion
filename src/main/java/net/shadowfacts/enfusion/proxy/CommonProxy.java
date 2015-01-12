@@ -5,6 +5,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.shadowfacts.enfusion.entity.EntityLaserBolt;
 import net.shadowfacts.enfusion.entity.EntityMiningLaser;
 import net.shadowfacts.enfusion.machine.generator.solar.TileEntitySolarPanel;
+import net.shadowfacts.enfusion.machine.generator.zinchoriumfurnace.TileEntityZinchoriumFurnace;
 
 public class CommonProxy {
 	
@@ -25,8 +26,8 @@ public class CommonProxy {
 	}
 	
 	public void registerTileEntities() {
-//		GameRegistry.registerTileEntity(TileEntityFluxFurnace.class, TileEntityFluxFurnace.TEId);
 		GameRegistry.registerTileEntity(TileEntitySolarPanel.class, "enfusion.tileentity.solarpanel");
+		GameRegistry.registerTileEntity(TileEntityZinchoriumFurnace.class, "enfusion.tileentity.zinchoriumfurnace");
 	}
 	
 }

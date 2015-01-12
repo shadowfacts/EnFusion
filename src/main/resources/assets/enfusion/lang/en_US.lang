@@ -5,8 +5,7 @@ tile.greenZinchoriumLightIdle.name=Zinchorium Light (Green)
 tile.oreCopper.name=Copper Ore
 
 # Machines
-tile.fluxFurnaceIdle.name=Flux Furnace
-tile.fluxFurnaceActive.name=Flux Furnace
+tile.fluxFurnace.name=Flux Furnace
 tile.solarPanelTier1.name=Solar Panel (Tier I)
 tile.solarPanelTier2.name=Solar Panel (Tier II)
 tile.solarPanelTier3.name=Solar Panel (Tier III)
