@@ -24,7 +24,7 @@ public class EFRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(EFBlocks.greenZinchoriumLightIdle, 1), "IGI", "GLG", "IGI", 'I', new ItemStack(EFItems.zinchoriumAlloyIngot), 'G', new ItemStack(Blocks.glass), 'L', new ItemStack(EFItems.lightBulb, 1));
 
 		// Zinchorium Block
-		GameRegistry.addShapedRecipe(new ItemStack(EFBlocks.zinchoriumBlock), "ZZZ", "ZZZ", "ZZZ", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot));
+		GameRegistry.addShapedRecipe(new ItemStack(EFBlocks.blockZinchorium), "ZZZ", "ZZZ", "ZZZ", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot));
 
 		// Solar Panel Tier 1
 		GameRegistry.addShapedRecipe(new ItemStack(EFBlocks.solarPanelTier1), "MMM", "CFC", "CCC", 'M', new ItemStack(EFItems.mirror), 'C', new ItemStack(Blocks.cobblestone), 'F', new ItemStack(EFItems.basicCapacitor));
@@ -72,7 +72,7 @@ public class EFRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumBoots), "   ", "Z Z", "Z Z", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot));
 
 		// Zinchorium Block -> Zinchorium Alloy Ingot
-		GameRegistry.addShapelessRecipe(new ItemStack(EFItems.zinchoriumAlloyIngot, 9), new ItemStack(EFBlocks.zinchoriumBlock));
+		GameRegistry.addShapelessRecipe(new ItemStack(EFItems.zinchoriumAlloyIngot, 9), new ItemStack(EFBlocks.blockZinchorium));
 
 		// Mirror
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.mirror, 3), "GGG", "III", "   ", 'G', new ItemStack(Blocks.glass), 'I', new ItemStack(Items.iron_ingot));

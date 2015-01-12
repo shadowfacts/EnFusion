@@ -14,6 +14,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.EFBlocks;
@@ -77,30 +78,30 @@ public class BlockZinchoriumFurnace extends BaseContainerBlock {
 		}
 	}
 
-//	@SideOnly(Side.CLIENT)
-//	public IIcon getIcon(int par1, int par2) {
-//		if (par1 != par2) {
-//			return this.blockIcon;
-//		} else if (par1 == 0 || par1 == 1) {
-//			return this.iconTop;
-//		} else {
-//			if (this.isActive) {
-//				return this.iconFrontActive;
-//			} else {
-//				return this.iconFrontIdle;
-//			}
-//		}
-//	}
-
 	@SideOnly(Side.CLIENT)
-	public
+	public IIcon getIcon(IBlockAccess world, int x, int y, int z, int side) {
+		if (side == world.getBlockMetadata(x, y, z)) {
+			TileEntity tileEntity = world.getTileEntity(x, y, z);
+			if (tileEntity instanceof TileEntityZinchoriumFurnace) {
+				TileEntityZinchoriumFurnace te = (TileEntityZinchoriumFurnace)tileEntity;
+				if (te.isBurning()) {
+					return this.iconFrontActive;
+				} else {
+					return this.iconFrontIdle;
+				}
+			} else {
+				return null;
+			}
+		} else {
+			return this.blockIcon;
+		}
+	}
 
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister registry) {
-		this.blockIcon = registry.registerIcon("machine/zinchoriumFurnace/side");
-		this.iconFrontActive = registry.registerIcon("machine/zinchoriumFurnace/front_active");
-		this.iconFrontIdle = registry.registerIcon("machine/zinchoriumFurnace/front_idle");
-		this.iconTop = registry.registerIcon("machine/zinchoriumFurnace/top");
+		this.blockIcon = registry.registerIcon(EnFusion.modId + ":machine/zinchoriumFurnace/base");
+		this.iconFrontActive = registry.registerIcon(EnFusion.modId + ":machine/zinchoriumFurnace/front_active");
+		this.iconFrontIdle = registry.registerIcon(EnFusion.modId + ":machine/zinchoriumFurnace/front_idle");
 	}
 
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
@@ -164,35 +165,29 @@ public class BlockZinchoriumFurnace extends BaseContainerBlock {
 
 	@SideOnly(Side.CLIENT)
 	public void randomDisplayTick(World world, int x, int y, int z, Random random) {
-		if (this.isActive) {
-			int l = world.getBlockMetadata(x, y, z);
-			float f = x + 0.5f;
-			float f1 = y + random.nextFloat() * 6.0f / 16.0f;
-			float f2 = z + 0.5f;
-			float f3 = 0.52f;
-			float f4 = random.nextFloat() * 0.6f - 0.3f;
-			if (l == 4) {
-				world.spawnParticle("smoke", f - f3, f1, f2 + f4, 0.0D, 0.0D, 0.0D);
-				world.spawnParticle("flame", f - f3, f1, f2 + f4, 0.0D, 0.0D, 0.0D);
-			} else if (l == 5) {
-				world.spawnParticle("smoke", f + f3, f1, f2 + f4, 0.0D, 0.0D, 0.0D);
-				world.spawnParticle("flame", f + f3, f1, f2 + f4, 0.0D, 0.0D, 0.0D);
-			} else if (l == 2) {
-				world.spawnParticle("smoke", f + f4, f1, f2 - f3, 0.0D, 0.0D, 0.0D);
-				world.spawnParticle("flame", f + f4, f1, f2 - f3, 0.0D, 0.0D, 0.0D);
-			} else if (l == 3) {
-				world.spawnParticle("smoke", f + f4, f1, f2 + f3, 0.0D, 0.0D, 0.0D);
-				world.spawnParticle("flame", f + f4, f1, f2 + f3, 0.0D, 0.0D, 0.0D);
+		if (world.getTileEntity(x, y, z) instanceof TileEntityZinchoriumFurnace) {
+			TileEntityZinchoriumFurnace te = (TileEntityZinchoriumFurnace)world.getTileEntity(x, y, z);
+			if (te.isBurning()) {
+				int l = world.getBlockMetadata(x, y, z);
+				float f = x + 0.5f;
+				float f1 = y + random.nextFloat() * 6.0f / 16.0f;
+				float f2 = z + 0.5f;
+				float f3 = 0.52f;
+				float f4 = random.nextFloat() * 0.6f - 0.3f;
+				if (l == 4) {
+					world.spawnParticle("smoke", f - f3, f1, f2 + f4, 0.0D, 0.0D, 0.0D);
+					world.spawnParticle("flame", f - f3, f1, f2 + f4, 0.0D, 0.0D, 0.0D);
+				} else if (l == 5) {
+					world.spawnParticle("smoke", f + f3, f1, f2 + f4, 0.0D, 0.0D, 0.0D);
+					world.spawnParticle("flame", f + f3, f1, f2 + f4, 0.0D, 0.0D, 0.0D);
+				} else if (l == 2) {
+					world.spawnParticle("smoke", f + f4, f1, f2 - f3, 0.0D, 0.0D, 0.0D);
+					world.spawnParticle("flame", f + f4, f1, f2 - f3, 0.0D, 0.0D, 0.0D);
+				} else if (l == 3) {
+					world.spawnParticle("smoke", f + f4, f1, f2 + f3, 0.0D, 0.0D, 0.0D);
+					world.spawnParticle("flame", f + f4, f1, f2 + f3, 0.0D, 0.0D, 0.0D);
+				}
 			}
-		}
-	}
-
-	@Override
-	public void updateTick(World world, int x, int y, int z, Random random) {
-		TileEntity genericTE = world.getTileEntity(x, y, z);
-		if (genericTE instanceof TileEntityZinchoriumFurnace) {
-			TileEntityZinchoriumFurnace te = (TileEntityZinchoriumFurnace)genericTE;
-			te.
 		}
 	}
 
