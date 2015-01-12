@@ -73,7 +73,7 @@ public class EFBlocks {
 
 //		Miscellaneous
 		zinchoriumBlock = new EFBlock();
-		zinchoriumBlock.setBlockName("zinchoriumBlock")
+		zinchoriumBlock.setBlockName("zinchoriumBlock").setBlockTextureName(EnFusion.modId + ":zinchoriumBlock")
 				.setHardness(0.8f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
 		
