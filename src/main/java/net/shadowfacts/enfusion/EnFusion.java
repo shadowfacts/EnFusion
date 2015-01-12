@@ -14,6 +14,7 @@ import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
 import net.shadowfacts.enfusion.compat.EFCompat;
 import net.shadowfacts.enfusion.config.Configurator;
 import net.shadowfacts.enfusion.item.EFItems;
+import net.shadowfacts.enfusion.network.EFNetworkManager;
 import net.shadowfacts.enfusion.proxy.CommonProxy;
 import net.shadowfacts.enfusion.recipes.EFRecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
@@ -59,6 +60,9 @@ public class EnFusion {
 
 		// Compatibility
 		EFCompat.preInit();
+
+		// Network stuff
+		EFNetworkManager.initialize();
 	}
 
 	@EventHandler

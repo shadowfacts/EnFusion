@@ -11,6 +11,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import net.shadowfacts.enfusion.energy.BaseEnergyStorage;
+import net.shadowfacts.enfusion.network.EFNetworkManager;
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 /**
@@ -19,7 +20,7 @@ import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
  */
 public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHandler {
 
-	private BaseEnergyStorage storage;
+	public BaseEnergyStorage storage;
 	protected int maxEnergyGeneration;
 
 	/**
@@ -45,6 +46,7 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 			if (storage.getEnergyStored() > 0) {
 				transferEnergy();
 			}
+			EFNetworkManager.sendToAllAround(new PacketUpdateSolarPanel(this), this);
 		}
 	}
 
