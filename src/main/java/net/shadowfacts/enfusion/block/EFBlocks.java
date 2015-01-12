@@ -26,7 +26,7 @@ public class EFBlocks {
 	//	Miscellaneous
 	public static BlockZinchoriumLight greenZinchoriumLightActive;
 	public static BlockZinchoriumLight greenZinchoriumLightIdle;
-	public static EFBlock zinchoriumBlock;
+	public static EFBlock blockZinchorium;
 	
 	// Methods
 	public static void preInit() {
@@ -72,8 +72,8 @@ public class EFBlocks {
 
 
 //		Miscellaneous
-		zinchoriumBlock = new EFBlock();
-		zinchoriumBlock.setBlockName("zinchoriumBlock").setBlockTextureName(EnFusion.modId + ":zinchoriumBlock")
+		blockZinchorium = new EFBlock();
+		blockZinchorium.setBlockName("blockZinchorium").setBlockTextureName(EnFusion.modId + ":blockZinchorium")
 				.setHardness(0.8f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
 		
@@ -106,7 +106,7 @@ public class EFBlocks {
 
 
 //		Miscellaneous
-		GameRegistry.registerBlock(zinchoriumBlock, "zinchoriumBlock");
+		GameRegistry.registerBlock(blockZinchorium, "blockZinchorium");
 		GameRegistry.registerBlock(greenZinchoriumLightActive, "greenZinchoriumLightActive");
 		GameRegistry.registerBlock(greenZinchoriumLightIdle, "greenZinchoriumLightIdle");
 	}
