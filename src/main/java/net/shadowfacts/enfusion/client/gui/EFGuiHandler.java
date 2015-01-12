@@ -6,9 +6,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-import net.shadowfacts.enfusion.machine.generator.zinchoriumfurnace.ContainerZinchoriumFurnace;
-import net.shadowfacts.enfusion.machine.generator.zinchoriumfurnace.GuiZinchoriumFurnace;
-import net.shadowfacts.enfusion.machine.generator.zinchoriumfurnace.TileEntityZinchoriumFurnace;
+import net.shadowfacts.enfusion.machine.zinchoriumfurnace.ContainerZinchoriumFurnace;
+import net.shadowfacts.enfusion.machine.zinchoriumfurnace.GuiZinchoriumFurnace;
+import net.shadowfacts.enfusion.machine.zinchoriumfurnace.TileEntityZinchoriumFurnace;
 
 /**
  * EnFusion GUI handler

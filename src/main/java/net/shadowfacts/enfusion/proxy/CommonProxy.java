@@ -5,7 +5,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.shadowfacts.enfusion.entity.EntityLaserBolt;
 import net.shadowfacts.enfusion.entity.EntityMiningLaser;
 import net.shadowfacts.enfusion.machine.generator.solar.TileEntitySolarPanel;
-import net.shadowfacts.enfusion.machine.generator.zinchoriumfurnace.TileEntityZinchoriumFurnace;
+import net.shadowfacts.enfusion.machine.zinchoriumfurnace.TileEntityZinchoriumFurnace;
 
 public class CommonProxy {
 	

@@ -6,7 +6,7 @@ import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
-import net.shadowfacts.enfusion.machine.generator.zinchoriumfurnace.BlockZinchoriumFurnace;
+import net.shadowfacts.enfusion.machine.zinchoriumfurnace.BlockZinchoriumFurnace;
 
 public class EFBlocks {
 //	Blocks

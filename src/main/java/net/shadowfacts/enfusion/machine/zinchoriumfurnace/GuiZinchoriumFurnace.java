@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine.generator.zinchoriumfurnace;
+package net.shadowfacts.enfusion.machine.zinchoriumfurnace;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;

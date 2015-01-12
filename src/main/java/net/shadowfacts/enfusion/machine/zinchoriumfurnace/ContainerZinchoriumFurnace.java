@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine.generator.zinchoriumfurnace;
+package net.shadowfacts.enfusion.machine.zinchoriumfurnace;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
