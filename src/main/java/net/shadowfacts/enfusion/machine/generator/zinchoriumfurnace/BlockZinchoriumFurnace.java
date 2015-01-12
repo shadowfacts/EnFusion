@@ -77,20 +77,23 @@ public class BlockZinchoriumFurnace extends BaseContainerBlock {
 		}
 	}
 
+//	@SideOnly(Side.CLIENT)
+//	public IIcon getIcon(int par1, int par2) {
+//		if (par1 != par2) {
+//			return this.blockIcon;
+//		} else if (par1 == 0 || par1 == 1) {
+//			return this.iconTop;
+//		} else {
+//			if (this.isActive) {
+//				return this.iconFrontActive;
+//			} else {
+//				return this.iconFrontIdle;
+//			}
+//		}
+//	}
+
 	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int par1, int par2) {
-		if (par1 != par2) {
-			return this.blockIcon;
-		} else if (par1 == 0 || par1 == 1) {
-			return this.iconTop;
-		} else {
-			if (this.isActive) {
-				return this.iconFrontActive;
-			} else {
-				return this.iconFrontIdle;
-			}
-		}
-	}
+	public
 
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister registry) {
@@ -181,6 +184,15 @@ public class BlockZinchoriumFurnace extends BaseContainerBlock {
 				world.spawnParticle("smoke", f + f4, f1, f2 + f3, 0.0D, 0.0D, 0.0D);
 				world.spawnParticle("flame", f + f4, f1, f2 + f3, 0.0D, 0.0D, 0.0D);
 			}
+		}
+	}
+
+	@Override
+	public void updateTick(World world, int x, int y, int z, Random random) {
+		TileEntity genericTE = world.getTileEntity(x, y, z);
+		if (genericTE instanceof TileEntityZinchoriumFurnace) {
+			TileEntityZinchoriumFurnace te = (TileEntityZinchoriumFurnace)genericTE;
+			te.
 		}
 	}
 
