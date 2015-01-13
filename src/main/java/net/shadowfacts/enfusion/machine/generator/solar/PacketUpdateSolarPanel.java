@@ -5,8 +5,6 @@ import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
 
-import net.minecraft.tileentity.TileEntity;
-
 /**
  *
  * @author shadowfacts
@@ -45,15 +43,20 @@ public class PacketUpdateSolarPanel implements IMessage, IMessageHandler<PacketU
 		capacity = buf.readInt();
 	}
 
-	public IMessage onMessage(PacketUpdateSolarPanel msg, MessageContext ctx) {
-		TileEntity genericTE = ctx.getServerHandler().playerEntity.worldObj.getTileEntity(msg.x, msg.y, msg.z);
-		if (genericTE instanceof TileEntitySolarPanel) {
-			TileEntitySolarPanel te = (TileEntitySolarPanel)genericTE;
-			te.storage.setEnergyStored(msg.energy);
-			te.storage.setCapacity(msg.capacity);
-			ctx.getServerHandler().playerEntity.worldObj.markBlockForUpdate(msg.x, msg.y, msg.z);
-		}
+//	public IMessage onMessage(PacketUpdateSolarPanel msg, MessageContext ctx) {
+////		TileEntity genericTE = ctx.getClientHandler();
+//		TileEntity genericTE = ctx.getServerHandler().playerEntity.worldObj.getTileEntity(msg.x, msg.y, msg.z);
+//		if (genericTE instanceof TileEntitySolarPanel) {
+//			TileEntitySolarPanel te = (TileEntitySolarPanel)genericTE;
+//			te.storage.setEnergyStored(msg.energy);
+//			te.storage.setCapacity(msg.capacity);
+//			ctx.getServerHandler().playerEntity.worldObj.markBlockForUpdate(msg.x, msg.y, msg.z);
+//		}
+//
+//		return null;
+//	}
 
+	public IMessage onMessage(PacketUpdateSolarPanel msg, MessageContext ctx) {
 		return null;
 	}
 

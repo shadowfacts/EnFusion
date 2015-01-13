@@ -1,7 +1,9 @@
 package net.shadowfacts.enfusion.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+
 import net.minecraft.block.Block;
+
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
@@ -67,14 +69,14 @@ public class EFBlocks {
 				.setHarvestLevel("pickaxe", 2);
 
 		zinchoriumFurnace = new BlockZinchoriumFurnace("zinchoriumFurnace", false);
-		zinchoriumFurnace.setBlockName("zinchoriumFurnace").setHardness(1.0f).setStepSound(Block.soundTypePiston)
+		zinchoriumFurnace.setBlockName("zinchoriumFurnace").setHardness(2.0f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(ECreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
 
 
 //		Miscellaneous
 		blockZinchorium = new EFBlock();
 		blockZinchorium.setBlockName("blockZinchorium").setBlockTextureName(EnFusion.modId + ":blockZinchorium")
-				.setHardness(0.8f).setStepSound(Block.soundTypeStone)
+				.setHardness(2.5f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
 		
 		greenZinchoriumLightActive = new BlockZinchoriumLight(true);
