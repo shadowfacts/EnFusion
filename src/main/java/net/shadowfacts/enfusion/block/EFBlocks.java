@@ -68,7 +68,7 @@ public class EFBlocks {
 				.setCreativeTab(ECreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier4")
 				.setHarvestLevel("pickaxe", 2);
 
-		zinchoriumFurnace = new BlockZinchoriumFurnace("zinchoriumFurnace", false);
+		zinchoriumFurnace = new BlockZinchoriumFurnace("zinchoriumFurnace");
 		zinchoriumFurnace.setBlockName("zinchoriumFurnace").setHardness(2.0f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(ECreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
 

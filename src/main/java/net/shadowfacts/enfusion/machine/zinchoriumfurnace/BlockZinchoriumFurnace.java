@@ -29,8 +29,6 @@ import java.util.Random;
  */
 public class BlockZinchoriumFurnace extends BaseContainerBlock {
 
-	private boolean isActive;
-
 	@SideOnly(Side.CLIENT)
 	private IIcon iconTop;
 	@SideOnly(Side.CLIENT)
@@ -38,15 +36,8 @@ public class BlockZinchoriumFurnace extends BaseContainerBlock {
 	@SideOnly(Side.CLIENT)
 	private IIcon iconFrontIdle;
 
-	public BlockZinchoriumFurnace(String blockName, boolean active) {
+	public BlockZinchoriumFurnace(String blockName) {
 		super(blockName);
-		this.isActive = active;
-	}
-
-	public void setActive(boolean active) {
-		if (active != this.isActive) {
-			this.isActive = active;
-		}
 	}
 
 	@SideOnly(Side.CLIENT)
