@@ -9,10 +9,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.item.armor.EArmor;
-import net.shadowfacts.enfusion.item.tool.ItemEAxe;
-import net.shadowfacts.enfusion.item.tool.ItemEPickaxe;
-import net.shadowfacts.enfusion.item.tool.ItemLaserPistol;
-import net.shadowfacts.enfusion.item.tool.ItemMiningLaser;
+import net.shadowfacts.enfusion.item.tool.*;
 
 public class EFItems {
 //	Items
@@ -40,6 +37,7 @@ public class EFItems {
 	public static EArmor zinchoriumBoots;
 	public static ItemLaserPistol laserPistol;
 	public static ItemMiningLaser miningLaser;
+	public static ItemLeafBlower leafBlower;
 
 
 //	Miscellaneous
@@ -125,6 +123,10 @@ public class EFItems {
 		miningLaser.setUnlocalizedName("miningLaser").setCreativeTab(ECreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/miningLaser");
 
+		leafBlower = new ItemLeafBlower();
+		leafBlower.setUnlocalizedName("leafBlower").setCreativeTab(ECreativeTabs.tabTools)
+				.setTextureName(EnFusion.modId + ":tools/leafBlower");
+
 
 //		Miscellaneous
 		lightBulb = new Item();
@@ -178,6 +180,7 @@ public class EFItems {
 		GameRegistry.registerItem(zinchoriumBoots, "zinchoriumBoots");
 		GameRegistry.registerItem(laserPistol, "laserPistol");
 		GameRegistry.registerItem(miningLaser, "miningLaser");
+		GameRegistry.registerItem(leafBlower, "leafBlower");
 
 
 //		Miscellaneous
