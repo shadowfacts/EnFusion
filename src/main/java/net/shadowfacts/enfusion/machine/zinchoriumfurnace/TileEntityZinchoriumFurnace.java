@@ -11,7 +11,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 /**
@@ -31,10 +30,6 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 	public int burnTime;
 	public int currentItemBurnTime;
 	public int cookTime;
-
-	// Furnace Configuration
-	public final float furnaceSpeedMuiltiplier = 1.0f;
-
 
 	// IInventory
 	public int getSizeInventory() {
@@ -89,11 +84,9 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 	// NBT
 	@Override
 	public void loadDataFromNBT(NBTTagCompound nbt) {
-		EnFusion.log.info("LOADING DATA");
 		NBTTagList tagList = nbt.getTagList("Items", 10);
 		this.furnaceItemStacks = new ItemStack[getSizeInventory()];
 		for (int i = 0; i < tagList.tagCount(); i++) {
-			EnFusion.log.info("Loading stack " + i);
 			NBTTagCompound tagCompound = tagList.getCompoundTagAt(i);
 			int slot = tagCompound.getInteger("Slot");
 			if ((slot >= 0) && (slot < this.furnaceItemStacks.length)) {
@@ -107,14 +100,11 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 
 	@Override
 	public void addDataToNBT(NBTTagCompound nbt) {
-		EnFusion.log.info("SAVING DATA");
 		nbt.setInteger("BurnTime", this.burnTime);
 		nbt.setInteger("CookTime", this.cookTime);
 		NBTTagList tagList = new NBTTagList();
 		for (int i = 0; i < this.furnaceItemStacks.length; i++) {
-			EnFusion.log.info("Attempting to save stack " + i);
 			if (this.furnaceItemStacks[i] != null) {
-				EnFusion.log.info("Saving stack " + i);
 				NBTTagCompound tagCompound = new NBTTagCompound();
 				tagCompound.setInteger("Slot", i);
 				this.furnaceItemStacks[i].writeToNBT(tagCompound);
@@ -167,7 +157,7 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 				}
 				if (isBurning() && canSmelt()) {
 					this.cookTime += 1;
-					if (this.cookTime == 200) {
+					if (this.cookTime == 100) {
 						this.cookTime = 0;
 						smeltItem();
 						flag1 = true;
@@ -176,13 +166,15 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 					this.cookTime = 0;
 				}
 			}
-			if (flag != this.burnTime > 0) {
-				flag1 = true;
-				BlockZinchoriumFurnace furnace = (BlockZinchoriumFurnace)this.worldObj.getBlock(xCoord, yCoord, zCoord);
-				if (furnace != null) {
-					furnace.setActive(this.burnTime > 0);
-				}
-			}
+//			if (flag != this.burnTime > 0) {
+//				flag1 = true;
+//				BlockZinchoriumFurnace furnace = (BlockZinchoriumFurnace)worldObj.getBlock(xCoord, yCoord, zCoord);
+//				worldObj.scheduleBlockUpdate(xCoord, yCoord, zCoord, furnace, 0);
+//			furnace.updateTick(worldObj, xCoord, yCoord, zCoord, new Random());
+//			furnace.onNeighborBlockChange(worldObj, xCoord, yCoord, zCoord, furnace);
+//			worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+
+//			}
 		}
 		if (flag1) {
 			markDirty();
