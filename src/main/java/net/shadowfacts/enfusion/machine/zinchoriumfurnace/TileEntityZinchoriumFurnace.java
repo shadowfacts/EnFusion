@@ -6,12 +6,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
-
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraftforge.common.util.ForgeDirection;
+import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 /**
@@ -89,9 +89,11 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 	// NBT
 	@Override
 	public void loadDataFromNBT(NBTTagCompound nbt) {
-		NBTTagList tagList = nbt.getTagList("items", 10);
+		EnFusion.log.info("LOADING DATA");
+		NBTTagList tagList = nbt.getTagList("Items", 10);
 		this.furnaceItemStacks = new ItemStack[getSizeInventory()];
 		for (int i = 0; i < tagList.tagCount(); i++) {
+			EnFusion.log.info("Loading stack " + i);
 			NBTTagCompound tagCompound = tagList.getCompoundTagAt(i);
 			int slot = tagCompound.getInteger("Slot");
 			if ((slot >= 0) && (slot < this.furnaceItemStacks.length)) {
@@ -105,11 +107,14 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 
 	@Override
 	public void addDataToNBT(NBTTagCompound nbt) {
+		EnFusion.log.info("SAVING DATA");
 		nbt.setInteger("BurnTime", this.burnTime);
 		nbt.setInteger("CookTime", this.cookTime);
 		NBTTagList tagList = new NBTTagList();
 		for (int i = 0; i < this.furnaceItemStacks.length; i++) {
+			EnFusion.log.info("Attempting to save stack " + i);
 			if (this.furnaceItemStacks[i] != null) {
+				EnFusion.log.info("Saving stack " + i);
 				NBTTagCompound tagCompound = new NBTTagCompound();
 				tagCompound.setInteger("Slot", i);
 				this.furnaceItemStacks[i].writeToNBT(tagCompound);
