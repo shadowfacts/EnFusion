@@ -37,6 +37,9 @@ public class EFRecipes {
 
 		// Solar Panel Tier 4
 		GameRegistry.addShapelessRecipe(new ItemStack(EFBlocks.solarPanelTier4), new ItemStack(EFBlocks.solarPanelTier3), new ItemStack(EFItems.hyperEnergeticCapacitor), new ItemStack(EFBlocks.solarPanelTier3));
+
+		// Zinchorium Furnace
+		GameRegistry.addShapedRecipe(new ItemStack(EFBlocks.zinchoriumFurnace), 'ZZZ', 'ZFZ', 'ZZZ', 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot), 'F', new ItemStack(Blocks.furnace));
 	}
 	
 	private static void registerItemRecipes() {
