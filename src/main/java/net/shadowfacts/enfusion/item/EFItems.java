@@ -1,11 +1,9 @@
 package net.shadowfacts.enfusion.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-
 import net.minecraft.item.*;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
 import net.shadowfacts.enfusion.item.armor.EArmor;
@@ -123,7 +121,7 @@ public class EFItems {
 		miningLaser.setUnlocalizedName("miningLaser").setCreativeTab(ECreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/miningLaser");
 
-		leafBlower = new ItemLeafBlower();
+		leafBlower = new ItemLeafBlower(16000, 32);
 		leafBlower.setUnlocalizedName("leafBlower").setCreativeTab(ECreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/leafBlower");
 
