@@ -44,6 +44,7 @@ item.zinchoriumLeggings.name=Zinchorium Leggings
 item.zinchoriumBoots.name=Zinchorium Boots
 item.laserPistol.name=Laser Pistol
 item.miningLaser.name=Mining Laser
+item.leafBlower.name=Leaf Blower
 
 # Creative Tabs
 itemGroup.EnFusionCore=EnFusion Core
