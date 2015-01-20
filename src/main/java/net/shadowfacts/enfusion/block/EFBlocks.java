@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
+import net.shadowfacts.enfusion.machine.conveyor.item.BlockItemConveyor;
 import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
 import net.shadowfacts.enfusion.machine.zinchoriumfurnace.BlockZinchoriumFurnace;
 
@@ -23,6 +24,7 @@ public class EFBlocks {
 	public static BlockSolarPanel solarPanelTier3;
 	public static BlockSolarPanel solarPanelTier4;
 	public static BlockZinchoriumFurnace zinchoriumFurnace;
+	public static BlockItemConveyor itemConveyor;
 
 
 	//	Miscellaneous
@@ -72,6 +74,10 @@ public class EFBlocks {
 		zinchoriumFurnace.setBlockName("zinchoriumFurnace").setHardness(2.0f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(ECreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
 
+		itemConveyor = new BlockItemConveyor("itemConveyor");
+		itemConveyor.setBlockName("itemConveyor").setHardness(2.0f).setStepSound(Block.soundTypePiston)
+				.setCreativeTab(ECreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
+
 
 //		Miscellaneous
 		blockZinchorium = new EFBlock();
@@ -105,6 +111,7 @@ public class EFBlocks {
 		GameRegistry.registerBlock(solarPanelTier3, "solarPanelTier3");
 		GameRegistry.registerBlock(solarPanelTier4, "solarPanelTier4");
 		GameRegistry.registerBlock(zinchoriumFurnace, "zinchoriumFurnace");
+		GameRegistry.registerBlock(itemConveyor, "itemConveyor");
 
 
 //		Miscellaneous

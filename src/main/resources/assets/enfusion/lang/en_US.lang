@@ -12,6 +12,7 @@ tile.solarPanelTier2.name=Solar Panel (Tier II)
 tile.solarPanelTier3.name=Solar Panel (Tier III)
 tile.solarPanelTier4.name=Solar Panel (Tier IV)
 tile.zinchoriumFurnace.name=Zinchorium Furnace
+tile.itemConveyor.name=Item Conveyor
 
 # Items
 item.lightBulb.name=Light Bulb
