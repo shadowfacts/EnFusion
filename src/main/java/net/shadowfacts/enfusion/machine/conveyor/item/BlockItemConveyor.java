@@ -64,7 +64,7 @@ public class BlockItemConveyor extends BaseTileEntityBlock {
 	}
 
 	public TileEntity createNewTileEntity(World world, int metadata) {
-		return new TileEntityItemConveyor(world, metadata);
+		return new TileEntityItemConveyor();
 	}
 
 	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack stack) {
