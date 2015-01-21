@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
-import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
+import net.shadowfacts.enfusion.client.gui.EFCreativeTabs;
 import net.shadowfacts.enfusion.machine.conveyor.item.BlockItemConveyor;
 import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
 import net.shadowfacts.enfusion.machine.zinchoriumfurnace.BlockZinchoriumFurnace;
@@ -37,14 +37,14 @@ public class EFBlocks {
 //		Create Blocks
 //		Ores
 		oreZinchorium = new BlockOre();
-		oreZinchorium.setBlockName("oreZinchorium").setCreativeTab(ECreativeTabs.tabCore)
+		oreZinchorium.setBlockName("oreZinchorium").setCreativeTab(EFCreativeTabs.tabCore)
 				.setHardness(1.0f).setStepSound(Block.soundTypeStone)
 				.setBlockTextureName(EnFusion.modId + ":ore/zinchorium")
 				.setHarvestLevel("pickaxe", 1);
 
 		oreCopper = new BlockOre();
 		oreCopper.setBlockName("oreCopper")
-				.setBlockTextureName(EnFusion.modId + ":ore/copper").setCreativeTab(ECreativeTabs.tabCore)
+				.setBlockTextureName(EnFusion.modId + ":ore/copper").setCreativeTab(EFCreativeTabs.tabCore)
 				.setHardness(1.5f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
 
@@ -52,31 +52,31 @@ public class EFBlocks {
 //		Machines
 		solarPanelTier1 = new BlockSolarPanel("solarPanelTier1", 16, 8000);
 		solarPanelTier1.setBlockName("solarPanelTier1").setHardness(0.9f).setStepSound(Block.soundTypePiston)
-				.setCreativeTab(ECreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier1")
+				.setCreativeTab(EFCreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier1")
 				.setHarvestLevel("pickaxe", 2);
 
 		solarPanelTier2 = new BlockSolarPanel("solarPanelTier2", 32, 16000);
 		solarPanelTier2.setBlockName("solarPanelTier2").setHardness(0.9f).setStepSound(Block.soundTypePiston)
-				.setCreativeTab(ECreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier2")
+				.setCreativeTab(EFCreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier2")
 				.setHarvestLevel("pickaxe", 2);
 
 		solarPanelTier3 = new BlockSolarPanel("solarPanelTier3", 64, 32000);
 		solarPanelTier3.setBlockName("solarPanelTier3").setHardness(0.9f).setStepSound(Block.soundTypePiston)
-				.setCreativeTab(ECreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier3")
+				.setCreativeTab(EFCreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier3")
 				.setHarvestLevel("pickaxe", 2);
 
 		solarPanelTier4 = new BlockSolarPanel("solarPanelTier4", 128, 64000);
 		solarPanelTier4.setBlockName("solarPanelTier4").setHardness(0.9f).setStepSound(Block.soundTypePiston)
-				.setCreativeTab(ECreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier4")
+				.setCreativeTab(EFCreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier4")
 				.setHarvestLevel("pickaxe", 2);
 
 		zinchoriumFurnace = new BlockZinchoriumFurnace("zinchoriumFurnace");
 		zinchoriumFurnace.setBlockName("zinchoriumFurnace").setHardness(2.0f).setStepSound(Block.soundTypePiston)
-				.setCreativeTab(ECreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
+				.setCreativeTab(EFCreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
 
 		itemConveyor = new BlockItemConveyor("itemConveyor");
 		itemConveyor.setBlockName("itemConveyor").setHardness(2.0f).setStepSound(Block.soundTypePiston)
-				.setCreativeTab(ECreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
+				.setCreativeTab(EFCreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
 
 
 //		Miscellaneous
@@ -93,7 +93,7 @@ public class EFBlocks {
 		
 		greenZinchoriumLightIdle = new BlockZinchoriumLight(false);
 		greenZinchoriumLightIdle.setBlockName("greenZinchoriumLightIdle")
-								.setCreativeTab(ECreativeTabs.tabCore).setBlockTextureName(EnFusion.modId + ":zinchoriumLight/green")
+								.setCreativeTab(EFCreativeTabs.tabCore).setBlockTextureName(EnFusion.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundTypeMetal)
 								.setHarvestLevel("pickaxe", 2);
 		

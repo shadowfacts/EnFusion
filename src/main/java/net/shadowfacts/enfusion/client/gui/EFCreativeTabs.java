@@ -7,7 +7,7 @@ import net.shadowfacts.enfusion.item.EFItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ECreativeTabs {
+public class EFCreativeTabs {
 	
 	public static CreativeTabs tabCore = new CreativeTabs("EnFusionCore") {
 		@Override

@@ -5,7 +5,7 @@ import net.minecraft.item.*;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.shadowfacts.enfusion.EnFusion;
-import net.shadowfacts.enfusion.client.gui.ECreativeTabs;
+import net.shadowfacts.enfusion.client.gui.EFCreativeTabs;
 import net.shadowfacts.enfusion.item.armor.EArmor;
 import net.shadowfacts.enfusion.item.tool.*;
 
@@ -53,102 +53,102 @@ public class EFItems {
 //		Ingots
 		ingotCopper = new Item();
 		ingotCopper.setUnlocalizedName("ingotCopper").setTextureName(EnFusion.modId + ":ingot/copper")
-				.setCreativeTab(ECreativeTabs.tabCore);
+				.setCreativeTab(EFCreativeTabs.tabCore);
 		zinchoriumAlloyIngot = new Item();
 		zinchoriumAlloyIngot.setUnlocalizedName("zinchoriumAlloyIngot").setTextureName(EnFusion.modId + ":ingot/zinchoriumAlloy")
-				.setCreativeTab(ECreativeTabs.tabCore);
+				.setCreativeTab(EFCreativeTabs.tabCore);
 
 //		Dusts
 		dustIron = new Item();
 		dustIron.setUnlocalizedName("dustIron").setTextureName(EnFusion.modId + ":dust/iron")
-				.setCreativeTab(ECreativeTabs.tabCore);
+				.setCreativeTab(EFCreativeTabs.tabCore);
 
 		dustGold = new Item();
 		dustGold.setUnlocalizedName("dustGold").setTextureName(EnFusion.modId + ":dust/gold")
-				.setCreativeTab(ECreativeTabs.tabCore);
+				.setCreativeTab(EFCreativeTabs.tabCore);
 
 		dustCopper = new Item();
 		dustCopper.setUnlocalizedName("dustCopper").setTextureName(EnFusion.modId + ":dust/copper")
-				.setCreativeTab(ECreativeTabs.tabCore);
+				.setCreativeTab(EFCreativeTabs.tabCore);
 
 
 		zinchoriumDust = new Item();
 		zinchoriumDust.setUnlocalizedName("zinchoriumDust").setTextureName(EnFusion.modId + ":dust/zinchorium")
-						.setCreativeTab(ECreativeTabs.tabCore);
+						.setCreativeTab(EFCreativeTabs.tabCore);
 
 //		Tools
 		zinchoriumSword = new ItemSword(ToolMaterial.EMERALD);
-		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(ECreativeTabs.tabTools)
+		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemSword");
 
 		zinchoriumPickaxe = new ItemEPickaxe(ToolMaterial.EMERALD);
-		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(ECreativeTabs.tabTools)
+		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemPickaxe");
 
 		zinchoriumAxe = new ItemEAxe(ToolMaterial.EMERALD);
-		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(ECreativeTabs.tabTools)
+		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemAxe");
 
 		zinchoriumShovel = new ItemSpade(ToolMaterial.EMERALD);
-		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(ECreativeTabs.tabTools)
+		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemShovel");
 
 		zinchoriumHoe = new ItemHoe(ToolMaterial.EMERALD);
-		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(ECreativeTabs.tabTools)
+		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemHoe");
 
 		zinchoriumHelmet = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 0, "zinchorium");
-		zinchoriumHelmet.setUnlocalizedName("zinchoriumHelmet").setCreativeTab(ECreativeTabs.tabTools)
+		zinchoriumHelmet.setUnlocalizedName("zinchoriumHelmet").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":armor/zinchoriumHelmet");
 
 		zinchoriumChestplate = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 1, "zinchorium");
-		zinchoriumChestplate.setUnlocalizedName("zinchoriumChestplate").setCreativeTab(ECreativeTabs.tabTools)
+		zinchoriumChestplate.setUnlocalizedName("zinchoriumChestplate").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":armor/zinchoriumChestplate");
 
 		zinchoriumLeggings = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 2, "zinchorium");
-		zinchoriumLeggings.setUnlocalizedName("zinchoriumLeggings").setCreativeTab(ECreativeTabs.tabTools)
+		zinchoriumLeggings.setUnlocalizedName("zinchoriumLeggings").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":armor/zinchoriumLeggings");
 
 		zinchoriumBoots = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 3, "zinchorium");
-		zinchoriumBoots.setUnlocalizedName("zinchoriumBoots").setCreativeTab(ECreativeTabs.tabTools)
+		zinchoriumBoots.setUnlocalizedName("zinchoriumBoots").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":armor/zinchoriumBoots");
 
 		laserPistol = new ItemLaserPistol();
-		laserPistol.setUnlocalizedName("laserPistol").setCreativeTab(ECreativeTabs.tabTools)
+		laserPistol.setUnlocalizedName("laserPistol").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/laserPistol");
 
 		miningLaser = new ItemMiningLaser();
-		miningLaser.setUnlocalizedName("miningLaser").setCreativeTab(ECreativeTabs.tabTools)
+		miningLaser.setUnlocalizedName("miningLaser").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/miningLaser");
 
 		leafBlower = new ItemLeafBlower(16000, 32);
-		leafBlower.setUnlocalizedName("leafBlower").setCreativeTab(ECreativeTabs.tabTools)
+		leafBlower.setUnlocalizedName("leafBlower").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/leafBlower");
 
 
 //		Miscellaneous
 		lightBulb = new Item();
 		lightBulb.setUnlocalizedName("lightBulb").setTextureName(EnFusion.modId + ":lightBulb")
-				.setCreativeTab(ECreativeTabs.tabCore);
+				.setCreativeTab(EFCreativeTabs.tabCore);
 
 		mirror = new Item();
-		mirror.setUnlocalizedName("mirror").setCreativeTab(ECreativeTabs.tabCore)
+		mirror.setUnlocalizedName("mirror").setCreativeTab(EFCreativeTabs.tabCore)
 				.setTextureName(EnFusion.modId + ":mirror");
 
 		basicCapacitor = new Item();
-		basicCapacitor.setUnlocalizedName("basicCapacitor").setCreativeTab(ECreativeTabs.tabCore)
+		basicCapacitor.setUnlocalizedName("basicCapacitor").setCreativeTab(EFCreativeTabs.tabCore)
 						.setTextureName(EnFusion.modId + ":basicCapacitor");
 
 		enhancedCapacitor = new Item();
-		enhancedCapacitor.setUnlocalizedName("enhancedCapacitor").setCreativeTab(ECreativeTabs.tabCore)
+		enhancedCapacitor.setUnlocalizedName("enhancedCapacitor").setCreativeTab(EFCreativeTabs.tabCore)
 						.setTextureName(EnFusion.modId + ":enhancedCapacitor");
 
 		energeticCapacitor = new Item();
-		energeticCapacitor.setUnlocalizedName("energeticCapacitor").setCreativeTab(ECreativeTabs.tabCore)
+		energeticCapacitor.setUnlocalizedName("energeticCapacitor").setCreativeTab(EFCreativeTabs.tabCore)
 						.setTextureName(EnFusion.modId + ":energeticCapacitor");
 
 		hyperEnergeticCapacitor = new Item();
-		hyperEnergeticCapacitor.setUnlocalizedName("hyperEnergeticCapacitor").setCreativeTab(ECreativeTabs.tabCore)
+		hyperEnergeticCapacitor.setUnlocalizedName("hyperEnergeticCapacitor").setCreativeTab(EFCreativeTabs.tabCore)
 							.setTextureName(EnFusion.modId + ":hyperEnergeticCapacitor");
 
 
