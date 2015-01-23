@@ -9,6 +9,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
 import net.shadowfacts.enfusion.compat.EFCompat;
@@ -63,6 +64,7 @@ public class EnFusion {
 
 		// Network stuff
 		EFNetworkManager.initialize();
+		EntityPlayerMP
 	}
 
 	@EventHandler

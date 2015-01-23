@@ -1,8 +1,7 @@
-package net.shadowfacts.enfusion.machine.conveyor.block;
+package net.shadowfacts.enfusion.machine.conveyor.entity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -13,35 +12,31 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
 import net.minecraftforge.common.util.ForgeDirection;
-
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.shadowcore.block.BaseTileEntityBlock;
 
 /**
-* The Block class for the Block Conveyor.
-* NOTE: The class name "BlockBlockConveyor" is not a typo, it is correct.
-* @author shadowfacts
-*/
-public class BlockBlockConveyor extends BaseTileEntityBlock {
+ * The block for the Entity Conveyor
+ * @author shadowfacts
+ */
+public class BlockEntityConveyor extends BaseTileEntityBlock {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon iconSide;
 	@SideOnly(Side.CLIENT)
 	private IIcon iconTop;
 
-	public BlockBlockConveyor(String name) {
-		super(name, Material.piston);
+	public BlockEntityConveyor(String name) {
+		super(name, Material.rock);
 	}
 
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-		this.blockIcon = iconRegister.registerIcon(EnFusion.modId + ":machine/conveyor/block");
+		this.blockIcon = iconRegister.registerIcon(EnFusion.modId + ":machine/conveyor/entity");
 		this.iconSide = iconRegister.registerIcon(EnFusion.modId + ":machine/conveyor/side");
 		this.iconTop = iconRegister.registerIcon(EnFusion.modId + ":machine/conveyor/top");
-
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -61,11 +56,11 @@ public class BlockBlockConveyor extends BaseTileEntityBlock {
 
 	@SideOnly(Side.CLIENT)
 	public Item getItem(World world, int x, int y, int z) {
-		return Item.getItemFromBlock(EFBlocks.blockConveyor);
+		return Item.getItemFromBlock(EFBlocks.entityConveyor);
 	}
 
 	public TileEntity createNewTileEntity(World world, int metadata) {
-		return new TileEntityBlockConveyor();
+		return new TileEntityEntityConveyor();
 	}
 
 	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack stack) {

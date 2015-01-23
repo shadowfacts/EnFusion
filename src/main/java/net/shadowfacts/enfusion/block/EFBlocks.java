@@ -7,6 +7,8 @@ import net.minecraft.block.Block;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.client.gui.EFCreativeTabs;
+import net.shadowfacts.enfusion.machine.conveyor.block.BlockBlockConveyor;
+import net.shadowfacts.enfusion.machine.conveyor.entity.BlockEntityConveyor;
 import net.shadowfacts.enfusion.machine.conveyor.item.BlockItemConveyor;
 import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
 import net.shadowfacts.enfusion.machine.zinchoriumfurnace.BlockZinchoriumFurnace;
@@ -25,6 +27,8 @@ public class EFBlocks {
 	public static BlockSolarPanel solarPanelTier4;
 	public static BlockZinchoriumFurnace zinchoriumFurnace;
 	public static BlockItemConveyor itemConveyor;
+	public static BlockBlockConveyor blockConveyor;
+	public static BlockEntityConveyor entityConveyor;
 
 
 	//	Miscellaneous
@@ -78,6 +82,14 @@ public class EFBlocks {
 		itemConveyor.setBlockName("itemConveyor").setHardness(2.0f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(EFCreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
 
+		blockConveyor = new BlockBlockConveyor("blockConveyor");
+		blockConveyor.setBlockName("blockConveyor").setHardness(2.0f).setStepSound(Block.soundTypePiston)
+				.setCreativeTab(EFCreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
+
+		entityConveyor = new BlockEntityConveyor("entityConveyor");
+		entityConveyor.setBlockName("entityConveyor").setHardness(2.0f).setStepSound(Block.soundTypePiston)
+				.setCreativeTab(EFCreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
+
 
 //		Miscellaneous
 		blockZinchorium = new EFBlock();
@@ -112,6 +124,8 @@ public class EFBlocks {
 		GameRegistry.registerBlock(solarPanelTier4, "solarPanelTier4");
 		GameRegistry.registerBlock(zinchoriumFurnace, "zinchoriumFurnace");
 		GameRegistry.registerBlock(itemConveyor, "itemConveyor");
+		GameRegistry.registerBlock(blockConveyor, "blockConveyor");
+		GameRegistry.registerBlock(entityConveyor, "entityConveyor");
 
 
 //		Miscellaneous

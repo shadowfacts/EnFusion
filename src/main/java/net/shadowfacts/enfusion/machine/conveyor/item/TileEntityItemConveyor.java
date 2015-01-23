@@ -83,7 +83,7 @@ public class TileEntityItemConveyor extends BaseModTileEntity implements IEnergy
 	@Override
 	public int receiveEnergy(ForgeDirection from, int maxReceive, boolean simulate) {
 		if (from != ForgeDirection.UP) {
-			storage.receiveEnergy(Math.min(maxReceive, storage.getMaxReceive()), simulate);
+			return storage.receiveEnergy(Math.min(maxReceive, storage.getMaxReceive()), simulate);
 		}
 		return 0;
 	}
@@ -111,4 +111,6 @@ public class TileEntityItemConveyor extends BaseModTileEntity implements IEnergy
 		return storage.getMaxEnergyStored();
 	}
 
+
+//	TODO: NBT stuff
 }
