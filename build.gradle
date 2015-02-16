@@ -21,17 +21,22 @@ buildscript {
     }
 }
 
+repositories {
+	maven {
+		name = "chickenbones"
+		url = "http://chickenbones.net/maven/"
+	}
+}
+
 apply plugin: 'forge'
 
 version = mc_ver + "-" + mod_ver
 group= "net.shadowfacts.enfusion" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "EnFusion"
 
-// Get the environment
-ext.env = System.getenv()
 
-if (env.DRONE_BUILD_NUMBER != null) {
-	version += "-snapshot-" + env.DRONE_BUILD_NUMBER
+if (System.getenv().DRONE_BUILD_NUMBER != null) {
+	version += "-snapshot-" + System.getenv().DRONE_BUILD_NUMBER
 }
 
 minecraft {
@@ -45,19 +50,15 @@ minecraft {
 dependencies {
     compile project(":ShadowCore")
 
-    // you may put jars on which you depend on in ./libs
-    // or you may define them like so..
-    //compile "some.group:artifact:version:classifier"
-    //compile "some.group:artifact:version"
-      
-    // real examples
-    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
-    //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
+    compile files(
+    	'libs/Ex-Nihilo-1.37.jar',
+    	'libs/neiaddons-mc1710-1.12.3.11.jar',
+    	'libs/NEIIntegration-MC1.7.10-1.0.0.jar'
+    )
 
-    // for more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
+    compile "codechicken:CodeChickenLib:1.7.10-1.1.1.95:dev"
+    compile "codechicken:CodeChickenCore:1.7.10-1.0.2.9:dev"
+    compile "codechicken:NotEnoughItems:1.7.10-1.0.2.15:dev"
 }
 
 processResources
