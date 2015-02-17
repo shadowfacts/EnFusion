@@ -16,8 +16,8 @@ import net.shadowfacts.enfusion.machine.zinchoriumfurnace.BlockZinchoriumFurnace
 public class EFBlocks {
 //	Blocks
 //	Ores
-	public static BlockOre oreZinchorium;
-	public static BlockOre oreCopper;
+	public static EFOre oreZinchorium;
+	public static EFOre oreCopper;
 
 
 //	Machines
@@ -40,13 +40,13 @@ public class EFBlocks {
 	public static void preInit() {
 //		Create Blocks
 //		Ores
-		oreZinchorium = new BlockOre();
+		oreZinchorium = new EFOre();
 		oreZinchorium.setBlockName("oreZinchorium").setCreativeTab(EFCreativeTabs.tabCore)
 				.setHardness(1.0f).setStepSound(Block.soundTypeStone)
 				.setBlockTextureName(EnFusion.modId + ":ore/zinchorium")
 				.setHarvestLevel("pickaxe", 1);
 
-		oreCopper = new BlockOre();
+		oreCopper = new EFOre();
 		oreCopper.setBlockName("oreCopper")
 				.setBlockTextureName(EnFusion.modId + ":ore/copper").setCreativeTab(EFCreativeTabs.tabCore)
 				.setHardness(1.5f).setStepSound(Block.soundTypeStone)

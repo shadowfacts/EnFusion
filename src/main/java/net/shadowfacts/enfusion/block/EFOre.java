@@ -8,9 +8,9 @@ import net.minecraft.world.World;
 
 import net.shadowfacts.enfusion.item.EFItems;
 
-public class BlockOre extends EFBlock {
+public class EFOre extends EFBlock {
 
-	public BlockOre() {
+	public EFOre() {
 		super();
 	}
 	
