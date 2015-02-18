@@ -6,12 +6,15 @@ import net.minecraft.block.Block;
 
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
+import net.shadowfacts.enfusion.block.misc.BlockConcrete;
 import net.shadowfacts.enfusion.client.gui.EFCreativeTabs;
 import net.shadowfacts.enfusion.machine.conveyor.block.BlockBlockConveyor;
 import net.shadowfacts.enfusion.machine.conveyor.entity.BlockEntityConveyor;
 import net.shadowfacts.enfusion.machine.conveyor.item.BlockItemConveyor;
 import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
 import net.shadowfacts.enfusion.machine.zinchoriumfurnace.BlockZinchoriumFurnace;
+
+import net.shadowfacts.enfusion.block.misc.*;
 
 public class EFBlocks {
 //	Blocks
@@ -35,6 +38,8 @@ public class EFBlocks {
 	public static BlockZinchoriumLight greenZinchoriumLightActive;
 	public static BlockZinchoriumLight greenZinchoriumLightIdle;
 	public static EFBlock blockZinchorium;
+	public static BlockLiquidConcrete liquidConcrete;
+	public static BlockConcrete concrete;
 	
 	// Methods
 	public static void preInit() {
@@ -108,6 +113,14 @@ public class EFBlocks {
 								.setCreativeTab(EFCreativeTabs.tabCore).setBlockTextureName(EnFusion.modId + ":zinchoriumLight/green")
 								.setHardness(1.0f).setStepSound(Block.soundTypeMetal)
 								.setHarvestLevel("pickaxe", 2);
+
+		liquidConcrete = new BlockLiquidConcrete();
+		liquidConcrete.setBlockName("liquidConcrete").setCreativeTab(EFCreativeTabs.tabCore).setBlockTextureName(EnFusion.modId + ":misc/liquidConcrete");
+
+		concrete = new BlockConcrete();
+		concrete.setBlockName("concrete").setBlockTextureName(EnFusion.modId + ":misc/concrete")
+				.setCreativeTab(EFCreativeTabs.tabCore).setStepSound(Block.soundTypeStone)
+				.setHardness(1.0f).setHarvestLevel("pickaxe", 1);
 		
 		
 		
@@ -132,6 +145,8 @@ public class EFBlocks {
 		GameRegistry.registerBlock(blockZinchorium, "blockZinchorium");
 		GameRegistry.registerBlock(greenZinchoriumLightActive, "greenZinchoriumLightActive");
 		GameRegistry.registerBlock(greenZinchoriumLightIdle, "greenZinchoriumLightIdle");
+		GameRegistry.registerBlock(liquidConcrete, "liquidConcrete");
+		GameRegistry.registerBlock(concrete, "concrete");
 	}
 	
 	public static void init() {
