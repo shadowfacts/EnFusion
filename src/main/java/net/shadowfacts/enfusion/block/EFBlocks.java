@@ -19,8 +19,9 @@ import net.shadowfacts.enfusion.block.misc.*;
 public class EFBlocks {
 //	Blocks
 //	Ores
-	public static EFOre oreZinchorium;
-	public static EFOre oreCopper;
+	public static BlockOre oreZinchorium;
+	public static BlockOre oreCopper;
+	public static BlockPeridotOre orePeridot;
 
 
 //	Machines
@@ -32,6 +33,7 @@ public class EFBlocks {
 	public static BlockItemConveyor itemConveyor;
 	public static BlockBlockConveyor blockConveyor;
 	public static BlockEntityConveyor entityConveyor;
+	public static BlockRouter router;
 
 
 	//	Miscellaneous
@@ -45,17 +47,24 @@ public class EFBlocks {
 	public static void preInit() {
 //		Create Blocks
 //		Ores
-		oreZinchorium = new EFOre();
+		oreZinchorium = new BlockOre();
 		oreZinchorium.setBlockName("oreZinchorium").setCreativeTab(EFCreativeTabs.tabCore)
 				.setHardness(1.0f).setStepSound(Block.soundTypeStone)
 				.setBlockTextureName(EnFusion.modId + ":ore/zinchorium")
 				.setHarvestLevel("pickaxe", 1);
 
-		oreCopper = new EFOre();
+		oreCopper = new BlockOre();
 		oreCopper.setBlockName("oreCopper")
 				.setBlockTextureName(EnFusion.modId + ":ore/copper").setCreativeTab(EFCreativeTabs.tabCore)
 				.setHardness(1.5f).setStepSound(Block.soundTypeStone)
 				.setHarvestLevel("pickaxe", 1);
+
+		orePeridot = new BlockPeridotOre();
+		orePeridot.setBlockName("orePeridot")
+					.setBlockTextureName(EnFusion.modId + ":ore/peridot").setCreativeTab(EFCreativeTabs.tabCore)
+					.setHardness(1.0f).setStepSound(Block.soundTypeStone).setHarvestLevel("pickaxe", 1);
+
+
 
 
 //		Machines
@@ -128,6 +137,7 @@ public class EFBlocks {
 //		Ores
 		GameRegistry.registerBlock(oreZinchorium, "oreZinchorium");
 		GameRegistry.registerBlock(oreCopper, "oreCopper");
+		GameRegistry.registerBlock(orePeridot, "orePeridot");
 
 
 //		Machines
