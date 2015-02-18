@@ -12,6 +12,7 @@ import net.shadowfacts.enfusion.machine.conveyor.block.BlockBlockConveyor;
 import net.shadowfacts.enfusion.machine.conveyor.entity.BlockEntityConveyor;
 import net.shadowfacts.enfusion.machine.conveyor.item.BlockItemConveyor;
 import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
+import net.shadowfacts.enfusion.machine.router.BlockRouter;
 import net.shadowfacts.enfusion.machine.zinchoriumfurnace.BlockZinchoriumFurnace;
 
 import net.shadowfacts.enfusion.block.misc.*;
@@ -104,6 +105,10 @@ public class EFBlocks {
 		entityConveyor.setBlockName("entityConveyor").setHardness(2.0f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(EFCreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
 
+		router = new BlockRouter("router");
+		router.setHardness(2.0f).setStepSound(Block.soundTypePiston)
+				.setCreativeTab(EFCreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
+
 
 //		Miscellaneous
 		blockZinchorium = new EFBlock();
@@ -149,6 +154,7 @@ public class EFBlocks {
 		GameRegistry.registerBlock(itemConveyor, "itemConveyor");
 		GameRegistry.registerBlock(blockConveyor, "blockConveyor");
 		GameRegistry.registerBlock(entityConveyor, "entityConveyor");
+		GameRegistry.registerBlock(router, "router");
 
 
 //		Miscellaneous
