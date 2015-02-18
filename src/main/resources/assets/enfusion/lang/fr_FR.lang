@@ -1,0 +1,53 @@
+# Blocks
+tile.oreZinchorium.name=Minerai de zinchorium
+tile.blockZinchorium.name=Bloc de zinchorium
+tile.greenZinchoriumLightActive.name=Lumière de zinchorium (verte)
+tile.greenZinchoriumLightIdle.name=Lumière de zinchorium (verte)
+tile.oreCopper.name=Minerai de cuivre
+
+# Machines
+tile.fluxFurnace.name=Four à flux
+tile.solarPanelTier1.name=Panneau solaire (Niveau I)
+tile.solarPanelTier2.name=Panneau solaire (Niveau II)
+tile.solarPanelTier3.name=Panneau solaire (Niveau III)
+tile.solarPanelTier4.name=Panneau solaire (Niveau IV)
+tile.zinchoriumFurnace.name=Four de zinchorium
+tile.itemConveyor.name=Transporteur d'éléments
+
+# Items
+item.lightBulb.name=Bulbe d'ampoule
+item.mirror.name=Miroir
+item.basicCapacitor.name=Condensateur de base
+item.enhancedCapacitor.name=Condensateur avancé
+item.energeticCapacitor.name=Condensateur énergétique
+item.hyperEnergeticCapacitor.name=Condensateur hyper énergétique
+
+# Ingots
+item.ingotCopper.name=Lingot de cuivre
+item.zinchoriumAlloyIngot.name=Lingot d'alliage de zinchorium
+
+
+# Dusts
+item.dustIron.name=Poudre de fer
+item.dustGold.name=Poudre d'or
+item.dustCopper.name=Poudre de cuivre
+item.zinchoriumDust.name=Poudre de zinchorium
+
+# Tools
+item.zinchoriumSword.name=Epée en zinchorium
+item.zinchoriumPickaxe.name=Pioche en zinchorium
+item.zinchoriumAxe.name=Hache en zinchorium
+item.zinchoriumShovel.name=Pelle en zinchorium
+item.zinchoriumHoe.name=Houe en zinchorium
+item.zinchoriumHelmet.name=Casque en zinchorium
+item.zinchoriumChestplate.name=Plastron en Chestplate
+item.zinchoriumLeggings.name=Jambières en Chestplate
+item.zinchoriumBoots.name=Bottes en zinchorium
+item.laserPistol.name=Pistolet laser
+item.miningLaser.name=Laser de minage
+item.leafBlower.name=Souffleur de feuilles
+
+# Creative Tabs
+itemGroup.EnFusionCore=Coeur EnFusion
+itemGroup.EnFusionMachines=Machines EnFusion
+itemGroup.EnFusionTools=Outils EnFusion
