@@ -4,6 +4,6 @@ EnFusion (ENergetic InFUSION) is a standalone mod (using the RF energy system) p
 Download the latest alpha build [here](https://drone.io/github.com/shadowfacts/EnFusion/files).
 
 ## Credits
-- Shadowfacts: Lead Developer
-- Lamipam: Miscellaneous Textures
-- Mazdallier: Localization
+- [Shadowfacts](https://github.com/shadowfacts): Lead Developer
+- [Lapiman](https://github.com/lapiman): Miscellaneous Textures
+- [Mazdallier](https://github.com/mazdallier): Localization
