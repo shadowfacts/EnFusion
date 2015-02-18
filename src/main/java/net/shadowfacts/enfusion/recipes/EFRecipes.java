@@ -90,6 +90,10 @@ public class EFRecipes {
 
 
 		// Hyper Energetic Capacitor
+
+
+		// Zinchorium Dust
+		GameRegistry.addShapelessRecipe(new ItemStack(EFItems.zinchoriumDust), EFItems.dustIron, EFItems.dustPeridot);
 		
 	}
 	
@@ -99,8 +103,12 @@ public class EFRecipes {
 		
 		// Zinchorium ore	-->		Zinchorium Alloy Ingot
 		GameRegistry.addSmelting(EFBlocks.oreZinchorium, new ItemStack(EFItems.zinchoriumAlloyIngot), 0.5f);
+
 		// Zinchorium dust	-->		Zinchorium Alloy Ingot
 		GameRegistry.addSmelting(EFItems.zinchoriumDust, new ItemStack(EFItems.zinchoriumAlloyIngot), 0.4f);
+
+		// Peridot dust		-->		Peridot Gem
+		GameRegistry.addSmelting(EFItems.dustPeridot, new ItemStack(EFItems.gemPeridot), 0.1f);
 	}
 	
 	public static void registerOreDictThings() {

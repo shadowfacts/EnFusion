@@ -30,7 +30,7 @@ public class Configurator {
 		// Entity IDs
 		laserBoltEntityId = config.get("EntityIDs", "LaserBoltEntity", getEntityId()).getInt();
 		miningLaserEntityId = config.get("EntityIDs", "MiningLaserEntity", getEntityId()).getInt();
-		
+
 		
 		// Save config
 		config.save();
