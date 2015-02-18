@@ -45,6 +45,8 @@ public class EFItems {
 	public static Item enhancedCapacitor;
 	public static Item energeticCapacitor;
 	public static Item hyperEnergeticCapacitor;
+	public static Item gemPeridot;
+	public static Item dustPeridot;
 	
 	
 	// Methods
@@ -57,6 +59,11 @@ public class EFItems {
 		zinchoriumAlloyIngot = new Item();
 		zinchoriumAlloyIngot.setUnlocalizedName("zinchoriumAlloyIngot").setTextureName(EnFusion.modId + ":ingot/zinchoriumAlloy")
 				.setCreativeTab(EFCreativeTabs.tabCore);
+
+//		Gem
+		gemPeridot = new Item();
+		gemPeridot.setUnlocalizedName("gemPeridot").setCreativeTab(EFCreativeTabs.tabCore)
+				.setTextureName(EnFusion.modId + ":gem/peridot");
 
 //		Dusts
 		dustIron = new Item();
@@ -75,6 +82,9 @@ public class EFItems {
 		zinchoriumDust = new Item();
 		zinchoriumDust.setUnlocalizedName("zinchoriumDust").setTextureName(EnFusion.modId + ":dust/zinchorium")
 						.setCreativeTab(EFCreativeTabs.tabCore);
+
+		dustPeridot = new Item();
+		dustPeridot.setUnlocalizedName("dustPeridot").setTextureName(EnFusion.modId + ":dust/peridot");
 
 //		Tools
 		zinchoriumSword = new ItemSword(ToolMaterial.EMERALD);
@@ -158,12 +168,15 @@ public class EFItems {
 		GameRegistry.registerItem(zinchoriumAlloyIngot, "zinchoriumAlloyIngot");
 		GameRegistry.registerItem(ingotCopper, "ingotCopper");
 
+//		Gems
+		GameRegistry.registerItem(gemPeridot, "gemPeridot");
 
 //		Dusts
 		GameRegistry.registerItem(dustIron, "dustIron");
 		GameRegistry.registerItem(dustGold, "dustGold");
 		GameRegistry.registerItem(dustCopper, "dustCopper");
 		GameRegistry.registerItem(zinchoriumDust, "zinchoriumDust");
+		GameRegistry.registerItem(dustPeridot, "dustPeridot");
 
 
 //		Tools
