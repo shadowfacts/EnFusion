@@ -1,7 +1,12 @@
 package net.shadowfacts.enfusion.machine.conveyor.block;
 
 import cofh.api.energy.IEnergyHandler;
+
+import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntity;
+
 import net.minecraftforge.common.util.ForgeDirection;
+
 import net.shadowfacts.enfusion.energy.BaseEnergyStorage;
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
@@ -19,7 +24,45 @@ public class TileEntityBlockConveyor extends BaseModTileEntity implements IEnerg
 
 	public void updateEntity() {
 		super.updateEntity();
-		// Do stuff...
+		if (this.storage.getEnergyStored() >= 16) {
+			Block block = worldObj.getBlock(xCoord, yCoord + 1, zCoord);
+			if (block != null) {
+				ForgeDirection dir = ForgeDirection.getOrientation(worldObj.getBlockMetadata(xCoord, yCoord, zCoord));
+				int x, y, z;
+				y = yCoord + 1;
+
+				if (dir == ForgeDirection.NORTH) {
+					x = xCoord;
+					z = zCoord - 1;
+				} else if (dir == ForgeDirection.SOUTH) {
+					x = xCoord;
+					z = zCoord + 1;
+				} else if (dir == ForgeDirection.WEST) {
+					x = xCoord - 1;
+					z = zCoord;
+				} else if (dir == ForgeDirection.DOWN.EAST) {
+					x = xCoord + 1;
+					z = zCoord;
+				} else {
+					x = xCoord;
+					z = zCoord;
+				}
+
+				worldObj.setBlock(x, y, z, block, worldObj.getBlockMetadata(xCoord, yCoord + 1, zCoord), 1);
+				worldObj.setBlockToAir(xCoord, yCoord + 1, zCoord);
+
+				this.storage.extractEnergy(16, false);
+
+//				Move (possible) TileEntity
+				if (block.hasTileEntity(worldObj.getBlockMetadata(x, y, z))) {
+					TileEntity tile = worldObj.getTileEntity(x, y, z);
+					tile.xCoord = x;
+					tile.yCoord = y;
+					tile.zCoord = z;
+					this.storage.extractEnergy(16, false);
+				}
+			}
+		}
 	}
 
 //	IEnergyHandler
