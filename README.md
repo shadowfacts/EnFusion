@@ -8,6 +8,7 @@ Download the latest alpha build [here](https://drone.io/github.com/shadowfacts/E
 - JDK (minimum Java 7)
 - Git
 
+====
 
 - To download the EnFusion source code navigate to a directory to keep EnFusion inside of, e.g. C:\Users\shadowdfacts\Documents\MinecraftMods.
 - Run the command: `git clone https://github.com/shadowfacts/EnFusion.git` to clone the repository.
