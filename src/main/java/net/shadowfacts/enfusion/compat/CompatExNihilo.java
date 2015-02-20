@@ -2,6 +2,7 @@ package net.shadowfacts.enfusion.compat;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.item.EFItems;
@@ -24,18 +25,23 @@ public class CompatExNihilo {
 			Class sieveRegistry = Class.forName("exnihilo.registries.SieveRegistry");
 
 			// void register(Block source, Item output, int outputMeta, int rarity)
-			Method register = sieveRegistry.getMethod("register", Block.class, Item.class, int.class, int.class);
+			Method registerMethod = sieveRegistry.getMethod("register", Block.class, Item.class, int.class, int.class);
 
+//			Dust
 			Block blockDust = GameRegistry.findBlock("exnihilo", "dust");
-
 			if (blockDust != null) {
 
-				register.invoke(null, blockDust, EFItems.zinchoriumDust, 0, 10);
+				registerMethod.invoke(null, blockDust, EFItems.zinchoriumDust, 0, 5);
+				registerMethod.invoke(null, blockDust, EFItems.dustPeridot, 0, 10);
 
 			} else {
 				EnFusion.log.error("Umm, dust should be a block, right?");
 				return;
 			}
+
+//			Gravel
+			registerMethod.invoke(null, Blocks.gravel, EFItems.gemPeridot, 0, 10);
+
 
 		} catch (ClassNotFoundException e) {
 			EnFusion.log.error("There was a problem loading the ExNihilo classes, uh oh.");
