@@ -114,9 +114,11 @@ public class EFRecipes {
 	public static void registerOreDictThings() {
 		// Blocks
 		OreDictionary.registerOre("oreCopper", EFBlocks.oreCopper);
+		OreDictionary.registerOre("orePeridot", EFBlocks.orePeridot);
 		
 		// Items
 		OreDictionary.registerOre("ingotCopper", EFItems.ingotCopper);
+		OreDictionary.registerOre("gemPeridot", EFItems.gemPeridot);
 		
 	}
 	
