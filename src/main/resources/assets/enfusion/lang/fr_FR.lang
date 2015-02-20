@@ -4,6 +4,9 @@ tile.blockZinchorium.name=Bloc de zinchorium
 tile.greenZinchoriumLightActive.name=Lumière de zinchorium (verte)
 tile.greenZinchoriumLightIdle.name=Lumière de zinchorium (verte)
 tile.oreCopper.name=Minerai de cuivre
+tile.orePeridot.name=Minerai de péridot 
+tile.liquidConcrete.name=Béton liquide 
+tile.concrete.name=Béton 
 
 # Machines
 tile.fluxFurnace.name=Four à flux
@@ -26,12 +29,15 @@ item.hyperEnergeticCapacitor.name=Condensateur hyper énergétique
 item.ingotCopper.name=Lingot de cuivre
 item.zinchoriumAlloyIngot.name=Lingot d'alliage de zinchorium
 
+# Gems 
+item.gemPeridot.name=Péridot 
 
 # Dusts
 item.dustIron.name=Poudre de fer
 item.dustGold.name=Poudre d'or
 item.dustCopper.name=Poudre de cuivre
-item.zinchoriumDust.name=Poudre de zinchorium
+item.dustZinchorium.name=Poudre de zinchorium
+item.dustPeridot.name=Poudre de péridot 
 
 # Tools
 item.zinchoriumSword.name=Epée en zinchorium
