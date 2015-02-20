@@ -4,6 +4,9 @@ tile.blockZinchorium.name=Zinchorium Block
 tile.greenZinchoriumLightActive.name=Zinchorium Light (Green)
 tile.greenZinchoriumLightIdle.name=Zinchorium Light (Green)
 tile.oreCopper.name=Copper Ore
+tile.orePeridot.name=Peridot Ore
+tile.liquidConcrete.name=Liquid Concrete
+tile.concrete.name=Concrete
 
 # Machines
 tile.fluxFurnace.name=Flux Furnace
@@ -26,12 +29,15 @@ item.hyperEnergeticCapacitor.name=Hyper Energetic Capacitor
 item.ingotCopper.name=Copper Ingot
 item.zinchoriumAlloyIngot.name=Zinchorium Alloy Ingot
 
+# Gems
+item.gemPeridot.name=Peridot
 
 # Dusts
 item.dustIron.name=Iron Dust
 item.dustGold.name=Gold Dust
 item.dustCopper.name=Copper Dust
-item.zinchoriumDust.name=Zinchorium Dust
+item.dustZinchorium.name=Zinchorium Dust
+item.dustPeridot.name=Peridot Dust
 
 # Tools
 item.zinchoriumSword.name=Zinchorium Sword

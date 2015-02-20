@@ -20,7 +20,7 @@ public class EFItems {
 	public static Item dustIron;
 	public static Item dustGold;
 	public static Item dustCopper;
-	public static Item zinchoriumDust;
+	public static Item dustZinchorium;
 
 
 //	Tools
@@ -79,12 +79,13 @@ public class EFItems {
 				.setCreativeTab(EFCreativeTabs.tabCore);
 
 
-		zinchoriumDust = new Item();
-		zinchoriumDust.setUnlocalizedName("zinchoriumDust").setTextureName(EnFusion.modId + ":dust/zinchorium")
+		dustZinchorium = new Item();
+		dustZinchorium.setUnlocalizedName("dustZinchorium").setTextureName(EnFusion.modId + ":dust/zinchorium")
 						.setCreativeTab(EFCreativeTabs.tabCore);
 
 		dustPeridot = new Item();
-		dustPeridot.setUnlocalizedName("dustPeridot").setTextureName(EnFusion.modId + ":dust/peridot");
+		dustPeridot.setUnlocalizedName("dustPeridot").setTextureName(EnFusion.modId + ":dust/peridot")
+					.setCreativeTab(EFCreativeTabs.tabCore);
 
 //		Tools
 		zinchoriumSword = new ItemSword(ToolMaterial.EMERALD);
@@ -175,7 +176,7 @@ public class EFItems {
 		GameRegistry.registerItem(dustIron, "dustIron");
 		GameRegistry.registerItem(dustGold, "dustGold");
 		GameRegistry.registerItem(dustCopper, "dustCopper");
-		GameRegistry.registerItem(zinchoriumDust, "zinchoriumDust");
+		GameRegistry.registerItem(dustZinchorium, "dustZinchorium");
 		GameRegistry.registerItem(dustPeridot, "dustPeridot");
 
 
