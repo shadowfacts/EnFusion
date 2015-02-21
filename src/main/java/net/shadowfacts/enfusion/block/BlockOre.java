@@ -16,7 +16,7 @@ public class BlockOre extends EFBlock {
 	@Override
 	public Item getItemDropped(int par1, Random par2Random, int par3) {
 		if (this == EFBlocks.oreZinchorium) {
-			return EFItems.zinchoriumDust;
+			return EFItems.dustZinchorium;
 		} else {
 			return Item.getItemFromBlock(this);
 		}

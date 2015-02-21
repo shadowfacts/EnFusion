@@ -31,7 +31,7 @@ public class CompatExNihilo {
 			Block blockDust = GameRegistry.findBlock("exnihilo", "dust");
 			if (blockDust != null) {
 
-				registerMethod.invoke(null, blockDust, EFItems.zinchoriumDust, 0, 5);
+				registerMethod.invoke(null, blockDust, EFItems.dustZinchorium, 0, 5);
 				registerMethod.invoke(null, blockDust, EFItems.dustPeridot, 0, 10);
 
 			} else {
