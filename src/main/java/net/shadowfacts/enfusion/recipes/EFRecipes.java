@@ -81,19 +81,19 @@ public class EFRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.mirror, 3), "GGG", "III", "   ", 'G', new ItemStack(Blocks.glass), 'I', new ItemStack(Items.iron_ingot));
 
 		// Basic Capacitor
-		GameRegistry.addShapedRecipe(new ItemStack(EFItems.basicCapacitor), "  R", " Z ", "R  ", 'R', new ItemStack(Items.redstone), 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot));
+		GameRegistry.addShapedRecipe(new ItemStack(EFItems.basicCapacitor), "  R", " G ", "R  ", 'R', new ItemStack(Items.redstone), 'G', Items.gold_nugget);
 
 		// Enhanced Capacitor
-
+		GameRegistry.addShapedRecipe(new ItemStack(EFItems.enhancedCapacitor), "  B", " R ", "B  ", 'B', EFItems.basicCapacitor, 'R', Items.redstone);
 
 		// Energetic Capacitor
-
+		GameRegistry.addShapedRecipe(new ItemStack(EFItems.energeticCapacitor), "  E", " Z ", "E  ", 'E', EFItems.enhancedCapacitor, 'Z', EFItems.zinchoriumAlloyIngot);
 
 		// Hyper Energetic Capacitor
-
+		GameRegistry.addShapedRecipe(new ItemStack(EFItems.hyperEnergeticCapacitor), " GE", "GZG", "EG ", 'G', Items.gold_nugget, 'E', EFItems.energeticCapacitor, 'Z', EFItems.zinchoriumAlloyIngot);
 
 		// Zinchorium Dust
-		GameRegistry.addShapelessRecipe(new ItemStack(EFItems.zinchoriumDust), EFItems.dustIron, EFItems.dustPeridot);
+		GameRegistry.addShapelessRecipe(new ItemStack(EFItems.dustZinchorium), EFItems.dustIron, EFItems.dustPeridot);
 		
 	}
 	
@@ -105,7 +105,7 @@ public class EFRecipes {
 		GameRegistry.addSmelting(EFBlocks.oreZinchorium, new ItemStack(EFItems.zinchoriumAlloyIngot), 0.5f);
 
 		// Zinchorium dust	-->		Zinchorium Alloy Ingot
-		GameRegistry.addSmelting(EFItems.zinchoriumDust, new ItemStack(EFItems.zinchoriumAlloyIngot), 0.4f);
+		GameRegistry.addSmelting(EFItems.dustZinchorium, new ItemStack(EFItems.zinchoriumAlloyIngot), 0.4f);
 
 		// Peridot dust		-->		Peridot Gem
 		GameRegistry.addSmelting(EFItems.dustPeridot, new ItemStack(EFItems.gemPeridot), 0.1f);
