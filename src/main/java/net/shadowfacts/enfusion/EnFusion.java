@@ -28,7 +28,7 @@ public class EnFusion {
 	public static final String version = "@VERSION@";
 	public static final String clientProxyString = "net.shadowfacts.enfusion.proxy.ClientProxy";
 	public static final String serverProxyString = "net.shadowfacts.enfusion.proxy.CommonProxy";
-	public static final String depString = "required-after:Forge@[10.13.2.1235,);required-after:shadowcore;after:exnihilo;";
+	public static final String depString = "required-after:Forge@[10.13.2.1235,);required-after:shadowcore@1.0.1;after:exnihilo;";
 	
 	
 	@Instance(value=EnFusion.modId)
