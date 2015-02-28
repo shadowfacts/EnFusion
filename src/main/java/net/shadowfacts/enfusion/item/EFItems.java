@@ -12,15 +12,18 @@ import net.shadowfacts.enfusion.item.tool.*;
 public class EFItems {
 //	Items
 //	Ingots
-	public static Item ingotCopper;
-	public static Item zinchoriumAlloyIngot;
+	public static EFItem ingotCopper;
+	public static EFItem zinchoriumAlloyIngot;
 
+//	Gems
+	public static EFItem gemPeridot;
 
 //	Dusts
-	public static Item dustIron;
-	public static Item dustGold;
-	public static Item dustCopper;
-	public static Item dustZinchorium;
+	public static EFItem dustIron;
+	public static EFItem dustGold;
+	public static EFItem dustCopper;
+	public static EFItem dustZinchorium;
+	public static EFItem dustPeridot;
 
 
 //	Tools
@@ -39,51 +42,50 @@ public class EFItems {
 
 
 //	Miscellaneous
-	public static Item lightBulb;
-	public static Item mirror;
-	public static Item basicCapacitor;
-	public static Item enhancedCapacitor;
-	public static Item energeticCapacitor;
-	public static Item hyperEnergeticCapacitor;
-	public static Item gemPeridot;
-	public static Item dustPeridot;
+	public static EFItem lightBulb;
+	public static EFItem mirror;
+	public static EFItem basicCapacitor;
+	public static EFItem enhancedCapacitor;
+	public static EFItem energeticCapacitor;
+	public static EFItem hyperEnergeticCapacitor;
 	
 	
-	// Methods
+//	Methods
 	public static void preInit() {
-		// Create the items
+//		Create the items
 //		Ingots
-		ingotCopper = new Item();
+		ingotCopper = new EFItem();
 		ingotCopper.setUnlocalizedName("ingotCopper").setTextureName(EnFusion.modId + ":ingot/copper")
 				.setCreativeTab(EFCreativeTabs.tabCore);
-		zinchoriumAlloyIngot = new Item();
+
+		zinchoriumAlloyIngot = new EFItem();
 		zinchoriumAlloyIngot.setUnlocalizedName("zinchoriumAlloyIngot").setTextureName(EnFusion.modId + ":ingot/zinchoriumAlloy")
 				.setCreativeTab(EFCreativeTabs.tabCore);
 
 //		Gem
-		gemPeridot = new Item();
+		gemPeridot = new EFItem();
 		gemPeridot.setUnlocalizedName("gemPeridot").setCreativeTab(EFCreativeTabs.tabCore)
 				.setTextureName(EnFusion.modId + ":gem/peridot");
 
 //		Dusts
-		dustIron = new Item();
+		dustIron = new EFItem();
 		dustIron.setUnlocalizedName("dustIron").setTextureName(EnFusion.modId + ":dust/iron")
 				.setCreativeTab(EFCreativeTabs.tabCore);
 
-		dustGold = new Item();
+		dustGold = new EFItem();
 		dustGold.setUnlocalizedName("dustGold").setTextureName(EnFusion.modId + ":dust/gold")
 				.setCreativeTab(EFCreativeTabs.tabCore);
 
-		dustCopper = new Item();
+		dustCopper = new EFItem();
 		dustCopper.setUnlocalizedName("dustCopper").setTextureName(EnFusion.modId + ":dust/copper")
 				.setCreativeTab(EFCreativeTabs.tabCore);
 
 
-		dustZinchorium = new Item();
+		dustZinchorium = new EFItem();
 		dustZinchorium.setUnlocalizedName("dustZinchorium").setTextureName(EnFusion.modId + ":dust/zinchorium")
 						.setCreativeTab(EFCreativeTabs.tabCore);
 
-		dustPeridot = new Item();
+		dustPeridot = new EFItem();
 		dustPeridot.setUnlocalizedName("dustPeridot").setTextureName(EnFusion.modId + ":dust/peridot")
 					.setCreativeTab(EFCreativeTabs.tabCore);
 
@@ -92,11 +94,11 @@ public class EFItems {
 		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemSword");
 
-		zinchoriumPickaxe = new ItemEPickaxe(ToolMaterial.EMERALD);
+		zinchoriumPickaxe = new EFItemPickaxe(ToolMaterial.EMERALD);
 		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemPickaxe");
 
-		zinchoriumAxe = new ItemEAxe(ToolMaterial.EMERALD);
+		zinchoriumAxe = new EFItemAxe(ToolMaterial.EMERALD);
 		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemAxe");
 
@@ -138,27 +140,27 @@ public class EFItems {
 
 
 //		Miscellaneous
-		lightBulb = new Item();
+		lightBulb = new EFItem();
 		lightBulb.setUnlocalizedName("lightBulb").setTextureName(EnFusion.modId + ":lightBulb")
 				.setCreativeTab(EFCreativeTabs.tabCore);
 
-		mirror = new Item();
+		mirror = new EFItem();
 		mirror.setUnlocalizedName("mirror").setCreativeTab(EFCreativeTabs.tabCore)
 				.setTextureName(EnFusion.modId + ":mirror");
 
-		basicCapacitor = new Item();
+		basicCapacitor = new EFItem();
 		basicCapacitor.setUnlocalizedName("basicCapacitor").setCreativeTab(EFCreativeTabs.tabCore)
 						.setTextureName(EnFusion.modId + ":basicCapacitor");
 
-		enhancedCapacitor = new Item();
+		enhancedCapacitor = new EFItem();
 		enhancedCapacitor.setUnlocalizedName("enhancedCapacitor").setCreativeTab(EFCreativeTabs.tabCore)
 						.setTextureName(EnFusion.modId + ":enhancedCapacitor");
 
-		energeticCapacitor = new Item();
+		energeticCapacitor = new EFItem();
 		energeticCapacitor.setUnlocalizedName("energeticCapacitor").setCreativeTab(EFCreativeTabs.tabCore)
 						.setTextureName(EnFusion.modId + ":energeticCapacitor");
 
-		hyperEnergeticCapacitor = new Item();
+		hyperEnergeticCapacitor = new EFItem();
 		hyperEnergeticCapacitor.setUnlocalizedName("hyperEnergeticCapacitor").setCreativeTab(EFCreativeTabs.tabCore)
 							.setTextureName(EnFusion.modId + ":hyperEnergeticCapacitor");
 
