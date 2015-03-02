@@ -117,8 +117,17 @@ public class EFRecipes {
 		OreDictionary.registerOre("orePeridot", EFBlocks.orePeridot);
 		
 		// Items
+//		Ingots
 		OreDictionary.registerOre("ingotCopper", EFItems.ingotCopper);
+
+//		Gems
 		OreDictionary.registerOre("gemPeridot", EFItems.gemPeridot);
+
+//		Dusts
+		OreDictionary.registerOre("dustIron", EFItems.dustIron);
+		OreDictionary.registerOre("dustGold", EFItems.dustGold);
+		OreDictionary.registerOre("dustCopper", EFItems.dustCopper);
+		OreDictionary.registerOre("dustPeridot", EFItems.dustPeridot);
 		
 	}
 	
