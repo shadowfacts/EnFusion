@@ -19,6 +19,16 @@ public class EFPaxel extends ItemTool {
 	public EFPaxel(ToolMaterial material) {
 		super(3, material, new HashSet<Block>(Arrays.asList(new Block[0])));
 	}
+	
+	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
+	@Override
+	public String getUnlocalizedName(ItemStack stack) {
+		return this.getUnlocalizedName();
+	}
 
 	@Override
 	public boolean getIsRepairable(ItemStack stack1, ItemStack stack2) {
