@@ -24,6 +24,16 @@ public class ItemLaserPistol extends Item implements IEnergyContainerItem {
 		this.maxExtract = 75;
 		this.maxRecieve = 75;
 	}
+
+	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
+	@Override
+	public String getUnlocalizedName(ItemStack stack) {
+		return this.getUnlocalizedName();
+	}
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {

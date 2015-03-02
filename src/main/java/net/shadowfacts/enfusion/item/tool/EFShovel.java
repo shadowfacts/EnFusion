@@ -1,12 +1,15 @@
 package net.shadowfacts.enfusion.item.tool;
 
-import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 
-public class EFItemAxe extends ItemAxe {
+/**
+ * @author shadowfacts
+ */
+public class EFShovel extends ItemSpade {
 
-	public EFItemAxe(ToolMaterial toolMaterial) {
-		super(toolMaterial);
+	public EFShovel(ToolMaterial material) {
+		super(material);
 	}
 
 	@Override
@@ -18,5 +21,4 @@ public class EFItemAxe extends ItemAxe {
 	public String getUnlocalizedName(ItemStack stack) {
 		return this.getUnlocalizedName();
 	}
-
 }

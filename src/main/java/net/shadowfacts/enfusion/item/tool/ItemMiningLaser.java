@@ -4,7 +4,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.shadowfacts.enfusion.entity.EntityLaserBolt;
 import net.shadowfacts.enfusion.entity.EntityMiningLaser;
 
 public class ItemMiningLaser extends Item {
@@ -24,6 +23,16 @@ public class ItemMiningLaser extends Item {
 		}
 		
 		return itemStack;
+	}
+
+	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
+	@Override
+	public String getUnlocalizedName(ItemStack stack) {
+		return this.getUnlocalizedName();
 	}
 
 }

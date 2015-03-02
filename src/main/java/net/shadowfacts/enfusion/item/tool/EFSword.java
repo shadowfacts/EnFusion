@@ -1,13 +1,16 @@
-package net.shadowfacts.enfusion.item;
+package net.shadowfacts.enfusion.item.tool;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 
 /**
- * Base item class for EnFusion.
  * @author shadowfacts
  */
-public class EFItem extends Item {
+public class EFSword extends ItemSword {
+
+	public EFSword(ToolMaterial material) {
+		super(material);
+	}
 
 	@Override
 	public String getUnlocalizedName() {

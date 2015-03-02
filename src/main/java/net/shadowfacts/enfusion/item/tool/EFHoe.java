@@ -1,12 +1,15 @@
 package net.shadowfacts.enfusion.item.tool;
 
-import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 
-public class EFItemPickaxe extends ItemPickaxe {
+/**
+ * @author shadowfacts
+ */
+public class EFHoe extends ItemHoe {
 
-	public EFItemPickaxe(ToolMaterial toolMaterial) {
-		super(toolMaterial);
+	public EFHoe(ToolMaterial material) {
+		super(material);
 	}
 
 	@Override
@@ -18,5 +21,4 @@ public class EFItemPickaxe extends ItemPickaxe {
 	public String getUnlocalizedName(ItemStack stack) {
 		return this.getUnlocalizedName();
 	}
-
 }

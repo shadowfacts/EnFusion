@@ -1,18 +1,12 @@
 package net.shadowfacts.enfusion.entity;
 
-import java.util.ArrayList;
-
+import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.config.Configurator;
-import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class EntityMiningLaser extends EntityThrowable {
 	
@@ -55,23 +49,27 @@ public class EntityMiningLaser extends EntityThrowable {
 //		this.setDead();
 //	}
 	
+//	@Override
+//	public void onImpact(MovingObjectPosition pos) {
+////		EntityPlayer thrower = (EntityPlayer)this.getThrower();
+//		if (this.getThrower() != null && this.getThrower() instanceof EntityPlayer) {
+//			if (this.worldObj.getBlock(pos.blockX, pos.blockY, pos.blockZ) == Blocks.bedrock) {
+//				if (((EntityPlayer)this.getThrower()).capabilities.isCreativeMode) {
+//					int metadata = this.worldObj.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ);
+//					ArrayList<ItemStack> dropList = this.worldObj.getBlock(pos.blockX, pos.blockY, pos.blockZ).getDrops(this.worldObj, pos.blockX, pos.blockY, pos.blockZ, metadata, 0);
+//
+//					for (ItemStack stack: dropList) {
+//						EntityItem drop = new EntityItem(this.worldObj, (double)pos.blockX, (double)pos.blockY, (double)pos.blockZ, stack);
+//						this.worldObj.spawnEntityInWorld(drop);
+//					}
+//
+//				}
+//			}
+//		}
+//	}
+
 	@Override
 	public void onImpact(MovingObjectPosition pos) {
-//		EntityPlayer thrower = (EntityPlayer)this.getThrower();
-		if (this.getThrower() != null && this.getThrower() instanceof EntityPlayer) {
-			if (this.worldObj.getBlock(pos.blockX, pos.blockY, pos.blockZ) == Blocks.bedrock) {
-				if (((EntityPlayer)this.getThrower()).capabilities.isCreativeMode) {
-					int metadata = this.worldObj.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ);
-					ArrayList<ItemStack> dropList = this.worldObj.getBlock(pos.blockX, pos.blockY, pos.blockZ).getDrops(this.worldObj, pos.blockX, pos.blockY, pos.blockZ, metadata, 0);
-					
-					for (ItemStack stack: dropList) {
-						EntityItem drop = new EntityItem(this.worldObj, (double)pos.blockX, (double)pos.blockY, (double)pos.blockZ, stack);
-						this.worldObj.spawnEntityInWorld(drop);
-					}
-					
-				}
-			}
-		}
 	}
 	
 }

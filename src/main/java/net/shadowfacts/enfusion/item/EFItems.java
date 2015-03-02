@@ -1,12 +1,11 @@
 package net.shadowfacts.enfusion.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.*;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.client.gui.EFCreativeTabs;
-import net.shadowfacts.enfusion.item.armor.EArmor;
+import net.shadowfacts.enfusion.item.armor.EFArmor;
 import net.shadowfacts.enfusion.item.tool.*;
 
 public class EFItems {
@@ -27,15 +26,15 @@ public class EFItems {
 
 
 //	Tools
-	public static ItemSword zinchoriumSword;
-	public static ItemPickaxe zinchoriumPickaxe;
-	public static ItemAxe zinchoriumAxe;
-	public static ItemSpade zinchoriumShovel;
-	public static ItemHoe zinchoriumHoe;
-	public static EArmor zinchoriumHelmet;
-	public static EArmor zinchoriumChestplate;
-	public static EArmor zinchoriumLeggings;
-	public static EArmor zinchoriumBoots;
+	public static EFSword zinchoriumSword;
+	public static EFPickaxe zinchoriumPickaxe;
+	public static EFAxe zinchoriumAxe;
+	public static EFShovel zinchoriumShovel;
+	public static EFHoe zinchoriumHoe;
+	public static EFArmor zinchoriumHelmet;
+	public static EFArmor zinchoriumChestplate;
+	public static EFArmor zinchoriumLeggings;
+	public static EFArmor zinchoriumBoots;
 	public static ItemLaserPistol laserPistol;
 	public static ItemMiningLaser miningLaser;
 	public static ItemLeafBlower leafBlower;
@@ -90,39 +89,39 @@ public class EFItems {
 					.setCreativeTab(EFCreativeTabs.tabCore);
 
 //		Tools
-		zinchoriumSword = new ItemSword(ToolMaterial.EMERALD);
+		zinchoriumSword = new EFSword(ToolMaterial.EMERALD);
 		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemSword");
 
-		zinchoriumPickaxe = new EFItemPickaxe(ToolMaterial.EMERALD);
+		zinchoriumPickaxe = new EFPickaxe(ToolMaterial.EMERALD);
 		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemPickaxe");
 
-		zinchoriumAxe = new EFItemAxe(ToolMaterial.EMERALD);
+		zinchoriumAxe = new EFAxe(ToolMaterial.EMERALD);
 		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemAxe");
 
-		zinchoriumShovel = new ItemSpade(ToolMaterial.EMERALD);
+		zinchoriumShovel = new EFShovel(ToolMaterial.EMERALD);
 		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemShovel");
 
-		zinchoriumHoe = new ItemHoe(ToolMaterial.EMERALD);
+		zinchoriumHoe = new EFHoe(ToolMaterial.EMERALD);
 		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemHoe");
 
-		zinchoriumHelmet = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 0, "zinchorium");
+		zinchoriumHelmet = new EFArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 0, "zinchorium");
 		zinchoriumHelmet.setUnlocalizedName("zinchoriumHelmet").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":armor/zinchoriumHelmet");
 
-		zinchoriumChestplate = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 1, "zinchorium");
+		zinchoriumChestplate = new EFArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 1, "zinchorium");
 		zinchoriumChestplate.setUnlocalizedName("zinchoriumChestplate").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":armor/zinchoriumChestplate");
 
-		zinchoriumLeggings = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 2, "zinchorium");
+		zinchoriumLeggings = new EFArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 2, "zinchorium");
 		zinchoriumLeggings.setUnlocalizedName("zinchoriumLeggings").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":armor/zinchoriumLeggings");
 
-		zinchoriumBoots = new EArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 3, "zinchorium");
+		zinchoriumBoots = new EFArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 3, "zinchorium");
 		zinchoriumBoots.setUnlocalizedName("zinchoriumBoots").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":armor/zinchoriumBoots");
 

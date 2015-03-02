@@ -9,51 +9,51 @@ tile.liquidConcrete.name=Liquid Concrete
 tile.concrete.name=Concrete
 
 # Machines
-tile.fluxFurnace.name=Flux Furnace
-tile.solarPanelTier1.name=Solar Panel (Tier I)
-tile.solarPanelTier2.name=Solar Panel (Tier II)
-tile.solarPanelTier3.name=Solar Panel (Tier III)
-tile.solarPanelTier4.name=Solar Panel (Tier IV)
-tile.zinchoriumFurnace.name=Zinchorium Furnace
-tile.itemConveyor.name=Item Conveyor
+enfusion.tile.fluxFurnace.name=Flux Furnace
+enfusion.tile.solarPanelTier1.name=Solar Panel (Tier I)
+enfusion.tile.solarPanelTier2.name=Solar Panel (Tier II)
+enfusion.tile.solarPanelTier3.name=Solar Panel (Tier III)
+enfusion.tile.solarPanelTier4.name=Solar Panel (Tier IV)
+enfusion.tile.zinchoriumFurnace.name=Zinchorium Furnace
+enfusion.tile.itemConveyor.name=Item Conveyor
 
 # Items
-item.lightBulb.name=Light Bulb
-item.mirror.name=Mirror
-item.basicCapacitor.name=Basic Capacitor
-item.enhancedCapacitor.name=Enhanced Capacitor
-item.energeticCapacitor.name=Energetic Capacitor
-item.hyperEnergeticCapacitor.name=Hyper Energetic Capacitor
+enfusion.item.lightBulb.name=Light Bulb
+enfusion.item.mirror.name=Mirror
+enfusion.item.basicCapacitor.name=Basic Capacitor
+enfusion.item.enhancedCapacitor.name=Enhanced Capacitor
+enfusion.item.energeticCapacitor.name=Energetic Capacitor
+enfusion.item.hyperEnergeticCapacitor.name=Hyper Energetic Capacitor
 
 # Ingots
-item.ingotCopper.name=Copper Ingot
-item.zinchoriumAlloyIngot.name=Zinchorium Alloy Ingot
+enfusion.item.ingotCopper.name=Copper Ingot
+enfusion.item.zinchoriumAlloyIngot.name=Zinchorium Alloy Ingot
 
 # Gems
-item.gemPeridot.name=Peridot
+enfusion.item.gemPeridot.name=Peridot
 
 # Dusts
-item.dustIron.name=Iron Dust
-item.dustGold.name=Gold Dust
-item.dustCopper.name=Copper Dust
-item.dustZinchorium.name=Zinchorium Dust
-item.dustPeridot.name=Peridot Dust
+enfusion.item.dustIron.name=Iron Dust
+enfusion.item.dustGold.name=Gold Dust
+enfusion.item.dustCopper.name=Copper Dust
+enfusion.item.dustZinchorium.name=Zinchorium Dust
+enfusion.item.dustPeridot.name=Peridot Dust
 
 # Tools
-item.zinchoriumSword.name=Zinchorium Sword
-item.zinchoriumPickaxe.name=Zinchorium Pickaxe
-item.zinchoriumAxe.name=Zinchorium Axe
-item.zinchoriumShovel.name=Zinchorium Shovel
-item.zinchoriumHoe.name=Zinchorium Hoe
-item.zinchoriumHelmet.name=Zinchorium Helmet
-item.zinchoriumChestplate.name=Zinchorium Chestplate
-item.zinchoriumLeggings.name=Zinchorium Leggings
-item.zinchoriumBoots.name=Zinchorium Boots
-item.laserPistol.name=Laser Pistol
-item.miningLaser.name=Mining Laser
-item.leafBlower.name=Leaf Blower
+enfusion.item.zinchoriumSword.name=Zinchorium Sword
+enfusion.item.zinchoriumPickaxe.name=Zinchorium Pickaxe
+enfusion.item.zinchoriumAxe.name=Zinchorium Axe
+enfusion.item.zinchoriumShovel.name=Zinchorium Shovel
+enfusion.item.zinchoriumHoe.name=Zinchorium Hoe
+enfusion.item.zinchoriumHelmet.name=Zinchorium Helmet
+enfusion.item.zinchoriumChestplate.name=Zinchorium Chestplate
+enfusion.item.zinchoriumLeggings.name=Zinchorium Leggings
+enfusion.item.zinchoriumBoots.name=Zinchorium Boots
+enfusion.item.laserPistol.name=Laser Pistol
+enfusion.item.miningLaser.name=Mining Laser
+enfusion.item.leafBlower.name=Leaf Blower
 
 # Creative Tabs
-itemGroup.EnFusionCore=EnFusion Core
-itemGroup.EnFusionMachines=EnFusion Machines
-itemGroup.EnFusionTools=EnFusion Tools
+enfusion.itemGroup.EnFusionCore=EnFusion Core
+enfusion.itemGroup.EnFusionMachines=EnFusion Machines
+enfusion.itemGroup.EnFusionTools=EnFusion Tools

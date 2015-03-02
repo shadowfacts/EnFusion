@@ -29,6 +29,11 @@ public class BlockZinchoriumLight extends BlockRedstoneLight implements IDebugga
         }
     }
 
+	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
     @Override
     /**
      * Called whenever the block is added into the world. Args: world, x, y, z

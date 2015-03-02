@@ -35,6 +35,11 @@ public class BlockItemConveyor extends BaseTileEntityBlock {
 		super(name, Material.piston);
 	}
 
+	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
 		this.blockIcon = iconRegister.registerIcon(EnFusion.modId + ":machine/conveyor/item");

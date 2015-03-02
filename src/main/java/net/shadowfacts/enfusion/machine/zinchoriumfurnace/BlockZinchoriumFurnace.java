@@ -40,6 +40,11 @@ public class BlockZinchoriumFurnace extends BaseContainerBlock {
 		super(blockName);
 	}
 
+	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
 	@SideOnly(Side.CLIENT)
 	public Item getItem(World world, int x, int y, int z) {
 		return Item.getItemFromBlock(EFBlocks.zinchoriumFurnace);

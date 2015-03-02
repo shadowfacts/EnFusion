@@ -37,6 +37,11 @@ public class BlockSolarPanel extends BaseTileEntityBlock implements IDebuggable 
 	}
 
 	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
+	@Override
 	public boolean renderAsNormalBlock() {
 		return false;
 	}

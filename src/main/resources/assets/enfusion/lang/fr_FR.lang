@@ -1,43 +1,43 @@
 # Blocks
-tile.oreZinchorium.name=Minerai de zinchorium
-tile.blockZinchorium.name=Bloc de zinchorium
-tile.greenZinchoriumLightActive.name=Lumière de zinchorium (verte)
-tile.greenZinchoriumLightIdle.name=Lumière de zinchorium (verte)
-tile.oreCopper.name=Minerai de cuivre
-tile.orePeridot.name=Minerai de péridot 
-tile.liquidConcrete.name=Béton liquide 
-tile.concrete.name=Béton 
+enfusion.tile.oreZinchorium.name=Minerai de zinchorium
+enfusion.tile.blockZinchorium.name=Bloc de zinchorium
+enfusion.tile.greenZinchoriumLightActive.name=Lumière de zinchorium (verte)
+enfusion.tile.greenZinchoriumLightIdle.name=Lumière de zinchorium (verte)
+enfusion.tile.oreCopper.name=Minerai de cuivre
+enfusion.tile.orePeridot.name=Minerai de péridot
+enfusion.tile.liquidConcrete.name=Béton liquide
+enfusion.tile.concrete.name=Béton
 
 # Machines
-tile.fluxFurnace.name=Four à flux
-tile.solarPanelTier1.name=Panneau solaire (Niveau I)
-tile.solarPanelTier2.name=Panneau solaire (Niveau II)
-tile.solarPanelTier3.name=Panneau solaire (Niveau III)
-tile.solarPanelTier4.name=Panneau solaire (Niveau IV)
-tile.zinchoriumFurnace.name=Four de zinchorium
-tile.itemConveyor.name=Transporteur d'éléments
+enfusion.tile.fluxFurnace.name=Four à flux
+enfusion.tile.solarPanelTier1.name=Panneau solaire (Niveau I)
+enfusion.tile.solarPanelTier2.name=Panneau solaire (Niveau II)
+enfusion.tile.solarPanelTier3.name=Panneau solaire (Niveau III)
+enfusion.tile.solarPanelTier4.name=Panneau solaire (Niveau IV)
+enfusion.tile.zinchoriumFurnace.name=Four de zinchorium
+enfusion.tile.itemConveyor.name=Transporteur d'éléments
 
 # Items
-item.lightBulb.name=Bulbe d'ampoule
-item.mirror.name=Miroir
-item.basicCapacitor.name=Condensateur de base
-item.enhancedCapacitor.name=Condensateur avancé
-item.energeticCapacitor.name=Condensateur énergétique
-item.hyperEnergeticCapacitor.name=Condensateur hyper énergétique
+enfusion.item.lightBulb.name=Bulbe d'ampoule
+enfusion.item.mirror.name=Miroir
+enfusion.item.basicCapacitor.name=Condensateur de base
+enfusion.item.enhancedCapacitor.name=Condensateur avancé
+enfusion.item.energeticCapacitor.name=Condensateur énergétique
+enfusion.item.hyperEnergeticCapacitor.name=Condensateur hyper énergétique
 
 # Ingots
-item.ingotCopper.name=Lingot de cuivre
-item.zinchoriumAlloyIngot.name=Lingot d'alliage de zinchorium
+enfusion.item.ingotCopper.name=Lingot de cuivre
+enfusion.item.zinchoriumAlloyIngot.name=Lingot d'alliage de zinchorium
 
 # Gems 
-item.gemPeridot.name=Péridot 
+enfusion.item.gemPeridot.name=Péridot
 
 # Dusts
-item.dustIron.name=Poudre de fer
-item.dustGold.name=Poudre d'or
-item.dustCopper.name=Poudre de cuivre
-item.dustZinchorium.name=Poudre de zinchorium
-item.dustPeridot.name=Poudre de péridot 
+enfusion.item.dustIron.name=Poudre de fer
+enfusion.item.dustGold.name=Poudre d'or
+enfusion.item.dustCopper.name=Poudre de cuivre
+enfusion.item.dustZinchorium.name=Poudre de zinchorium
+enfusion.item.dustPeridot.name=Poudre de péridot
 
 # Tools
 item.zinchoriumSword.name=Epée en zinchorium

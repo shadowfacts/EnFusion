@@ -5,13 +5,23 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.shadowfacts.enfusion.EnFusion;
 
-public class EArmor extends ItemArmor {
+public class EFArmor extends ItemArmor {
 
 	private String armorString;
 	
-	public EArmor(ArmorMaterial par2ArmorMaterial, int par3, int par4, String armorString) {
+	public EFArmor(ArmorMaterial par2ArmorMaterial, int par3, int par4, String armorString) {
 		super(par2ArmorMaterial, par3, par4);
 		this.armorString = armorString;
+	}
+
+	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
+	@Override
+	public String getUnlocalizedName(ItemStack stack) {
+		return this.getUnlocalizedName();
 	}
 	
 	@Override

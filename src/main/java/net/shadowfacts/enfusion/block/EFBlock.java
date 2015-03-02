@@ -17,4 +17,9 @@ public class EFBlock extends Block {
 		super(material);
 	}
 
+	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
 }

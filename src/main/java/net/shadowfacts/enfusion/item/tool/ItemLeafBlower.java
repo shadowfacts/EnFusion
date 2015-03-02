@@ -48,6 +48,16 @@ public class ItemLeafBlower extends Item implements IEnergyContainerItem {
 	}
 
 	@Override
+	public String getUnlocalizedName() {
+		return "enfusion." + super.getUnlocalizedName();
+	}
+
+	@Override
+	public String getUnlocalizedName(ItemStack stack) {
+		return this.getUnlocalizedName();
+	}
+
+	@Override
 	public int receiveEnergy(ItemStack container, int maxReceive, boolean simulate) {
 		if (container.stackTagCompound == null) {
 			container.stackTagCompound = new NBTTagCompound();
