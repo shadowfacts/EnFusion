@@ -59,7 +59,7 @@ public class EFRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumShovel), " Z ", " S ", " S ", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
 
 //		Zinchorium Paxel
-		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumPaxel), "ASP", " S ", " S ", 'A', EFItems.zinchoriumAxe, 'S', EFItems.zinchoriumShovel, 'P', EFItems.zinchoriumPickaxe, 'S', Items.stick);
+		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumPaxel), "AQP", " S ", " S ", 'A', EFItems.zinchoriumAxe, 'Q', EFItems.zinchoriumShovel, 'P', EFItems.zinchoriumPickaxe, 'S', Items.stick);
 
 		// Zinchorium Gem Hoe
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumHoe), "ZZ ", " S ", " S ", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
