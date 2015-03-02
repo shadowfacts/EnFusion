@@ -6,8 +6,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.shadowfacts.enfusion.item.EFItems;
-import scala.actors.threadpool.Arrays;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 /**
