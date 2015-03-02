@@ -19,7 +19,7 @@ public class EFPaxel extends ItemTool {
 	public EFPaxel(ToolMaterial material) {
 		super(3, material, new HashSet<Block>(Arrays.asList(new Block[0])));
 	}
-	
+
 	@Override
 	public String getUnlocalizedName() {
 		return "enfusion." + super.getUnlocalizedName();
