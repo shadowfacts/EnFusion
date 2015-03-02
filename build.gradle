@@ -78,4 +78,6 @@ task deobfJar(type: Jar) {
 	classifier = 'deobf'
 }
 
-tasks.build.dependsOn deobfJar
+tasks.build.dependsOn deobfJartasks.build.dependsOn deobfJar
+
+sourceSets { main { output.resourcesDir = output.classesDir } }
