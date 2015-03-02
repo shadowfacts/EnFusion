@@ -19,10 +19,21 @@ buildscript {
 }
 
 repositories {
-	maven {
-		name = "chickenbones"
-		url = "http://chickenbones.net/maven/"
-	}
+    ivy {
+        name "CoFHCore"
+        artifactPattern 'http://addons.cursecdn.com/files/2221/835/[module]-[revision].[ext]'
+    }
+    ivy {
+        name "ThermalFoundation"
+        artifactPattern 'http://addons.cursecdn.com/files/2221/831/[module]-[revision].[ext]'
+    }
+    ivy {
+        name "ThermalExpansion"
+        artifactPattern 'http://addons.cursecdn.com/files/2221/850/[module]-[revision].[ext]'
+    }
+
+
+	maven { url = "http://chickenbones.net/maven/" } // Chicken Bones
 }
 
 apply plugin: 'forge'
@@ -56,6 +67,11 @@ dependencies {
     compile "codechicken:CodeChickenLib:$minecraft_version-$ccl_version:dev"
     compile "codechicken:CodeChickenCore:$minecraft_version-$ccc_version:dev"
     compile "codechicken:NotEnoughItems:$minecraft_version-$nei_version:dev"
+
+    // CoFH
+    // compile group: 'cofh', name: 'CoFHCore', version: "[$minecraft_version]$cofhcore_version-dev", ext: 'jar'
+    // compile group: 'cofh', name: 'ThermalFoundation', version: "[$minecraft_version]$thermalfoundation_version-dev", ext: 'jar'
+    // compile group: 'cofh', name: 'ThermalExpansion', version: "[$minecraft_version]$thermalexpansion_version-dev", ext: 'jar'
 }
 
 processResources
@@ -78,6 +94,6 @@ task deobfJar(type: Jar) {
 	classifier = 'deobf'
 }
 
-tasks.build.dependsOn deobfJartasks.build.dependsOn deobfJar
+tasks.build.dependsOn deobfJar
 
 sourceSets { main { output.resourcesDir = output.classesDir } }
