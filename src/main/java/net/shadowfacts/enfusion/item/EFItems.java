@@ -91,27 +91,27 @@ public class EFItems {
 //		Tools
 		zinchoriumSword = new EFSword(EFToolMaterials.ZINCHORIUM);
 		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(EFCreativeTabs.tabTools)
-				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemSword");
+				.setTextureName(EnFusion.modId + ":tools/zinchorium/sword");
 
 		zinchoriumPickaxe = new EFPickaxe(EFToolMaterials.ZINCHORIUM);
 		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(EFCreativeTabs.tabTools)
-				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemPickaxe");
+				.setTextureName(EnFusion.modId + ":tools/zinchorium/pickaxe");
 
 		zinchoriumAxe = new EFAxe(EFToolMaterials.ZINCHORIUM);
 		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(EFCreativeTabs.tabTools)
-				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemAxe");
+				.setTextureName(EnFusion.modId + ":tools/zinchorium/axe");
 
 		zinchoriumShovel = new EFShovel(EFToolMaterials.ZINCHORIUM);
 		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(EFCreativeTabs.tabTools)
-				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemShovel");
+				.setTextureName(EnFusion.modId + ":tools/zinchorium/shovel");
 
 		zinchoriumPaxel = new EFPaxel(EFToolMaterials.ZINCHORIUM);
 		zinchoriumPaxel.setUnlocalizedName("zinchoriumPaxel").setCreativeTab(EFCreativeTabs.tabTools)
-				.setTextureName(EnFusion.modId + ":tools/zinchoriumPaxel");
+				.setTextureName(EnFusion.modId + ":tools/zinchorium/paxel");
 
 		zinchoriumHoe = new EFHoe(EFToolMaterials.ZINCHORIUM);
 		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(EFCreativeTabs.tabTools)
-				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemHoe");
+				.setTextureName(EnFusion.modId + ":tools/zinchorium/hoe");
 
 		zinchoriumHelmet = new EFArmor(ArmorMaterial.DIAMOND, EnFusion.proxy.getArmorIndex("zinchorium"), 0, "zinchorium");
 		zinchoriumHelmet.setUnlocalizedName("zinchoriumHelmet").setCreativeTab(EFCreativeTabs.tabTools)
