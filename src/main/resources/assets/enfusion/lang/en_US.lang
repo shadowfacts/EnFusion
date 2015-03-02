@@ -1,12 +1,12 @@
 # Blocks
-tile.oreZinchorium.name=Zinchorium Ore
-tile.blockZinchorium.name=Zinchorium Block
-tile.greenZinchoriumLightActive.name=Zinchorium Light (Green)
-tile.greenZinchoriumLightIdle.name=Zinchorium Light (Green)
-tile.oreCopper.name=Copper Ore
-tile.orePeridot.name=Peridot Ore
-tile.liquidConcrete.name=Liquid Concrete
-tile.concrete.name=Concrete
+enfusion.tile.oreZinchorium.name=Zinchorium Ore
+enfusion.tile.blockZinchorium.name=Zinchorium Block
+enfusion.tile.greenZinchoriumLightActive.name=Zinchorium Light (Green)
+enfusion.tile.greenZinchoriumLightIdle.name=Zinchorium Light (Green)
+enfusion.tile.oreCopper.name=Copper Ore
+enfusion.tile.orePeridot.name=Peridot Ore
+enfusion.tile.liquidConcrete.name=Liquid Concrete
+enfusion.tile.concrete.name=Concrete
 
 # Machines
 enfusion.tile.fluxFurnace.name=Flux Furnace
@@ -54,6 +54,6 @@ enfusion.item.miningLaser.name=Mining Laser
 enfusion.item.leafBlower.name=Leaf Blower
 
 # Creative Tabs
-enfusion.itemGroup.EnFusionCore=EnFusion Core
-enfusion.itemGroup.EnFusionMachines=EnFusion Machines
-enfusion.itemGroup.EnFusionTools=EnFusion Tools
+itemGroup.EnFusionCore=EnFusion Core
+itemGroup.EnFusionMachines=EnFusion Machines
+itemGroup.EnFusionTools=EnFusion Tools
