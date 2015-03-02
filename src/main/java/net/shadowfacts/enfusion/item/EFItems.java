@@ -30,6 +30,7 @@ public class EFItems {
 	public static EFPickaxe zinchoriumPickaxe;
 	public static EFAxe zinchoriumAxe;
 	public static EFShovel zinchoriumShovel;
+	public static EFPaxel zinchoriumPaxel;
 	public static EFHoe zinchoriumHoe;
 	public static EFArmor zinchoriumHelmet;
 	public static EFArmor zinchoriumChestplate;
@@ -104,6 +105,10 @@ public class EFItems {
 		zinchoriumShovel = new EFShovel(ToolMaterial.EMERALD);
 		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemShovel");
+
+		zinchoriumPaxel = new EFPaxel(EFToolMaterials.ZINCHORIUM);
+		zinchoriumPaxel.setUnlocalizedName("zinchoriumPaxel").setCreativeTab(EFCreativeTabs.tabTools)
+				.setTextureName(EnFusion.modId + ":tools/zinchoriumPaxel");
 
 		zinchoriumHoe = new EFHoe(ToolMaterial.EMERALD);
 		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(EFCreativeTabs.tabTools)
@@ -186,6 +191,7 @@ public class EFItems {
 		GameRegistry.registerItem(zinchoriumPickaxe, "zinchoriumPickaxe");
 		GameRegistry.registerItem(zinchoriumAxe, "zinchoriumAxe");
 		GameRegistry.registerItem(zinchoriumShovel, "zinchoriumShovel");
+		GameRegistry.registerItem(zinchoriumPaxel, "zinchoriumPaxel");
 		GameRegistry.registerItem(zinchoriumHoe, "zinchoriumHoe");
 		GameRegistry.registerItem(zinchoriumHelmet, "zinchoriumHelmet");
 		GameRegistry.registerItem(zinchoriumChestplate, "zinchoriumChestplate");
