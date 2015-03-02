@@ -69,9 +69,9 @@ dependencies {
     compile "codechicken:NotEnoughItems:$minecraft_version-$nei_version:dev"
 
     // CoFH
-    // compile group: 'cofh', name: 'CoFHCore', version: "[$minecraft_version]$cofhcore_version-dev", ext: 'jar'
-    // compile group: 'cofh', name: 'ThermalFoundation', version: "[$minecraft_version]$thermalfoundation_version-dev", ext: 'jar'
-    // compile group: 'cofh', name: 'ThermalExpansion', version: "[$minecraft_version]$thermalexpansion_version-dev", ext: 'jar'
+    compile group: 'cofh', name: 'CoFHCore', version: "[$minecraft_version]$cofhcore_version-dev", ext: 'jar'
+    compile group: 'cofh', name: 'ThermalExpansion', version: "[$minecraft_version]$thermalexpansion_version-dev", ext: 'jar'
+    compile group: 'cofh', name: 'ThermalFoundation', version: "[$minecraft_version]$thermalfoundation_version-dev", ext: 'jar'
 }
 
 processResources
