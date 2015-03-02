@@ -1,15 +1,13 @@
 package net.shadowfacts.enfusion.machine.generator.solar;
 
 import cofh.api.energy.IEnergyHandler;
-
 import com.google.common.base.Objects;
-
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.Packet;
+import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
-
 import net.minecraftforge.common.util.ForgeDirection;
-
 import net.shadowfacts.enfusion.energy.BaseEnergyStorage;
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
@@ -86,6 +84,12 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 				storage.extractEnergy(toExtract, false);
 			}
 		}
+	}
+
+	public Packet getDescriptionPacket() {
+		NBTTagCompound nbt = new NBTTagCompound();
+		this.writeToNBT(nbt);
+		return new S35PacketUpdateTileEntity(this.xCoord, this.yCoord, this.zCoord, 0, nbt);
 	}
 
 //	NBT Stuff
