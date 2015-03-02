@@ -47,7 +47,7 @@ public class EFRecipes {
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.lightBulb), "GGG", "GOG", "III", 'G', new ItemStack(Blocks.glass), 'O', new ItemStack(Items.gold_ingot), 'I', new ItemStack(Items.iron_ingot));
 		
 		// Zinchorium Gem Sword
-		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumSword), " Z ", " Z ", " S ", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
+		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumSword), "Z", "Z", "S", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
 		
 		// Zinchorium Gem Pickaxe
 		GameRegistry.addShapedRecipe(new ItemStack(EFItems.zinchoriumPickaxe), "ZZZ", " S ", " S ", 'Z', new ItemStack(EFItems.zinchoriumAlloyIngot), 'S', new ItemStack(Items.stick));
