@@ -86,6 +86,7 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 		}
 	}
 
+	@Override
 	public Packet getDescriptionPacket() {
 		NBTTagCompound nbt = new NBTTagCompound();
 		this.writeToNBT(nbt);

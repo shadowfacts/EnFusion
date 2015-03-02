@@ -2,6 +2,7 @@ package net.shadowfacts.enfusion.machine.zinchoriumfurnace;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
@@ -9,8 +10,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.Packet;
+import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
+
 import net.minecraftforge.common.util.ForgeDirection;
+
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 /**
@@ -79,6 +84,13 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 
 	public boolean hasCustomInventoryName() {
 		return false;
+	}
+
+	@Override
+	public Packet getDescriptionPacket() {
+		NBTTagCompound nbt = new NBTTagCompound();
+		this.writeToNBT(nbt);
+		return new S35PacketUpdateTileEntity(this.xCoord, this.yCoord, this.zCoord, 0, nbt);
 	}
 
 	// NBT
