@@ -1,7 +1,6 @@
 package net.shadowfacts.enfusion.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.client.gui.EFCreativeTabs;
@@ -90,19 +89,19 @@ public class EFItems {
 					.setCreativeTab(EFCreativeTabs.tabCore);
 
 //		Tools
-		zinchoriumSword = new EFSword(ToolMaterial.EMERALD);
+		zinchoriumSword = new EFSword(EFToolMaterials.ZINCHORIUM);
 		zinchoriumSword.setUnlocalizedName("zinchoriumSword").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemSword");
 
-		zinchoriumPickaxe = new EFPickaxe(ToolMaterial.EMERALD);
+		zinchoriumPickaxe = new EFPickaxe(EFToolMaterials.ZINCHORIUM);
 		zinchoriumPickaxe.setUnlocalizedName("zinchoriumPickaxe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemPickaxe");
 
-		zinchoriumAxe = new EFAxe(ToolMaterial.EMERALD);
+		zinchoriumAxe = new EFAxe(EFToolMaterials.ZINCHORIUM);
 		zinchoriumAxe.setUnlocalizedName("zinchoriumAxe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemAxe");
 
-		zinchoriumShovel = new EFShovel(ToolMaterial.EMERALD);
+		zinchoriumShovel = new EFShovel(EFToolMaterials.ZINCHORIUM);
 		zinchoriumShovel.setUnlocalizedName("zinchoriumShovel").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemShovel");
 
@@ -110,7 +109,7 @@ public class EFItems {
 		zinchoriumPaxel.setUnlocalizedName("zinchoriumPaxel").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumPaxel");
 
-		zinchoriumHoe = new EFHoe(ToolMaterial.EMERALD);
+		zinchoriumHoe = new EFHoe(EFToolMaterials.ZINCHORIUM);
 		zinchoriumHoe.setUnlocalizedName("zinchoriumHoe").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/zinchoriumGemHoe");
 
