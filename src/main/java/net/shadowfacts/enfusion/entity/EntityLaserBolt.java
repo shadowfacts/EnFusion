@@ -36,13 +36,15 @@ public class EntityLaserBolt extends EntityThrowable {
 	}
 
 	@Override
-	protected void onImpact(MovingObjectPosition movingobjectposition) {
-		this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, (float)6, true);
-		this.setDead();
+	public void onImpact(MovingObjectPosition movingobjectposition) {
+		if (!this.worldObj.isRemote) {
+			this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, (float) 6, true);
+			this.setDead();
+		}
 	}
 	
 	@Override
-	protected float getGravityVelocity() {
+	public float getGravityVelocity() {
 		return 0;
 	}
 }
