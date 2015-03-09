@@ -2,11 +2,16 @@ package net.shadowfacts.enfusion.entity;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.config.Configurator;
+
+import java.util.ArrayList;
 
 public class EntityMiningLaser extends EntityThrowable {
 	
@@ -35,41 +40,26 @@ public class EntityMiningLaser extends EntityThrowable {
 		this.motionZ *= 8;
 	}
 
-//	@Override
-//	protected void onImpact(MovingObjectPosition movingobjectposition) {
-//		EntityPlayer thrower = (EntityPlayer)this.getThrower();
-//		boolean isCreative = thrower.capabilities.isCreativeMode;
-//		if (this.worldObj.getBlockId(movingobjectposition.blockX, movingobjectposition.blockY, movingobjectposition.blockZ) == Block.bedrock.blockID) {
-//			if (isCreative) {
-//				this.worldObj.destroyBlock(movingobjectposition.blockX, movingobjectposition.blockY, movingobjectposition.blockZ, true);
-//			}
-//		} else {
-//			this.worldObj.destroyBlock(movingobjectposition.blockX, movingobjectposition.blockY, movingobjectposition.blockZ, true);
-//		}
-//		this.setDead();
-//	}
-	
-//	@Override
-//	public void onImpact(MovingObjectPosition pos) {
-////		EntityPlayer thrower = (EntityPlayer)this.getThrower();
-//		if (this.getThrower() != null && this.getThrower() instanceof EntityPlayer) {
-//			if (this.worldObj.getBlock(pos.blockX, pos.blockY, pos.blockZ) == Blocks.bedrock) {
-//				if (((EntityPlayer)this.getThrower()).capabilities.isCreativeMode) {
-//					int metadata = this.worldObj.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ);
-//					ArrayList<ItemStack> dropList = this.worldObj.getBlock(pos.blockX, pos.blockY, pos.blockZ).getDrops(this.worldObj, pos.blockX, pos.blockY, pos.blockZ, metadata, 0);
-//
-//					for (ItemStack stack: dropList) {
-//						EntityItem drop = new EntityItem(this.worldObj, (double)pos.blockX, (double)pos.blockY, (double)pos.blockZ, stack);
-//						this.worldObj.spawnEntityInWorld(drop);
-//					}
-//
-//				}
-//			}
-//		}
-//	}
-
 	@Override
 	public void onImpact(MovingObjectPosition pos) {
+		if (!this.worldObj.isRemote) {
+			if (this.worldObj.getBlock(pos.blockX, pos.blockY, pos.blockZ) != Blocks.bedrock) {
+				int metadata = this.worldObj.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ);
+				ArrayList<ItemStack> dropList = this.worldObj.getBlock(pos.blockX, pos.blockY, pos.blockZ).getDrops(this.worldObj, pos.blockX, pos.blockY, pos.blockZ, metadata, 0);
+
+				for (ItemStack stack : dropList) {
+					EntityItem item = new EntityItem(this.worldObj, (double) pos.blockX, (double) pos.blockY, (double) pos.blockZ, stack);
+					this.worldObj.spawnEntityInWorld(item);
+				}
+
+				this.worldObj.setBlockToAir(pos.blockX, pos.blockY, pos.blockZ);
+			}
+		}
+	}
+
+	@Override
+	public float getGravityVelocity() {
+		return 0;
 	}
 	
 }
