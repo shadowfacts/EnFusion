@@ -12,13 +12,14 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
 import net.shadowfacts.enfusion.compat.EFCompat;
-import net.shadowfacts.enfusion.config.Configurator;
+import net.shadowfacts.enfusion.config.Configuration;
 import net.shadowfacts.enfusion.item.EFItems;
 import net.shadowfacts.enfusion.network.EFNetworkManager;
 import net.shadowfacts.enfusion.proxy.CommonProxy;
 import net.shadowfacts.enfusion.recipes.EFRecipes;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
 import net.shadowfacts.shadowcore.Log;
+import net.shadowfacts.shadowcore.config.ConfigManager;
 
 @Mod(modid=EnFusion.modId, name=EnFusion.displayName, version=EnFusion.version, dependencies = EnFusion.depString)
 public class EnFusion {
@@ -46,9 +47,10 @@ public class EnFusion {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		// Config
-		Configurator.loadConfig(event);
-		
-		
+//		Configurator.loadConfig(event);
+		ConfigManager.instance.register("EnFusion", Configuration.class);
+		ConfigManager.instance.load("EnFusion");
+
 		EFBlocks.preInit(); // Blocks
 		EFItems.preInit(); // Items
 		EFRecipes.registerRecipes(); // Recipes

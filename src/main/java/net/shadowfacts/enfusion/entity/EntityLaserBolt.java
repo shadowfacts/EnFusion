@@ -5,13 +5,13 @@ import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.shadowfacts.enfusion.EnFusion;
-import net.shadowfacts.enfusion.config.Configurator;
 import cpw.mods.fml.common.registry.EntityRegistry;
+import net.shadowfacts.enfusion.config.Configuration;
 
 public class EntityLaserBolt extends EntityThrowable {
 	
 	public static void initialize() {
-		EntityRegistry.registerModEntity(EntityLaserBolt.class, "LaserBolt", Configurator.laserBoltEntityId, EnFusion.instance, 120, 3, true);
+		EntityRegistry.registerModEntity(EntityLaserBolt.class, "LaserBolt", Configuration.laserBoltEntityID, EnFusion.instance, 120, 3, true);
 	}
 
 	public EntityLaserBolt(World par1World) {
