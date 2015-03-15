@@ -8,10 +8,6 @@ import net.shadowfacts.enfusion.entity.EntityMiningLaser;
 
 public class ItemMiningLaser extends EFItemEnergyContainer {
 
-	protected int capacity;
-	protected int maxReceive;
-	protected int maxExtract;
-
 	public ItemMiningLaser() {
 		super(32000, 64);
 		this.setMaxStackSize(1);
