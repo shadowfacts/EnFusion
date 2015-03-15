@@ -17,6 +17,7 @@ import net.shadowfacts.enfusion.item.EFItems;
 import net.shadowfacts.enfusion.network.EFNetworkManager;
 import net.shadowfacts.enfusion.proxy.CommonProxy;
 import net.shadowfacts.enfusion.recipes.EFRecipes;
+import net.shadowfacts.enfusion.util.UpdateUtils;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
 import net.shadowfacts.shadowcore.Log;
 import net.shadowfacts.shadowcore.config.ConfigManager;
@@ -47,7 +48,9 @@ public class EnFusion {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		// Config
-//		Configurator.loadConfig(event);
+//		Remove the legacy config file
+		UpdateUtils.tryMoveLegacyConfig(event.getModConfigurationDirectory());
+//		Register/load config
 		ConfigManager.instance.register("EnFusion", Configuration.class);
 		ConfigManager.instance.load("EnFusion");
 
