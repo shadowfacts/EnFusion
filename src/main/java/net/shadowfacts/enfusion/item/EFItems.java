@@ -137,7 +137,7 @@ public class EFItems {
 		miningLaser.setUnlocalizedName("miningLaser").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/miningLaser");
 
-		leafBlower = new ItemLeafBlower(16000, 32);
+		leafBlower = new ItemLeafBlower();
 		leafBlower.setUnlocalizedName("leafBlower").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/leafBlower");
 
