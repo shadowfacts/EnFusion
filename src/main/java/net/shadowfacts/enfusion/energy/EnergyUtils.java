@@ -9,6 +9,7 @@ import net.minecraft.nbt.NBTTagCompound;
 public class EnergyUtils {
 
 	public static final String TAG_ENERGY = "Energy";
+	public static final String TAG_CAPACITY = "Capacity";
 
 	/**
 	 * Sets the energy in an {@link net.minecraft.item.ItemStack}

@@ -24,9 +24,9 @@ public class BaseEnergyStorage extends EnergyStorage {
 
 	@Override
 	public BaseEnergyStorage readFromNBT(NBTTagCompound nbt) {
-		this.capacity = nbt.getInteger("Capacity");
+		this.capacity = nbt.getInteger(EnergyUtils.TAG_CAPACITY);
 
-		this.energy = nbt.getInteger("Energy");
+		this.energy = nbt.getInteger(EnergyUtils.TAG_ENERGY);
 		if (energy > capacity) {
 			energy = capacity;
 		}
@@ -36,12 +36,12 @@ public class BaseEnergyStorage extends EnergyStorage {
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
-		nbt.setInteger("Capacity", this.capacity);
+		nbt.setInteger(EnergyUtils.TAG_CAPACITY, this.capacity);
 
 		if (this.energy < 0) {
 			this.energy = 0;
 		}
-		nbt.setInteger("Energy", this.energy);
+		nbt.setInteger(EnergyUtils.TAG_ENERGY, this.energy);
 
 		return nbt;
 	}
