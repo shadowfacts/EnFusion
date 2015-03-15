@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
+ * Based on code from Botania by Lizbeth Rika (Vazkii).
+ * See the source code here: https://github.com/vazkii/botania
  * @author shadowfacts
  */
 public class ItemLeafBlower extends EFItemEnergyContainer {
