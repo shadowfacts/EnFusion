@@ -35,8 +35,10 @@ public class ItemMiningLaser extends EFItem implements IEnergyContainerItem {
 		itemStack.damageItem(1, player);
 		world.playSoundAtEntity(player, "random.bow", 0.5f, 0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
 		if (!world.isRemote) {
-			world.spawnEntityInWorld(new EntityMiningLaser(world, player));
-			this.extractEnergy(itemStack, 16, false);
+			if (getEnergyStored(itemStack) >= 16) {
+				world.spawnEntityInWorld(new EntityMiningLaser(world, player));
+				this.extractEnergy(itemStack, 16, false);
+			}
 		}
 		
 		return itemStack;
