@@ -23,7 +23,7 @@ public class TileEntityItemConveyor extends BaseModTileEntity implements IEnergy
 
 	public void updateEntity() {
 		super.updateEntity();
-//		if (!this.worldObj.isRemote) {
+		if (!this.worldObj.isRemote) {
 
 			AxisAlignedBB aabb = AxisAlignedBB.getBoundingBox((double) this.xCoord, (double) this.yCoord + 1, (double) this.zCoord, (double) this.xCoord + 1, (double) this.yCoord + 2, (double) this.zCoord + 1);
 			List entities = this.worldObj.getEntitiesWithinAABB(EntityItem.class, aabb);
@@ -46,7 +46,7 @@ public class TileEntityItemConveyor extends BaseModTileEntity implements IEnergy
 									} else if (dir == ForgeDirection.WEST) {
 										item.addVelocity(-0.02, 0, 0);
 									} else if (dir == ForgeDirection.EAST) {
-										item.setVelocity(0.02, 0, 0);
+										item.setVelocity(item.motionX, 0, item.motionZ);
 									}
 
 									this.storage.extractEnergy(16, false);
@@ -57,7 +57,7 @@ public class TileEntityItemConveyor extends BaseModTileEntity implements IEnergy
 					}
 				}
 			}
-//		}
+		}
 	}
 
 //	IEnergyHandler
