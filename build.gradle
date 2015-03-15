@@ -21,15 +21,19 @@ buildscript {
 repositories {
     ivy {
         name "CoFHCore"
-        artifactPattern 'http://addons.cursecdn.com/files/2221/835/[module]-[revision].[ext]'
+        artifactPattern 'http://addons-origin.cursecdn.com/files/2229/536/[module]-[revision].[ext]'
     }
     ivy {
         name "ThermalFoundation"
-        artifactPattern 'http://addons.cursecdn.com/files/2221/831/[module]-[revision].[ext]'
+        artifactPattern "http://addons-origin.cursecdn.com/files/2229/339/[module]-[revision].[ext]"
     }
     ivy {
         name "ThermalExpansion"
-        artifactPattern 'http://addons.cursecdn.com/files/2221/850/[module]-[revision].[ext]'
+        artifactPattern "http://addons-origin.cursecdn.com/files/2229/552/[module]-[revision].[ext]"
+    }
+    ivy {
+        name "ThermalDynamics"
+        artifactPattern "http://addons-origin.cursecdn.com/files/2229/532/[module]-[revision].[ext]"
     }
 
 
@@ -39,9 +43,6 @@ repositories {
 apply plugin: 'forge'
 
 version = "$minecraft_version-$mod_version"
-// group= "net.shadowfacts.enfusion" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-// archivesBaseName = "EnFusion"
-
 
 if (System.getenv().DRONE_BUILD_NUMBER != null) {
 	version += "-snapshot-" + System.getenv().DRONE_BUILD_NUMBER
@@ -72,6 +73,7 @@ dependencies {
     compile group: 'cofh', name: 'CoFHCore', version: "[$minecraft_version]$cofhcore_version-dev", ext: 'jar'
     compile group: 'cofh', name: 'ThermalExpansion', version: "[$minecraft_version]$thermalexpansion_version-dev", ext: 'jar'
     compile group: 'cofh', name: 'ThermalFoundation', version: "[$minecraft_version]$thermalfoundation_version-dev", ext: 'jar'
+    compile group: 'cofh', name: 'ThermalDynamics', version: "[$minecraft_version]$thermaldynamics_version-dev", ext: 'jar'
 }
 
 processResources
