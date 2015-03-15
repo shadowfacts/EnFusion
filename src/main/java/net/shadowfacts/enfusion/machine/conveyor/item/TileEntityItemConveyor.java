@@ -4,7 +4,6 @@ import cofh.api.energy.IEnergyHandler;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.energy.BaseEnergyStorage;
 import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
@@ -39,29 +38,16 @@ public class TileEntityItemConveyor extends BaseModTileEntity implements IEnergy
 								if (this.storage.getEnergyStored() >= 16) {
 
 									ForgeDirection dir = ForgeDirection.getOrientation(this.worldObj.getBlockMetadata(this.xCoord, this.yCoord, this.zCoord));
-									double newX, newY, newZ;
-									newY = yCoord + 1;
-									if (dir == ForgeDirection.NORTH) {
-										newX = xCoord + 0.5d;
-										newZ = zCoord - 0.5d;
-									} else if (dir == ForgeDirection.SOUTH) {
-										newX = xCoord + 0.5d;
-										newZ = zCoord + 1.5d;
-									} else if (dir == ForgeDirection.WEST) {
-										newX = xCoord - 0.5d;
-										newZ = zCoord + 0.5d;
-									} else if (dir == ForgeDirection.EAST) {
-										newX = xCoord + 1.5d;
-										newZ = zCoord + 0.5d;
-									} else {
-										newX = xCoord;
-										newZ = zCoord;
-										EnFusion.log.info("An ItemConveyor couldn't move an EntityItem, this should not be happening. Report this immediately!");
-									}
 
-									item.posX = newX;
-									item.posY = newY;
-									item.posZ = newZ;
+									if (dir == ForgeDirection.NORTH) {
+										item.addVelocity(0, 0, -0.02);
+									} else if (dir == ForgeDirection.SOUTH) {
+										item.addVelocity(0, 0, 0.02);
+									} else if (dir == ForgeDirection.WEST) {
+										item.addVelocity(-0.02, 0, 0);
+									} else if (dir == ForgeDirection.EAST) {
+										item.setVelocity(item.motionX, 0, item.motionZ);
+									}
 
 									this.storage.extractEnergy(16, false);
 
