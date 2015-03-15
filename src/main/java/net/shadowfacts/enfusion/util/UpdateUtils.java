@@ -16,6 +16,7 @@ public class UpdateUtils {
 	public static void tryMoveLegacyConfig(File configFolder) {
 		Path oldPath = FileSystems.getDefault().getPath(configFolder.getPath(), "enfusion.cfg");
 		if (Files.exists(oldPath)) {
+			EnFusion.log.info("Attempting to migrate legacy config file to new location.");
 			try {
 				Path newPath = FileSystems.getDefault().getPath(configFolder.getPath(), "shadow", "EnFusion.cfg");
 				Files.move(oldPath, newPath);
