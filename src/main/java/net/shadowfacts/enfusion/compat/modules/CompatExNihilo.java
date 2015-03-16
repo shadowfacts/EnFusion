@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.compat;
+package net.shadowfacts.enfusion.compat.modules;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.shadowfacts.enfusion.EnFusion;
+import net.shadowfacts.enfusion.compat.Compat;
 import net.shadowfacts.enfusion.item.EFItems;
 
 import java.lang.reflect.InvocationTargetException;
