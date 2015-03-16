@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.compat.modules.CompatExNihilo;
+import net.shadowfacts.enfusion.compat.modules.CompatThermalExpansion;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class EFCompat {
 
 	static {
 		modules.add(CompatExNihilo.class);
+		modules.add(CompatThermalExpansion.class);
 	}
 
 	public static boolean register(Class clazz) {
