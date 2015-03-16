@@ -8,6 +8,7 @@ import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.block.misc.BlockConcrete;
 import net.shadowfacts.enfusion.client.gui.EFCreativeTabs;
+import net.shadowfacts.enfusion.config.EFConfig;
 import net.shadowfacts.enfusion.machine.conveyor.block.BlockBlockConveyor;
 import net.shadowfacts.enfusion.machine.conveyor.entity.BlockEntityConveyor;
 import net.shadowfacts.enfusion.machine.conveyor.item.BlockItemConveyor;
@@ -69,22 +70,22 @@ public class EFBlocks {
 
 
 //		Machines
-		solarPanelTier1 = new BlockSolarPanel("solarPanelTier1", 16, 8000);
+		solarPanelTier1 = new BlockSolarPanel("solarPanelTier1", EFConfig.solarPanelTier1MaxGeneration, EFConfig.solarPanelTier1Capacity);
 		solarPanelTier1.setBlockName("solarPanelTier1").setHardness(0.9f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(EFCreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier1")
 				.setHarvestLevel("pickaxe", 2);
 
-		solarPanelTier2 = new BlockSolarPanel("solarPanelTier2", 32, 16000);
+		solarPanelTier2 = new BlockSolarPanel("solarPanelTier2", EFConfig.solarPanelTier2MaxGeneration, EFConfig.solarPanelTier2Capacity);
 		solarPanelTier2.setBlockName("solarPanelTier2").setHardness(0.9f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(EFCreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier2")
 				.setHarvestLevel("pickaxe", 2);
 
-		solarPanelTier3 = new BlockSolarPanel("solarPanelTier3", 64, 32000);
+		solarPanelTier3 = new BlockSolarPanel("solarPanelTier3", EFConfig.solarPanelTier3MaxGeneration, EFConfig.solarPanelTier3Capacity);
 		solarPanelTier3.setBlockName("solarPanelTier3").setHardness(0.9f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(EFCreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier3")
 				.setHarvestLevel("pickaxe", 2);
 
-		solarPanelTier4 = new BlockSolarPanel("solarPanelTier4", 128, 64000);
+		solarPanelTier4 = new BlockSolarPanel("solarPanelTier4", EFConfig.solarPanelTier4MaxGeneration, EFConfig.solarPanelTier4Capacity);
 		solarPanelTier4.setBlockName("solarPanelTier4").setHardness(0.9f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(EFCreativeTabs.tabMachines).setBlockTextureName(EnFusion.modId + ":machine/solarPanel/tier4")
 				.setHarvestLevel("pickaxe", 2);

@@ -9,10 +9,35 @@ import net.shadowfacts.shadowcore.config.ConfigProperty;
 @Config(name = "EnFusion")
 public class EFConfig {
 
-	@ConfigProperty(category = "EntityIDs", comment = "ID for the Laser Pistol's laser bolt")
+	@ConfigProperty(category = "entity", comment = "ID for the Laser Pistol's laser bolt")
 	public static int laserBoltEntityID = 1337;
 
-	@ConfigProperty(category = "EntityIDs", comment = "ID for the Mining Laser entity.")
+	@ConfigProperty(category = "entity", comment = "ID for the Mining Laser entity.")
 	public static int miningLaserEntityID = 1338;
+
+//	Solar Panels
+//	Tier 1
+	@ConfigProperty(category = "generator.solar.tier1", comment = "Maximum RF that can be generated per tick.")
+	public static int solarPanelTier1MaxGeneration = 16;
+	@ConfigProperty(category = "generator.solar.tier1", comment = "Maximum RF that can be stored.")
+	public static int solarPanelTier1Capacity = 8000;
+
+//	Tier 2
+	@ConfigProperty(category = "generator.solar.tier2", comment = "Maximum RF that can be generated per tick.")
+	public static int solarPanelTier2MaxGeneration = 32;
+	@ConfigProperty(category = "generator.solar.tier2", comment = "Maximum RF that can be stored.")
+	public static int solarPanelTier2Capacity = 16000;
+
+//	Tier 3
+	@ConfigProperty(category = "generator.solar.tier3", comment = "Maximum RF that can be generated per tick.")
+	public static int solarPanelTier3MaxGeneration = 64;
+	@ConfigProperty(category = "generator.solar.tier3", comment = "Maximum RF that can be stored.")
+	public static int solarPanelTier3Capacity = 32000;
+
+//	Tier 4
+	@ConfigProperty(category = "generator.solar.tier4", comment = "Maximum RF that can be generated per tick.")
+	public static int solarPanelTier4MaxGeneration = 128;
+	@ConfigProperty(category = "generator.solar.tier4", comment = "Maximum RF that can be stored.")
+	public static int solarPanelTier4Capacity = 64000;
 
 }
