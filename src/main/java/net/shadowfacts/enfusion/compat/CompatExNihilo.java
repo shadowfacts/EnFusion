@@ -1,5 +1,6 @@
 package net.shadowfacts.enfusion.compat;
 
+import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -14,12 +15,11 @@ import java.lang.reflect.Method;
  * ExNihilo Compatibility
  * @author shadowfacts
  */
+@Compat("exnihilo")
 public class CompatExNihilo {
-	public static void preInit() {
 
-	}
-
-	public static void init() {
+	@Compat.Init
+	public static void init(FMLInitializationEvent event) {
 		// Add Zinchorium Dust to ExNihilo Sieve Registry for Dust
 		try {
 			Class sieveRegistry = Class.forName("exnihilo.registries.SieveRegistry");
@@ -60,9 +60,5 @@ public class CompatExNihilo {
 			EnFusion.log.error("Report this immediately at: http://github.com/shadowfacts/EnFusion/issues");
 			EnFusion.log.error(e.getMessage());
 		}
-	}
-
-	public static void postInit() {
-
 	}
 }

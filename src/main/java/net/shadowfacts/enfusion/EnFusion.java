@@ -64,7 +64,7 @@ public class EnFusion {
 		GameRegistry.registerWorldGenerator(oreGenerator, 3);
 
 		// Compatibility
-		EFCompat.preInit();
+		EFCompat.preInit(event);
 
 		// Network stuff
 		EFNetworkManager.initialize();
@@ -82,7 +82,7 @@ public class EnFusion {
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new EFGuiHandler());
 
 		// Compatibility
-		EFCompat.init();
+		EFCompat.init(event);
 	}
 
 	@EventHandler
@@ -94,12 +94,6 @@ public class EnFusion {
 		proxy.registerRenderInformation();
 
 		// Compatibility
-		EFCompat.postInit();
+		EFCompat.postInit(event);
 	}
 }
-
-
-
-
-
-
