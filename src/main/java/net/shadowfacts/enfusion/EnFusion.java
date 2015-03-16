@@ -12,7 +12,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
 import net.shadowfacts.enfusion.compat.EFCompat;
-import net.shadowfacts.enfusion.config.Configuration;
+import net.shadowfacts.enfusion.config.EFConfig;
 import net.shadowfacts.enfusion.item.EFItems;
 import net.shadowfacts.enfusion.network.EFNetworkManager;
 import net.shadowfacts.enfusion.proxy.CommonProxy;
@@ -51,7 +51,7 @@ public class EnFusion {
 //		Remove the legacy config file
 		UpdateUtils.tryMoveLegacyConfig(event.getModConfigurationDirectory());
 //		Register/load config
-		ConfigManager.instance.register("EnFusion", Configuration.class);
+		ConfigManager.instance.register("EnFusion", EFConfig.class);
 		ConfigManager.instance.load("EnFusion");
 
 		EFBlocks.preInit(); // Blocks

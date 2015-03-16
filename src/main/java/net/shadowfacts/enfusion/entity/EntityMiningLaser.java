@@ -9,14 +9,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.shadowfacts.enfusion.EnFusion;
-import net.shadowfacts.enfusion.config.Configuration;
+import net.shadowfacts.enfusion.config.EFConfig;
 
 import java.util.ArrayList;
 
 public class EntityMiningLaser extends EntityThrowable {
 	
 	public static void initialize() {
-		EntityRegistry.registerModEntity(EntityMiningLaser.class, "MiningLaser", Configuration.miningLaserEntityID, EnFusion.instance, 120, 3, true);
+		EntityRegistry.registerModEntity(EntityMiningLaser.class, "MiningLaser", EFConfig.miningLaserEntityID, EnFusion.instance, 120, 3, true);
 	}
 
 	public EntityMiningLaser(World par1World) {

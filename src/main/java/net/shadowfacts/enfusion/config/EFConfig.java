@@ -7,7 +7,7 @@ import net.shadowfacts.shadowcore.config.ConfigProperty;
  * @author shadowfacts
  */
 @Config(name = "EnFusion")
-public class Configuration {
+public class EFConfig {
 
 	@ConfigProperty(category = "EntityIDs", comment = "ID for the Laser Pistol's laser bolt")
 	public static int laserBoltEntityID = 1337;
