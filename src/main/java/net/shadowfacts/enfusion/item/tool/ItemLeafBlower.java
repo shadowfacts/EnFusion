@@ -9,6 +9,7 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
+import net.shadowfacts.enfusion.config.EFConfig;
 import net.shadowfacts.enfusion.energy.EFItemEnergyContainer;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ import java.util.Random;
 public class ItemLeafBlower extends EFItemEnergyContainer {
 
 	public ItemLeafBlower() {
-		super(16000, 32, 0);
+		super(EFConfig.leafBlowerCapacity, EFConfig.leafBlowerMaxReceive, 0);
 		this.setMaxStackSize(1);
 	}
 

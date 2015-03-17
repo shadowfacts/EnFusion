@@ -3,13 +3,14 @@ package net.shadowfacts.enfusion.item.tool;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.shadowfacts.enfusion.config.EFConfig;
 import net.shadowfacts.enfusion.energy.EFItemEnergyContainer;
 import net.shadowfacts.enfusion.entity.EntityMiningLaser;
 
 public class ItemMiningLaser extends EFItemEnergyContainer {
 
 	public ItemMiningLaser() {
-		super(32000, 64, 0);
+		super(EFConfig.miningLaserCapacity, EFConfig.miningLaserMaxReceive, 0);
 		this.setMaxStackSize(1);
 	}
 	

@@ -3,13 +3,14 @@ package net.shadowfacts.enfusion.item.tool;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.shadowfacts.enfusion.config.EFConfig;
 import net.shadowfacts.enfusion.energy.EFItemEnergyContainer;
 import net.shadowfacts.enfusion.entity.EntityLaserBolt;
 
 public class ItemLaserPistol extends EFItemEnergyContainer {
 	
 	public ItemLaserPistol() {
-		super(32000, 64, 0);
+		super(EFConfig.laserPistolCapacity, EFConfig.laserPistolMaxReceive, 0);
 		this.setMaxStackSize(1);
 	}
 	
