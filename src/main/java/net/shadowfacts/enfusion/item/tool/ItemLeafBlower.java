@@ -23,7 +23,7 @@ import java.util.Random;
 public class ItemLeafBlower extends EFItemEnergyContainer {
 
 	public ItemLeafBlower() {
-		super(16000, 32);
+		super(16000, 32, 0);
 		this.setMaxStackSize(1);
 	}
 

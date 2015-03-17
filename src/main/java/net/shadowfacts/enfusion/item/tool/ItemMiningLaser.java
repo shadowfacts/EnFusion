@@ -9,7 +9,7 @@ import net.shadowfacts.enfusion.entity.EntityMiningLaser;
 public class ItemMiningLaser extends EFItemEnergyContainer {
 
 	public ItemMiningLaser() {
-		super(32000, 64);
+		super(32000, 64, 0);
 		this.setMaxStackSize(1);
 	}
 	

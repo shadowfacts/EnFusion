@@ -9,7 +9,7 @@ import net.shadowfacts.enfusion.entity.EntityLaserBolt;
 public class ItemLaserPistol extends EFItemEnergyContainer {
 	
 	public ItemLaserPistol() {
-		super(32000, 64);
+		super(32000, 64, 0);
 		this.setMaxStackSize(1);
 	}
 	
