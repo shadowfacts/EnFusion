@@ -19,9 +19,9 @@ public class ItemMiningLaser extends EFItemEnergyContainer {
 		if (EFConfig.miningLaserEnabled) {
 			world.playSoundAtEntity(player, "random.bow", 0.5f, 0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
 			if (!world.isRemote) {
-				if (getEnergyStored(itemStack) >= 16) {
+				if (getEnergyStored(itemStack) >= EFConfig.miningLaserEnergyPerUse) {
 					world.spawnEntityInWorld(new EntityMiningLaser(world, player));
-					this.extractEnergy(itemStack, 16, false);
+					this.extractEnergy(itemStack, EFConfig.miningLaserEnergyPerUse, false);
 				}
 			}
 		}

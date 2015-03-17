@@ -17,11 +17,11 @@ public class ItemLaserPistol extends EFItemEnergyContainer {
 	@Override
 	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		if (EFConfig.laserPistolEnabled) {
-			if (getEnergyStored(itemStack) >= 16) {
+			if (getEnergyStored(itemStack) >= EFConfig.laserPistolEnergyPerUse) {
 				world.playSoundAtEntity(player, "random.bow", 0.5f, 0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
 				if (!world.isRemote) {
 					world.spawnEntityInWorld(new EntityLaserBolt(world, player));
-					extractEnergy(itemStack, 16, false);
+					extractEnergy(itemStack, EFConfig.laserPistolEnergyPerUse, false);
 				}
 			}
 		}

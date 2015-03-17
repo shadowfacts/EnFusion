@@ -47,9 +47,11 @@ public class ItemLeafBlower extends EFItemEnergyContainer {
 	@Override
 	public void onUsingTick(ItemStack stack, EntityPlayer player, int time) {
 		if (EFConfig.leafBlowerEnabled) {
-			this.extractEnergy(stack, 16, false);
-			if (time != getMaxItemUseDuration(stack) && time % 5 == 0) {
-				breakGrass(player.worldObj, stack.getItemDamage(), (int) player.posX, (int) player.posY, (int) player.posZ);
+			if (this.getEnergyStored(stack) >= EFConfig.leafBlowerEnergyPerUse) {
+				if (time != getMaxItemUseDuration(stack) && time % 5 == 0) {
+					this.extractEnergy(stack, EFConfig.leafBlowerEnergyPerUse, false);
+					breakGrass(player.worldObj, stack.getItemDamage(), (int) player.posX, (int) player.posY, (int) player.posZ);
+				}
 			}
 		}
 	}
