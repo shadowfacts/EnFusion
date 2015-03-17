@@ -16,15 +16,15 @@ public class ItemMiningLaser extends EFItemEnergyContainer {
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
-		itemStack.damageItem(1, player);
-		world.playSoundAtEntity(player, "random.bow", 0.5f, 0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
-		if (!world.isRemote) {
-			if (getEnergyStored(itemStack) >= 16) {
-				world.spawnEntityInWorld(new EntityMiningLaser(world, player));
-				this.extractEnergy(itemStack, 16, false);
+		if (EFConfig.miningLaserEnabled) {
+			world.playSoundAtEntity(player, "random.bow", 0.5f, 0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
+			if (!world.isRemote) {
+				if (getEnergyStored(itemStack) >= 16) {
+					world.spawnEntityInWorld(new EntityMiningLaser(world, player));
+					this.extractEnergy(itemStack, 16, false);
+				}
 			}
 		}
-		
 		return itemStack;
 	}
 

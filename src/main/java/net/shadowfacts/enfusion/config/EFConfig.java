@@ -48,16 +48,22 @@ public class EFConfig {
 
 //	Tools
 //	Laser Pistol
+	@ConfigProperty(category = "items.tools.laserPistol")
+	public static boolean laserPistolEnabled = true;
 	@ConfigProperty(category = "items.tools.laserPistol", comment = "Maximum RF that can be stored.")
 	public static int laserPistolCapacity = 32000;
 	@ConfigProperty(category = "items.tools.laserPistol", comment = "Maximum RF that the laser pistol can receive per tick.")
 	public static int laserPistolMaxReceive = 64;
 //	Mining Laser
+	@ConfigProperty(category = "items.tools.miningLaser")
+	public static boolean miningLaserEnabled = true;
 	@ConfigProperty(category = "items.tools.miningLaser", comment = "Maximum RF that can be stored.")
 	public static int miningLaserCapacity = 32000;
 	@ConfigProperty(category = "items.tools.miningLaser", comment = "Maximum RF that the mining laser can receive per tick.")
 	public static int miningLaserMaxReceive= 64;
 //	Leaf Blower
+	@ConfigProperty(category = "items.tools.leafBlower")
+	public static boolean leafBlowerEnabled = true;
 	@ConfigProperty(category = "items.tools.leafBlower", comment = "Maximum RF that can be stored.")
 	public static int leafBlowerCapacity = 16000;
 	@ConfigProperty(category = "items.tools.leafBlower", comment = "Maximum RF that the leaf blower can receive per tick.")
