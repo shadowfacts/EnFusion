@@ -15,6 +15,12 @@ public class EFConfig {
 	@ConfigProperty(category = "entity", comment = "ID for the Mining Laser entity.")
 	public static int miningLaserEntityID = 1338;
 
+//	World Generation
+	@ConfigProperty(category = "world.generation")
+	public static boolean generatePeridot = true;
+	@ConfigProperty(category = "world.generation")
+	public static boolean generateCopper = true;
+
 //	Solar Panels
 //	Tier 1
 	@ConfigProperty(category = "generator.solar.tier1", comment = "Maximum RF that can be generated per tick.")

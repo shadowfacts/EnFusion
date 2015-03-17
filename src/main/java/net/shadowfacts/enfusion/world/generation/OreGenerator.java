@@ -6,6 +6,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.shadowfacts.enfusion.block.EFBlocks;
+import net.shadowfacts.enfusion.config.EFConfig;
 
 import java.util.Random;
 
@@ -34,17 +35,14 @@ public class OreGenerator implements IWorldGenerator {
 
 	// Generate stuff for the overworld
 	private void generateOverworld(World world, Random random, int x, int z) {
-		this.addOreSpawn(EFBlocks.orePeridot, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 4, 42);
-		this.addOreSpawn(EFBlocks.oreCopper, world, random, x, z, 16, 16, 5 + random.nextInt(2), 5, 0, 70);
+		if (EFConfig.generatePeridot) this.addOreSpawn(EFBlocks.orePeridot, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 4, 42);
+		if (EFConfig.generateCopper) this.addOreSpawn(EFBlocks.oreCopper, world, random, x, z, 16, 16, 5 + random.nextInt(2), 5, 0, 70);
 	}
 
 	// Generate stuff for the end
 	private void generateEnd(World world, Random random, int x, int z) {
 
 	}
-
-
-
 
 	/**
 	 * Adds an Ore Spawn to Minecraft. Simply register all Ores to spawn with this method in your Generation method in your IWorldGeneration extending Class
