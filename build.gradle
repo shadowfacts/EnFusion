@@ -38,6 +38,7 @@ repositories {
 }
 
 apply plugin: 'forge'
+apply plugin: 'maven'
 
 version = "$minecraft_version-$mod_version"
 
@@ -103,10 +104,20 @@ artifacts {
 }
 
 uploadArchives {
-	repositories {
-		mavenDeployer {
-			repository(url: "~/maven/")
-			pom.groupId = "net.shadowfacts"
-		}
+	repositories.mavenDeployer {
+		repository(url: "file:///maven/")
 	}
 }
+
+//publishing {
+//	publications {
+//		mavenJava(MavenPublication) {
+//			from components.java
+//		}
+//	}
+//	repositories {
+//		maven {
+//			url "/maven/"
+//		}
+//	}
+//}
