@@ -108,16 +108,3 @@ uploadArchives {
 		repository(url: "file:///maven/")
 	}
 }
-
-//publishing {
-//	publications {
-//		mavenJava(MavenPublication) {
-//			from components.java
-//		}
-//	}
-//	repositories {
-//		maven {
-//			url "/maven/"
-//		}
-//	}
-//}
