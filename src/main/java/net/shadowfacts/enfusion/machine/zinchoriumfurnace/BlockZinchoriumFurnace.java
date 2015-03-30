@@ -1,6 +1,5 @@
 package net.shadowfacts.enfusion.machine.zinchoriumfurnace;
 
-import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -102,7 +101,7 @@ public class BlockZinchoriumFurnace extends BaseContainerBlock {
 
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
 		if (!world.isRemote) {
-			FMLNetworkHandler.openGui(player, EnFusion.instance, GUIs.ZINCHORIUM_FURNACE, world, x, y, z);
+			player.openGui(EnFusion.instance, GUIs.ZINCHORIUM_FURNACE, world, x, y, z);
 		}
 		return true;
 	}
