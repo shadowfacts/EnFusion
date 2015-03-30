@@ -1,22 +1,19 @@
 package net.shadowfacts.enfusion.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-
 import net.minecraft.block.Block;
-
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.decoration.BlockZinchoriumLight;
 import net.shadowfacts.enfusion.block.misc.BlockConcrete;
+import net.shadowfacts.enfusion.block.misc.BlockLiquidConcrete;
+import net.shadowfacts.enfusion.block.misc.BlockPeridotOre;
 import net.shadowfacts.enfusion.client.gui.EFCreativeTabs;
 import net.shadowfacts.enfusion.config.EFConfig;
 import net.shadowfacts.enfusion.machine.conveyor.block.BlockBlockConveyor;
 import net.shadowfacts.enfusion.machine.conveyor.entity.BlockEntityConveyor;
 import net.shadowfacts.enfusion.machine.conveyor.item.BlockItemConveyor;
 import net.shadowfacts.enfusion.machine.generator.solar.BlockSolarPanel;
-import net.shadowfacts.enfusion.machine.router.BlockRouter;
 import net.shadowfacts.enfusion.machine.zinchoriumfurnace.BlockZinchoriumFurnace;
-
-import net.shadowfacts.enfusion.block.misc.*;
 
 public class EFBlocks {
 //	Blocks
@@ -35,7 +32,6 @@ public class EFBlocks {
 	public static BlockItemConveyor itemConveyor;
 	public static BlockBlockConveyor blockConveyor;
 	public static BlockEntityConveyor entityConveyor;
-	public static BlockRouter router;
 
 
 	//	Miscellaneous
