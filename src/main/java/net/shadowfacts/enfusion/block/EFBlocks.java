@@ -106,10 +106,6 @@ public class EFBlocks {
 		entityConveyor.setBlockName("entityConveyor").setHardness(2.0f).setStepSound(Block.soundTypePiston)
 				.setCreativeTab(EFCreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
 
-		router = new BlockRouter("router");
-		router.setHardness(2.0f).setStepSound(Block.soundTypePiston)
-				.setCreativeTab(EFCreativeTabs.tabMachines).setHarvestLevel("pickaxe", 2);
-
 
 //		Miscellaneous
 		blockZinchorium = new EFBlock();
@@ -155,7 +151,6 @@ public class EFBlocks {
 		GameRegistry.registerBlock(itemConveyor, "itemConveyor");
 		GameRegistry.registerBlock(blockConveyor, "blockConveyor");
 		GameRegistry.registerBlock(entityConveyor, "entityConveyor");
-		GameRegistry.registerBlock(router, "router");
 
 
 //		Miscellaneous
