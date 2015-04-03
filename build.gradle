@@ -96,8 +96,6 @@ task deobfJar(type: Jar) {
 
 tasks.build.dependsOn deobfJar
 
-sourceSets { main { output.resourcesDir = output.classesDir } }
-
 artifacts {
 	archives jar
 	archives deobfJar
@@ -108,3 +106,7 @@ uploadArchives {
 		repository(url: "file:///maven/")
 	}
 }
+
+
+// IDEA bug
+idea { module { inheritOutputDirs = true } }
