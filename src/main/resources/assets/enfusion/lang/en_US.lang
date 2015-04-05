@@ -58,3 +58,13 @@ enfusion.item.leafBlower.name=Leaf Blower
 itemGroup.EnFusionCore=EnFusion Core
 itemGroup.EnFusionMachines=EnFusion Machines
 itemGroup.EnFusionTools=EnFusion Tools
+
+# Config GUI
+enfusion.configgui.ctgy.entity=Entities
+enfusion.configgui.ctgy.entity.tooltip=Settings to entities (laser pistol bolt, mining laser bolt)
+enfusion.configgui.ctgy.generator=Generators
+enfusion.configgui.ctgy.generator.tooltip=Settings for generators (max generation, max storage, max transfer)
+enfusion.configgui.ctgy.item=Items
+enfusion.configgui.ctgy.item.tooltip=Settings for items (laser pistol, mining laser, leaf blower)
+enfusion.configgui.ctgy.world=World
+enfusion.configgui.ctgy.world.tooltip=Settings for world generation
