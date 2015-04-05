@@ -1,5 +1,6 @@
 package net.shadowfacts.enfusion;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -13,6 +14,7 @@ import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.EFGuiHandler;
 import net.shadowfacts.enfusion.compat.EFCompat;
 import net.shadowfacts.enfusion.config.EFConfig;
+import net.shadowfacts.enfusion.event.ConfigEventHandler;
 import net.shadowfacts.enfusion.item.EFItems;
 import net.shadowfacts.enfusion.network.EFNetworkManager;
 import net.shadowfacts.enfusion.proxy.CommonProxy;
@@ -22,7 +24,7 @@ import net.shadowfacts.enfusion.world.generation.OreGenerator;
 import net.shadowfacts.shadowcore.Log;
 import net.shadowfacts.shadowcore.config.ConfigManager;
 
-@Mod(modid=EnFusion.modId, name=EnFusion.displayName, version=EnFusion.version, dependencies = EnFusion.depString)
+@Mod(modid=EnFusion.modId, name=EnFusion.displayName, version=EnFusion.version, dependencies = EnFusion.depString, guiFactory = EnFusion.guiFactory)
 public class EnFusion {
 	// Mod info
 	public static final String modId = "enfusion";
@@ -31,6 +33,7 @@ public class EnFusion {
 	public static final String clientProxyString = "net.shadowfacts.enfusion.proxy.ClientProxy";
 	public static final String serverProxyString = "net.shadowfacts.enfusion.proxy.CommonProxy";
 	public static final String depString = "required-after:Forge@[10.13.2.1235,);required-after:shadowcore@1.0.1;after:exnihilo;";
+	public static final String guiFactory = "net.shadowfacts.enfusion.client.gui.EFGuiFactory";
 	
 	
 	@Instance(value=EnFusion.modId)
@@ -52,7 +55,6 @@ public class EnFusion {
 		UpdateUtils.tryMoveLegacyConfig(event.getModConfigurationDirectory());
 //		Register/load config
 		ConfigManager.instance.register("EnFusion", EFConfig.class);
-		ConfigManager.instance.load("EnFusion");
 
 		EFBlocks.preInit(); // Blocks
 		EFItems.preInit(); // Items
@@ -72,6 +74,8 @@ public class EnFusion {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		FMLCommonHandler.instance().bus().register(new ConfigEventHandler());
+
 		EFBlocks.init();
 		EFItems.init();
 
