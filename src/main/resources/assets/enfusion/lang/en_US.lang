@@ -53,6 +53,12 @@ enfusion.item.zinchoriumBoots.name=Zinchorium Boots
 enfusion.item.laserPistol.name=Laser Pistol
 enfusion.item.miningLaser.name=Mining Laser
 enfusion.item.leafBlower.name=Leaf Blower
+enfusion.item.peridotSword.name=Peridot Sword
+enfusion.item.peridotPickaxe.name=Peridot Pickaxe
+enfusion.item.peridotShovel.name=Peridot Shovel
+enfusion.item.peridotAxe.name=Peridot Axe
+enfusion.item.peridotHoe.name=Peridot Hoe
+enfusion.item.peridotPaxel.name=Peridot Paxel
 
 # Creative Tabs
 itemGroup.EnFusionCore=EnFusion Core

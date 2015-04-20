@@ -29,8 +29,8 @@ public class EFItems {
 	public static EFPickaxe zinchoriumPickaxe;
 	public static EFAxe zinchoriumAxe;
 	public static EFShovel zinchoriumShovel;
-	public static EFPaxel zinchoriumPaxel;
 	public static EFHoe zinchoriumHoe;
+	public static EFPaxel zinchoriumPaxel;
 	public static EFArmor zinchoriumHelmet;
 	public static EFArmor zinchoriumChestplate;
 	public static EFArmor zinchoriumLeggings;
@@ -38,6 +38,12 @@ public class EFItems {
 	public static ItemLaserPistol laserPistol;
 	public static ItemMiningLaser miningLaser;
 	public static ItemLeafBlower leafBlower;
+	public static EFSword peridotSword;
+	public static EFPickaxe peridotPickaxe;
+	public static EFAxe peridotAxe;
+	public static EFShovel peridotShovel;
+	public static EFHoe peridotHoe;
+	public static EFPaxel peridotPaxel;
 
 
 //	Miscellaneous
@@ -141,6 +147,30 @@ public class EFItems {
 		leafBlower.setUnlocalizedName("leafBlower").setCreativeTab(EFCreativeTabs.tabTools)
 				.setTextureName(EnFusion.modId + ":tools/leafBlower");
 
+		peridotSword = new EFSword(EFToolMaterials.PERIDOT);
+		peridotSword.setUnlocalizedName("peridotSword").setCreativeTab(EFCreativeTabs.tabTools)
+					.setTextureName(EnFusion.modId + ":tools/peridot/sword");
+
+		peridotPickaxe = new EFPickaxe(EFToolMaterials.PERIDOT);
+		peridotPickaxe.setUnlocalizedName("peridotPickaxe").setCreativeTab(EFCreativeTabs.tabTools)
+					.setTextureName(EnFusion.modId + ":tools/peridot/pickaxe");
+
+		peridotAxe = new EFAxe(EFToolMaterials.PERIDOT);
+		peridotAxe.setUnlocalizedName("peridotAxe").setCreativeTab(EFCreativeTabs.tabTools)
+					.setTextureName(EnFusion.modId + ":tools/peridot/axe");
+
+		peridotShovel = new EFShovel(EFToolMaterials.PERIDOT);
+		peridotShovel.setUnlocalizedName("peridotShovel").setCreativeTab(EFCreativeTabs.tabTools)
+					.setTextureName(EnFusion.modId + ":tools/peridot/shovel");
+
+		peridotHoe = new EFHoe(EFToolMaterials.PERIDOT);
+		peridotHoe.setUnlocalizedName("peridotHoe").setCreativeTab(EFCreativeTabs.tabTools)
+					.setTextureName(EnFusion.modId + ":tools/peridot/hoe");
+
+		peridotPaxel = new EFPaxel(EFToolMaterials.PERIDOT);
+		peridotPaxel.setUnlocalizedName("peridotPaxel").setCreativeTab(EFCreativeTabs.tabTools)
+					.setTextureName(EnFusion.modId + ":tools/peridot/paxel");
+
 
 //		Miscellaneous
 		lightBulb = new EFItem();
@@ -199,6 +229,12 @@ public class EFItems {
 		GameRegistry.registerItem(laserPistol, "laserPistol");
 		GameRegistry.registerItem(miningLaser, "miningLaser");
 		GameRegistry.registerItem(leafBlower, "leafBlower");
+		GameRegistry.registerItem(peridotSword, "peridotSword");
+		GameRegistry.registerItem(peridotPickaxe, "peridotPickaxe");
+		GameRegistry.registerItem(peridotShovel, "peridotShovel");
+		GameRegistry.registerItem(peridotAxe, "peridotAxe");
+		GameRegistry.registerItem(peridotHoe, "peridotHoe");
+		GameRegistry.registerItem(peridotPaxel, "peridotPaxel");
 
 
 //		Miscellaneous
