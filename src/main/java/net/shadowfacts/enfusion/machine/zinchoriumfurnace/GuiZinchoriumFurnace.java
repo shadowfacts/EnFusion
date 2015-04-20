@@ -1,6 +1,5 @@
 package net.shadowfacts.enfusion.machine.zinchoriumfurnace;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -33,20 +32,42 @@ public class GuiZinchoriumFurnace extends GuiContainer {
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float i, int j, int k) {
+	protected void drawGuiContainerBackgroundLayer(float f1, int i1, int i2) {
+//		GL11.glColor4f(1f, 1f, 1f, 1f);
+//
+//		Minecraft.getMinecraft().getTextureManager().bindTexture(bg);
+//		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+//
+////		Flame
+//		if (this.te.isBurning()) {
+//			int m = this.te.getBurnTimeRemainingScaled(14);
+//			int l = 14 - m;
+////			drawTexturedModalRect(guiLeft + 57, guiTop + 36 + l, 176, 30 + l, 14, 14 - l);
+////			drawTexturedModalRect(guiLeft + 51, guiTop - 7 + l, );
+//		}
+//
+//		System.out.println("guiTop: " + guiTop);
+//
+////		Progress arrow
+//		int m = this.te.getCookProgressScaled(45);
+//		drawTexturedModalRect(guiLeft + 79, guiTop + 36, 176, 16, m + 1, 16);
+
 		GL11.glColor4f(1f, 1f, 1f, 1f);
 
-		Minecraft.getMinecraft().getTextureManager().bindTexture(bg);
-		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+		mc.getTextureManager().bindTexture(bg);
 
-		if (this.te.isBurning()) {
-			int m = this.te.getBurnTimeRemainingScaled(14);
-			int l = 14 - m;
-			drawTexturedModalRect(guiLeft + 57, guiTop + 36 + l, 176, 17 + l, 14, 14 - l);
+		int k = (width - xSize) / 2;
+		int l = (height - ySize) / 2;
+
+		drawTexturedModalRect(k, l, 0, 0, xSize, ySize);
+
+		if (te.isBurning()) {
+			int i3 = te.getBurnTimeRemainingScaled(13);
+			drawTexturedModalRect(k + 56, l + 36 + 12 - i3, 176, 12 - i3, 14, i3 + 1);
+
+			int i4 = te.getCookProgressScaled(24);
+			drawTexturedModalRect(k + 79, l + 34, 176, 14, i4 + 1, 16);
 		}
-
-		int m = this.te.getCookProgressScaled(24);
-		drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 0, m + 1, 16);
 
 	}
 
