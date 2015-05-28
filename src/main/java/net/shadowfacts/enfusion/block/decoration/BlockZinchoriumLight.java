@@ -1,5 +1,7 @@
 package net.shadowfacts.enfusion.block.decoration;
 
+
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -7,13 +9,12 @@ import net.minecraft.block.BlockRedstoneLight;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import net.shadowfacts.enfusion.block.EFBlocks;
-import net.shadowfacts.shadowcore.debug.IDebuggable;
-import net.shadowfacts.shadowcore.util.StringHelper;
+import net.shadowfacts.shadowapi.util.StringHelper;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class BlockZinchoriumLight extends BlockRedstoneLight implements IDebuggable {
+public class BlockZinchoriumLight extends BlockRedstoneLight {
 	
 	/** Whether this lamp block is the powered version. */
     private final boolean powered;
@@ -92,22 +93,7 @@ public class BlockZinchoriumLight extends BlockRedstoneLight implements IDebugga
     
     @SideOnly(Side.CLIENT)
     @Override
-    public Item getItem(World par1World, int par2, int par3, int par4)
-    {
+    public Item getItem(World par1World, int par2, int par3, int par4) {
         return Item.getItemFromBlock(EFBlocks.greenZinchoriumLightIdle);
     }
-
-	// Debuggable
-	public ArrayList<String> getDebugInfo() {
-
-		ArrayList<String> list = new ArrayList<String>();
-
-		if (this.powered) {
-			list.add(StringHelper.BRIGHT_GREEN + "ZinchoriumLight" + StringHelper.WHITE + ": " + StringHelper.LIGHT_RED + "active" + StringHelper.WHITE);
-		} else {
-			list.add(StringHelper.BRIGHT_GREEN + "ZinchoriumLight" + StringHelper.WHITE + ": " + StringHelper.LIGHT_RED + "idle" + StringHelper.WHITE);
-		}
-
-		return list;
-	}
 }

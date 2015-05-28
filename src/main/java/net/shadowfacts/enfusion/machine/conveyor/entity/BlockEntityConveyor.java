@@ -2,6 +2,8 @@ package net.shadowfacts.enfusion.machine.conveyor.entity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -15,13 +17,12 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.EFBlocks;
-import net.shadowfacts.shadowcore.block.BaseTileEntityBlock;
 
 /**
  * The block for the Entity Conveyor
  * @author shadowfacts
  */
-public class BlockEntityConveyor extends BaseTileEntityBlock {
+public class BlockEntityConveyor extends Block implements ITileEntityProvider {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon iconSide;
@@ -29,7 +30,8 @@ public class BlockEntityConveyor extends BaseTileEntityBlock {
 	private IIcon iconTop;
 
 	public BlockEntityConveyor(String name) {
-		super(name, Material.rock);
+        super(Material.rock);
+        setBlockName(name);
 	}
 
 	@Override

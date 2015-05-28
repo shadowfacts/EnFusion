@@ -2,10 +2,10 @@ package net.shadowfacts.enfusion.machine.conveyor.item;
 
 import cofh.api.energy.IEnergyHandler;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.shadowfacts.enfusion.energy.BaseEnergyStorage;
-import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
  * Tile Entity for the Item Conveyor
  * @author shadowfacts
  */
-public class TileEntityItemConveyor extends BaseModTileEntity implements IEnergyHandler {
+public class TileEntityItemConveyor extends TileEntity implements IEnergyHandler {
 
 	public BaseEnergyStorage storage;
 

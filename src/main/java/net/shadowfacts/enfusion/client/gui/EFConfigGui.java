@@ -6,8 +6,8 @@ import cpw.mods.fml.client.config.IConfigElement;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.shadowfacts.enfusion.EnFusion;
-import net.shadowfacts.shadowcore.config.ConfigManager;
-import net.shadowfacts.shadowcore.util.StringHelper;
+import net.shadowfacts.shadowapi.config.ConfigManager;
+import net.shadowfacts.shadowapi.util.StringHelper;
 
 import java.util.ArrayList;
 import java.util.List;

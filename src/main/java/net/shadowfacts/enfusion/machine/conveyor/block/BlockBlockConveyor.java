@@ -3,6 +3,8 @@ package net.shadowfacts.enfusion.machine.conveyor.block;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -18,22 +20,22 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.EFBlocks;
-import net.shadowfacts.shadowcore.block.BaseTileEntityBlock;
 
 /**
 * The Block class for the Block Conveyor.
 * NOTE: The class name "BlockBlockConveyor" is not a typo, it is correct.
 * @author shadowfacts
 */
-public class BlockBlockConveyor extends BaseTileEntityBlock {
+public class BlockBlockConveyor extends Block implements ITileEntityProvider {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon iconSide;
 	@SideOnly(Side.CLIENT)
 	private IIcon iconTop;
 
-	public BlockBlockConveyor(String name) {
-		super(name, Material.piston);
+	public BlockBlockConveyor(String blockName) {
+		super(Material.piston);
+        setBlockName(blockName);
 	}
 
 	@Override

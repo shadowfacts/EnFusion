@@ -12,17 +12,16 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
 
 import net.minecraftforge.common.util.ForgeDirection;
-
-import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 /**
  * TileEntity for the Zinchorium Furnace.
  * @author shadowfacts
  */
-public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements ISidedInventory {
+public class TileEntityZinchoriumFurnace extends TileEntity implements ISidedInventory {
 
 	// Slots accessible from sides
 	private static final int[] slotsTop = {0};
@@ -95,7 +94,9 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 
 	// NBT
 	@Override
-	public void loadDataFromNBT(NBTTagCompound nbt) {
+	public void readFromNBT(NBTTagCompound nbt) {
+        super.readFromNBT(nbt);
+
 		NBTTagList tagList = nbt.getTagList("Items", 10);
 		this.furnaceItemStacks = new ItemStack[getSizeInventory()];
 		for (int i = 0; i < tagList.tagCount(); i++) {
@@ -111,7 +112,9 @@ public class TileEntityZinchoriumFurnace extends BaseModTileEntity implements IS
 	}
 
 	@Override
-	public void addDataToNBT(NBTTagCompound nbt) {
+	public void writeToNBT(NBTTagCompound nbt) {
+        super.writeToNBT(nbt);
+
 		nbt.setInteger("BurnTime", this.burnTime);
 		nbt.setInteger("CookTime", this.cookTime);
 		NBTTagList tagList = new NBTTagList();

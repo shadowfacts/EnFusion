@@ -21,8 +21,8 @@ import net.shadowfacts.enfusion.proxy.CommonProxy;
 import net.shadowfacts.enfusion.recipes.EFRecipes;
 import net.shadowfacts.enfusion.util.UpdateUtils;
 import net.shadowfacts.enfusion.world.generation.OreGenerator;
-import net.shadowfacts.shadowcore.Log;
-import net.shadowfacts.shadowcore.config.ConfigManager;
+import net.shadowfacts.shadowapi.config.ConfigManager;
+import net.shadowfacts.shadowapi.util.Log;
 
 @Mod(modid=EnFusion.modId, name=EnFusion.displayName, version=EnFusion.version, dependencies = EnFusion.depString, guiFactory = EnFusion.guiFactory)
 public class EnFusion {
@@ -32,7 +32,7 @@ public class EnFusion {
 	public static final String version = "@VERSION@";
 	public static final String clientProxyString = "net.shadowfacts.enfusion.proxy.ClientProxy";
 	public static final String serverProxyString = "net.shadowfacts.enfusion.proxy.CommonProxy";
-	public static final String depString = "required-after:Forge@[10.13.2.1235,);required-after:shadowcore@1.0.1;after:exnihilo;";
+	public static final String depString = "required-after:Forge@[10.13.3.1408,);after:exnihilo;";
 	public static final String guiFactory = "net.shadowfacts.enfusion.client.gui.EFGuiFactory";
 	
 	

@@ -16,6 +16,10 @@ buildscript {
 }
 
 repositories {
+	maven { // Shadowfacts
+		url = "http://maven.shadowfacts.net"
+	}
+
 	ivy {
 		name "CoFHCore"
 		artifactPattern 'http://addons-origin.cursecdn.com/files/2229/536/[module]-[revision].[ext]'
@@ -34,7 +38,9 @@ repositories {
 	}
 
 
-	maven { url = "http://chickenbones.net/maven/" } // Chicken Bones
+	maven { // ChickenBones
+		url = "http://chickenbones.net/maven/"
+	}
 }
 
 apply plugin: 'forge'
@@ -55,7 +61,9 @@ minecraft {
 }
 
 dependencies {
-	compile project(":ShadowCore")
+	// compile project(":ShadowCore")
+
+	compile group: 'net.shadowfacts', name: 'ShadowAPI', version: '1.7.10-2.0.0', classifier: 'deobf'
 
 	compile files(
 		'libs/Ex-Nihilo-1.37.jar',
@@ -63,9 +71,9 @@ dependencies {
 		'libs/NEIIntegration-MC1.7.10-1.0.0.jar'
 	)
 
-	compile "codechicken:CodeChickenLib:$minecraft_version-$ccl_version:dev"
-	compile "codechicken:CodeChickenCore:$minecraft_version-$ccc_version:dev"
-	compile "codechicken:NotEnoughItems:$minecraft_version-$nei_version:dev"
+	// compile group: 'codechicken', name: 'CodeChickenLib', version: "$minecraft_version-$ccl_version", classifier: 'dev'
+	// compile group: 'codechicken', name: 'CodeChickenCore', version: "$minecraft_version-$ccc_version", classifier: 'dev'
+	// compile group: 'codechicken', name: 'NotEnoughItems', version:  "$minecraft_version-$nei_version", classifier: 'dev'
 
 	// CoFH
 	compile group: 'cofh', name: 'CoFHCore', version: "[$minecraft_version]$cofhcore_version-dev", ext: 'jar'

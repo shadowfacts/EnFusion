@@ -9,13 +9,12 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.shadowfacts.enfusion.energy.BaseEnergyStorage;
-import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 /**
  * Tile Entity for the solar panel.
  * @author shadowfacts
  */
-public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHandler {
+public class TileEntitySolarPanel extends TileEntity implements IEnergyHandler {
 
 	public BaseEnergyStorage storage;
 	protected int maxEnergyGeneration;
@@ -95,13 +94,17 @@ public class TileEntitySolarPanel extends BaseModTileEntity implements IEnergyHa
 
 //	NBT Stuff
 	@Override
-	protected void loadDataFromNBT(NBTTagCompound nbt) {
+	public void readFromNBT(NBTTagCompound nbt) {
+        super.readFromNBT(nbt);
+
 		maxEnergyGeneration = nbt.getInteger("MaxEnergyGeneration");
 		this.storage.readFromNBT(nbt);
 	}
 
 	@Override
-	protected void addDataToNBT(NBTTagCompound nbt) {
+	public void writeToNBT(NBTTagCompound nbt) {
+        super.writeToNBT(nbt);
+
 		nbt.setInteger("MaxEnergyGeneration", maxEnergyGeneration);
 		this.storage.writeToNBT(nbt);
 	}

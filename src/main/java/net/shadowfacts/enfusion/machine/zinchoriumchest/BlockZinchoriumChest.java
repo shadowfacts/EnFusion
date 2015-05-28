@@ -2,6 +2,7 @@ package net.shadowfacts.enfusion.machine.zinchoriumchest;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -9,17 +10,17 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import net.shadowfacts.shadowcore.block.BaseContainerBlock;
 
 import java.util.ArrayList;
 
 /**
  * @author shadowfacts
  */
-public class BlockZinchoriumChest extends BaseContainerBlock {
+public class BlockZinchoriumChest extends BlockContainer {
 
 	public BlockZinchoriumChest() {
-		super("zinchoriumChest", Material.iron);
+        super(Material.iron);
+        setBlockName("zinchoriumChest");
 	}
 
 //	Block

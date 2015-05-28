@@ -3,7 +3,7 @@ package net.shadowfacts.enfusion.event;
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.shadowfacts.enfusion.EnFusion;
-import net.shadowfacts.shadowcore.config.ConfigManager;
+import net.shadowfacts.shadowapi.config.ConfigManager;
 
 /**
  * @author shadowfacts

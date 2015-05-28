@@ -3,6 +3,8 @@ package net.shadowfacts.enfusion.machine.zinchoriumfurnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
@@ -18,7 +20,6 @@ import net.minecraft.world.World;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.gui.GUIs;
-import net.shadowfacts.shadowcore.block.BaseContainerBlock;
 
 import java.util.Random;
 
@@ -26,7 +27,7 @@ import java.util.Random;
  * Block class for the flux furnace.
  * @author shadowfacts
  */
-public class BlockZinchoriumFurnace extends BaseContainerBlock {
+public class BlockZinchoriumFurnace extends BlockContainer {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon iconTop;
@@ -36,7 +37,8 @@ public class BlockZinchoriumFurnace extends BaseContainerBlock {
 	private IIcon iconFrontIdle;
 
 	public BlockZinchoriumFurnace(String blockName) {
-		super(blockName);
+		super(Material.rock);
+        setBlockName(blockName);
 	}
 
 	@Override

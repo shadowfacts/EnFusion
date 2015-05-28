@@ -8,13 +8,12 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import net.shadowfacts.enfusion.energy.BaseEnergyStorage;
-import net.shadowfacts.shadowcore.tileentity.BaseModTileEntity;
 
 /**
  * TileEntity for the Block Conveyor
  * @author shadowfacts
  */
-public class TileEntityBlockConveyor extends BaseModTileEntity implements IEnergyHandler {
+public class TileEntityBlockConveyor extends TileEntity implements IEnergyHandler {
 
 	public BaseEnergyStorage storage;
 

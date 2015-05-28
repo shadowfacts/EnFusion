@@ -9,7 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.shadowfacts.enfusion.item.EFItem;
-import net.shadowfacts.shadowcore.util.StringHelper;
+import net.shadowfacts.shadowapi.util.StringHelper;
 
 import java.util.List;
 

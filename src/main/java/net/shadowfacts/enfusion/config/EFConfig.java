@@ -1,7 +1,7 @@
 package net.shadowfacts.enfusion.config;
 
-import net.shadowfacts.shadowcore.config.Config;
-import net.shadowfacts.shadowcore.config.ConfigProperty;
+import net.shadowfacts.shadowapi.config.Config;
+import net.shadowfacts.shadowapi.config.ConfigProperty;
 
 /**
  * @author shadowfacts
