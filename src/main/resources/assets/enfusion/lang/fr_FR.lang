@@ -44,6 +44,7 @@ item.zinchoriumSword.name=Epée en zinchorium
 item.zinchoriumPickaxe.name=Pioche en zinchorium
 item.zinchoriumAxe.name=Hache en zinchorium
 item.zinchoriumShovel.name=Pelle en zinchorium
+enfusion.item.zinchoriumPaxel.name=Piobèche en zinchorium
 item.zinchoriumHoe.name=Houe en zinchorium
 item.zinchoriumHelmet.name=Casque en zinchorium
 item.zinchoriumChestplate.name=Plastron en Chestplate
@@ -52,8 +53,24 @@ item.zinchoriumBoots.name=Bottes en zinchorium
 item.laserPistol.name=Pistolet laser
 item.miningLaser.name=Laser de minage
 item.leafBlower.name=Souffleur de feuilles
+enfusion.item.peridotSword.name=Epée en péridot
+enfusion.item.peridotPickaxe.name=Pioche en péridot 
+enfusion.item.peridotShovel.name=Pelle en péridot
+enfusion.item.peridotAxe.name=Hache en péridot 
+enfusion.item.peridotHoe.name=Houe en péridot
+enfusion.item.peridotPaxel.name=Piobèche en péridot
 
 # Creative Tabs
 itemGroup.EnFusionCore=Coeur EnFusion
 itemGroup.EnFusionMachines=Machines EnFusion
 itemGroup.EnFusionTools=Outils EnFusion
+
+# Config GUI
+enfusion.configgui.ctgy.entity=Entités
+enfusion.configgui.ctgy.entity.tooltip=Options des entités (rayon laser)
+enfusion.configgui.ctgy.generator=Générateurs
+enfusion.configgui.ctgy.generator.tooltip=Options des générateurs (génération maxi, stockage maxi, transfert maxi)
+enfusion.configgui.ctgy.item=Eléments
+enfusion.configgui.ctgy.item.tooltip=options des éléments (pistolet laser, laser de minage, souffleur de feuilles)
+enfusion.configgui.ctgy.world=Monde
+enfusion.configgui.ctgy.world.tooltip=Option de génération du monde
