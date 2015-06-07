@@ -7,7 +7,7 @@ import nova.core.item.ItemManager;
  */
 public class EFItems {
 
-	public void registerItems(ItemManager itemManager) {
+	public static void registerItems(ItemManager itemManager) {
 
 	}
 
