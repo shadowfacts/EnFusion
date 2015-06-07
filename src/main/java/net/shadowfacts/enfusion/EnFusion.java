@@ -50,7 +50,10 @@ public class EnFusion implements Loadable {
 
 	@Override
 	public void preInit() {
-		blocks.registerBlocks(blockManager);
-		blockTextures.registerTextures(renderManager);
+		EFBlocks.registerBlocks(blockManager);
+		EFBlockTextures.registerTextures(renderManager);
+
+		EFItems.registerItems(itemManager);
+		EFItemTextures.registerTextures(renderManager);
 	}
 }
