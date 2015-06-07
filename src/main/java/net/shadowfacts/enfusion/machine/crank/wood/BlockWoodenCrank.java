@@ -1,5 +1,7 @@
 package net.shadowfacts.enfusion.machine.crank.wood;
 
+import net.shadowfacts.enfusion.EnFusion;
+import net.shadowfacts.enfusion.client.EFBlockTextures;
 import net.shadowfacts.enfusion.machine.crank.BlockCrank;
 
 /**
@@ -8,7 +10,11 @@ import net.shadowfacts.enfusion.machine.crank.BlockCrank;
 public class BlockWoodenCrank extends BlockCrank {
 
 	public BlockWoodenCrank() {
-		super();
+		super(EFBlockTextures.crankWood);
+	}
 
+	@Override
+	public String getID() {
+		return EnFusion.id + ".crank.base";
 	}
 }
