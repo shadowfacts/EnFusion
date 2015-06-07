@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine.crank.wood;
+package net.shadowfacts.enfusion.machine.crank;
 
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.client.EFBlockTextures;
