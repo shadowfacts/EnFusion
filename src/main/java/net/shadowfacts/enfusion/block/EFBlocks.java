@@ -1,9 +1,9 @@
 package net.shadowfacts.enfusion.block;
 
 
+import net.shadowfacts.enfusion.block.ore.*;
 import nova.core.block.BlockFactory;
 import nova.core.block.BlockManager;
-import nova.core.loader.Loadable;
 
 /**
  * @author shadowfacts
@@ -11,10 +11,10 @@ import nova.core.loader.Loadable;
 public class EFBlocks {
 
 //	Ores
-	public BlockFactory oreCopper;
+	public static BlockFactory oreChalcopyrite;
 
 
-	public void registerBlocks(BlockManager blockManager) {
-		oreCopper = blockManager.register(BlockOreCopper.class);
+	public static void registerBlocks(BlockManager blockManager) {
+		oreChalcopyrite = blockManager.register(BlockOreChalcopyrite.class);
 	}
 }
