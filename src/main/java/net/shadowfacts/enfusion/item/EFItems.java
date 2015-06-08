@@ -2,6 +2,7 @@ package net.shadowfacts.enfusion.item;
 
 import net.shadowfacts.enfusion.item.dust.*;
 import net.shadowfacts.enfusion.item.ingot.*;
+import net.shadowfacts.enfusion.item.misc.*;
 import nova.core.item.ItemFactory;
 import nova.core.item.ItemManager;
 
@@ -17,6 +18,7 @@ public class EFItems {
 
 //	Dusts
 	public static ItemFactory dustCopper;
+	public static ItemFactory dustIron;
 	public static ItemFactory dustLead;
 	public static ItemFactory dustSilver;
 
@@ -31,6 +33,7 @@ public class EFItems {
 
 //		Dusts
 		dustCopper = itemManager.register(DustCopper.class);
+		dustIron = itemManager.register(DustIron.class);
 		dustLead = itemManager.register(DustLead.class);
 		dustSilver = itemManager.register(DustSilver.class);
 
