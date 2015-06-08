@@ -18,6 +18,7 @@ public class EFItemTextures {
 //	Dusts
 	public static ItemTexture dustCopper;
 	public static ItemTexture dustIron;
+	public static ItemTexture dustLead;
 	public static ItemTexture dustSilver;
 
 //	Misc
@@ -31,6 +32,7 @@ public class EFItemTextures {
 
 //		Dusts
 		dustCopper = renderManager.registerTexture(new ItemTexture(EnFusion.id, "missing"));
+		dustIron = renderManager.registerTexture(new ItemTexture(EnFusion.id, "missing"));
 		dustLead = renderManager.registerTexture(new ItemTexture(EnFusion.id, "missing"));
 		dustSilver = renderManager.registerTexture(new ItemTexture(EnFusion.id, "missing"));
 
