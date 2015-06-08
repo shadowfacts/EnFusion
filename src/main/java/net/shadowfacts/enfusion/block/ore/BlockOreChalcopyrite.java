@@ -19,12 +19,12 @@ public class BlockOreChalcopyrite extends Block {
 		add(new StaticBlockRenderer(this)).setTexture(direction -> Optional.of(EFBlockTextures.oreChalcopyrite));
 		add(new ItemRenderer(this));
 		add(new Collider());
-		add(new Category(EnFusion.id + ".category.blocks"));
+		add(new Category(EnFusion.id + ".category.resources"));
 	}
 
 	@Override
 	public String getID() {
-		return EnFusion.id + ".oreChalcopyrite";
+		return EnFusion.id + ".ore.chalcopyrite";
 	}
 
 }

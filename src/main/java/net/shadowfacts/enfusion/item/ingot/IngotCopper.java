@@ -14,7 +14,7 @@ import java.util.Optional;
 public class IngotCopper extends Item {
 
 	public IngotCopper() {
-		add(new Category(EnFusion.id + ".category.items"));
+		add(new Category(EnFusion.id + ".category.resources"));
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class IngotCopper extends Item {
 
 	@Override
 	public String getID() {
-		return EnFusion.id + ".ingotCopper";
+		return EnFusion.id + ".ingot.copper";
 	}
 
 }
