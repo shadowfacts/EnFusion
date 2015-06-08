@@ -1,7 +1,9 @@
 package net.shadowfacts.enfusion.machine.grinder.recipe;
 
 import nova.core.block.Block;
+import nova.core.block.BlockFactory;
 import nova.core.item.Item;
+import nova.core.item.ItemFactory;
 
 import java.util.ArrayList;
 
@@ -24,6 +26,14 @@ public class GrinderRecipe {
 
 	public GrinderRecipe(Block input, ArrayList<GrinderOutput> outputs) {
 		this(input.getItemFactory().makeItem(), outputs);
+	}
+
+	public GrinderRecipe(ItemFactory factory, ArrayList<GrinderOutput> outputs) {
+		this(factory.makeItem(), outputs);
+	}
+
+	public GrinderRecipe(BlockFactory factory, ArrayList<GrinderOutput> outputs) {
+		this(factory.makeBlock().getItemFactory(), outputs);
 	}
 
 	@Override
