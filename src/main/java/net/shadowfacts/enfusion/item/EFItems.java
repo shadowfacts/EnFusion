@@ -17,6 +17,8 @@ public class EFItems {
 	public static void registerItems(ItemManager itemManager) {
 //		Ingots
 		ingotCopper = itemManager.register(IngotCopper.class);
+		ingotLead = itemManager.register(IngotLead.class);
+		ingotSilver = itemManager.register(IngotSilver.class);
 	}
 
 }
