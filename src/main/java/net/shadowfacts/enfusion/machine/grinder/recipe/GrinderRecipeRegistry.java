@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine.grinder;
+package net.shadowfacts.enfusion.machine.grinder.recipe;
 
 import java.util.ArrayList;
 
@@ -10,8 +10,8 @@ public class GrinderRecipeRegistry {
 	private static ArrayList<GrinderRecipe> recipes;
 
 	/**
-	 * Adds a {@link net.shadowfacts.enfusion.machine.grinder.GrinderRecipe} to the registry.
-	 * @param recipe The {@link net.shadowfacts.enfusion.machine.grinder.GrinderRecipe}
+	 * Adds a {@link GrinderRecipe} to the registry.
+	 * @param recipe The {@link GrinderRecipe}
 	 * @return	True if the recipe was registered.
 	 * 			False if it wasn't (usually because the recipe has already been added).
 	 */
@@ -25,8 +25,8 @@ public class GrinderRecipeRegistry {
 	}
 
 	/**
-	 * Removes a {@link net.shadowfacts.enfusion.machine.grinder.GrinderRecipe} from the registry.
-	 * @param recipe The {@link net.shadowfacts.enfusion.machine.grinder.GrinderRecipe} to remove
+	 * Removes a {@link GrinderRecipe} from the registry.
+	 * @param recipe The {@link GrinderRecipe} to remove
 	 * @return	True if the recipe was removed.
 	 * 			False if the recipe was not removed (usually because the recipe wasn't registered).
 	 */
@@ -40,7 +40,7 @@ public class GrinderRecipeRegistry {
 	}
 
 	/**
-	 * Checks if the specified {@link net.shadowfacts.enfusion.machine.grinder.GrinderRecipe} is in the registry.
+	 * Checks if the specified {@link GrinderRecipe} is in the registry.
 	 * @param recipe The recipe to check for.
 	 * @return	True if the recipe exists.
 	 */

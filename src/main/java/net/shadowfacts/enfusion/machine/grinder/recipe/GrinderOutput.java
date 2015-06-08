@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine.grinder;
+package net.shadowfacts.enfusion.machine.grinder.recipe;
 
 import nova.core.block.Block;
 import nova.core.item.Item;
