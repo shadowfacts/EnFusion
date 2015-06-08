@@ -15,6 +15,6 @@ public class BlockWoodenCrank extends BlockCrank {
 
 	@Override
 	public String getID() {
-		return EnFusion.id + ".crank.base";
+		return EnFusion.id + ".crank.wood";
 	}
 }
