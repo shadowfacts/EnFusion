@@ -12,9 +12,13 @@ public class EFItemTextures {
 
 //	Ingots
 	public static ItemTexture ingotCopper;
+	public static ItemTexture ingotLead;
+	public static ItemTexture ingotSilver;
 
 	public static void registerTextures(RenderManager renderManager) {
 		ingotCopper = renderManager.registerTexture(new ItemTexture(EnFusion.id, "missing"));
+		ingotLead = renderManager.registerTexture(new ItemTexture(EnFusion.id, "missing"));
+		ingotSilver = renderManager.registerTexture(new ItemTexture(EnFusion.id, "missing"));
 	}
 
 }
