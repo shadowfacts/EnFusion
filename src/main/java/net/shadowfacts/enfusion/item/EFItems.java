@@ -20,6 +20,9 @@ public class EFItems {
 	public static ItemFactory dustLead;
 	public static ItemFactory dustSilver;
 
+//	Misc
+	public static ItemFactory sulfur;
+
 	public static void registerItems(ItemManager itemManager) {
 //		Ingots
 		ingotCopper = itemManager.register(IngotCopper.class);
@@ -30,6 +33,9 @@ public class EFItems {
 		dustCopper = itemManager.register(DustCopper.class);
 		dustLead = itemManager.register(DustLead.class);
 		dustSilver = itemManager.register(DustSilver.class);
+
+//		Misc
+		sulfur = itemManager.register(Sulfur.class);
 	}
 
 }
