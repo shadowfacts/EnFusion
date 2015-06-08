@@ -13,10 +13,10 @@ import java.util.Optional;
 /**
  * @author shadowfacts
  */
-public class BlockOreGalena extends Block {
+public class OreNativeCopper extends Block {
 
-	public BlockOreGalena() {
-		add(new StaticBlockRenderer(this)).setTexture(direction -> Optional.of(EFBlockTextures.oreGalena));
+	public OreNativeCopper() {
+		add(new StaticBlockRenderer(this)).setTexture(direction -> Optional.of(EFBlockTextures.oreNativeCopper));
 		add(new ItemRenderer(this));
 		add(new Collider());
 		add(new Category(EnFusion.id + ".category.resources"));
@@ -24,7 +24,7 @@ public class BlockOreGalena extends Block {
 
 	@Override
 	public String getID() {
-		return EnFusion.id + "ore.galena";
+		return EnFusion.id + ".ore.nativeCopper";
 	}
 
 }

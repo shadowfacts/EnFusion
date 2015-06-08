@@ -17,8 +17,8 @@ public class EFBlocks {
 
 
 	public static void registerBlocks(BlockManager blockManager) {
-		oreChalcopyrite = blockManager.register(BlockOreChalcopyrite.class);
-		oreGalena = blockManager.register(BlockOreGalena.class);
-		oreNativeCopper = blockManager.register(BlockOreNativeCopper.class);
+		oreChalcopyrite = blockManager.register(OreChalcopyrite.class);
+		oreGalena = blockManager.register(OreGalena.class);
+		oreNativeCopper = blockManager.register(OreNativeCopper.class);
 	}
 }

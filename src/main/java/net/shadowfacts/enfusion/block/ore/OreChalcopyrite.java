@@ -13,9 +13,9 @@ import java.util.Optional;
 /**
  * @author shadowfacts
  */
-public class BlockOreChalcopyrite extends Block {
+public class OreChalcopyrite extends Block {
 
-	public BlockOreChalcopyrite() {
+	public OreChalcopyrite() {
 		add(new StaticBlockRenderer(this)).setTexture(direction -> Optional.of(EFBlockTextures.oreChalcopyrite));
 		add(new ItemRenderer(this));
 		add(new Collider());
