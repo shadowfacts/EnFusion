@@ -1,11 +1,9 @@
 package net.shadowfacts.enfusion.machine.crank;
 
 import net.shadowfacts.enfusion.EnFusion;
-import net.shadowfacts.enfusion.client.EFBlockTextures;
 import net.shadowfacts.enfusion.client.EFModels;
 import nova.core.block.Block;
 import nova.core.block.Stateful;
-import nova.core.block.component.StaticBlockRenderer;
 import nova.core.component.Category;
 import nova.core.component.renderer.ItemRenderer;
 import nova.core.component.renderer.StaticRenderer;
@@ -16,7 +14,8 @@ import nova.core.render.model.Model;
 import nova.core.render.texture.Texture;
 import nova.core.retention.Storable;
 import nova.core.retention.Store;
-import nova.core.util.transform.matrix.Quaternion;
+import nova.core.util.math.RotationUtil;
+import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
 
 /**
  * Base crank block.
@@ -33,8 +32,10 @@ public abstract class BlockCrank extends Block implements Storable, Stateful, Sy
 		add(new StaticRenderer(this)).setOnRender(model -> {
 			Model crankModel = EFModels.crankModel.getModel();
 
-			crankModel.combineChildren("crank", "crank1", "crank2", "crank3")
-						.rotate(Quaternion.fromEuler(0, 0, angle));
+			crankModel
+						.combineChildren("crank", "crank1", "crank2", "crank3")
+						.matrix.rotate(new Rotation(RotationUtil.DEFAULT_ORDER, 0, 0, angle));
+
 
 			model.children.add(crankModel);
 			model.bindAll(texture);
