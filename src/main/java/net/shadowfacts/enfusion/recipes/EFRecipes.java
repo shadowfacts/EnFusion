@@ -36,6 +36,13 @@ public class EFRecipes {
 		outputs.add(new GrinderOutput(EFItems.sulfur, 0.5));
 		GrinderRecipeRegistry.addRecipe(new GrinderRecipe(EFBlocks.oreChalcopyrite, outputs));
 		outputs.clear();
+
+//		Galena
+		outputs.add(new GrinderOutput(EFItems.dustLead, 0.5));
+		outputs.add(new GrinderOutput(EFItems.sulfur, 0.5));
+		GrinderRecipeRegistry.addRecipe(new GrinderRecipe(EFBlocks.oreGalena, outputs));
+		outputs.clear();
+		
 	}
 
 }
