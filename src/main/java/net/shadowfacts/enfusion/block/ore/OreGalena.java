@@ -24,7 +24,7 @@ public class OreGalena extends Block {
 
 	@Override
 	public String getID() {
-		return EnFusion.id + "ore.galena";
+		return EnFusion.id + ".ore.galena";
 	}
 
 }
