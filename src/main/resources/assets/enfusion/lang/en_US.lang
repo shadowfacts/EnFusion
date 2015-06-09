@@ -9,6 +9,7 @@ itemGroup.enfusion.category.resources=Resources
 block.enfusion.ore.chalcopyrite.name=Chalcopyrite Ore
 block.enfusion.ore.galena.name=Galena Ore
 block.enfusion.ore.chlorargyrite.name=Chlorargyrite Ore
+block.enfusion.ore.pyrargyrite.name=Pyrargyrite Ore
 
 # Items
 # Ingots

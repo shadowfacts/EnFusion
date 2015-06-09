@@ -14,11 +14,13 @@ public class EFBlocks {
 	public static BlockFactory oreChalcopyrite;
 	public static BlockFactory oreChlorargyrite;
 	public static BlockFactory oreGalena;
+	public static BlockFactory orePyrargyrite;
 
 
 	public static void registerBlocks(BlockManager blockManager) {
 		oreChalcopyrite = blockManager.register(OreChalcopyrite.class);
 		oreChlorargyrite = blockManager.register(OreChlorargyrite.class);
 		oreGalena = blockManager.register(OreGalena.class);
+		orePyrargyrite = blockManager.register(OrePyrargyrite.class);
 	}
 }
