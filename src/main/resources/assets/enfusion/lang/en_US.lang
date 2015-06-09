@@ -1,0 +1,23 @@
+# United States English Localization
+# Author: Shadowfacts
+
+# Categories
+itemGroup.enfusion.category.resources=Resources
+
+# Blocks
+# Ores
+block.enfusion.ore.chalcopyrite.name=Chalcopyrite Ore
+block.enfusion.ore.galena.name=Galena Ore
+block.enfusion.ore.chlorargyrite.name=Chlorargyrite Ore
+
+# Items
+# Ingots
+item.enfusion.ingot.copper.name=Copper Ingot
+item.enfusion.ingot.lead.name=Lead Ingot
+item.enfusion.ingot.silver.name=Silver Ingot
+# Dusts
+item.enfusion.dust.copper.name=Copper Dust
+item.enfusion.dust.iron.name=Iron Dust
+item.enfusion.dust.lead.name=Lead Dust
+item.enfusion.dust.silver.name=Silver Dust
+item.enfusion.sulfur=Sulfur
