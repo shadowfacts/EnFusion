@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class GrinderRecipeRegistry {
 
-	private static ArrayList<GrinderRecipe> recipes;
+	private static ArrayList<GrinderRecipe> recipes = new ArrayList<>();
 
 	/**
 	 * Adds a {@link GrinderRecipe} to the registry.
