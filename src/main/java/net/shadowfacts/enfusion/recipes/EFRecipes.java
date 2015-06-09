@@ -42,7 +42,12 @@ public class EFRecipes {
 		outputs.add(new GrinderOutput(EFItems.sulfur, 0.5));
 		GrinderRecipeRegistry.addRecipe(new GrinderRecipe(EFBlocks.oreGalena, outputs));
 		outputs.clear();
-		
+
+//		Chlorargyrite
+		outputs.add(new GrinderOutput(EFItems.dustSilver, 1));
+		GrinderRecipeRegistry.addRecipe(new GrinderRecipe(EFBlocks.oreChlorargyrite, outputs));
+		outputs.clear();
+
 	}
 
 }

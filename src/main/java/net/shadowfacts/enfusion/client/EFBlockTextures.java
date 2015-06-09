@@ -13,6 +13,7 @@ public class EFBlockTextures {
 
 //	Ores
 	public static BlockTexture oreChalcopyrite;
+	public static BlockTexture oreChlorargyrite;
 	public static BlockTexture oreGalena;
 
 //	Machines
@@ -21,6 +22,7 @@ public class EFBlockTextures {
 	public static void registerTextures(RenderManager renderManager) {
 //		Ores
 		oreChalcopyrite = renderManager.registerTexture(new BlockTexture(EnFusion.id, "missing"));
+		oreChlorargyrite = renderManager.registerTexture(new BlockTexture(EnFusion.id, "missing"));
 		oreGalena = renderManager.registerTexture(new BlockTexture(EnFusion.id, "missing"));
 
 //		Machines
