@@ -13,12 +13,10 @@ public class EFBlocks {
 //	Ores
 	public static BlockFactory oreChalcopyrite;
 	public static BlockFactory oreGalena;
-	public static BlockFactory oreNativeCopper;
 
 
 	public static void registerBlocks(BlockManager blockManager) {
 		oreChalcopyrite = blockManager.register(OreChalcopyrite.class);
 		oreGalena = blockManager.register(OreGalena.class);
-		oreNativeCopper = blockManager.register(OreNativeCopper.class);
 	}
 }
