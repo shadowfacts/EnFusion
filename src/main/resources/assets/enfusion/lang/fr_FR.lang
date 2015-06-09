@@ -1,0 +1,24 @@
+# France Frenc Localization
+# Author: Mazdallier
+
+# Categories
+itemGroup.enfusion.category.resources=Ressources
+
+# Blocks
+# Ores
+block.enfusion.ore.chalcopyrite.name=Minerai de chalcopyrite
+block.enfusion.ore.galena.name=Minerai de galène
+block.enfusion.ore.chlorargyrite.name=Minerai de chlorargyrite
+block.enfusion.ore.pyrargyrite.name=Minerai de pyrargyrite
+
+# Items
+# Ingots
+item.enfusion.ingot.copper.name=Lingot de cuivre
+item.enfusion.ingot.lead.name=Lingot de plomb
+item.enfusion.ingot.silver.name=Lingot d'argent
+# Dusts
+item.enfusion.dust.copper.name=Poudre de cuivre
+item.enfusion.dust.iron.name=Poudre de fer
+item.enfusion.dust.lead.name=Poudre de plomb
+item.enfusion.dust.silver.name=Poudre d'argent
+item.enfusion.sulfur=Souffre
