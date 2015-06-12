@@ -4,6 +4,7 @@ import nova.core.block.Block;
 import nova.core.block.BlockFactory;
 import nova.core.item.Item;
 import nova.core.item.ItemFactory;
+import nova.core.recipes.Recipe;
 
 import java.util.ArrayList;
 
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author shadowfacts
  */
-public class GrinderRecipe {
+public class GrinderRecipe implements Recipe {
 
 	public Item input;
 	public ArrayList<GrinderOutput> outputs;

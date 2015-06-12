@@ -4,6 +4,7 @@ import net.shadowfacts.enfusion.client.EFBlockTextures;
 import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.EFItemTextures;
 import net.shadowfacts.enfusion.item.EFItems;
+import net.shadowfacts.enfusion.recipes.EFRecipes;
 import nova.core.block.BlockManager;
 import nova.core.item.ItemManager;
 import nova.core.loader.Loadable;
@@ -55,5 +56,7 @@ public class EnFusion implements Loadable {
 
 		EFItems.registerItems(itemManager);
 		EFItemTextures.registerTextures(renderManager);
+
+		EFRecipes.registerAll(recipeManager);
 	}
 }
