@@ -43,7 +43,8 @@ public abstract class BlockCrank extends Block implements Storable, Stateful, Sy
 		add(new ItemRenderer(this));
 		add(new CrankCollider());
 		add(new Category(EnFusion.id + ".category.machines"));
-		rightClickEvent.add(this::onRightClick);
+
+		events.on(RightClickEvent.class).bind(this::onRightClick);
 	}
 
 	public boolean onRightClick(RightClickEvent event) {
