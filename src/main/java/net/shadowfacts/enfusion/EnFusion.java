@@ -51,11 +51,11 @@ public class EnFusion implements Loadable {
 
 	@Override
 	public void preInit() {
-		EFBlocks.registerBlocks(blockManager);
 		EFBlockTextures.registerTextures(renderManager);
+		EFBlocks.registerBlocks(blockManager);
 
-		EFItems.registerItems(itemManager);
 		EFItemTextures.registerTextures(renderManager);
+		EFItems.registerItems(itemManager);
 
 		EFRecipes.registerAll(recipeManager);
 	}
