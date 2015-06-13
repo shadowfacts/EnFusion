@@ -16,7 +16,7 @@ import java.util.Optional;
 public class OreGalena extends Block {
 
 	public OreGalena() {
-		add(new StaticBlockRenderer(this)).setTexture(direction -> Optional.of(EFBlockTextures.oreGalena));
+		add(new StaticBlockRenderer(this)).setTexture(EFBlockTextures.oreGalena);
 		add(new ItemRenderer(this));
 		add(new Collider());
 		add(new Category(EnFusion.id + ".category.resources"));

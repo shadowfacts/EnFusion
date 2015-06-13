@@ -16,7 +16,7 @@ import java.util.Optional;
 public class OrePyrargyrite extends Block {
 
 	public OrePyrargyrite() {
-		add(new StaticBlockRenderer(this)).setTexture(direction -> Optional.of(EFBlockTextures.orePyrargyrite));
+		add(new StaticBlockRenderer(this)).setTexture(EFBlockTextures.orePyrargyrite);
 		add(new ItemRenderer(this));
 		add(new Collider());
 		add(new Category(EnFusion.id + ".category.resources"));

@@ -16,7 +16,7 @@ import java.util.Optional;
 public class OreChlorargyrite extends Block {
 
 	public OreChlorargyrite() {
-		add(new StaticBlockRenderer(this)).setTexture(direction -> Optional.of(EFBlockTextures.oreChlorargyrite));
+		add(new StaticBlockRenderer(this)).setTexture(EFBlockTextures.oreChlorargyrite);
 		add(new ItemRenderer(this));
 		add(new Collider());
 		add(new Category(EnFusion.id + ".category.resources"));

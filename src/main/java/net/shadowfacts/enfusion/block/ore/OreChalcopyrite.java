@@ -16,7 +16,7 @@ import java.util.Optional;
 public class OreChalcopyrite extends Block {
 
 	public OreChalcopyrite() {
-		add(new StaticBlockRenderer(this)).setTexture(direction -> Optional.of(EFBlockTextures.oreChalcopyrite));
+		add(new StaticBlockRenderer(this)).setTexture(EFBlockTextures.oreChalcopyrite);
 		add(new ItemRenderer(this));
 		add(new Collider());
 		add(new Category(EnFusion.id + ".category.resources"));
