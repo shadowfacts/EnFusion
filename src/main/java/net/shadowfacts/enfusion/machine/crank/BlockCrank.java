@@ -29,17 +29,17 @@ public abstract class BlockCrank extends Block implements Storable, Stateful, Sy
 	private double angle = 0;
 
 	public BlockCrank(Texture texture) {
-		add(new StaticRenderer(this)).setOnRender(model -> {
-			Model crankModel = EFModels.crankModel.getModel();
-
-			crankModel
-						.combineChildren("crank", "crank1", "crank2", "crank3")
-						.matrix.rotate(new Rotation(RotationUtil.DEFAULT_ORDER, 0, 0, angle));
-
-
-			model.children.add(crankModel);
-			model.bindAll(texture);
-		});
+//		add(new StaticRenderer(this)).setOnRender(model -> {
+//			Model crankModel = EFModels.crankModel.getModel();
+//
+//			crankModel
+//						.combineChildren("crank", "crank1", "crank2", "crank3")
+//						.matrix.rotate(new Rotation(RotationUtil.DEFAULT_ORDER, 0, 0, angle));
+//
+//
+//			model.children.add(crankModel);
+//			model.bindAll(texture);
+//		});
 		add(new ItemRenderer(this));
 		add(new CrankCollider());
 		add(new Category(EnFusion.id + ".category.machines"));
