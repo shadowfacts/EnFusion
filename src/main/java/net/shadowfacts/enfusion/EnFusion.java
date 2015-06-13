@@ -30,18 +30,16 @@ public class EnFusion implements Loadable {
 	public static BlockManager blockManager;
 	public static ItemManager itemManager;
 	public static RenderManager renderManager;
-	public static NativeManager nativeManager;
 	public static NetworkManager networkManager;
 	public static RecipeManager recipeManager;
 
 	public static EFBlocks blocks;
 	public static EFBlockTextures blockTextures;
 
-	public EnFusion(BlockManager blockManager, ItemManager itemManager, RenderManager renderManager, NativeManager nativeManager, NetworkManager networkManager, RecipeManager recipeManager) {
+	public EnFusion(BlockManager blockManager, ItemManager itemManager, RenderManager renderManager, NetworkManager networkManager, RecipeManager recipeManager) {
 		EnFusion.blockManager = blockManager;
 		EnFusion.itemManager = itemManager;
 		EnFusion.renderManager = renderManager;
-		EnFusion.nativeManager = nativeManager;
 		EnFusion.networkManager = networkManager;
 		EnFusion.recipeManager = recipeManager;
 
