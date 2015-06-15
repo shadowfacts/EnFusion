@@ -19,6 +19,7 @@ public class EFBlockTextures {
 //	Machines
 	public static BlockTexture crankWood;
 	public static BlockTexture crankIron;
+	public static BlockTexture grinderFront;
 
 	public static void registerTextures(RenderManager renderManager) {
 //		Ores
@@ -30,6 +31,7 @@ public class EFBlockTextures {
 //		Machines
 		crankWood = renderManager.registerTexture(new BlockTexture(EnFusion.id, "crank/wood"));
 		crankIron = renderManager.registerTexture(new BlockTexture(EnFusion.id, "crank/wood"));
+		grinderFront = renderManager.registerTexture(new BlockTexture(EnFusion.id, "missing"));
 	}
 
 }
