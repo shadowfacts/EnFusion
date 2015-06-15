@@ -7,4 +7,4 @@ This is the [NOVA](http://novaapi.net) version of EnFusion. If you are looking f
 ### Contributors
 - [Shadowfacts](https://github.com/shadowfacts) (Developer)
 - [Syths](https://gitub.com/SythsGod) (Texture/Model creator)
-- [Yves](https://github.com/Mazdallier) (Localization)
+- [Mazdallier](https://github.com/Mazdallier) (Localization)
