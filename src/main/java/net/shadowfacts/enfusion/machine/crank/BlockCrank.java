@@ -32,12 +32,12 @@ public abstract class BlockCrank extends Block implements Storable, Stateful, Sy
 		events.on(RightClickEvent.class).bind(this::onRightClick);
 	}
 
-	public boolean onRightClick(RightClickEvent event) {
+	public void onRightClick(RightClickEvent event) {
 		if (EnFusion.networkManager.isServer()) {
 			angle = (angle + Math.PI / 6) % (Math.PI * 2);
 			EnFusion.networkManager.sync(this);
 		}
-		return true;
+		event.result = true;
 	}
 
 	public double getAngle() {
