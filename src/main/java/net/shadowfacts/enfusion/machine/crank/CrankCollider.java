@@ -5,11 +5,14 @@ import nova.core.util.shape.Cuboid;
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 
 /**
+ * Custom collider sized specifically to the crank model.
+ *
  * @author shadowfacts
  */
 public class CrankCollider extends Collider {
 
 	public CrankCollider() {
-		boundingBox = () -> new Cuboid(new Vector3D(0, 0, 0), new Vector3D(1, 1, 1));
+		setBoundingBox(new Cuboid(new Vector3D(0.2, 0, 0.2), new Vector3D(0.8, 0.6, 0.8)));
+		isOpaqueCube(false);
 	}
 }

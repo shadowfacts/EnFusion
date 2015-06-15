@@ -10,6 +10,9 @@ block.enfusion.ore.chalcopyrite.name=Chalcopyrite Ore
 block.enfusion.ore.galena.name=Galena Ore
 block.enfusion.ore.chlorargyrite.name=Chlorargyrite Ore
 block.enfusion.ore.pyrargyrite.name=Pyrargyrite Ore
+# Machines
+block.enfusion.crank.wood.name=Wooden Crank
+block.enfusion.crank.iron.name=Iron Crank
 
 # Items
 # Ingots

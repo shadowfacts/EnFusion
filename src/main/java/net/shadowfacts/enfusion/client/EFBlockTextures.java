@@ -4,7 +4,6 @@ package net.shadowfacts.enfusion.client;
 import net.shadowfacts.enfusion.EnFusion;
 import nova.core.render.RenderManager;
 import nova.core.render.texture.BlockTexture;
-import nova.core.render.texture.Texture;
 
 /**
  * @author shadowfacts
@@ -19,6 +18,7 @@ public class EFBlockTextures {
 
 //	Machines
 	public static BlockTexture crankWood;
+	public static BlockTexture crankIron;
 
 	public static void registerTextures(RenderManager renderManager) {
 //		Ores
@@ -28,6 +28,8 @@ public class EFBlockTextures {
 		orePyrargyrite = renderManager.registerTexture(new BlockTexture(EnFusion.id, "missing"));
 
 //		Machines
+		crankWood = renderManager.registerTexture(new BlockTexture(EnFusion.id, "crank/wood"));
+		crankIron = renderManager.registerTexture(new BlockTexture(EnFusion.id, "crank/wood"));
 	}
 
 }

@@ -3,6 +3,7 @@ package net.shadowfacts.enfusion;
 import net.shadowfacts.enfusion.client.EFBlockTextures;
 import net.shadowfacts.enfusion.block.EFBlocks;
 import net.shadowfacts.enfusion.client.EFItemTextures;
+import net.shadowfacts.enfusion.client.EFModels;
 import net.shadowfacts.enfusion.item.EFItems;
 import net.shadowfacts.enfusion.recipes.EFRecipes;
 import nova.core.block.BlockManager;
@@ -49,11 +50,12 @@ public class EnFusion implements Loadable {
 
 	@Override
 	public void preInit() {
-		EFBlockTextures.registerTextures(renderManager);
-		EFBlocks.registerBlocks(blockManager);
-
 		EFItemTextures.registerTextures(renderManager);
+		EFBlockTextures.registerTextures(renderManager);
+		EFModels.registerModels(renderManager);
+
 		EFItems.registerItems(itemManager);
+		EFBlocks.registerBlocks(blockManager);
 
 		EFRecipes.registerAll(recipeManager);
 	}
