@@ -1,4 +1,4 @@
-# France Frenc Localization
+# France French Localization
 # Author: Mazdallier
 
 # Categories
@@ -10,6 +10,9 @@ block.enfusion.ore.chalcopyrite.name=Minerai de chalcopyrite
 block.enfusion.ore.galena.name=Minerai de galène
 block.enfusion.ore.chlorargyrite.name=Minerai de chlorargyrite
 block.enfusion.ore.pyrargyrite.name=Minerai de pyrargyrite
+# Machines
+block.enfusion.crank.wood.name=Clef en bois
+block.enfusion.crank.iron.name=Clef en fer
 
 # Items
 # Ingots
