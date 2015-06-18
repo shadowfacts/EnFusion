@@ -11,6 +11,7 @@ import nova.core.network.Syncable;
 import nova.core.render.texture.Texture;
 import nova.core.retention.Storable;
 import nova.core.retention.Store;
+import nova.core.util.Direction;
 
 /**
  * Base crank block.
@@ -23,16 +24,24 @@ public abstract class BlockCrank extends Block implements Storable, Stateful, Sy
 	@Sync
 	private double angle = 0;
 
+	@Store
+	private Direction side = Direction.UP;
+
 	public BlockCrank(Texture texture) {
 		add(new CrankRenderer(this, texture));
 		add(new ItemRenderer(this));
-		add(new CrankCollider().isOpaqueCube(false));
+		add(new CrankCollider(this));
 		add(new Category(EnFusion.id + ".category.machines"));
 
 		events.on(RightClickEvent.class).bind(this::onRightClick);
+		events.on(PlaceEvent.class).bind(this::onPlace);
 	}
 
-	public void onRightClick(RightClickEvent event) {
+	private void onPlace(PlaceEvent event) {
+		side = event.side.opposite();
+	}
+
+	private void onRightClick(RightClickEvent event) {
 		if (EnFusion.networkManager.isServer()) {
 			angle = (angle + Math.PI / 6) % (Math.PI * 2);
 			EnFusion.networkManager.sync(this);
@@ -42,6 +51,10 @@ public abstract class BlockCrank extends Block implements Storable, Stateful, Sy
 
 	public double getAngle() {
 		return angle;
+	}
+
+	public Direction getSide() {
+		return side;
 	}
 
 	@Override

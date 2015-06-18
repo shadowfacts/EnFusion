@@ -12,8 +12,8 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
  */
 public class CrankRenderer extends StaticRenderer {
 
-	BlockCrank crank;
-	Texture texture;
+	private BlockCrank crank;
+	private Texture texture;
 
 	public CrankRenderer(BlockCrank crank, Texture texture) {
 		super(crank);
@@ -26,6 +26,11 @@ public class CrankRenderer extends StaticRenderer {
 
 	public void onRender(Model model) {
 		Model crankModel = EFModels.crank.getModel();
+
+//		switch (crank.getSide()) {
+//			case UP:
+//				crankModel.matrix.rotate(new Rotation(new Vector3D(1, 0, 0), 190));
+//		}
 
 		crankModel.matrix.rotate(new Rotation(new Vector3D(0, 1, 0), this.crank.getAngle()));
 
