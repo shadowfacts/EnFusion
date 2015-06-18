@@ -25,7 +25,7 @@ public class EnFusion implements Loadable {
 	public static final String id = "enfusion";
 	public static final String name = "EnFusion";
 	public static final String version = "0.1.0";
-	public static final String novaVersion = "0.0.1";
+	public static final String novaVersion = "0.1.0";
 	public static final String description = "EnFusion is a mod primarily focusing on complex and unique technological expansion.";
 
 	public static BlockManager blockManager;
