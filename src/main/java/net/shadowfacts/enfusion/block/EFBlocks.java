@@ -4,6 +4,7 @@ package net.shadowfacts.enfusion.block;
 import net.shadowfacts.enfusion.block.ore.*;
 import net.shadowfacts.enfusion.machine.crank.BlockIronCrank;
 import net.shadowfacts.enfusion.machine.crank.BlockWoodenCrank;
+import net.shadowfacts.enfusion.machine.grinder.BlockGrinder;
 import nova.core.block.BlockFactory;
 import nova.core.block.BlockManager;
 
@@ -21,6 +22,7 @@ public class EFBlocks {
 //	Machines
 	public static BlockFactory crankWood;
 	public static BlockFactory crankIron;
+	public static BlockFactory grinder;
 
 
 	public static void registerBlocks(BlockManager blockManager) {
@@ -33,5 +35,6 @@ public class EFBlocks {
 //		Machines
 		crankWood = blockManager.register(BlockWoodenCrank.class);
 		crankIron = blockManager.register(BlockIronCrank.class);
+		grinder = blockManager.register(BlockGrinder.class);
 	}
 }

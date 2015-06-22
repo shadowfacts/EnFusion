@@ -2,11 +2,14 @@ package net.shadowfacts.enfusion;
 
 import net.shadowfacts.enfusion.client.EFBlockTextures;
 import net.shadowfacts.enfusion.block.EFBlocks;
+import net.shadowfacts.enfusion.client.EFGUIs;
 import net.shadowfacts.enfusion.client.EFItemTextures;
 import net.shadowfacts.enfusion.client.EFModels;
 import net.shadowfacts.enfusion.item.EFItems;
 import net.shadowfacts.enfusion.recipes.EFRecipes;
 import nova.core.block.BlockManager;
+import nova.core.gui.Gui;
+import nova.core.gui.factory.GuiManager;
 import nova.core.item.ItemManager;
 import nova.core.loader.Loadable;
 import nova.core.loader.NovaMod;
@@ -33,16 +36,18 @@ public class EnFusion implements Loadable {
 	public static RenderManager renderManager;
 	public static NetworkManager networkManager;
 	public static RecipeManager recipeManager;
+	public static GuiManager guiManager;
 
 	public static EFBlocks blocks;
 	public static EFBlockTextures blockTextures;
 
-	public EnFusion(BlockManager blockManager, ItemManager itemManager, RenderManager renderManager, NetworkManager networkManager, RecipeManager recipeManager) {
+	public EnFusion(BlockManager blockManager, ItemManager itemManager, RenderManager renderManager, NetworkManager networkManager, RecipeManager recipeManager, GuiManager guiManager) {
 		EnFusion.blockManager = blockManager;
 		EnFusion.itemManager = itemManager;
 		EnFusion.renderManager = renderManager;
 		EnFusion.networkManager = networkManager;
 		EnFusion.recipeManager = recipeManager;
+		EnFusion.guiManager = guiManager;
 
 		blocks = new EFBlocks();
 		blockTextures = new EFBlockTextures();
@@ -53,6 +58,8 @@ public class EnFusion implements Loadable {
 		EFItemTextures.registerTextures(renderManager);
 		EFBlockTextures.registerTextures(renderManager);
 		EFModels.registerModels(renderManager);
+
+		EFGUIs.registerGuis(guiManager);
 
 		EFItems.registerItems(itemManager);
 		EFBlocks.registerBlocks(blockManager);
