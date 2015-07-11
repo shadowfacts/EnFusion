@@ -3,6 +3,7 @@ package net.shadowfacts.enfusion.machine.grinder;
 import net.shadowfacts.enfusion.EnFusion;
 import net.shadowfacts.enfusion.client.EFBlockTextures;
 import nova.core.block.Block;
+import nova.core.block.Stateful;
 import nova.core.block.component.StaticBlockRenderer;
 import nova.core.component.Category;
 import nova.core.component.misc.Collider;
@@ -14,7 +15,11 @@ import nova.core.gui.component.inventory.Slot;
 import nova.core.gui.layout.FlowLayout;
 import nova.core.inventory.Inventory;
 import nova.core.inventory.InventorySimple;
+import nova.core.network.Sync;
+import nova.core.network.Syncable;
 import nova.core.render.texture.Texture;
+import nova.core.retention.Storable;
+import nova.core.retention.Store;
 import nova.core.util.Direction;
 
 import java.util.Optional;
@@ -22,9 +27,11 @@ import java.util.Optional;
 /**
  * @author shadowfacts
  */
-public class BlockGrinder extends Block {
+public class BlockGrinder extends Block implements Storable, Stateful, Syncable {
 
-	public Inventory inventory = new InventorySimple(2);
+	@Sync
+	@Store
+	public Inventory inventory = new InventorySimple(1);
 
 	public BlockGrinder() {
 		add(new StaticBlockRenderer(this)).setTexture(this::getTexture);
