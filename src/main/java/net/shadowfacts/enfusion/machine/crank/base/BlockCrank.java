@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine.crank;
+package net.shadowfacts.enfusion.machine.crank.base;
 
 import net.shadowfacts.enfusion.EnFusion;
 import nova.core.block.Block;

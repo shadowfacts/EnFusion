@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine.crank;
+package net.shadowfacts.enfusion.machine.crank.base;
 
 import nova.core.component.misc.Collider;
 import nova.core.util.shape.Cuboid;

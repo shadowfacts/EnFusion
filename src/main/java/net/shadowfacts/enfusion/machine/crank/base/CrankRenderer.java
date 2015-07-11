@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine.crank;
+package net.shadowfacts.enfusion.machine.crank.base;
 
 import net.shadowfacts.enfusion.client.EFModels;
 import nova.core.component.renderer.StaticRenderer;
