@@ -1,4 +1,4 @@
-package net.shadowfacts.enfusion.machine.grinder.recipe;
+package net.shadowfacts.enfusion.api.recipe.grinder;
 
 import nova.core.block.Block;
 import nova.core.block.BlockFactory;
