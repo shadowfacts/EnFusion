@@ -38,7 +38,7 @@ public class EFGUIs {
 								.add(new Slot(EnFusion.id + ".gui.grinder.inv", 1))
 						)
 						.onGuiEvent((event) -> {
-							event.gui.addInventory(EnFusion.id + ".gui.grinder.inv", ((BlockGrinder) event.block.get()).inventory);
+							event.gui.addInventory(EnFusion.id + ".gui.grinder.inv", ((BlockGrinder) event.block.get()).getInventory());
 							System.out.println("Grinder GUI opened!");
 						}, GuiEvent.BindEvent.class)
 		);

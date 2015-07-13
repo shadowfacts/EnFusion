@@ -29,9 +29,8 @@ import java.util.Optional;
  */
 public class BlockGrinder extends Block implements Storable, Stateful, Syncable {
 
-	@Sync
 	@Store
-	public Inventory inventory = new InventorySimple(1);
+	private Inventory inventory = new InventorySimple(1);
 
 	public BlockGrinder() {
 		add(new StaticBlockRenderer(this)).setTexture(this::getTexture);
@@ -56,4 +55,7 @@ public class BlockGrinder extends Block implements Storable, Stateful, Syncable 
 		return EnFusion.id + ".machine.grinder";
 	}
 
+	public Inventory getInventory() {
+		return inventory;
+	}
 }
